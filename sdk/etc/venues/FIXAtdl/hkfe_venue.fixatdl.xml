@@ -1,0 +1,41 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="db8b15f6-f0f8-11e7-b240-ea65dadc641a">
+  <Strategy uiRep="Hong Kong Futures Exchange" wireValue="Hong Kong Futures Exchange" version="1.0" name="HKFE">
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="PostingAction" tbricks_property_identifier="c41e0652-9649-11e8-a68b-b3a6db3c870c">
+      <Description>Posting Action</Description>
+    </Parameter>
+	<Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f55f92-a7cf-11e5-b809-3c870c3e9924">
+      <Description>Transition Type</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkfe.key.Reference">
+      <Description>Reference</Description>
+    </Parameter>
+	<Parameter xsi:type="String_t" name="hkfe.key.Client">
+      <Description>Client</Description>
+    </Parameter>
+	<Parameter xsi:type="String_t" name="hkfe.key.GiveUp">
+      <Description>Give-up</Description>
+    </Parameter>
+	<Parameter xsi:type="String_t" name="hkfe.key.APIChannel">
+      <Description>API Channel</Description>
+    </Parameter>
+	<Parameter xsi:type="Boolean_t" name="hkfe.key.AfterHours">
+      <Description>After Hours</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Order settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" initValue="false" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Transition Type" ID="TransitionType" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TransitionType" />
+        <lay:Control xsi:type="lay:TextField_t" label="Reference" ID="Reference" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkfe.key.Reference" />
+        <lay:Control xsi:type="lay:TextField_t" label="Client" ID="Client" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkfe.key.Client" />
+        <lay:Control xsi:type="lay:TextField_t" label="Give-up" ID="GiveUp" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkfe.key.GiveUp" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Posting Action" ID="PostingAction" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PostingAction" />
+        <lay:Control xsi:type="lay:TextField_t" label="API Channel" ID="APIChannel" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkfe.key.APIChannel" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="After Hours" ID="AfterHours" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkfe.key.AfterHours" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

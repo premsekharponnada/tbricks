@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process identifier="27305604-7f93-11df-b25c-492d706c83b7" name="speedcore">
+    <node transport_shm_reserved_disk_space="1000000"/>
+    <system identifier="49f43d5e-7a16-11df-8d47-799432e9605f"
+            short_name="system"
+            name="system"/>
+
+    <core module="tbricks_plugin_engine">
+        <component identifier="27305604-7f93-11df-b25c-492d706c83b7"
+                   short_name="de"
+                   type="Distribution Engine"
+                   enable_int_cs="yes" />
+
+        <service identifier="00d2d488-1ff1-11ea-b500-ed80a93eb708"
+                 short_name="de"
+                 class="47"
+                 type="Distribution Engine">
+
+            <subsystem identifier="1cf93f6c-1ff1-11ea-b310-a2bdd8f83460"
+                       short_name="subsystem1"
+                       default="true"
+                       name="subsystem1"/>
+        </service>
+    </core>
+</process>

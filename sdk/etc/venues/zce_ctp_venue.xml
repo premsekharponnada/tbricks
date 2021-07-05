@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="ZCE CTP venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="ZCE CTP" shortname="ZCE CTP" identifier="3ccf2a0c-55e1-11e9-a850-7d964c4eb9b9" description="Zhengzhou Commodity Exchange via CTP">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- expresses the restrictions of capabilities -->
+    <capabilities>
+        <restriction message="order">
+            <field name="capacity"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="price improvement not allowed"/>
+            <field name="execution policy"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+        </restriction>
+        <restriction message="order modify"/>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the ZCE CTP venue
+    </documentation>
+</resource>

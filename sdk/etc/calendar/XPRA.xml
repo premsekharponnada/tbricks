@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="XPRA" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+    </days>
+
+    <days year="2018">
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="04-02" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="05-08" valid="no"/> <!-- Liberation Day -->
+        <day date="07-05" valid="no"/> <!-- Saints Cyril and Methodius Day -->
+        <day date="07-06" valid="no"/> <!-- Jan Hus Day -->
+        <day date="09-28" valid="no"/> <!-- Czech Statehood Day -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- St. Stephen’s Day -->
+        <day date="12-31" valid="no"/> <!-- Exchange Holiday -->
+    </days>
+    <days year="2019">
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="05-08" valid="no"/> <!-- Liberation Day -->
+        <day date="07-05" valid="no"/> <!-- Saints Cyril and Methodius Day -->
+        <day date="10-28" valid="no"/> <!-- Independence Day -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- St. Stephen’s Day -->
+        <day date="12-31" valid="no"/> <!-- Exchange Holiday -->
+    </days>
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="05-08" valid="no"/> <!-- Liberation Day -->
+        <day date="07-06" valid="no"/> <!-- Jan Hus Day -->
+        <day date="09-28" valid="no"/> <!-- Statehood Day -->
+        <day date="10-28" valid="no"/> <!-- Independence Day -->
+        <day date="11-17" valid="no"/> <!-- Freedom and Democracy Day -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-31" valid="no"/> <!-- Exchange Holiday -->
+    </days>
+    <documentation>
+        Calendar defining trading-days for XPRA (Prague Stock Exchange).
+        Source https://www.pse.cz/en/trading/trading-information/trading-calendar/
+    </documentation>
+</resource>

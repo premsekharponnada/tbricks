@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="BATS BZX venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="BATS BZX" shortname="BATS BZX" identifier="45f2392e-88e4-11e7-8680-beb2fa8a5d11" description="BATS BZX">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+    <capabilities>
+        <restriction message="order">
+            <field name="validity type" value="last auction"/>
+            <field name="transition type" value="market to limit" />
+            <field name="transition type" value="limit to market" />
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing BATS BZX venue.
+    </documentation>
+</resource>

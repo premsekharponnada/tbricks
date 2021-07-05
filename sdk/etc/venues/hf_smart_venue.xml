@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="HF SMARTGate" type="application/x-venue+xml">
+    <venues>
+        <venue name="HF SMARTGate" shortname="HF SMARTGate" identifier="b341d69e-15ec-11e7-a990-5188a07094d0" description="HF SMARTGate FIX Interface">
+            <identifier>
+                <key name="SecurityID" tag="48">
+                    <additional tag="22" value="4"/>
+                </key>
+                <key name="TargetSubID"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="stop price"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="stop price"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the HF SMARTGate FIX Interface.
+    </documentation>
+</resource>

@@ -1,0 +1,871 @@
+.\" -*- coding: us-ascii -*-
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH tbtrace 1 2018-01-10 Tbricks tbtrace
+.SH NAME
+tbtrace \- performance tracing control and analytics
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBtbtrace [help]\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace create\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+template session service... | component... | pid... | subsystem... | system... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace destroy\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[-f] session... | \fBoffline_nodes\fR
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace enable\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace disable\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace start\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace stop\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace list | ls\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[session]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace analyze\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session [expression] [-f format] [-x filename] [-g] [-G node1,node2] [-p] [-m metric,...] [-r] [-u unit] [--no_protocol_translation] [--bwlimit=Mbit/sec] [-n] [-d seconds] [--time_window seconds] [-a host:port] [--per_component] [--ignore_filters] [--delta_threshold "time [unit]"] [--show_delta] [--no_delta]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace get\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[property[,property] session...|UUID... ]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace set\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[property=value session...]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace clear\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[property[,property] session...]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace info\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace clean\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace validate\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+session 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template create\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+template [service_class...]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template destroy\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+template... 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template get\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[property[,property...] template...]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template set\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[property=value template...]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template clear\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[property[,property...] template...]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template add\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+probes=value template 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template remove\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+probes=value template 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template list | ls\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[template]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace template clone\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+original_template new_template 
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace [live]\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+service... | component... | pid... | subsystem... | system... template | "probes" [expression] [-f format] [-x filename] [-W [timeout]] [-v] [-g] [-G node1,node2] [-p] [-m metric,...] [-r] [-u unit] [--no_protocol_translation] [--bwlimit=Mbit/sec] [-n] [-d seconds] [--time_window seconds] [-a host:port] [--per_component] [--ignore_filters] [--delta_threshold "time [unit]"] [--show_delta] [--no_delta]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace execute\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+"command line" "probes" [expression] [-g] [-G node1,node2] [-p] [-m metric,...] [-r] [-u unit] [--no_protocol_translation] [-v] [-n]
+'in \n(.iu-\nxu
+.ad b
+'hy
+'nh
+.fi
+.ad l
+\fBtbtrace probes list | ls\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[component | pid]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+The tbtrace command controls performance tracing sessions and provides a unified interface for performing cross-component LTTng (https://lttng.org) tracing and analysis.
+.PP
+The Tbricks system has a rich set of built-in LTTng probes and provides support for tracing and analyzing arbitrary event paths in the system.
+.PP
+The tbtrace tool provides easy creation of many commonly used performance traces using a standard set of templates, but also provides the flexibility of custom tracing of arbitrary LTTng probes.
+.PP
+Tracing process is described by tracing session. Running tracing session produces LTTng data that is stored on a disk. Type of data produced by a tracing session is described by tracing template related to the session.
+.PP
+\fIIdentifiers\fR
+.PP
+Please see tbintro(1) for information about the identifiers used.
+.PP
+\fIProperties\fR
+.PP
+Each tracing session and template have a set of properties that are used to provide specific behavior.
+.PP
+The identifier provides a persistent unique identifier (an UUID), that is assigned at creation time. It is typically used for cross references and/or scripts which require that the identifier will not change. The identifier cannot be changed by the user.
+.TP 
+identifier
+The UUID uniquely identifying the tracing session/template configuration.
+.PP
+\fISession properties\fR
+.TP 
+status
+Session status.
+.PP
+The properties below can be set by the user:
+.TP 
+short_name
+A short name that is used to identify the tracing session.
+.TP 
+template
+The tracing session template used.
+.TP 
+services
+A comma-separated list of service names that to be traced.
+.TP 
+components
+A comma-separated list of component names that to be traced.
+.TP 
+subsystems
+A comma-separated list of subsystem names that to be traced.
+.TP 
+systems
+A comma-separated list of system names that to be traced.
+.TP 
+pids
+A comma-separated list of pids that to be traced.
+.TP 
+purging_period
+Defines trace session data keeping period (30 days by default). The live trace session will be removed after the purging period.
+.TP 
+nightly_restart
+Automatic restart at midnight (true by default).
+.TP 
+allow_partially_tracing
+Defines that all (default value 'false') specified session components/pids or at least one (value 'true') should be traced.
+.PP
+\fITemplate properties\fR
+.PP
+The properties below can be set by the user:
+.TP 
+short_name
+A short name that is used to identify the tracing template.
+.TP 
+probes
+A comma-separated list of server-side or app probe patterns that will be enabled for tracing.
+.TP 
+service_class
+List of service classes for those probes could be enabled.
+.TP 
+parent_templates
+List of tracing templates that will be inherited by the specified template.
+.TP 
+description
+A longer description of the tracing template and its intended usage.
+.TP 
+filter
+List of filters for the data analysis.
+.TP 
+output
+Default output settings (i.e. "-k layer trees").
+.TP 
+time_window
+Default time_window settings.
+.TP 
+perf_counters
+Enables perf counters tracing (false by default). The value 'true' enables the default list: perf:thread:cycles, perf:thread:stalled-cycles-frontend, perf:thread:instructions, perf:thread:cache-references, perf:thread:cache-misses, perf:thread:bus-cycles.
+
+Specify a comma-separated list to enable other perf counters.
+.PP
+\fIExpressions\fR
+.PP
+Expressions specify matching criteria. They may be used when analyzing tracing session to filter for trace data of interest.
+.PP
+Expressions can be used with 'analyze' and 'live' subcommands.
+.PP
+The -k and -o flags are used to construct expressions.
+.PP
+The -k option may be followed by two, or three arguments. If a pair of arguments is specified, a match occurs when a trace data has exactly the specified value for a given key. If three arguments are given, they are of the form -k key operation value.
+.PP
+tbtrace supports the following matching operators:
+.TP 0.2i
+\(bu
+eq equal
+.TP 0.2i
+\(bu
+ne not equal
+.TP 0.2i
+\(bu
+ge greater than or equal to. It can be used only with 'date' key.
+.TP 0.2i
+\(bu
+le less than or equal to. It can be used only with 'date' key.
+.PP
+A simple expression matches an event if all of the key-value operations match. Logically, the result is an AND of all of key-value operations. The -o option separates simple expressions and provides an OR operation. If two or more simple expressions are given, separated by -o options, then a match occurs if a trace data matches any of the simple expressions.
+.PP
+The value 'none' cancels all filters from the template as well as the option '--ignore_filters'.
+.PP
+\fIKeys\fR
+.TP 
+date
+Build trees using events of given dates. 'Nt/d/w/m' means last available session's traces (t) / per days (d) / weeks (w) / months (m).
+.TP 
+route
+Find event paths that are described with the given node list. Any number of intermediate nodes are allowed between each two nodes in the list.
+.TP 
+route_cutoff first
+Requires use with 'route'. Cutoff the tree on the first instance of the final route filter probe.
+.TP 
+nodeset
+Use trees that includes given set of nodes.
+.TP 
+exclude
+Use trees that excludes given set of nodes.
+.TP 
+procname
+Use trees that have nodes with given procname.
+.TP 
+tree_depth
+Use trees that have depth not less than given.
+.TP 
+tree_depth_threshold
+>Prints out trees levels from 1 to given threshold (=10 by default). If threshold is 0, then it prints out all levels.
+.TP 
+layer
+Show data dump.
+
+The possible data types are:
+.RS 
+.TP 0.2i
+\(bu
+stats
+
+Prints out statistics. Default layer.
+.TP 0.2i
+\(bu
+events
+
+Prints out CTF events dump in Babeltrace-like format.
+.TP 0.2i
+\(bu
+trees
+
+Prints out all events trees.
+.TP 0.2i
+\(bu
+trees_and_stats
+
+Prints out all events trees and statistics.
+.TP 0.2i
+\(bu
+trees_debug
+
+Prints out all events trees with extended information.
+.TP 0.2i
+\(bu
+trees_pet
+
+trees_debug with pet information.
+.TP 0.2i
+\(bu
+ptlc
+
+Dumps PTLC beacons.
+.TP 0.2i
+\(bu
+paths_per_tree
+
+Prints out paths after each tree.
+.TP 0.2i
+\(bu
+protocol_activity
+
+Provides a summary of the system usage and which apps and services that are loading different parts of the system.
+.TP 0.2i
+\(bu
+transport_latency
+
+Prints out statistics on transport latency.
+.TP 0.2i
+\(bu
+irregular_trees
+
+For debug purpose, prints out all events trees that consist of the only root event.
+.TP 0.2i
+\(bu
+event_distribution
+
+Show events distribution with a specified time window (using '--time_window X' setting). The moments of high activity are listed in the first part of the report to make it easier to detect them.
+.TP 0.2i
+\(bu
+nothing
+
+Prints out nothing.
+.RE
+.TP 
+group
+Use trees that have node with given grouping identifier. Note: this option takes effect when combined with '-g'.
+.PP
+\fISubcommands\fR
+.PP
+The tbtrace command provides subcommands to create and destroy traces, and get/set their properties.
+.PP
+The following subcommands for persistent tracing session are supported:
+.TP 
+\fBtbtrace [help]\fR
+Displays usage of the tool, including available subcommands.
+.TP 
+\fBtbtrace create\fR template session service... | component... | pid... | subsystem... | system...
+Creates a new persistent tracing session.
+.TP 
+\fBtbtrace destroy\fR [-f] session... | \fBoffline_nodes\fR
+Clean up tracing sessions and destroy. If the node is specified, all offline nodes are removed from the list of trace session's list.
+
+-f Forces tracing session to be destroyed even if the session is degraded or unknown. Also skips the question about the agreement with the multiple tracing sessions cleaning.
+.TP 
+\fBtbtrace enable\fR session...
+Enables the given tracing sessions.
+.TP 
+\fBtbtrace disable\fR session...
+Disable the given tracing sessions.
+.TP 
+\fBtbtrace start\fR session...
+Start the specified tracing session.
+.TP 
+\fBtbtrace stop\fR session...
+Stop the specified tracing session.
+.TP 
+\fBtbtrace list | ls\fR [session]
+List all configured tracing sessions or list information about the session specified.
+.TP 
+\fBtbtrace analyze\fR session [expression] [-f format] [-x filename] [-g] [-G node1,node2] [-p] [-m metric,...] [-r] [-u unit] [--no_protocol_translation] [--bwlimit=Mbit/sec] [-n] [-d seconds] [--time_window seconds] [-a host:port] [--per_component] [--ignore_filters] [--delta_threshold "time [unit]"] [--show_delta] [--no_delta]
+Analyze trace data and output it in various formats.
+
+See the "Expressions" section for more information about expressions.
+.TP 
+\fBtbtrace get\fR [property[,property...] session...|UUID...]
+Display status and configuration information for specified tracing sessions. If no tracing session is specified, all available properties will be listed.
+.TP 
+\fBtbtrace set\fR [property=value session...]
+If the property is not specified, this lists all possible properties that can be set. Otherwise it sets the property to the given value for the tracing sessions.
+
+Only some properties can be edited. See the "Properties" section for more information on what properties can be set and acceptable values.
+.TP 
+\fBtbtrace clear\fR [property[,property...] session...]
+Clears values for the given properties for the specified tracing sessions.
+.TP 
+\fBtbtrace info\fR session
+Displays detailed information about the tracing session.
+.TP 
+\fBtbtrace clean\fR session...
+Clean trace all events stored for a given tracing sessions.
+.TP 
+\fBtbtrace validate\fR session
+Validates that trace session configuration complies with the requirements to start. When a trace session is running it's possible to check that tracepoints exist for traced components.
+.PP
+The following subcommands for tracing template are supported:
+.TP 
+\fBtbtrace template create\fR template [service_class...]
+Creates a new tracing template.
+
+Specified probe patterns will be applied to specified service classes.
+
+\fIAvailable service classes:\fR
+.RS 
+.TP 
+ae
+AccessoryEngine
+.TP 
+de
+DistributionEngine
+.TP 
+etr
+ExpitTrading
+.TP 
+fe
+FlowEngine
+.TP 
+is
+Instrument
+.TP 
+ird
+InstrumentReferenceData
+.TP 
+ie
+IntegrationEngine
+.TP 
+le
+LimitEngine
+.TP 
+md
+MarketData
+.TP 
+me
+MatchingEngine
+.TP 
+mx
+Metadata
+.TP 
+op
+Order Persistence
+.TP 
+ce
+CalculationEngine
+.TP 
+qr
+QuoteRequest
+.TP 
+qs
+Quoting
+.TP 
+rfq
+RequestForQuote
+.TP 
+se
+Strategy Engine
+.TP 
+tp
+Trade Persistence
+.TP 
+tr
+Trading
+.TP 
+trd
+TradingReferenceData
+.TP 
+ve
+VisualizationEngine
+.TP 
+xe
+XRayEngine
+.TP 
+xrp
+XRayPersistence
+.RE
+.TP 
+\fBtbtrace template destroy\fR template...
+Destroys the given tracing templates.
+.TP 
+\fBtbtrace template get\fR [property[,property...] template...]
+Display configuration information for specified tracing template. If no template is specified, all available properties will be listed.
+.TP 
+\fBtbtrace template set\fR [property=value template...]
+If the property is not specified, this lists all possible properties that can be set. Otherwise it sets the property to the given value for the tracing templates.
+
+Only some properties can be edited. See the "Properties" section for more information on what properties can be set and acceptable values.
+.TP 
+\fBtbtrace template clear\fR [property[,property...] template...]
+Clears values for the given properties for the specified tracing template.
+.TP 
+\fBtbtrace template add\fR probes=value template
+Update the property with the given server or app probes for the tracing template.
+.TP 
+\fBtbtrace template remove\fR probes=value template
+Remove given server or app probes from the property for the tracing template.
+.TP 
+\fBtbtrace template list | ls\fR [template]
+Lists configured tracing template.
+
+If the optional parameter is template short name, information about the tracing template is displayed.
+.TP 
+\fBtbtrace template clone\fR original_template new_template
+Copies all properties of original tracing template to the new tracing template.
+.PP
+The following additional subcommands are supported: 
+.TP 
+\fBtbtrace [live]\fR service... | component... | pid... | subsystem... | system... template | "probes" [expression] [-f format] [-x filename] [-W [timeout]] [-v] [-g] [-G node1,node2] [-p] [-m metric,...] [-r] [-u unit] [--no_protocol_translation] [--bwlimit=Mbit/sec] [-n] [-d seconds] [--time_window seconds] [-a host:port] [--per_component] [--ignore_filters] [--delta_threshold "time [unit]"] [--show_delta] [--no_delta]
+Start a live tracing session.
+
+See the "Expressions" section for more information about expressions.
+.TP 
+\fBtbtrace execute\fR "command line" "probes" [expression] [-g] [-G node1,node2] [-p] [-m metric,...] [-r] [-u unit] [--no_protocol_translation] [-n] [-v]
+Execute and trace the binary.
+
+See the "Expressions" section for more information about expressions.
+.TP 
+\fBtbtrace probes list | ls\fR [component | pid]
+Display available LTTng tracepoints for specified process on current node. If no process is specified, all available tracepoints will be listed.
+.PP
+\fIOptions\fR
+.RS 
+.TP 
+-a host:port
+PTLC data will be sent to specified address.
+.TP 
+--bwlimit=Mbit/sec
+Allows to specify a maximum transfer rate in megabits per second (50 Mbit/sec by default) for the trace data copy when analyze data from multiple nodes.
+.TP 
+--delay, -d seconds
+Prints live statistics once the specified time interval.
+.TP 
+-f format
+Sets output data format: 'text' or 'csv'.
+.TP 
+-x filename
+Export data in given file.
+.TP 
+--group_trees, -g
+Calculate Performance Event Trees stastics for event groups basing on \(cqpet_grouping_identifier\(cq parameter value.
+
+All pet grouping identifiers are replaced with business objects names. It doesn't work if required tbricks services aren't available and environment misconfigured.
+.TP 
+--group_trees_with_sorting, -G node1,node2
+The same as \(cq-g\(cq but output is sorted by Total "node1 - node2".
+.TP 
+--metric, -m metric,...
+Calculate specified list of metrics.
+
+The supported metrics are:
+.RS 
+.TP 0.2i
+\(bu
+latency
+
+Latency in microseconds.
+.TP 0.2i
+\(bu
+ipc
+
+IPC metric, based tracepoints\(cq perf counter values.
+.TP 0.2i
+\(bu
+scpi
+
+SCPI metric, based tracepoints\(cq perf counter values.
+.TP 0.2i
+\(bu
+llc_misses
+
+LLC misses metric, based tracepoints\(cq perf counter values.
+.RE
+.TP 
+-n
+Don\(cqt translate UUIDs into symbolic names.
+.TP 
+--no_protocol_translation
+Use real protocol tracepoints name.
+.TP 
+--reverse, -r
+Build \(cqreverse\(cq Performance Event Trees.
+.TP 
+--time_window seconds
+Splits trees if the time between the two events more than the specified value. Default value is 1 second.
+.TP 
+--unit, -u unit
+Set up time calculation unit. Note that time values are rounded in standard way, i.e. values less than 0.5 are rounded to 0 and values that greater or equal than 0.5 are rounded to 1. Unit is \(cqmicros\(cq if not specified explicitly.
+
+The possible options are:
+.RS 
+.TP 0.2i
+\(bu
+sec
+
+Seconds unit.
+.TP 0.2i
+\(bu
+millis
+
+Milliseconds unit.
+.TP 0.2i
+\(bu
+micros
+
+Microseconds unit.
+.TP 0.2i
+\(bu
+nanos
+
+Nanoseconds unit.
+.RE
+.TP 
+--use_perf_counters, -p
+Add IPC, SCPI and LLC misses metrics calculation.
+.TP 
+-v
+Verbose mode.
+.TP 
+-W [timeout]
+Automatically stop the trace after the specified timeout (1 hour by default). You can specify timeout as number of hours, minutes or seconds, e.g. 1h, 30m, 10s. Value without suffix denotes number of seconds.
+.TP 
+--per_component
+Builds trees per-component.
+.TP 
+--ignore_filters
+Cancels all configured filters from tracing template.
+.TP 
+--delta_threshold "time [unit]"
+Shows time delta between two consecutive events if it is larger than "time". Default value is 1. Default time unit is seconds. Units could be: us/ms/s.
+.TP 
+--show_delta
+Shorthand for --delta_threshold "1 us".
+.TP 
+--no_delta
+Don't show time delta.
+.RE
+.SH EXAMPLE
+\fBRunning a persistent tracing session\fR
+.PP
+.nf
+\*(T<$ tbtrace create tick_to_order session1 speedcore
+Session 'session1' has been created.
+
+$ tbtrace enable session1
+Session 'session1' is enabled.
+
+$ tbtrace start session1
+Session 'session1' is now running.
+
+$tbtrace ls
+     Session      Status         Template               Entities
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    session1      Running      tick_to_order            speedcore
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+
+$ tbtrace stop session1
+Session 'session1' is stopped.
+
+$ tbtrace analyze session1
+Initialization, please wait....
+
+Analyzing LTTng data...
+tbctf /opt/tbricks/perf_admin_sys/logs/traces/2016\-06\-23/99da3eee\-392e\-11e6\-9d80\-99eb55ecda04\-1
+Clean up time window: 30 seconds.
+Open CTF folder: /opt/tbricks/perf_admin_sys/logs/traces/2016\-06\-23/99da3eee\-392e\-11e6\-9d80\-99eb55ecda04\-1/ust/uid/750/64\-bit/
+Events statistics: total 506, suitable 506, skipped 0.
+
+Performance Event Trees for grouping id <empty>
+(Latency metric)
+
+========================================================================================================================================
+                                                   #        50%        80%         95%         99%       99.9%   > 2 x 80%           SUM
+========================================================================================================================================
+md:packet_received \- tr:send_request             170      86 \(mcs      94 \(mcs      107 \(mcs      129 \(mcs      196 \(mcs        0.6%         15 ms
+========================================================================================================================================
+Path: md:packet_received \- tr:send_request       170      86 \(mcs      94 \(mcs      107 \(mcs      129 \(mcs      196 \(mcs        0.6%         15 ms
+========================================================================================================================================
+            \*(T>
+.fi
+.PP
+\fBRunning a live tracing session\fR
+.PP
+.nf
+\*(T<$ tbtrace speedcore tick_to_order
+Initialization, please wait....
+Session 'session_20160623\-144742.temp' has been created.
+
+=======================
+Press Ctrl+C to stop tracing....
+^C
+Initialization, please wait....
+
+Analyzing LTTng data...
+tbctf /opt/tbricks/perf_admin_sys/logs/traces/2016\-06\-23/ad712adc\-3940\-11e6\-8a50\-74acd397cea8\-1
+Clean up time window: 30 seconds.
+Open CTF folder: /opt/tbricks/perf_admin_sys/logs/traces/2016\-06\-23/ad712adc\-3940\-11e6\-8a50\-74acd397cea8\-1/ust/uid/750/64\-bit/
+Events statistics: total 1119, suitable 1119, skipped 0.
+
+Performance Event Trees for grouping id <empty>
+(Latency metric)
+
+========================================================================================================================================
+                                                   #        50%        80%         95%         99%       99.9%   > 2 x 80%           SUM
+========================================================================================================================================
+md:packet_received \- tr:send_request             375      85 \(mcs      93 \(mcs      105 \(mcs      144 \(mcs      188 \(mcs        0.3%         33 ms
+========================================================================================================================================
+Path: md:packet_received \- tr:send_request       375      85 \(mcs      93 \(mcs      105 \(mcs      144 \(mcs      188 \(mcs        0.3%         33 ms
+========================================================================================================================================
+            \*(T>
+.fi

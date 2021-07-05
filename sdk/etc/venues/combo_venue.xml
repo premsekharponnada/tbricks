@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SyntheticBasketVenue" type="application/x-venue+xml">
+  <venues>
+      <venue name="Synthetic basket" shortname="Basket" identifier="c0c78852-efd6-11de-9fb8-dfdb5824b38d" description="Synthetic market data venue providing prices for off-market combinations." app_id="31dabda5-b432-11e0-9fa6-3c870c3e9924">
+          <identifier>
+              <key name="symbol" tag="55"/>
+          </identifier>
+      </venue>
+  </venues>
+
+  <capabilities>
+      <restriction message="order">
+          <field name="participation policy"/>
+          <field name="validity type" value="immediate on auction"/>
+          <field name="validity type" value="last auction"/>
+          <field name="price improvement not allowed"/>
+      </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+  </capabilities>
+
+  <documentation>
+      Venue identifier resource for Synthetic basket Tbricks venue.
+  </documentation>
+</resource>

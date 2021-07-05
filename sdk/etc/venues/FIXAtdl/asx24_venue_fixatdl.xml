@@ -1,0 +1,25 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="6212a0d4-038e-4053-b779-fadd68905aa9">
+  <Strategy uiRep="Tbricks" wireValue="Tbricks" version="1.0" name="Tbricks">
+    <Parameter xsi:type="String_t" name="asx24.key.Account">
+      <Description>Account</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="asx24.key.AccountType">
+      <Description>AccountType</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.orc-group.sd.PartyId">
+      <Description>PartyID</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f5adc6-a7cf-11e5-b809-3c870c3e9924">
+        <Description>Transition type</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:DropDownList_t" label="Transition type" ID="TransitionType" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TransitionType" />
+        <lay:Control xsi:type="lay:TextField_t" label="Account" ID="Account" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="asx24.key.Account" />
+        <lay:Control xsi:type="lay:TextField_t" label="AccountType" ID="AccountType" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="asx24.key.AccountType" />
+        <lay:Control xsi:type="lay:TextField_t" label="PartyID" ID="PartyID" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.orc-group.sd.PartyId" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

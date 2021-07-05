@@ -1,0 +1,135 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="aaf073c0-0689-11ea-bda0-102630cdc390">
+  <Strategy uiRep="ASX Trade" wireValue="ASX Trade" version="1.0" name="ASX Trade">
+    <Parameter xsi:type="String_t" name="com.asx.ex_client">
+      <Description>ExClient. 16 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.asx.exchange_info">
+      <Description>ExchangeInfo. 32 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.asx.customer_info">
+      <Description>CustomerInfo. 32 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.asx.giveup_member">
+      <Description>GiveUpMember. 7 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="DisclosedVolume" tbricks_property_identifier="bc9e0d54-6779-4675-aa9c-6e769c30529e">
+      <Description>Disclosed volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f5adc6-a7cf-11e5-b809-3c870c3e9924">
+      <Description>Transition type</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="PegInstruction" tbricks_property_identifier="ddb4052f-052c-11e9-8c87-ae529049f1f1">
+      <Description>Peg Instruction</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="ExecutionPolicy" tbricks_property_identifier="bb1e5eae-e1a3-11e7-b809-3c870c3e9924">
+      <Description>Execution Policy</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="ParticipationPolicy" tbricks_property_identifier="1bf53f2f-530a-11e6-9e47-f1bbe9ebb3a6">
+      <Description>Participation policy</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="MinimumAcceptableVolume" tbricks_property_identifier="4aa0eed0-e1e1-11e5-9e24-9049f1f1bbe9">
+      <Description>Minimum acceptable volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="com.asx.crossing_key" minValue="0" maxValue="65535">
+      <Description>UCP key. 0 to 65535</Description>
+    </Parameter>
+    <Parameter xsi:type="Char_t" name="com.asx.capacity_of_participant">
+      <Description>Capacity of the participant.</Description>
+        <EnumPair enumID="e_NotSet" wireValue="{NULL}"/>
+        <EnumPair enumID="Agency" wireValue="A"/>
+        <EnumPair enumID="Principal" wireValue="P"/>
+        <EnumPair enumID="Mixed Agency and Principal." wireValue="M"/>
+    </Parameter>
+    <Parameter xsi:type="Char_t" name="com.asx.directed_wholesale">
+      <Description>Directed wholesale indicator for agency orders and transactions.</Description>
+        <EnumPair enumID="e_NotSet" wireValue="{NULL}"/>
+        <EnumPair enumID="True" wireValue="Y"/>
+        <EnumPair enumID="False" wireValue="N"/>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.asx.intermediary_id">
+      <Description>Intermediary identifier for agency orders and transactions. 10 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.asx.order_origin">
+      <Description>Origin or order information for agency orders and transactions. 20 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="Char_t" name="com.asx.mid_tick">
+      <Description>Specifies whether the limit price should be a half-tick more aggressive (i.e. improved).</Description>
+        <EnumPair enumID="e_NotSet" wireValue="{NULL}"/>
+        <EnumPair enumID="MidTickOn" wireValue="1"/>
+        <EnumPair enumID="MidTickOff" wireValue="2"/>
+        <EnumPair enumID="PermittedPricesInAdditionToMidPoint" wireValue="3"/>
+        <EnumPair enumID="PermittedPricesInAdditionToMidPointMidTickOn" wireValue="4"/>
+        <EnumPair enumID="AnyPriceBlockOrder" wireValue="5"/>
+        <EnumPair enumID="AnyPriceBlockOrderMidTickOn" wireValue="6"/>
+    </Parameter>
+    <Parameter xsi:type="Char_t" name="com.asx.preference_only">
+      <Description>A Preference and Kill order.</Description>
+        <EnumPair enumID="e_NotSet" wireValue="{NULL}"/>
+        <EnumPair enumID="NotDefined" wireValue="0"/>
+        <EnumPair enumID="PreferenceAndKillYes" wireValue="1"/>
+        <EnumPair enumID="PreferenceAndKillNo" wireValue="2"/>
+    </Parameter>
+    <Parameter xsi:type="Char_t" name="com.asx.single_fill_minimum_quantity">
+      <Description>Whether the minimum acceptable quantity must be satisfied in a single fill or not.</Description>
+        <EnumPair enumID="e_NotSet" wireValue="{NULL}"/>
+        <EnumPair enumID="NotDefined" wireValue="0"/>
+        <EnumPair enumID="MAQMustSingleFill" wireValue="1"/>
+        <EnumPair enumID="MAQMayMultipleFills" wireValue="2"/>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="ASX:" orientation="VERTICAL">
+        <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+          <lay:Control xsi:type="lay:TextField_t" label="Ex Client:" ID="ExClient" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.ex_client" />
+          <lay:Control xsi:type="lay:TextField_t" label="Exchange Info:" ID="ExchangeInfo" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.exchange_info" />
+          <lay:Control xsi:type="lay:TextField_t" label="Customer Info:" ID="CustomerInfo" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.customer_info" />
+          <lay:Control xsi:type="lay:TextField_t" label="Give-Up Member:" ID="GiveUpMember" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.giveup_member" />
+          <lay:Control xsi:type="lay:SingleSpinner_t" label="Disclosed volume:" ID="DisclosedVolume" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="DisclosedVolume" />
+          <lay:Control xsi:type="lay:DropDownList_t" label="Transition type:" ID="TransitionType" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TransitionType" />
+          <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+          <lay:Control xsi:type="lay:DropDownList_t" label="Peg Instruction" ID="PegInstruction" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PegInstruction" />
+          <lay:Control xsi:type="lay:DropDownList_t" label="Execution Policy" ID="ExecutionPolicy" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="ExecutionPolicy" />
+          <lay:Control xsi:type="lay:SingleSpinner_t" label="UCP Key (0-65535):" ID="UCPKey" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.crossing_key" />
+        </lay:StrategyPanel>
+        <lay:StrategyPanel title="Regulatory data:" orientation="VERTICAL">
+          <lay:Control xsi:type="lay:DropDownList_t" label="Capacity of the participant:" ID="CapacityOfParticipant" labelLocation="Top" labelWidth="150" controlWidth="150" parameterRef="com.asx.capacity_of_participant">
+            <lay:ListItem enumID="Agency" uiRep="Agency" />
+            <lay:ListItem enumID="Principal" uiRep="Principal" />
+            <lay:ListItem enumID="Mixed Agency and Principal" uiRep="Mixed Agency and Principal" />
+          </lay:Control>
+          <lay:Control xsi:type="lay:DropDownList_t" label="Directed wholesale indicator:" ID="DirectedWholesale" labelLocation="Top" labelWidth="150" controlWidth="150" parameterRef="com.asx.directed_wholesale">
+            <lay:ListItem enumID="True" uiRep="True" />
+            <lay:ListItem enumID="False" uiRep="False" />
+          </lay:Control>
+          <lay:Control xsi:type="lay:TextField_t" label="Intermediary identifier:" ID="IntermediaryIdentifier" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.intermediary_id" />
+          <lay:Control xsi:type="lay:TextField_t" label="Origin or order:" ID="OrderOrigin" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.asx.order_origin" />
+        </lay:StrategyPanel>
+        <lay:StrategyPanel title="Centre point:" orientation="VERTICAL">
+          <lay:Control xsi:type="lay:SingleSpinner_t" label="MAQ of Centre Point Block order:" ID="MinimumAcceptableVolume" labelLocation="Top" labelWidth="160" controlWidth="150" parameterRef="MinimumAcceptableVolume" />
+          <lay:Control xsi:type="lay:DropDownList_t" label="Mid tick attribute:" ID="MidTickattribute" labelLocation="Top" labelWidth="120" controlWidth="150" parameterRef="com.asx.mid_tick">
+            <lay:ListItem enumID="MidTickOn" uiRep="MidTickOn" />
+            <lay:ListItem enumID="MidTickOff" uiRep="MidTickOff" />
+            <lay:ListItem enumID="PermittedPricesInAdditionToMidPoint" uiRep="PermittedPricesInAdditionToMidPoint" />
+            <lay:ListItem enumID="PermittedPricesInAdditionToMidPointMidTickOn" uiRep="PermittedPricesInAdditionToMidPointMidTickOn" />
+            <lay:ListItem enumID="AnyPriceBlockOrder" uiRep="AnyPriceBlockOrder" />
+            <lay:ListItem enumID="AnyPriceBlockOrderMidTickOn" uiRep="AnyPriceBlockOrderMidTickOn" />
+          </lay:Control>
+          <lay:Control xsi:type="lay:DropDownList_t" label="Participation policy" ID="ParticipationPolicy" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="ParticipationPolicy" />
+          <lay:Control xsi:type="lay:DropDownList_t" label="A Preference and Kill order:" ID="PreferenceAndKill" labelLocation="Top" labelWidth="160" controlWidth="150" parameterRef="com.asx.preference_only">
+            <lay:ListItem enumID="NotDefined" uiRep="NotDefined" />
+            <lay:ListItem enumID="PreferenceAndKillYes" uiRep="PreferenceAndKillYes" />
+            <lay:ListItem enumID="PreferenceAndKillNo" uiRep="PreferenceAndKillNo" />
+          </lay:Control>
+          <lay:Control xsi:type="lay:DropDownList_t" label="Single Fill Minimum quantity:" ID="SingleFillMinimumQuantity" labelLocation="Top" labelWidth="150" controlWidth="150" parameterRef="com.asx.single_fill_minimum_quantity">
+            <lay:ListItem enumID="NotDefined" uiRep="NotDefined" />
+            <lay:ListItem enumID="MAQMustSingleFill" uiRep="MAQMustSingleFill" />
+            <lay:ListItem enumID="MAQMayMultipleFills" uiRep="MAQMayMultipleFills" />
+          </lay:Control>
+        </lay:StrategyPanel>
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

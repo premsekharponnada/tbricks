@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="ZSE venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="zse" shortname="ZSE" identifier="2c226012-c696-11e5-81c0-73a05651e6f2" description="Zagreb Stock Exchange">
+      <identifier>
+        <key name="sec_code"/>
+        <key name="board_id"/>
+      </identifier>
+    </venue>
+  </venues>
+
+  <capabilities>
+    <restriction message="order">
+      <field name="execution policy"/>
+      <field name="participation policy"/>
+      <field name="transition type"/>
+      <field name="validity type" value="until elapsed time"/>
+      <field name="validity type" value="immediate on auction"/>
+      <field name="validity type" value="immediate on close"/>
+      <field name="validity type" value="immediate on open"/>
+      <field name="validity type" value="last auction"/>
+      <field name="price improvement not allowed"/>
+      <field name="disclosed volume"/>
+    </restriction>
+    <restriction message="order modify">
+        <field name="total volume"/>
+        <field name="disclosed volume"/>
+        <field name="price" value="empty"/>
+    </restriction>
+  </capabilities>
+
+  <documentation>
+       Venue identifier resource describing the Zagreb Stock Exchange.
+  </documentation>
+</resource>

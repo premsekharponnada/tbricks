@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="MTA venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Borsa Italiana Equities" shortname="Borsa Italiana Equities" identifier="c7692cac-6fcd-11df-92c0-39f6a5f25e2a" description="Borsa Italiana Equities">
+            <identifier>
+                <key name="security_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="price" value="empty"/>
+            <field name="retain on disconnect"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Borsa Italiana Cash Equity (Millennium) venue.
+    </documentation>
+</resource>

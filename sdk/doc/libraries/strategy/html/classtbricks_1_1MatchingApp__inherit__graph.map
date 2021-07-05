@@ -1,0 +1,9 @@
+<map id="MatchingApp" name="MatchingApp">
+<area shape="rect" id="node1" title=" " alt="" coords="220,160,319,189"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1Plugin.html" title=" " alt="" coords="53,83,112,112"/>
+<area shape="rect" id="node4" href="$classtbricks_1_1IStrategyEventHandler.html" title=" " alt="" coords="5,5,160,35"/>
+<area shape="rect" id="node6" href="$classtbricks_1_1IMarketDataProvider.html" title=" " alt="" coords="136,83,277,112"/>
+<area shape="rect" id="node8" href="$classtbricks_1_1Trading.html" title=" " alt="" coords="301,83,365,112"/>
+<area shape="rect" id="node10" href="$classtbricks_1_1ITrading.html" title=" " alt="" coords="299,5,368,35"/>
+<area shape="rect" id="node12" href="$classtbricks_1_1RequestForQuoteProvider.html" title=" " alt="" coords="389,83,563,112"/>
+</map>

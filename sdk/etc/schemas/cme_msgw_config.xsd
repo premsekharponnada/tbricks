@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="configuration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="marketsegment" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="protocol" type="xs:string"/>
+                            <xs:element name="primary-host-ip" type="xs:string"/>
+                            <xs:element name="backup-host-ip" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:int"/>
+                        <xs:attribute name="label" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="environment" type="xs:string"/>
+            <xs:attribute name="updated" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

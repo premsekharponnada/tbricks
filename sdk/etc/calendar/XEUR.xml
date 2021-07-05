@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="XEUR" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/>
+        <day date="05-01" valid="no"/>
+        <!-- October 3 is the national day but still a trading day. -->
+        <day date="12-24" valid="no"/>
+        <day date="12-25" valid="no"/>
+        <day date="12-26" valid="no"/>
+        <day date="12-31" valid="no"/>
+    </days>
+
+    <days year="2013">
+        <day date="03-29" valid="no"/> <!-- Good Friday -->
+        <day date="04-01" valid="no"/> <!-- Easter Monday -->
+        <day date="05-09" valid="yes"/> <!-- Ascension day -->
+        <day date="05-20" valid="yes"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2014">
+        <day date="04-18" valid="no"/> <!-- Good Friday -->
+        <day date="04-21" valid="no"/> <!-- Easter Monday -->
+        <day date="05-29" valid="yes"/> <!-- Ascension day -->
+        <day date="06-09" valid="yes"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2015">
+        <day date="04-03" valid="no"/> <!-- Good Friday -->
+        <day date="04-06" valid="no"/> <!-- Easter Monday -->
+        <day date="05-14" valid="yes"/> <!-- Ascension day -->
+        <day date="05-25" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2016">
+        <day date="03-25" valid="no"/> <!-- Good Friday -->
+        <day date="03-28" valid="no"/> <!-- Easter Monday -->
+        <day date="05-05" valid="yes"/> <!-- Ascension day -->
+        <day date="05-16" valid="yes"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2017">
+        <day date="04-14" valid="no"/> <!-- Good Friday -->
+        <day date="04-17" valid="no"/> <!-- Easter Monday -->
+        <day date="05-25" valid="no"/> <!-- Ascension day -->
+        <day date="06-05" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2018">
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="04-02" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2019">
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <documentation>
+        Calendar defining trading-days for XEUR (Eurex).
+        Source http://www.eurexchange.com/exchange-en/trading/trading-calendar/holiday-regulations
+    </documentation>
+</resource>

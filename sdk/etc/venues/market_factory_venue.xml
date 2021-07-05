@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="MarketFactory venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="MarketFactory" shortname="MarketFactory" identifier="d96f029e-a7a6-11e9-9260-811ff1ee63c7" description="MarketFactory SBE">
+            <identifier>
+                <key name="security_id"/>
+                <key name="venue_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+            <field name="retain on disconnect"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue resource for Tbricks internal market place.
+    </documentation>
+</resource>

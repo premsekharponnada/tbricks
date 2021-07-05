@@ -1,0 +1,29 @@
+<map id="TradeFilterCondition" name="TradeFilterCondition">
+<area shape="rect" id="node1" title=" " alt="" coords="283,651,421,680"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1TradeByAncestorFilter.html" title=" " alt="" coords="497,5,649,35"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1TradeByBusinessDateFilter.html" title=" " alt="" coords="483,59,664,88"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1TradeByCounterCurrencyFilter.html" title=" " alt="" coords="475,112,672,141"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1TradeByCreatedDateTimeFilter.html" title=" " alt="" coords="472,165,675,195"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1TradeByExchangeCreatedDateTimeFilter.html" title=" " alt="" coords="472,218,675,265"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1TradeByExtraDataFilter.html" title=" " alt="" coords="495,288,652,317"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1TradeByIdentifierFilter.html" title=" " alt="" coords="499,341,648,371"/>
+<area shape="rect" id="node21" href="$classtbricks_1_1TradeByInstrumentIdentifierFilter.html" title=" " alt="" coords="483,394,664,441"/>
+<area shape="rect" id="node23" href="$classtbricks_1_1TradeByMICFilter.html" title=" " alt="" coords="511,464,636,493"/>
+<area shape="rect" id="node25" href="$classtbricks_1_1TradeByModifiedDateTimeFilter.html" title=" " alt="" coords="471,517,676,547"/>
+<area shape="rect" id="node27" href="$classtbricks_1_1TradeByOrderIdentifierFilter.html" title=" " alt="" coords="483,571,664,600"/>
+<area shape="rect" id="node29" href="$classtbricks_1_1TradeByOwnerFilter.html" title=" " alt="" coords="504,624,643,653"/>
+<area shape="rect" id="node31" href="$classtbricks_1_1TradeByParameterFilter.html" title=" " alt="" coords="493,677,653,707"/>
+<area shape="rect" id="node33" href="$classtbricks_1_1TradeByParentFilter.html" title=" " alt="" coords="504,731,643,760"/>
+<area shape="rect" id="node35" href="$classtbricks_1_1TradeByPortfolioFilter.html" title=" " alt="" coords="500,784,647,813"/>
+<area shape="rect" id="node37" href="$classtbricks_1_1TradeByPositionFilter.html" title=" " alt="" coords="500,837,647,867"/>
+<area shape="rect" id="node39" href="$classtbricks_1_1TradeByPriceFilter.html" title=" " alt="" coords="508,891,639,920"/>
+<area shape="rect" id="node41" href="$classtbricks_1_1TradeByRootFilter.html" title=" " alt="" coords="509,944,637,973"/>
+<area shape="rect" id="node43" href="$classtbricks_1_1TradeByTradingServiceTradeIdentifierFilter.html" title=" " alt="" coords="479,997,668,1043"/>
+<area shape="rect" id="node45" href="$classtbricks_1_1TradeByTypeFilter.html" title=" " alt="" coords="509,1067,637,1096"/>
+<area shape="rect" id="node47" href="$classtbricks_1_1TradeByVenueFilter.html" title=" " alt="" coords="505,1120,641,1149"/>
+<area shape="rect" id="node49" href="$classtbricks_1_1TradeByVolumeFilter.html" title=" " alt="" coords="501,1173,645,1203"/>
+<area shape="rect" id="node51" href="$classtbricks_1_1TradeDeletedFilter.html" title=" " alt="" coords="509,1227,637,1256"/>
+<area shape="rect" id="node53" href="$classtbricks_1_1TradeModifiedSinceCreationFilter.html" title=" " alt="" coords="480,1279,667,1326"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1FilterCondition.html" title=" " alt="" coords="128,651,235,680"/>
+<area shape="rect" id="node4" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,651,79,680"/>
+</map>

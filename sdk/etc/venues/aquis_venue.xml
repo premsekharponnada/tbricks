@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Aquis venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Aquis" shortname="Aquis" identifier="2b7eb726-7275-11e9-9960-6725d0ec5ff0" description="Aquis">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="target_book" tag="9303"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="price" value="empty"/>
+            <field name="execution policy"/>
+            <field name="minimum acceptable fill volume"/>
+            <field name="participation policy"/>
+            <field name="price improvement not allowed"/>
+            <field name="stop price"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until elapsed time"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="price" value="empty"/>
+            <field name="stop price"/>
+            <field name="validity type"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Aquis venue.
+    </documentation>
+</resource>

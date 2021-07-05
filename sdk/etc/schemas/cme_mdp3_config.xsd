@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="configuration">
+    <xs:complexType>
+    <xs:sequence>
+
+        <xs:element name="channel" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element name="products" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                <xs:sequence>                
+                    <xs:element name="group" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                    <xs:attribute name="code" type="xs:string" use="required"/>
+                    </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="code" type="xs:string" use="required"/>
+                </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+            
+            <xs:element name="connections" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+            <xs:sequence>
+                <xs:element name="connection" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                <xs:sequence>                
+                    <xs:element name="type" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                    <xs:sequence>
+                    </xs:sequence>
+                    <xs:attribute name="feed-type" type="xs:string" use="required"/>
+                    </xs:complexType>
+                    </xs:element>
+                    <xs:element name="protocol" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="host-ip" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="port" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="feed" minOccurs="1" maxOccurs="1"/>
+                
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            </xs:complexType>
+            </xs:element>                            
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="label" type="xs:string" use="required"/>
+        </xs:complexType>
+        </xs:element>
+                                
+    </xs:sequence>
+    <xs:attribute name="environment" type="xs:string" use="optional"/>
+    <xs:attribute name="updated" type="xs:string" use="optional"/>
+    </xs:complexType>
+    </xs:element> 
+ </xs:schema>
+

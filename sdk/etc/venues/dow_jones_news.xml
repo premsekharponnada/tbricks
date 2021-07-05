@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Dow Jones News venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Dow Jones News"
+               shortname="Dow Jones News"
+               identifier="b3cccc30-2d90-11e6-82d0-65a845d82318"
+               description="Dow Jones News">
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Dow Jones News feed.
+    </documentation>
+</resource>

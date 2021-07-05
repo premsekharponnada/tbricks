@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="FI" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/>
+        <day date="01-06" valid="no"/>
+        <day date="05-01" valid="no"/>
+        <day date="12-06" valid="no"/>
+        <day date="12-24" valid="no"/>
+        <day date="12-25" valid="no"/>
+        <day date="12-26" valid="no"/>
+    </days>
+                        
+    <days year="2012">
+        <day date="04-06" valid="no"/> <!-- Good Friday -->
+        <day date="04-09" valid="no"/> <!-- Easter Monday -->
+        <day date="05-17" valid="no"/> <!-- Ascension Day -->
+        <day date="06-22" valid="no"/> <!-- Midsummers Eve -->
+    </days>
+
+    <days year="2013">
+        <day date="03-29" valid="no"/> <!-- Good Friday -->
+        <day date="04-01" valid="no"/> <!-- Easter Monday -->
+        <day date="05-09" valid="no"/> <!-- Ascension Day -->
+        <day date="06-21" valid="no"/> <!-- Midsummers Eve -->
+    </days>
+
+    <days year="2014">
+        <day date="04-18" valid="no"/> <!-- Good Friday -->
+        <day date="04-21" valid="no"/> <!-- Easter Monday -->
+        <day date="05-29" valid="no"/> <!-- Ascension Day -->
+        <day date="06-20" valid="no"/> <!-- Midsummers Eve -->
+    </days>
+
+    <days year="2015">
+        <day date="04-03" valid="no"/> <!-- Good Friday -->
+        <day date="04-06" valid="no"/> <!-- Easter Monday -->
+        <day date="05-14" valid="no"/> <!-- Ascension day -->
+        <day date="06-19" valid="no"/> <!-- Midsummers Eve -->
+    </days>
+                                                
+    <days year="2016">
+        <day date="03-25" valid="no"/> <!-- Good Friday -->
+        <day date="03-28" valid="no"/> <!-- Easter Monday -->
+        <day date="05-05" valid="no"/> <!-- Ascension day -->
+        <day date="06-24" valid="no"/> <!-- Midsummer Eve -->
+    </days>
+
+    <days year="2017">
+        <day date="04-14" valid="no"/> <!-- Good Friday -->
+        <day date="04-17" valid="no"/> <!-- Easter Monday -->
+        <day date="05-25" valid="no"/> <!-- Ascension day -->
+        <day date="06-23" valid="no"/> <!-- Midsummer Eve -->
+    </days>
+
+    <days year="2018">
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="04-02" valid="no"/> <!-- Easter Monday -->
+        <day date="05-10" valid="no"/> <!-- Ascension day -->
+        <day date="06-22" valid="no"/> <!-- Midsummer Eve -->
+    </days>
+
+    <days year="2019">
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-30" valid="no"/> <!-- Ascension day -->
+        <day date="06-21" valid="no"/> <!-- Midsummer Eve -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-21" valid="no"/> <!-- Ascension day -->
+        <day date="06-19" valid="no"/> <!-- Midsummer Eve -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for FI (Finland).
+        Source https://www.timeanddate.com/holidays/finland/
+    </documentation>
+</resource>

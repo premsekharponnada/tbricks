@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Borsa Istanbul Equities venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Borsa Istanbul Equities" shortname="Borsa Istanbul Equities" identifier="13dd71b2-6067-11e5-abd0-cd0656f53e45" description="Borsa Istanbul Equities">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Borsa Istanbul Equities venue.
+    </documentation>
+</resource>

@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Spread tables" type="application/x-spread-table+xml">
+    <spreads>
+        <!--
+             ============  XSTO - SEK =============
+        -->
+        <!--  Spread table for Options for Regular Market Makers -->
+        <spread group="e056ffb0-641d-11e0-ab03-302000b52331" default="1" type="absolute">
+            <price bid="2"   spread="1.5" type="absolute"/>
+            <price bid="10"  spread="3" type="absolute"/>
+            <price bid="20"  spread="4" type="absolute"/>
+            <price bid="30"  spread="5" type="absolute"/>
+            <price bid="200" spread="10" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="f7b593ee-65d8-11e0-9aa2-3fc5ee8841f3" default="2" type="absolute">
+            <price bid="2"   spread="3" type="absolute"/>
+            <price bid="10"  spread="6" type="absolute"/>
+            <price bid="20"  spread="8" type="absolute"/>
+            <price bid="30"  spread="10" type="absolute"/>
+            <price bid="200" spread="20" type="absolute"/>
+        </spread>
+-->
+        <!--  Spread table for Futures for Regular Market Makers -->
+        <spread group="e0c36f92-641d-11e0-9f0c-34b33204570d" default="1.5" type="absolute">
+            <price bid="100" spread="3" type="absolute"/>
+            <price bid="200" spread="5" type="absolute"/>
+        </spread>
+        <!--  Spread table for Futures for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="fc1af3d4-65d8-11e0-92ca-4c55cf28bf18" default="6" type="absolute">
+            <price bid="200" spread="10" type="absolute"/>
+        </spread>
+-->
+
+        <!--  Spread table for Options for Advanced Market Makers -->
+        <spread group="7b884d1e-6f30-11e0-a555-4816d135f0ed" default="0.8" type="absolute">
+            <price bid="0" period="months" maturity="0" spread="0.8" type="absolute"/>
+            <price bid="2" period="months" maturity="0"   spread="1" type="absolute"/>
+            <price bid="5" period="months" maturity="0"   spread="1.25" type="absolute"/>
+            <price bid="10" period="months" maturity="0"  spread="2" type="absolute"/>
+            <price bid="15" period="months" maturity="0"  spread="2.5" type="absolute"/>
+            <price bid="20" period="months" maturity="0"  spread="3.25" type="absolute"/>
+            <price bid="30" period="months" maturity="0"  spread="4" type="absolute"/>
+            <price bid="200" period="months" maturity="0" spread="8" type="absolute"/>
+            <price bid="0" period="months" maturity="3" spread="1.2" type="absolute"/>
+            <price bid="2" period="months" maturity="3"   spread="1.5" type="absolute"/>
+            <price bid="5" period="months" maturity="3"   spread="2" type="absolute"/>
+            <price bid="10" period="months" maturity="3"  spread="3" type="absolute"/>
+            <price bid="15" period="months" maturity="3"  spread="4" type="absolute"/>
+            <price bid="20" period="months" maturity="3"  spread="5" type="absolute"/>
+            <price bid="30" period="months" maturity="3"  spread="6" type="absolute"/>
+            <price bid="200" period="months" maturity="3" spread="12" type="absolute"/>
+        </spread>
+
+        <!--  Spread table for Options for Advanced Market Makers in 3 months -->
+        <spread group="01faee3a-65d9-11e0-ab0e-cb74a4106565" default="1.2" type="absolute">
+            <price bid="2"   spread="1.5" type="absolute"/>
+            <price bid="5"   spread="2" type="absolute"/>
+            <price bid="10"  spread="3" type="absolute"/>
+            <price bid="15"  spread="4" type="absolute"/>
+            <price bid="20"  spread="5" type="absolute"/>
+            <price bid="30"  spread="6" type="absolute"/>
+            <price bid="200" spread="12" type="absolute"/>
+        </spread>
+
+        <!--  Spread table for Futures for Advanced Market Makers -->
+        <spread group="94fa5a58-6f30-11e0-9052-c04d30a283e2" default="1.25" type="absolute">
+            <price bid="0" period="months" maturity="0" spread="1.25" type="absolute"/>
+            <price bid="100" period="months" maturity="0" spread="2.5" type="absolute"/>
+            <price bid="200" period="months" maturity="0" spread="4" type="absolute"/>
+            <price bid="0" period="months" maturity="3" spread="2.5" type="absolute"/>
+            <price bid="100" period="months" maturity="3" spread="5" type="absolute"/>
+            <price bid="200" period="months" maturity="3" spread="8" type="absolute"/>
+        </spread>
+
+        <!--  Spread table for Futures for Advanced Market Makers in 3 months -->
+        <spread group="0926def8-65d9-11e0-9e0b-1f0b7c344080" default="2.5" type="absolute">
+            <price bid="100" spread="5" type="absolute"/>
+            <price bid="200" spread="8" type="absolute"/>
+        </spread>
+
+
+        <!--  
+             ============  XSTO - NOK =============
+        -->
+        <!--  Spread table for Options for Regular Market Makers -->
+        <spread group="ea0c6f98-723e-11e0-84d4-55d3dd17e6c6" default="0.75" type="absolute">
+            <price bid="2"   spread="1.5" type="absolute"/>
+            <price bid="10"  spread="2.25" type="absolute"/>
+            <price bid="20"  spread="3" type="absolute"/>
+            <price bid="30"  spread="3.75" type="absolute"/>
+        </spread>
+
+        <!--  Spread table for Options for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="ea6bec70-723e-11e0-96b8-55d690d860ba" default="1.5" type="absolute">
+            <price bid="2"   spread="3" type="absolute"/>
+            <price bid="10"  spread="4.5" type="absolute"/>
+            <price bid="20"  spread="6" type="absolute"/>
+            <price bid="30"  spread="7.5" type="absolute"/>
+        </spread>
+-->
+        <!--  Spread table for Stock Forwards for Regular Market Makers -->
+        <spread group="eac2a5e2-723e-11e0-b96b-2d1af98297fc" default="1.5" type="absolute">
+            <price bid="100" spread="3" type="absolute"/>
+            <price bid="200" spread="4" type="absolute"/>
+        </spread>
+
+        <!--  Spread table for Stock Forwards for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="eb1cec14-723e-11e0-9760-1af3ecc71fa1" default="6" type="absolute">
+            <price bid="200" spread="8" type="absolute"/>
+        </spread>
+-->
+        <!--  Spread table for Index Futures for Regular Market Makers -->
+        <spread group="eb728016-723e-11e0-8618-b3563e94f71e" default="0.75" type="absolute">
+            <price bid="150" spread="1.1" type="absolute"/>
+            <price bid="350" spread="1.6" type="absolute"/>
+            <price bid="500" spread="2.5" type="absolute"/>
+            <price bid="700" spread="3" type="absolute"/>
+            <price bid="850" spread="3.75" type="absolute"/>
+            <price bid="1000" spread="5" type="absolute"/>
+        </spread>
+        <!--  Spread table for Index Futures for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="ebc7df5c-723e-11e0-9566-1d9736b8fb8d" default="1.5" type="absolute">
+            <price bid="150" spread="2.2" type="absolute"/>
+            <price bid="350" spread="3.2" type="absolute"/>
+            <price bid="500" spread="5" type="absolute"/>
+            <price bid="700" spread="6" type="absolute"/>
+            <price bid="850" spread="7.5" type="absolute"/>
+            <price bid="1000" spread="10" type="absolute"/>
+        </spread>
+-->
+
+        <!--  Spread table for Options for Advanced Market Makers -->
+        <spread group="3cfd8c0e-7240-11e0-99b0-cb3934eebd20" default="0.6" type="absolute">
+            <price bid="2"   spread="1.25" type="absolute"/>
+            <price bid="10"  spread="1.75" type="absolute"/>
+            <price bid="20"  spread="2.5" type="absolute"/>
+            <price bid="30"  spread="3" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options for Advanced Market Makers in 3 months -->
+        <spread group="3d5bf622-7240-11e0-b460-ca934e71ff3f" default="1.2" type="absolute">
+            <price bid="2"   spread="2.5" type="absolute"/>
+            <price bid="10"  spread="3.5" type="absolute"/>
+            <price bid="20"  spread="5" type="absolute"/>
+            <price bid="30"  spread="6" type="absolute"/>
+        </spread>
+        <!--  Spread table for Stock Forwards for Advanced Market Makers -->
+        <spread group="3dbc69f8-7240-11e0-8d04-36bd292206a3" default="1.5" type="absolute">
+            <price bid="100" spread="2.5" type="absolute"/>
+            <price bid="200" spread="3.5" type="absolute"/>
+        </spread>
+        <!--  Spread table for Stock Forwards for Advanced Market Makers in 3 months -->
+        <spread group="3e1df9a2-7240-11e0-ad8b-2e3978e26cd0" default="3" type="absolute">
+            <price bid="100" spread="5" type="absolute"/>
+            <price bid="200" spread="7" type="absolute"/>
+        </spread>
+        <!--  Spread table for Index Futures for Advanced Market Makers -->
+        <spread group="3e685b8c-7240-11e0-bef7-50b10aeb869f" default="0.6" type="absolute">
+            <price bid="150" spread="0.9" type="absolute"/>
+            <price bid="350" spread="1.3" type="absolute"/>
+            <price bid="500" spread="2" type="absolute"/>
+            <price bid="700" spread="2.5" type="absolute"/>
+            <price bid="850" spread="3" type="absolute"/>
+            <price bid="1000" spread="4" type="absolute"/>
+        </spread>
+        <!--  Spread table for Index Futures for Advanced Market Makers in 3 months -->
+        <spread group="3ea30bba-7240-11e0-bc42-30f7f02c78b6" default="1.2" type="absolute">
+            <price bid="150" spread="1.8" type="absolute"/>
+            <price bid="350" spread="2.6" type="absolute"/>
+            <price bid="500" spread="4" type="absolute"/>
+            <price bid="700" spread="5" type="absolute"/>
+            <price bid="850" spread="6" type="absolute"/>
+            <price bid="1000" spread="8" type="absolute"/>
+        </spread>
+
+
+        <!--  
+             ============  XCSE =============
+        -->
+        <!--  Spread table for Options for Regular Market Makers -->
+        <spread group="9e58fb66-7239-11e0-bf81-bbb7f7814215" default="1" type="absolute">
+            <price bid="2"   spread="1.5" type="absolute"/>
+            <price bid="10"  spread="3" type="absolute"/>
+            <price bid="20"  spread="4" type="absolute"/>
+            <price bid="30"  spread="5" type="absolute"/>
+            <price bid="200" spread="150" type="absolute"/>
+            <price bid="500" spread="200" type="absolute"/>
+            <price bid="1000" spread="400" type="absolute"/>
+            <price bid="2000" spread="500" type="absolute"/>
+            <price bid="3000" spread="600" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="9ed9a1ee-7239-11e0-9741-e1e00f50b99e" default="2" type="absolute">
+            <price bid="2"   spread="3" type="absolute"/>
+            <price bid="10"  spread="6" type="absolute"/>
+            <price bid="20"  spread="8" type="absolute"/>
+            <price bid="30"  spread="10" type="absolute"/>
+            <price bid="200" spread="300" type="absolute"/>
+            <price bid="500" spread="400" type="absolute"/>
+            <price bid="1000" spread="800" type="absolute"/>
+            <price bid="2000" spread="1000" type="absolute"/>
+            <price bid="3000" spread="1200" type="absolute"/>
+        </spread>
+-->
+        <!--  Spread table for Futures for Regular Market Makers -->
+        <spread group="9f4c3b96-7239-11e0-bcee-3e18c5a57cb8" default="3" type="absolute">
+            <price bid="200" spread="5" type="absolute"/>
+            <price bid="2000" spread="500" type="absolute"/>
+        </spread>
+        <!--  Spread table for Futures for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="9fd8bc4c-7239-11e0-840f-8587fe5cf201" default="6" type="absolute">
+            <price bid="200" spread="10" type="absolute"/>
+            <price bid="2000" spread="1000" type="absolute"/>
+        </spread>
+-->
+
+        <!--  
+             ============  XHEL =============
+        -->
+        <!--  Spread table for Options for Regular Market Makers -->
+        <spread group="dffebc0c-723b-11e0-9941-871d0fa22c18" default="0.1" type="absolute">
+            <price bid="0.2" spread="0.15" type="absolute"/>
+            <price bid="1"   spread="0.3" type="absolute"/>
+            <price bid="2"   spread="0.4" type="absolute"/>
+            <price bid="3"   spread="0.5" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="e062c698-723b-11e0-8dd6-eeaff0fa7b8f" default="0.2" type="absolute">
+            <price bid="0.2" spread="0.3" type="absolute"/>
+            <price bid="1"   spread="0.6" type="absolute"/>
+            <price bid="2"   spread="0.8" type="absolute"/>
+            <price bid="3"   spread="1" type="absolute"/>
+        </spread>
+-->
+        <!--  Spread table for Futures for Regular Market Makers -->
+        <spread group="e0b33f06-723b-11e0-82a6-b6d78a51084a" default="0.4" type="absolute">
+            <price bid="20" spread="0.6" type="absolute"/>
+            <price bid="150" spread="4" type="absolute"/>
+        </spread>
+        <!--  Spread table for Futures for Regular Market Makers in Fast Market -->
+<!--
+        <spread group="e10030b8-723b-11e0-bd9f-ca203f0f7c3d" default="0.8" type="absolute">
+            <price bid="20" spread="1.2" type="absolute"/>
+            <price bid="150" spread="8" type="absolute"/>
+        </spread>
+-->
+
+
+        <!--  
+             ============  XOSL =============
+        -->
+        <!--  Spread table for Options A & B -->
+        <spread group="f176418e-77cd-11e0-978d-44611283f6f5" default="0.25" type="absolute">
+            <price bid="0.5"    spread="0.5" type="absolute"/>
+            <price bid="2"   spread="0.75" type="absolute"/>
+            <price bid="5"   spread="1" type="absolute"/>
+            <price bid="10"   spread="2" type="absolute"/>
+            <price bid="20"   spread="3" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options A & B in Fast Market -->
+        <spread group="f1eacd4c-77cd-11e0-8d2b-0b736d3c30e4" default="0.5" type="absolute">
+            <price bid="0.5" spread="1" type="absolute"/>
+            <price bid="2"   spread="1.5" type="absolute"/>
+            <price bid="5"   spread="2" type="absolute"/>
+            <price bid="10"   spread="4" type="absolute"/>
+            <price bid="20"   spread="6" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options C & D -->
+        <spread group="f6c9140e-77cd-11e0-8ac0-c6707900a6d5" default="0.6" type="absolute">
+            <price bid="2" spread="1.25" type="absolute"/>
+            <price bid="10" spread="2.25" type="absolute"/>
+            <price bid="20" spread="3" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options C & D in Fast Market -->
+        <spread group="f6fe99e4-77cd-11e0-8b58-ae154a210879" default="1.2" type="absolute">
+            <price bid="2" spread="2.5" type="absolute"/>
+            <price bid="10" spread="4.5" type="absolute"/>
+            <price bid="20" spread="6" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options Index -->
+        <spread group="86c0ef1c-2cff-11e3-bc77-523db01abb95" default="0.6" type="absolute">
+            <price bid="2" spread="1.25" type="absolute"/>
+            <price bid="10" spread="2.25" type="absolute"/>
+            <price bid="20" spread="3" type="absolute"/>
+        </spread>
+        <!--  Spread table for Options Index in Fast Market -->
+        <spread group="ad5ad282-2cff-11e3-aaf0-0c86d6215023" default="1.2" type="absolute">
+            <price bid="2" spread="2.5" type="absolute"/>
+            <price bid="10" spread="4.5" type="absolute"/>
+            <price bid="20" spread="6" type="absolute"/>
+        </spread>
+        <!--  Spread table for Forwards -->
+        <spread group="f264c764-77cd-11e0-b6e0-0a39dcbc5976" default="0.1" type="absolute">
+            <price bid="10" spread="0.25" type="absolute"/>
+            <price bid="25" spread="0.5" type="absolute"/>
+            <price bid="50" spread="1" type="absolute"/>
+            <price bid="100" spread="2" type="absolute"/>
+            <price bid="200" spread="3" type="absolute"/>
+            <price bid="400" spread="4" type="absolute"/>
+        </spread>
+        <!--  Spread table for Forwards in Fast Market -->
+        <spread group="f2e786ae-77cd-11e0-b6a9-cb3b393a1879" default="0.2" type="absolute">
+            <price bid="10" spread="0.5" type="absolute"/>
+            <price bid="25" spread="1" type="absolute"/>
+            <price bid="50" spread="2" type="absolute"/>
+            <price bid="100" spread="4" type="absolute"/>
+            <price bid="200" spread="6" type="absolute"/>
+            <price bid="400" spread="8" type="absolute"/>
+        </spread>
+        <!--  Spread table for Futures -->
+        <spread group="f369f332-77cd-11e0-9342-7c3a2b15e408" default="0.6" type="absolute">
+            <price bid="150" spread="0.9" type="absolute"/>
+            <price bid="350" spread="1.3" type="absolute"/>
+            <price bid="500" spread="2" type="absolute"/>
+            <price bid="700" spread="2.5" type="absolute"/>
+            <price bid="850" spread="3" type="absolute"/>
+            <price bid="1000" spread="4" type="absolute"/>
+        </spread>
+        <!--  Spread table for Futures in Fast Market -->
+        <spread group="f3ea4618-77cd-11e0-abb4-1be6e143e686" default="1.2" type="absolute">
+            <price bid="150" spread="2" type="absolute"/>
+            <price bid="350" spread="3" type="absolute"/>
+            <price bid="500" spread="4" type="absolute"/>
+            <price bid="700" spread="5" type="absolute"/>
+            <price bid="850" spread="6" type="absolute"/>
+            <price bid="1000" spread="8" type="absolute"/>
+        </spread> 
+
+
+
+        <!--  XEUR -->
+        <!--  Spread table for Precious Metal Options and EXTF Options class 1 -->
+        <spread group="6906c308-65e1-11e0-9966-b6c353117757" default="0.1" type="absolute">
+            <price bid="1"  percentage="10" type="percentage"/>
+            <price bid="5"  spread="0.5"    type="absolute"/>
+        </spread>
+        <spread group="0cb716f0-65e3-11e0-8d8f-141ca198bdde" default="0.15" type="absolute">
+            <price bid="1"  spread="15"   type="percentage"/>
+            <price bid="5"  spread="0.75" type="absolute"/>
+        </spread>
+        <spread group="99be7d2c-65e8-11e0-910d-d96738bbdbf5" default="0.2" type="absolute">
+            <price bid="1"  percentage="20" type="percentage"/>
+            <price bid="5"  spread="1"      type="absolute"/>
+        </spread>
+        <spread group="9d48a4d6-65e8-11e0-bfd4-e54916b6fe6f" default="0.3" type="absolute">
+            <price bid="1"  spread="30"   type="percentage"/>
+            <price bid="5"  spread="1.5"  type="absolute"/>
+        </spread>
+
+
+
+        <!--  NYSE Liffe -->
+        <!--  XLIF -->
+        <spread group="d4f16173-67b1-41e5-b358-0b9c1b28bd9e" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="233fb766-de4d-4eb6-bfac-6cd90c90816b" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="b924755d-2339-40aa-a218-e7e0d9782ee2" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="f6dfe18b-e138-4c0c-8627-1e6a401cc440" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="b3c0600e-54e2-4c3e-a5b2-38dd409a43d7" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="6363b607-4250-42b8-bd1d-193c4b7e898d" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="b41c986d-76ad-4a50-a156-5704e5122c1f" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="ac6c9c09-bd97-4df8-bea4-4a1585507fe2" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="63a77b10-1f8a-46ec-9070-97df488d02a0" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="4762bde9-6e69-48a3-ab82-7959e7c58569" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="4c228ef9-43bb-4c29-b33c-1f1213e5515f" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="d5b528ae-b8a0-4f2f-9a57-dd8edc601ff5" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="41702c77-5227-453a-b19a-92e5d5a79bda" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="e19c467d-234a-4e9e-b234-c6b8c7f97eac" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="cdc64062-b600-415e-86a4-093650ff8640" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="613c9fd3-1c1b-492e-89ef-1c1d4c1e2ff2" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="16dd636a-8f00-4149-805f-f6c8891413cb" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="ec26d89c-ecf6-490e-a310-78f842175f4b" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="783acfd2-253e-4e72-929b-7e85c4dd0e10" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="77fb5935-9d31-41d8-af1d-a0cbe71c76eb" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="7b3c142c-5c20-4d1a-be6b-ec7072a692a1" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="deee8e22-2cca-486b-8196-b121ca3ff397" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="3a6680e2-0529-4038-bbc2-416c23263931" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="ca0e52af-d9c7-4eb2-beb6-bc1d16a2e76e" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="cd50dbfb-0b05-4fec-be4b-5c61ed527abd" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="5bed7369-3197-4cbd-88de-2cdf9153417c" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="c2baf008-3be3-474a-908f-88cf51845429" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="4eee661f-6070-4262-9319-7e1c10bfc602" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="d3672d93-1152-4b2a-8797-74023d385a25" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="5609cc93-6b69-4123-8fad-dd97d90563c6" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="547f568a-3b22-40f2-8caa-799f2ad6ee5d" default="1" type="absolute">
+            <price bid="0" period="months" maturity="0" spread="1.5" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="1.5" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="2" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="2.5" type="absolute"/>
+            <price bid="25.01" period="months" maturity="0" spread="3" type="absolute"/>
+            <price bid="50.01" period="months" maturity="0" spread="4" type="absolute"/>
+            <price bid="100.01" period="months" maturity="0" spread="5" type="absolute"/>
+            <price bid="200.01" period="months" maturity="0" spread="6" type="absolute"/>
+            <price bid="300.01" period="months" maturity="0" spread="7" type="absolute"/>
+            <price bid="400.01" period="months" maturity="0" spread="8" type="absolute"/>
+            <price bid="500.01" period="months" maturity="0" spread="9" type="absolute"/>
+            <price bid="600" period="months" maturity="0" spread="10" type="absolute"/>
+            <price bid="0" period="months" maturity="4" spread="1.5" type="absolute"/>
+            <price bid="2.51" period="months" maturity="4" spread="2.5" type="absolute"/>
+            <price bid="5.01" period="months" maturity="4" spread="3" type="absolute"/>
+            <price bid="10.01" period="months" maturity="4" spread="4.5" type="absolute"/>
+            <price bid="25.01" period="months" maturity="4" spread="6" type="absolute"/>
+            <price bid="50.01" period="months" maturity="4" spread="7" type="absolute"/>
+            <price bid="100.01" period="months" maturity="4" spread="8" type="absolute"/>
+            <price bid="200.01" period="months" maturity="4" spread="9" type="absolute"/>
+            <price bid="300.01" period="months" maturity="4" spread="10.5" type="absolute"/>
+            <price bid="400.01" period="months" maturity="4" spread="12" type="absolute"/>
+            <price bid="500.01" period="months" maturity="4" spread="13.5" type="absolute"/>
+            <price bid="600" period="months" maturity="4" spread="15" type="absolute"/>
+            <price bid="0" period="months" maturity="12" spread="4" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="5" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="7" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="8.5" type="absolute"/>
+            <price bid="25.01" period="months" maturity="12" spread="10" type="absolute"/>
+            <price bid="50.01" period="months" maturity="12" spread="13" type="absolute"/>
+            <price bid="100.01" period="months" maturity="12" spread="14" type="absolute"/>
+            <price bid="200.01" period="months" maturity="12" spread="14" type="absolute"/>
+            <price bid="300.01" period="months" maturity="12" spread="14" type="absolute"/>
+            <price bid="400.01" period="months" maturity="12" spread="16" type="absolute"/>
+            <price bid="500.01" period="months" maturity="12" spread="18" type="absolute"/>
+            <price bid="600" period="months" maturity="12" spread="20" type="absolute"/>
+        </spread>
+        <spread group="49de5cf0-9d39-4bb4-ae81-d3913ec0eea3" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="42ebce4d-8222-47f6-a165-a40c8b8e6432" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="f87476fc-2619-4193-82c6-6630b61cba42" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="9ceaeb91-01ee-4d4b-bb7f-e75be5fe10a7" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="90cabefd-3337-455c-8cd4-383fe6c9cfec" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="3067dead-52a2-4cfa-acee-8701f4590365" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="ec3b7c8f-6a2d-4a6b-b83c-4a4dcb81f81d" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="f5feac4f-07aa-4d52-be70-76c6fe398093" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="7bd8cf18-9d4c-42c5-b601-255d00a56c1d" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="c1198208-57b0-48f5-9eed-97fd00ace35b" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="2dd3acc1-b8ed-4b7c-bc6e-18664cea69c8" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="7a8d548a-16f1-4cb8-8551-1beef7cce186" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="44c36444-820c-4cc0-9187-33c397e8d5b6" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="7610ee3e-ee38-4f89-95d4-535bdfa9ff44" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="4ae16f6a-de62-446d-9d3b-c8bf665ea379" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="cec8ff2a-7482-4411-8f6f-278292ece532" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="b495a725-f646-43ab-9c7b-d2bb17d97923" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="0b893f4b-d671-49f7-a36c-87ef5cbef3f2" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="11b06e07-cc05-45cc-ac87-9c8740bbef44" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="b6212338-fecd-4c92-932f-8eaf4a19f24d" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="fc217a9f-9374-482b-afd1-8267edb2eb01" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="90d9c98b-74ac-4cc5-8e97-6a4d0979cc21" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="690e87af-e312-4815-ab2b-86deac17f010" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="9b1ff22e-e0ad-457e-9861-0f7820fefafe" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="bc764e85-2be9-4b45-9eb0-f52efa3601df" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="68dc38a2-9039-4997-8067-9f03aca108e9" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="74b36712-440d-4de4-a60a-e4fe61e910ac" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="05a66248-dd04-4bfa-b7e0-29b69006392d" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="326da3b3-7994-4913-a70c-8d002b284569" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="343f347d-62cc-4ccf-bbaa-134a7fefe95e" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="47ffec72-0e09-42b2-871e-e0f18b8320ab" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="b1025631-40a6-4a31-a51d-ad6476fb2239" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="37eaa876-11d8-44dc-a87f-8f38f1d28c57" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="bab7a316-b7ee-4fdf-84c0-abad30e1e649" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="97c37012-9bdc-4df5-83aa-7751fd6cb419" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="cf325963-df96-4c81-9712-b6aa1bdd09c6" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="ade1a256-87f9-4255-87b6-7d78acde8f35" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="0e6d2198-c111-43f0-9543-6576068a4e50" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="954d87b1-dade-459c-87e9-bf4d067e9b1c" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="10" type="absolute"/>
+            <price bid="30.01" spread="12" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="30" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="a070960b-6eb5-408f-b752-63f2e0c6f355" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="2d70885e-23aa-4e78-9188-a113d5dbf0c6" default="1" type="absolute">
+            <price bid="0" spread="15" type="absolute"/>
+            <price bid="15.01" spread="20" type="absolute"/>
+            <price bid="30.01" spread="25" type="absolute"/>
+            <price bid="60.01" spread="30" type="absolute"/>
+            <price bid="100.01" spread="40" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="9117e559-fbf1-43c8-bc3f-1b60131739fd" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="6a8bbac3-490b-4f51-962b-fae5b9dd5e72" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="ad64fbce-872e-4594-ad2f-a1cbe6217103" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="1313ce4c-6085-4273-b34d-36660704acf9" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="a76476a2-7584-49d2-a2a6-4a1e3160f4c6" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="15b9c118-de66-43e8-a49d-4b786ff245c6" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="9f93a800-917b-4914-9899-f6b45654e0da" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="ed5ab8f3-1340-42f5-9ae6-ccbe6a9d1fe6" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="35a9bbc8-5d62-49a8-af73-633e6c4afa81" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="ea6a0e57-2764-405b-878d-2e60d1cacaab" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="7b208453-ed86-4f4b-ba45-75959a857210" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="5e1b9810-49a9-43b1-8057-f5c7f97e689a" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="09eb019a-cff0-43f3-8b55-6c824b3ca9d0" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="ceff94cb-d8d4-4886-9174-662e95041d88" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="c2802c08-5ada-4be3-86f6-47097662b84b" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="63e73b23-6650-4dc0-b54d-fef63f6385ad" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="a9faecca-5812-428d-96fb-5888a2b594c5" default="1" type="absolute">
+            <price bid="0" spread="5" type="absolute"/>
+            <price bid="15.01" spread="6" type="absolute"/>
+            <price bid="30.01" spread="7" type="absolute"/>
+            <price bid="60.01" spread="8" type="absolute"/>
+            <price bid="100.01" spread="15" type="absolute"/>
+            <price bid="150.01" spread="15" type="absolute"/>
+            <price bid="1000" spread="20" type="absolute"/>
+        </spread>
+        <spread group="5daca7a9-c1dc-4ed7-9d3b-2117c8299406" default="1" type="absolute">
+            <price bid="0" spread="7" type="absolute"/>
+            <price bid="15.01" spread="8" type="absolute"/>
+            <price bid="30.01" spread="9" type="absolute"/>
+            <price bid="60.01" spread="10" type="absolute"/>
+            <price bid="100.01" spread="20" type="absolute"/>
+            <price bid="150.01" spread="40" type="absolute"/>
+            <price bid="1000" spread="60" type="absolute"/>
+        </spread>
+        <spread group="97d79b5b-105d-4ad4-85c3-373c4adb9ab5" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <spread group="2c49d4b1-e105-4e7b-8fe2-e52463ced791" default="1" type="absolute">
+            <price bid="0" spread="10" type="absolute"/>
+            <price bid="15.01" spread="12" type="absolute"/>
+            <price bid="30.01" spread="15" type="absolute"/>
+            <price bid="60.01" spread="15" type="absolute"/>
+            <price bid="100.01" spread="30" type="absolute"/>
+            <price bid="150.01" spread="60" type="absolute"/>
+            <price bid="1000" spread="100" type="absolute"/>
+        </spread>
+        <!--
+             ============  HKFE  =============
+        -->
+        <!--  Spread table for SSO (Liquidity Level 1) -->
+        <spread group="415252fc-3175-11e8-afe0-81061d76bace" table_type="HKFE SSO">
+            <price bid="0" period="days" maturity="0" ratio="0.2" underlying_cap_factor="3"/>
+            <price bid="0" period="days" maturity="4" ratio="0.1" underlying_cap_factor="3"/>
+            <price bid="0" period="expirations" maturity="4" ratio="0.2" underlying_cap_factor="4"/>
+            <price bid="0" period="expirations" maturity="6" ratio="0.2" underlying_cap_factor="8"/>
+        </spread>
+        <!--  Spread table for SSO (Liquidity Level 2) -->
+        <spread group="381cd93c-3184-11e8-a320-c1a51c0623cf" table_type="HKFE SSO">
+            <price bid="0" period="days" maturity="0" ratio="0.2" underlying_cap_factor="4"/>
+            <price bid="0" period="days" maturity="4" ratio="0.1" underlying_cap_factor="4"/>
+            <price bid="0" period="expirations" maturity="4" ratio="0.2" underlying_cap_factor="6"/>
+            <price bid="0" period="expirations" maturity="6" ratio="0.2" underlying_cap_factor="12"/>
+        </spread>
+        <!--  Spread table for Index Options (Big) -->
+        <spread group="353db7de-ed60-11e8-ac70-4cfefc095602" table_type="HKFE IO">
+            <price bid="0" period="expirations" maturity="0" ratio="0.1" abs_spread="30"/>
+            <price bid="750" period="expirations" maturity="0" abs_spread="75"/>
+            <price bid="0" period="expirations" maturity="4" ratio="0.2" abs_spread="40"/>
+            <price bid="750" period="expirations" maturity="4" abs_spread="150"/>
+            <price bid="0" period="expirations" maturity="6" ratio="0.25" abs_spread="50"/>
+            <price bid="750" period="expirations" maturity="6" abs_spread="200"/>
+        </spread>
+        <!--  Spread table for Index Options (Small) -->
+        <spread group="71ffdc10-f6b1-11e8-b400-b93de2777930" table_type="HKFE IO">
+            <price bid="0" period="expirations" maturity="0" ratio="0.1" abs_spread="30"/>
+            <price bid="750" period="expirations" maturity="0" abs_spread="75"/>
+            <price bid="0" period="expirations" maturity="2" ratio="0.2" abs_spread="40"/>
+            <price bid="750" period="expirations" maturity="2" abs_spread="150"/>
+            <price bid="0" period="expirations" maturity="3" ratio="0.2" abs_spread="40"/>
+            <price bid="750" period="expirations" maturity="3" abs_spread="150"/>
+        </spread>
+        <!--  Spread table for Index Options (Big, T+1) -->
+        <spread group="8cf9a166-6ef9-11e9-be40-e9e57da7a1a7" table_type="HKFE IO">
+            <price bid="0" period="expirations" maturity="0" ratio="0.2" abs_spread="40"/>
+            <price bid="750" period="expirations" maturity="0" abs_spread="150"/>
+            <price bid="0" period="expirations" maturity="4" ratio="0.3" abs_spread="60"/>
+            <price bid="750" period="expirations" maturity="4" abs_spread="225"/>
+            <price bid="0" period="expirations" maturity="6" ratio="0.4" abs_spread="80"/>
+            <price bid="750" period="expirations" maturity="6" abs_spread="300"/>
+        </spread>
+        <!--  Spread table for Index Options (Small, T+1) -->
+        <spread group="8ea2aeb8-6ef9-11e9-8750-654e93518c0e" table_type="HKFE IO">
+            <price bid="0" period="expirations" maturity="0" ratio="0.2" abs_spread="40"/>
+            <price bid="750" period="expirations" maturity="0" abs_spread="150"/>
+            <price bid="0" period="expirations" maturity="2" ratio="0.3" abs_spread="60"/>
+            <price bid="750" period="expirations" maturity="2" abs_spread="225"/>
+            <price bid="0" period="expirations" maturity="3" ratio="0.3" abs_spread="60"/>
+            <price bid="750" period="expirations" maturity="3" abs_spread="225"/>
+        </spread>
+
+        <!--
+             ============  HKSE  =============
+        -->
+        <!--  Spread table for Local Index Warrants (HKSE Spread table A) -->
+        <spread group="986d8418-3ae8-11e8-9e30-3a0d9b4cbca0" default="25" type="absolute">
+            <price bid="0" spread="0.005" type="absolute"/>
+            <price bid="0.255" spread="0.025" type="absolute"/>
+            <price bid="0.51" spread="0.05" type="absolute"/>
+            <price bid="10.02" spread="0.1" type="absolute"/>
+            <price bid="20.05" spread="0.25" type="absolute"/>
+            <price bid="100.1" spread="0.5" type="absolute"/>
+            <price bid="200.2" spread="1" type="absolute"/>
+            <price bid="500.5" spread="2.5" type="absolute"/>
+            <price bid="1001" spread="5" type="absolute"/>
+            <price bid="2002" spread="10" type="absolute"/>
+            <price bid="5005" spread="25" type="absolute"/>
+        </spread>
+        <!--  Spread table for Actively Traded Stock Warrants (HKSE Spread table A) -->
+        <spread group="a5a6d6ca-3ae8-11e8-adf0-05f67f936a31" default="50" type="absolute">
+            <price bid="0" spread="0.01" type="absolute"/>
+            <price bid="0.255" spread="0.05" type="absolute"/>
+            <price bid="0.51" spread="0.1" type="absolute"/>
+            <price bid="10.02" spread="0.2" type="absolute"/>
+            <price bid="20.05" spread="0.5" type="absolute"/>
+            <price bid="100.1" spread="1" type="absolute"/>
+            <price bid="200.2" spread="2" type="absolute"/>
+            <price bid="500.5" spread="5" type="absolute"/>
+            <price bid="1001" spread="10" type="absolute"/>
+            <price bid="2002" spread="20" type="absolute"/>
+            <price bid="5005" spread="50" type="absolute"/>
+        </spread>
+        <!--  Spread table for Local CBBC (HKSE Spread table A) -->
+        <spread group="b2e99d22-3ae8-11e8-b790-a5d461b459b1" default="50" type="absolute">
+            <price bid="0" spread="0.01" type="absolute"/>
+            <price bid="0.255" spread="0.05" type="absolute"/>
+            <price bid="0.51" spread="0.1" type="absolute"/>
+            <price bid="10.02" spread="0.2" type="absolute"/>
+            <price bid="20.05" spread="0.5" type="absolute"/>
+            <price bid="100.1" spread="1" type="absolute"/>
+            <price bid="200.2" spread="2" type="absolute"/>
+            <price bid="500.5" spread="5" type="absolute"/>
+            <price bid="1001" spread="10" type="absolute"/>
+            <price bid="2002" spread="20" type="absolute"/>
+            <price bid="5005" spread="50" type="absolute"/>
+        </spread>
+        <!--  Spread table for Actively Traded Stock CBBC (HKSE Spread table A) -->
+        <spread group="bc53840e-3ae8-11e8-be10-72fe32c5aba1" default="75" type="absolute">
+            <price bid="0" spread="0.015" type="absolute"/>
+            <price bid="0.255" spread="0.075" type="absolute"/>
+            <price bid="0.51" spread="0.15" type="absolute"/>
+            <price bid="10.02" spread="0.3" type="absolute"/>
+            <price bid="20.05" spread="0.75" type="absolute"/>
+            <price bid="100.1" spread="1.5" type="absolute"/>
+            <price bid="200.2" spread="3" type="absolute"/>
+            <price bid="500.5" spread="7.5" type="absolute"/>
+            <price bid="1001" spread="15" type="absolute"/>
+            <price bid="2002" spread="30" type="absolute"/>
+            <price bid="5005" spread="75" type="absolute"/>
+        </spread>
+        <!--  Spread table for Local Index Warrants (HKSE Spread table B) -->
+        <spread group="8eeafc92-3d7a-11e8-9320-c07d104b694d" default="25" type="absolute">
+            <price bid="0" spread="0.25" type="absolute"/>
+        </spread>
+        <!--  Spread table for Actively Traded Stock Warrants (HKSE Spread table B) -->
+        <spread group="8fef0e58-3d7a-11e8-8360-6a9fbd92f62a" default="25" type="absolute">
+            <price bid="0" spread="0.5" type="absolute"/>
+        </spread>
+        <!--  Spread table for Local CBBC (HKSE Spread table B) -->
+        <spread group="90714d6e-3d7a-11e8-ad20-38b853cb8427" default="25" type="absolute">
+            <price bid="0" spread="0.5" type="absolute"/>
+        </spread>
+        <!--  Spread table for Actively Traded Stock CBBC (HKSE Spread table B) -->
+        <spread group="90fe3e90-3d7a-11e8-9050-5867c2750986" default="25" type="absolute">
+            <price bid="0" spread="0.75" type="absolute"/>
+        </spread>
+        
+        <!--
+             ============  TFEX  =============
+        -->
+        <!--  Spread table for 50 Baht Gold Futures -->
+        <spread group="e270e464-c3e1-11e9-9b30-b2c461362a34" default="100" type="absolute">
+            <price bid="0" period="expirations" maturity="0" spread="50" type="absolute"/>
+            <price bid="0" period="expirations" maturity="1"   spread="100" type="absolute"/>
+            <price bid="0" period="expirations" maturity="2"   spread="100" type="absolute"/>
+        </spread>
+        <!--  Spread table for 10 Baht Gold Futures -->
+        <spread group="f2a95708-c3e1-11e9-bdd0-f6e5a1cebb9b" default="100" type="absolute">
+            <price bid="0" period="expirations" maturity="0" spread="50" type="absolute"/>
+            <price bid="0" period="expirations" maturity="1"   spread="100" type="absolute"/>
+            <price bid="0" period="expirations" maturity="2"   spread="100" type="absolute"/>
+        </spread>
+        <!--  Spread table for Baht/USD Futures -->
+        <spread group="14f4259a-c3e2-11e9-98e0-112299b8ce0e" default="0.1" type="absolute">
+            <price bid="0" period="expirations" maturity="0" spread="0.1" type="absolute"/>
+            <price bid="0" period="expirations" maturity="1"   spread="0.1" type="absolute"/>
+            <price bid="0" period="expirations" maturity="2"   spread="0.1" type="absolute"/>
+            <price bid="0" period="expirations" maturity="4"   spread="0.1" type="absolute"/>
+        </spread>
+        <!--  Spread table for Single Stock Futures -->
+        <spread group="1b545d38-c3e2-11e9-a220-0461a4411506" default="30" type="absolute">
+            <price bid="0" period="expirations" maturity="0" spread="0.04" type="absolute"/>
+            <price bid="2" period="expirations" maturity="0"   spread="0.1" type="absolute"/>
+            <price bid="5" period="expirations" maturity="0"   spread="0.25" type="absolute"/>
+            <price bid="10" period="expirations" maturity="0"   spread="0.5" type="absolute"/>
+            <price bid="25" period="expirations" maturity="0" spread="1.6" type="absolute"/>
+            <price bid="100" period="expirations" maturity="0"   spread="3.65" type="absolute"/>
+            <price bid="200" period="expirations" maturity="0"   spread="7.25" type="absolute"/>
+            <price bid="400" period="expirations" maturity="0"   spread="14.5" type="absolute"/>
+            <price bid="0" period="expirations" maturity="1" spread="0.07" type="absolute"/>
+            <price bid="2" period="expirations" maturity="1"   spread="0.2" type="absolute"/>
+            <price bid="5" period="expirations" maturity="1"   spread="0.45" type="absolute"/>
+            <price bid="10" period="expirations" maturity="1"   spread="1" type="absolute"/>
+            <price bid="25" period="expirations" maturity="1" spread="3.2" type="absolute"/>
+            <price bid="100" period="expirations" maturity="1"   spread="7.5" type="absolute"/>
+            <price bid="200" period="expirations" maturity="1"   spread="15" type="absolute"/>
+            <price bid="400" period="expirations" maturity="1"   spread="30" type="absolute"/>
+        </spread>
+        <!--  Spread table for SET50 Index Options -->
+        <spread group="346610f0-c3e2-11e9-ad90-2cfeaa805160" default="1800" type="absolute">
+            <price bid="0" period="expirations" maturity="0" spread="400" type="absolute"/>
+            <price bid="4000" period="expirations" maturity="0" spread="600" type="absolute"/>
+            <price bid="8000" period="expirations" maturity="0"   spread="900" type="absolute"/>
+            <price bid="12000" period="expirations" maturity="0"   spread="1200" type="absolute"/>
+            <price bid="16000" period="expirations" maturity="0"   spread="1500" type="absolute"/>
+            <price bid="24000" period="expirations" maturity="0"   spread="1800" type="absolute"/>
+            <price bid="0" period="expirations" maturity="1" spread="600" type="absolute"/>
+            <price bid="4000" period="expirations" maturity="1"   spread="1200" type="absolute"/>
+            <price bid="8000" period="expirations" maturity="1"   spread="1800" type="absolute"/>
+            <price bid="12000" period="expirations" maturity="1"   spread="2400" type="absolute"/>
+            <price bid="16000" period="expirations" maturity="1"   spread="3000" type="absolute"/>
+            <price bid="24000" period="expirations" maturity="1"   spread="3600" type="absolute"/>
+        </spread>
+
+        <!--
+             ============  SET  =============
+        -->
+        <!--  Spread table for Securities -->
+        <spread group="10720b44-c61d-11e9-98e0-d09a5a0cb17f" default="20" type="absolute">
+            <price bid="0" spread="0.1" type="absolute"/>
+            <price bid="2" spread="0.2" type="absolute"/>
+            <price bid="5" spread="0.5" type="absolute"/>
+            <price bid="10" spread="1" type="absolute"/>
+            <price bid="25" spread="2.5" type="absolute"/>
+            <price bid="100" spread="5" type="absolute"/>
+            <price bid="200" spread="10" type="absolute"/>
+            <price bid="400" spread="20" type="absolute"/>
+        </spread>
+    </spreads>
+</resource>

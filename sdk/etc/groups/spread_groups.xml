@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource long_name="Spread groups" type="application/x-group+xml"> 
+    <groups>
+        <group id="cf17aed4-641d-11e0-b633-5153a6b2ae73"
+               name="Spread tables" description="Spreads for quoting" long_name="Default spread tables" type="spreads"/> 
+
+
+
+
+        <!-- XSTO Derivatives -->
+        <group id="d75672e2-641d-11e0-9afe-b60735971a15"
+               name="XSTO" description="Market" long_name="NASDAQ OMX Nordic - Stockholm"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/> 
+
+        <group id="e056ffb0-641d-11e0-ab03-302000b52331"
+               name="RMM Options - SEK" description="Spread table" long_name="Options for Regular Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+<!-- Disabled
+        <group id="f7b593ee-65d8-11e0-9aa2-3fc5ee8841f3"
+               name="RMM Options Fast - SEK" description="Spread table" long_name="Options for Regular Market Makers in fast market"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+-->
+        <group id="e0c36f92-641d-11e0-9f0c-34b33204570d"
+               name="RMM Futures - SEK" description="Spread table" long_name="Futures for Regular Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+<!-- Disabled
+        <group id="fc1af3d4-65d8-11e0-92ca-4c55cf28bf18"
+               name="RMM Futures Fast - SEK" description="Spread table" long_name="Futures for Regular Market Makers in fast market"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+-->
+
+        <group id="7b884d1e-6f30-11e0-a555-4816d135f0ed"
+               name="AMM Options - SEK" description="Spread table" long_name="Options for Advanced Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="01faee3a-65d9-11e0-ab0e-cb74a4106565"
+               name="AMM Options Back - SEK" description="Spread table" long_name="Options for Advanced Market Makers in 3 months"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="94fa5a58-6f30-11e0-9052-c04d30a283e2"
+               name="AMM Futures - SEK" description="Spread table" long_name="Futures for Advanced Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="0926def8-65d9-11e0-9e0b-1f0b7c344080"
+               name="AMM Futures Back - SEK" description="Spread table" long_name="Futures for Advanced Market Makers in 3 months"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+
+
+        <group id="ea0c6f98-723e-11e0-84d4-55d3dd17e6c6"
+               name="RMM Options - NOK" description="Spread table" long_name="Options for Regular Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+<!-- Disabled
+        <group id="ea6bec70-723e-11e0-96b8-55d690d860ba"
+               name="RMM Options Fast - NOK" description="Spread table" long_name="Options for Regular Market Makers in fast market"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+-->
+        <group id="eac2a5e2-723e-11e0-b96b-2d1af98297fc"
+               name="RMM Stock Forwards - NOK" description="Spread table" long_name="Futures for Regular Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+<!-- Disabled
+        <group id="eb1cec14-723e-11e0-9760-1af3ecc71fa1"
+               name="RMM Stock Forwards Fast - NOK" description="Spread table" long_name="Futures for Regular Market Makers in fast market"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+-->
+        <group id="eb728016-723e-11e0-8618-b3563e94f71e"
+               name="RMM Index Futures - NOK" description="Spread table" long_name="Futures for Regular Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+<!-- Disabled
+        <group id="ebc7df5c-723e-11e0-9566-1d9736b8fb8d"
+               name="RMM Index Futures Fast - NOK" description="Spread table" long_name="Futures for Regular Market Makers in fast market"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+-->
+
+        <group id="3cfd8c0e-7240-11e0-99b0-cb3934eebd20"
+               name="AMM Options - NOK" description="Spread table" long_name="Options for Advanced Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="3d5bf622-7240-11e0-b460-ca934e71ff3f"
+               name="AMM Options Back - NOK" description="Spread table" long_name="Options for Advanced Market Makers in 3 months"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="3dbc69f8-7240-11e0-8d04-36bd292206a3"
+               name="AMM Stock Forwards - NOK" description="Spread table" long_name="Futures for Advanced Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="3e1df9a2-7240-11e0-ad8b-2e3978e26cd0"
+               name="AMM Stock Forwards Back - NOK" description="Spread table" long_name="Futures for Advanced Market Makers in 3 months"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="3e685b8c-7240-11e0-bef7-50b10aeb869f"
+               name="AMM Index Futures - NOK" description="Spread table" long_name="Futures for Advanced Market Makers"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+        <group id="3ea30bba-7240-11e0-bc42-30f7f02c78b6"
+               name="AMM Index Futures Back - NOK" description="Spread table" long_name="Futures for Advanced Market Makers in 3 months"
+               parent="d75672e2-641d-11e0-9afe-b60735971a15"/>
+
+
+
+        <!-- XCSE Derivatives -->
+        <group id="6e81d8a4-7239-11e0-881f-7f0eba3cc90f"
+               name="XCSE" description="Market" long_name="NASDAQ OMX Nordic - Copenhagen"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/> 
+
+        <group id="9e58fb66-7239-11e0-bf81-bbb7f7814215"
+               name="RMM Options" description="Spread table" long_name="Options for Regular Market Makers"
+               parent="6e81d8a4-7239-11e0-881f-7f0eba3cc90f"/>
+<!-- Disabled
+        <group id="9ed9a1ee-7239-11e0-9741-e1e00f50b99e"
+               name="RMM Options Fast" description="Spread table" long_name="Options for Regular Market Makers in fast market"
+               parent="6e81d8a4-7239-11e0-881f-7f0eba3cc90f"/>
+-->
+        <group id="9f4c3b96-7239-11e0-bcee-3e18c5a57cb8"
+               name="RMM Futures" description="Spread table" long_name="Futures for Regular Market Makers"
+               parent="6e81d8a4-7239-11e0-881f-7f0eba3cc90f"/>
+<!-- Disabled
+        <group id="9fd8bc4c-7239-11e0-840f-8587fe5cf201"
+               name="RMM Futures Fast" description="Spread table" long_name="Futures for Regular Market Makers in fast market"
+               parent="6e81d8a4-7239-11e0-881f-7f0eba3cc90f"/>
+-->
+
+
+
+        <!-- XHEL Derivatives -->
+        <group id="d4d9bbc4-723b-11e0-b4cc-f49be440cce6"
+               name="XHEL" description="Market" long_name="NASDAQ OMX Nordic - Helsinki"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/> 
+
+        <group id="dffebc0c-723b-11e0-9941-871d0fa22c18"
+               name="RMM Options" description="Spread table" long_name="Options for Regular Market Makers"
+               parent="d4d9bbc4-723b-11e0-b4cc-f49be440cce6"/>
+<!-- Disabled
+        <group id="e062c698-723b-11e0-8dd6-eeaff0fa7b8f"
+               name="RMM Options Fast" description="Spread table" long_name="Options for Regular Market Makers in fast market"
+               parent="d4d9bbc4-723b-11e0-b4cc-f49be440cce6"/>
+-->
+        <group id="e0b33f06-723b-11e0-82a6-b6d78a51084a"
+               name="RMM Futures" description="Spread table" long_name="Futures for Regular Market Makers"
+               parent="d4d9bbc4-723b-11e0-b4cc-f49be440cce6"/>
+<!-- Disabled
+        <group id="e10030b8-723b-11e0-bd9f-ca203f0f7c3d"
+               name="RMM Futures Fast" description="Spread table" long_name="Futures for Regular Market Makers in fast market"
+               parent="d4d9bbc4-723b-11e0-b4cc-f49be440cce6"/>
+-->
+
+
+
+
+        <!-- XOSL Derivatives -->
+        <group id="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"
+               name="XOSL" description="Market" long_name="Oslo Bors"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/> 
+
+        <group id="f176418e-77cd-11e0-978d-44611283f6f5"
+               name="Options A &amp; B" description="Spread table" long_name="Options A &amp; B"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f1eacd4c-77cd-11e0-8d2b-0b736d3c30e4"
+               name="Options A &amp; B Fast" description="Spread table" long_name="Options A &amp; B in fast market"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f264c764-77cd-11e0-b6e0-0a39dcbc5976"
+               name="Stock Forwards" description="Spread table" long_name="Forwards"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f2e786ae-77cd-11e0-b6a9-cb3b393a1879"
+               name="Stock Forwards Fast" description="Spread table" long_name="Forwards in fast market"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f369f332-77cd-11e0-9342-7c3a2b15e408"
+               name="Index Futures" description="Spread table" long_name="Futures"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f3ea4618-77cd-11e0-abb4-1be6e143e686"
+               name="Index Futures Fast" description="Spread table" long_name="Futures in fast market"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f6c9140e-77cd-11e0-8ac0-c6707900a6d5"
+               name="Options C &amp; D" description="Spread table" long_name="Options C &amp; D"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="f6fe99e4-77cd-11e0-8b58-ae154a210879"
+               name="Options C &amp; D Fast" description="Spread table" long_name="Options C &amp; D in fast market"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="86c0ef1c-2cff-11e3-bc77-523db01abb95"
+               name="Options Index" description="Spread table" long_name="Options Index"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+        <group id="ad5ad282-2cff-11e3-aaf0-0c86d6215023"
+               name="Options Index Fast" description="Spread table" long_name="Options Index in fast market"
+               parent="765a6b7e-77cd-11e0-8d2d-c7baabc38a3d"/>
+
+
+
+
+        <!-- XEUR Derivatives -->
+        <group id="0456d962-65e0-11e0-96ab-e6cf506708ee"
+               name="XEUR" description="Market" long_name="Eurex"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/> 
+
+        <group id="546c45e2-65e8-11e0-8a84-49076dc216cf"
+               name="Stock Options Class 1" description="Spread class" long_name="Stock Options, Precious Metal Options and EXTF Options"
+               parent="0456d962-65e0-11e0-96ab-e6cf506708ee"/>
+        <group id="6906c308-65e1-11e0-9966-b6c353117757" name="Normal"       long_name="Normal" description="Spread table" parent="546c45e2-65e8-11e0-8a84-49076dc216cf"/>
+        <group id="0cb716f0-65e3-11e0-8d8f-141ca198bdde" name="Far"          long_name="Far"    description="Spread table" parent="546c45e2-65e8-11e0-8a84-49076dc216cf"/>
+        <group id="99be7d2c-65e8-11e0-910d-d96738bbdbf5" name="Fast"         long_name="Fast"   description="Spread table" parent="546c45e2-65e8-11e0-8a84-49076dc216cf"/>
+        <group id="9d48a4d6-65e8-11e0-bfd4-e54916b6fe6f" name="Far and Fast" long_name="Far and Fast" description="Spread table" parent="546c45e2-65e8-11e0-8a84-49076dc216cf"/>
+
+        <!-- NYSE Liffe Derivatives -->
+        <!-- XLIF -->
+        <group id="6458cb96-33db-4d23-96d5-032689a7fccf" name="XLIF" long_name="Liffe" description="Market" parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/>
+        <group id="d4f16173-67b1-41e5-b358-0b9c1b28bd9e" name="AER" long_name="AER" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="233fb766-de4d-4eb6-bfac-6cd90c90816b" name="AHA" long_name="AHA" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="b924755d-2339-40aa-a218-e7e0d9782ee2" name="AWS" long_name="AWS" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="f6dfe18b-e138-4c0c-8627-1e6a401cc440" name="AZA" long_name="AZA" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="b3c0600e-54e2-4c3e-a5b2-38dd409a43d7" name="BBL" long_name="BBL" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="6363b607-4250-42b8-bd1d-193c4b7e898d" name="BGG" long_name="BGG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="b41c986d-76ad-4a50-a156-5704e5122c1f" name="BLT" long_name="BLT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ac6c9c09-bd97-4df8-bea4-4a1585507fe2" name="BP" long_name="BP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="63a77b10-1f8a-46ec-9070-97df488d02a0" name="BTG" long_name="BTG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="4762bde9-6e69-48a3-ab82-7959e7c58569" name="CUA" long_name="CUA" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="4c228ef9-43bb-4c29-b33c-1f1213e5515f" name="EMG" long_name="EMG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="d5b528ae-b8a0-4f2f-9a57-dd8edc601ff5" name="GL" long_name="GL" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="41702c77-5227-453a-b19a-92e5d5a79bda" name="GNS" long_name="GNS" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="e19c467d-234a-4e9e-b234-c6b8c7f97eac" name="GXO" long_name="GXO" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="cdc64062-b600-415e-86a4-093650ff8640" name="HSB" long_name="HSB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="613c9fd3-1c1b-492e-89ef-1c1d4c1e2ff2" name="LGE" long_name="LGE" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="16dd636a-8f00-4149-805f-f6c8891413cb" name="M+S" long_name="M+S" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ec26d89c-ecf6-490e-a310-78f842175f4b" name="NGG" long_name="NGG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="783acfd2-253e-4e72-929b-7e85c4dd0e10" name="PRU" long_name="PRU" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="77fb5935-9d31-41d8-af1d-a0cbe71c76eb" name="RBS" long_name="RBS" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="7b3c142c-5c20-4d1a-be6b-ec7072a692a1" name="RTZ" long_name="RTZ" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="deee8e22-2cca-486b-8196-b121ca3ff397" name="RYL" long_name="RYL" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="3a6680e2-0529-4038-bbc2-416c23263931" name="SAN" long_name="SAN" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ca0e52af-d9c7-4eb2-beb6-bc1d16a2e76e" name="SCB" long_name="SCB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="cd50dbfb-0b05-4fec-be4b-5c61ed527abd" name="SHL" long_name="SHL" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="5bed7369-3197-4cbd-88de-2cdf9153417c" name="TAB" long_name="TAB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="c2baf008-3be3-474a-908f-88cf51845429" name="TCO" long_name="TCO" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="4eee661f-6070-4262-9319-7e1c10bfc602" name="TSB" long_name="TSB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="d3672d93-1152-4b2a-8797-74023d385a25" name="VOD" long_name="VOD" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="5609cc93-6b69-4123-8fad-dd97d90563c6" name="XST" long_name="XST" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="547f568a-3b22-40f2-8caa-799f2ad6ee5d" name="Z" long_name="Z" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="49de5cf0-9d39-4bb4-ae81-d3913ec0eea3" name="ABR" long_name="ABR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="42ebce4d-8222-47f6-a165-a40c8b8e6432" name="ARM" long_name="ARM" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="f87476fc-2619-4193-82c6-6630b61cba42" name="ATT" long_name="ATT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="9ceaeb91-01ee-4d4b-bb7f-e75be5fe10a7" name="BLC" long_name="BLC" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="90cabefd-3337-455c-8cd4-383fe6c9cfec" name="BRT" long_name="BRT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="3067dead-52a2-4cfa-acee-8701f4590365" name="BRW" long_name="BRW" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ec3b7c8f-6a2d-4a6b-b83c-4a4dcb81f81d" name="BSK" long_name="BSK" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="f5feac4f-07aa-4d52-be70-76c6fe398093" name="CCT" long_name="CCT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="7bd8cf18-9d4c-42c5-b601-255d00a56c1d" name="CNG" long_name="CNG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="c1198208-57b0-48f5-9eed-97fd00ace35b" name="CPG" long_name="CPG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="2dd3acc1-b8ed-4b7c-bc6e-18664cea69c8" name="CRM" long_name="CRM" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="7a8d548a-16f1-4cb8-8551-1beef7cce186" name="CTR" long_name="CTR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="44c36444-820c-4cc0-9187-33c397e8d5b6" name="CWT" long_name="CWT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="7610ee3e-ee38-4f89-95d4-535bdfa9ff44" name="DIX" long_name="DIX" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="4ae16f6a-de62-446d-9d3b-c8bf665ea379" name="ESR" long_name="ESR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="cec8ff2a-7482-4411-8f6f-278292ece532" name="ETP" long_name="ETP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="b495a725-f646-43ab-9c7b-d2bb17d97923" name="EUN" long_name="EUN" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="0b893f4b-d671-49f7-a36c-87ef5cbef3f2" name="EXP" long_name="EXP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="11b06e07-cc05-45cc-ac87-9c8740bbef44" name="GME" long_name="GME" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="b6212338-fecd-4c92-932f-8eaf4a19f24d" name="ICA" long_name="ICA" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="fc217a9f-9374-482b-afd1-8267edb2eb01" name="IHG" long_name="IHG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="90d9c98b-74ac-4cc5-8e97-6a4d0979cc21" name="III" long_name="III" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="690e87af-e312-4815-ab2b-86deac17f010" name="IMP" long_name="IMP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="9b1ff22e-e0ad-457e-9861-0f7820fefafe" name="INS" long_name="INS" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="bc764e85-2be9-4b45-9eb0-f52efa3601df" name="IPR" long_name="IPR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="68dc38a2-9039-4997-8067-9f03aca108e9" name="KGF" long_name="KGF" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="74b36712-440d-4de4-a60a-e4fe61e910ac" name="KZK" long_name="KZK" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="05a66248-dd04-4bfa-b7e0-29b69006392d" name="LDB" long_name="LDB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="326da3b3-7994-4913-a70c-8d002b284569" name="LFI" long_name="LFI" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="343f347d-62cc-4ccf-bbaa-134a7fefe95e" name="LNM" long_name="LNM" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="47ffec72-0e09-42b2-871e-e0f18b8320ab" name="LOG" long_name="LOG" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="b1025631-40a6-4a31-a51d-ad6476fb2239" name="LS" long_name="LS" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="37eaa876-11d8-44dc-a87f-8f38f1d28c57" name="LSE" long_name="LSE" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="bab7a316-b7ee-4fdf-84c0-abad30e1e649" name="MWR" long_name="MWR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="97c37012-9bdc-4df5-83aa-7751fd6cb419" name="NXT" long_name="NXT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="cf325963-df96-4c81-9712-b6aa1bdd09c6" name="OMT" long_name="OMT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ade1a256-87f9-4255-87b6-7d78acde8f35" name="PER" long_name="PER" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="0e6d2198-c111-43f0-9543-6576068a4e50" name="PET" long_name="PET" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="954d87b1-dade-459c-87e9-bf4d067e9b1c" name="POC" long_name="POC" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="a070960b-6eb5-408f-b752-63f2e0c6f355" name="PSO" long_name="PSO" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="2d70885e-23aa-4e78-9188-a113d5dbf0c6" name="RAR" long_name="RAR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="9117e559-fbf1-43c8-bc3f-1b60131739fd" name="RB" long_name="RB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="6a8bbac3-490b-4f51-962b-fae5b9dd5e72" name="REI" long_name="REI" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ad64fbce-872e-4594-ad2f-a1cbe6217103" name="RR" long_name="RR" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="1313ce4c-6085-4273-b34d-36660704acf9" name="RTO" long_name="RTO" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="a76476a2-7584-49d2-a2a6-4a1e3160f4c6" name="SAB" long_name="SAB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="15b9c118-de66-43e8-a49d-4b786ff245c6" name="SGE" long_name="SGE" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="9f93a800-917b-4914-9899-f6b45654e0da" name="SHA" long_name="SHA" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ed5ab8f3-1340-42f5-9ae6-ccbe6a9d1fe6" name="SHP" long_name="SHP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="35a9bbc8-5d62-49a8-af73-633e6c4afa81" name="SNP" long_name="SNP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ea6a0e57-2764-405b-878d-2e60d1cacaab" name="SSE" long_name="SSE" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="7b208453-ed86-4f4b-ba45-75959a857210" name="SVT" long_name="SVT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="5e1b9810-49a9-43b1-8057-f5c7f97e689a" name="TAT" long_name="TAT" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="09eb019a-cff0-43f3-8b55-6c824b3ca9d0" name="TLO" long_name="TLO" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="ceff94cb-d8d4-4886-9174-662e95041d88" name="ULV" long_name="ULV" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="c2802c08-5ada-4be3-86f6-47097662b84b" name="UUL" long_name="UUL" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="63e73b23-6650-4dc0-b54d-fef63f6385ad" name="VRS" long_name="VRS" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="a9faecca-5812-428d-96fb-5888a2b594c5" name="WHL" long_name="WHL" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="5daca7a9-c1dc-4ed7-9d3b-2117c8299406" name="WPP" long_name="WPP" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="97d79b5b-105d-4ad4-85c3-373c4adb9ab5" name="WSY" long_name="WSY" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+        <group id="2c49d4b1-e105-4e7b-8fe2-e52463ced791" name="WTB" long_name="WTB" description="Commodity Code" parent="6458cb96-33db-4d23-96d5-032689a7fccf"/>
+
+        <!-- XLIF -->
+        <group id="07afe37f-f486-438e-a68c-8d1fed8aceb0" name="XEUE" long_name="NYSE Amsterdam" description="Market" parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/>
+        <group id="b84bd35c-5f6f-47fd-b083-21ab440542b4" name="AEX" long_name="AEX" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="ffcea12e-843c-4271-8c1a-5aa0293389a1" name="AAI" long_name="AAI" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="7f2cf326-d598-4f2e-ad4c-9e796646ec5c" name="AFA" long_name="AFA" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="2fa47820-fe42-4d7e-901d-e51af6bd5136" name="AGA" long_name="AGA" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="e012199f-f569-4338-bf94-25d4d391028f" name="AGN" long_name="AGN" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="ff73ffc9-2241-4cc9-8427-7a367fb2eb83" name="AH" long_name="AH" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="45fc3a7d-7fdb-411e-a956-40efa0acc6d9" name="AKZ" long_name="AKZ" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="1e09700b-9c7a-4ad1-a54d-68e86b6b7e88" name="AMG" long_name="AMG" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="542fa430-1ea6-4141-9c62-e309b0418254" name="AMX" long_name="AMX" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="ee549d35-bcc2-467b-801b-e698bf5c0a50" name="AP" long_name="AP" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="8a69fdf7-6fa1-4702-8449-98ecebc64e98" name="ARC" long_name="ARC" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="b1943ddc-2710-49eb-bef0-a2f09af8e9ec" name="ASL" long_name="ASL" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="e803e5df-36fb-479b-976b-af7262f6e29f" name="ASM" long_name="ASM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="45e14650-7680-460f-93d2-a53b94f89204" name="BAM" long_name="BAM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="4b879dc5-de27-402b-9f42-f076df65d38a" name="BCK" long_name="BCK" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="7172332a-a265-4984-966a-74b3608e2435" name="BI" long_name="BI" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="08f070d1-5d45-4e6b-8484-a252ade93086" name="BOS" long_name="BOS" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="94a19630-2d7a-4c4f-8450-7ac0123e53f9" name="CIO" long_name="CIO" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="25b74e27-637a-4c59-a9b4-f7ef1758f293" name="CSM" long_name="CSM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="ef101ac0-56da-4371-b75c-4653e8adcf56" name="DE" long_name="DE" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="c87fb2f0-fc89-4c11-9e7f-b8f04caf65fe" name="DL" long_name="DL" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="e8152af7-2f27-4f77-a812-c4fe9a3fb23b" name="DSM" long_name="DSM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="188f0e71-8d43-4a77-8772-e1899849936e" name="EDX" long_name="EDX" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="aed6cee3-f3ab-4e65-8611-cfb99203ab0c" name="FMX" long_name="FMX" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="4affdc44-e780-4c4d-aa70-9311208ae7d9" name="FRO" long_name="FRO" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="4d5e354d-ca7b-450e-b241-d7a2c50976ea" name="FUR" long_name="FUR" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="94dd95cb-74c2-46f8-900a-b506f1630707" name="HEI" long_name="HEI" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="f3d5181d-c021-4bef-a7fb-43aeba0432c9" name="HEY" long_name="HEY" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="698bcf34-2812-4441-9193-416b58cb0aa8" name="IM" long_name="IM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="0cfde304-15b2-428f-86f4-6ff2604c16eb" name="ING" long_name="ING" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="6fabd2a8-9266-4cdf-bc17-6b246ad25cd7" name="INO" long_name="INO" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="d359999d-0f4c-4d4b-b21c-c30a51539060" name="KPN" long_name="KPN" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="954ddf9d-6fa6-4f4a-9a7e-42eed53d209e" name="MDQ" long_name="MDQ" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="4990e38d-40e8-4768-8241-6953b8ca6f44" name="MT" long_name="MT" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="672f62a3-08a2-40a6-9472-b013bffb82e7" name="NUO" long_name="NUO" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="a609966c-9025-4443-8b92-ee8a59fc2c6c" name="ORD" long_name="ORD" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="25b6982c-8c67-42ba-8fe6-2eb62eacbe58" name="PHI" long_name="PHI" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="e0ebdfbb-4f38-4417-ae82-24c1f3a347c6" name="PNL" long_name="PNL" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="2a0799dd-300a-4778-a7e1-6ad1bb4e63ab" name="RD" long_name="RD" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="f9e586d0-ac0c-4b69-8926-d2061776508c" name="REN" long_name="REN" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="8b5d4048-752d-4d55-8637-11e17ccaba4a" name="RND" long_name="RND" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="305d464a-d550-4574-8b78-91bb5b9e4eb0" name="SBM" long_name="SBM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="044795a8-eab6-4246-975b-f973496f7924" name="SR" long_name="SR" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="f119e7fb-7ae7-4875-8afe-16dce9385b08" name="TCT" long_name="TCT" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="1e0b3bae-f82f-4e6d-a56f-8d7fa84ed0df" name="TNE" long_name="TNE" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="bc74d616-1206-4f3a-a365-12c996e5f3cc" name="TPO" long_name="TPO" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="6b19201d-f71f-4ad2-b294-bb3ec70d26e4" name="TTM" long_name="TTM" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="0d1d784c-ea65-41c9-ab4f-41eedc70fec4" name="UBL" long_name="UBL" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="446bd039-7c7a-4624-a9e7-9f7bf04afdaf" name="UN" long_name="UN" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="577cfeec-09e8-404c-b0c2-a9daf2ad1b40" name="UNT" long_name="UNT" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="158bf955-ffca-4e93-ab6d-6a48711318eb" name="USG" long_name="USG" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="f6ff8c45-ee4a-46e8-86a6-d29c491ec458" name="VPK" long_name="VPK" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="767d2885-196d-409e-9f98-3a8665774ef9" name="WES" long_name="WES" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="d8e83008-6af8-41c4-8011-4f7d3d17e67a" name="WHV" long_name="WHV" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="b3615457-8c3a-4113-9a17-fb05a6cb134a" name="WKL" long_name="WKL" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+        <group id="1e005565-1f12-4aba-8cf7-f4e51d9fe3b5" name="ZGO" long_name="ZGO" description="Commodity Code" parent="07afe37f-f486-438e-a68c-8d1fed8aceb0"/>
+
+        <!-- HKFE Options -->
+        <group id="268b3858-3175-11e8-9860-f5291a8c5f6d"
+               name="XHKF" description="Market" long_name="Hong Kong Futures Exchanges"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/>
+        <group id="415252fc-3175-11e8-afe0-81061d76bace" name="HKFE - SSO Liquidity Level 1" long_name="HKFE - SSO Liquidity Level 1" description="Spread table" parent="268b3858-3175-11e8-9860-f5291a8c5f6d"/>
+        <group id="381cd93c-3184-11e8-a320-c1a51c0623cf" name="HKFE - SSO Liquidity Level 2" long_name="HKFE - SSO Liquidity Level 2" description="Spread table" parent="268b3858-3175-11e8-9860-f5291a8c5f6d"/>
+        <group id="353db7de-ed60-11e8-ac70-4cfefc095602" name="HKFE - HSI and HSCEI Options (Big)" long_name="HKFE - HSI and HSCEI Options (Big)" description="Spread table" parent="268b3858-3175-11e8-9860-f5291a8c5f6d"/>
+        <group id="71ffdc10-f6b1-11e8-b400-b93de2777930" name="HKFE - HSI and HSCEI Options (Mini)" long_name="HKFE - HSI and HSCEI Options (Mini)" description="Spread table" parent="268b3858-3175-11e8-9860-f5291a8c5f6d"/>
+        <group id="8cf9a166-6ef9-11e9-be40-e9e57da7a1a7" name="HKFE - HSI and HSCEI Options (Big, T+1)" long_name="HKFE - HSI and HSCEI Options (Big, T+1)" description="Spread table" parent="268b3858-3175-11e8-9860-f5291a8c5f6d"/>
+        <group id="8ea2aeb8-6ef9-11e9-8750-654e93518c0e" name="HKFE - HSI and HSCEI Options (Mini, T+1)" long_name="HKFE - HSI and HSCEI Options (Mini, T+1)" description="Spread table" parent="268b3858-3175-11e8-9860-f5291a8c5f6d"/>
+
+        <!-- HKSE warrants -->
+        <group id="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"
+               name="XHKG" description="Market" long_name="Hong Kong Stock Exchanges"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/>
+        <group id="986d8418-3ae8-11e8-9e30-3a0d9b4cbca0" name="HKSE - Local Index Warrants (Spread table A)" long_name="HKSE - Local Index Warrants (Spread table A)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+        <group id="a5a6d6ca-3ae8-11e8-adf0-05f67f936a31" name="HKSE - Actively Traded Stock Warrants (Spread table A)" long_name="HKSE - Actively Traded Stock Warrants (Spread table A)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+        <group id="b2e99d22-3ae8-11e8-b790-a5d461b459b1" name="HKSE - Local Index CBBC (Spread table A)" long_name="HKSE - Local Index CBBC (Spread table A)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+        <group id="bc53840e-3ae8-11e8-be10-72fe32c5aba1" name="HKSE - Actively Traded Stock CBBC (Spread table A)" long_name="HKSE - Actively Traded Stock CBBC (Spread table A)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+
+        <group id="8eeafc92-3d7a-11e8-9320-c07d104b694d" name="HKSE - Local Index Warrants (Spread table B)" long_name="HKSE - Local Index Warrants (Spread table B)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+        <group id="8fef0e58-3d7a-11e8-8360-6a9fbd92f62a" name="HKSE - Actively Traded Stock Warrants (Spread table B)" long_name="HKSE - Actively Traded Stock Warrants (Spread table B)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+        <group id="90714d6e-3d7a-11e8-ad20-38b853cb8427" name="HKSE - Local Index CBBC (Spread table B)" long_name="HKSE - Local Index CBBC (Spread table B)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+        <group id="90fe3e90-3d7a-11e8-9050-5867c2750986" name="HKSE - Actively Traded Stock CBBC (Spread table B)" long_name="HKSE - Actively Traded Stock CBBC (Spread table B)" description="Spread table" parent="0cedba3e-3ae8-11e8-a3b0-57a5617ca95c"/>
+    
+        <!-- TFEX -->
+        <group id="6af5aba4-c3e1-11e9-a8a0-0bbe0572fdd2"
+               name="TFEX" description="Market" long_name="Thailand Futures Exchange"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/>
+        <group id="e270e464-c3e1-11e9-9b30-b2c461362a34" name="TFEX - 50 Baht Gold Futures" long_name="TFEX - 50 Baht Gold Futures" description="Spread table" parent="6af5aba4-c3e1-11e9-a8a0-0bbe0572fdd2"/>
+        <group id="f2a95708-c3e1-11e9-bdd0-f6e5a1cebb9b" name="TFEX - 10 Baht Gold Futures" long_name="TFEX - 10 Baht Gold Futures" description="Spread table" parent="6af5aba4-c3e1-11e9-a8a0-0bbe0572fdd2"/>
+        <group id="14f4259a-c3e2-11e9-98e0-112299b8ce0e" name="TFEX - Baht/USD Futures" long_name="TFEX - Baht/USD Futures" description="Spread table" parent="6af5aba4-c3e1-11e9-a8a0-0bbe0572fdd2"/>
+        <group id="1b545d38-c3e2-11e9-a220-0461a4411506" name="TFEX - Single Stock Futures" long_name="TFEX - Single Stock Futures" description="Spread table" parent="6af5aba4-c3e1-11e9-a8a0-0bbe0572fdd2"/>
+        <group id="346610f0-c3e2-11e9-ad90-2cfeaa805160" name="TFEX - SET50 Index Options" long_name="TFEX - SET50 Index Options" description="Spread table" parent="6af5aba4-c3e1-11e9-a8a0-0bbe0572fdd2"/>
+
+        <!-- SET -->
+        <group id="f795c642-c61c-11e9-a470-417d447e7172"
+               name="XBKK" description="Market" long_name="Stock Exchange of Thailand"
+               parent="cf17aed4-641d-11e0-b633-5153a6b2ae73"/>
+        <group id="10720b44-c61d-11e9-98e0-d09a5a0cb17f" name="SET - Securities" long_name="SET - Securities" description="Spread table" parent="f795c642-c61c-11e9-a470-417d447e7172"/>
+    </groups>
+
+</resource>

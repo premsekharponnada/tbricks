@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="KRX GMSH Cash" type="application/x-venue+xml">
+
+    <venues>
+        <venue name="KRX GMSH Cash" shortname="KRX GMSH Cash" identifier="5e247e9a-a129-11e8-ab40-2f138c5915c4" description="Goodmorning Shinhan Securities to KRX">
+            <identifier>
+                <key name="Symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy" value="buy minus" />
+            <field name="execution policy" value="sell plus" />
+            <field name="execution policy" value="sell undisclosed" />
+            <field name="transition type" value="market to limit"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="participation policy"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="active volume" value="+"/>
+            <field name="total volume" value="+"/>
+            <field name="volume delta" value="+"/>
+            <field name="disclosed volume"/>
+            <field name="validity type"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the KRX GMSH Cash venue.
+    </documentation>
+</resource>

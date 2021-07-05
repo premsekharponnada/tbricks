@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CFI" type="application/x-cfi+xml">
+    <cfis>
+        <!-- Equities -->
+        <cfi root="EXXXXX" name="Equity">
+            <cfi root="ESXXXX" name="Equity share"/>
+            <cfi root="EPXXXX" name="Equity preferred share"/>
+            <cfi root="ERXXXX" name="Equity preference share"/>
+            <cfi root="ECXXXX" name="Convertible shares"/>
+            <cfi root="EFXXXX" name="Preferred convertible share"/>
+            <cfi root="EVXXXX" name="Preference convertible share"/>
+            <cfi root="EUXXXX" name="Units and funds">
+                <cfi root="EUCMEE" name="ETF"/>
+            </cfi>
+            <cfi root="ELXXXX" name="Limited partnership unit"/>
+            <cfi root="EDXXXX" name="Depositary receipts on equities"/>
+            <cfi root="EMXXXX" name="Miscellaneous equity"/>
+            <cfi root="EYXXXX" name="Structured instruments (participation)"/>
+            <variant subtype="Equity return" name="Equity return"/>
+        </cfi>
+
+        <!-- Debt instruments -->
+        <cfi root="DXXXXX" name="Debt">
+            <cfi root="DBXXXX" name="Bond"/>
+            <cfi root="DCXXXX" name="Convertible bond"/>
+            <cfi root="DTXXXX" name="Medium term note"/>
+            <cfi root="DAXXXX" name="Asset-backed security"/>
+            <cfi root="DDXXXX" name="Depositary receipts on debt instrument"/>
+            <cfi root="DEXXXX" name="Structured product (without capital protection)"/>
+            <cfi root="DGXXXX" name="Mortgage-backed security"/>
+            <cfi root="DMXXXX" name="Miscellaneous debt"/>
+            <cfi root="DNXXXX" name="Municipal bond"/>
+            <cfi root="DSXXXX" name="Structured product (capital protection)"/>
+            <cfi root="DWXXXX" name="Bond with warrant attached"/>
+            <cfi root="DYXXXX" name="Money Market Instrument"/>
+        </cfi>
+
+        <!-- Rights -->
+        <cfi root="RXXXXX" name="Entitlement">
+            <cfi root="RAXXXX" name="Bonus right"/>
+            <cfi root="RSXXXX" name="Subscription right"/>
+            <cfi root="RPXXXX" name="Purchase right"/>
+            <cfi root="RDXXXX" name="Depositary receipts on entitlement"/>
+            <cfi root="RFXXXX" name="Mini-future certificates/constant leverage certificate"/>
+            <cfi root="RWXXXX" name="Warrant">
+                <cfi root="RWXXCX" name="Call warrant">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="RWXXPX" name="Put warrant">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <variant subtype="Mini-future" name="Mini-future"/>
+                <cfi root="RWXXBX" name="Call and put warrant">
+                    <variant subtype="Inline warrant" name="Inline warrant"/>
+                </cfi>
+            </cfi>
+            <cfi root="RMXXXX" name="Miscellaneous right">
+                <variant subtype="EUSIPA 2299" name="Index certificate"/>
+                <variant subtype="EUSIPA 1200" name="Max certificate"/>
+                <variant subtype="EUSIPA 1250" name="Capped bonus certificate"/>
+                <variant subtype="EUSIPA 1260" name="Express certificate"/>
+                <variant subtype="EUSIPA 1300" name="Tracker certificate"/>
+                <variant subtype="EUSIPA 1320" name="Uncapped bonus certificate"/>
+                <variant subtype="Capped call" name="Capped call"/>
+                <variant subtype="Capped put" name="Capped put"/>
+            </cfi>
+        </cfi>
+
+        <!-- Options -->
+        <cfi root="OXXXXX" name="Option">
+            <cfi root="OCXXXX" name="Call">
+                <variant subtype="Down and in" name="Barrier down and in call"/>
+                <variant subtype="Down and out" name="Barrier down and out call"/>
+                <variant subtype="Up and in" name="Barrier up and in call"/>
+                <variant subtype="Up and out" name="Barrier up and out call"/>
+                <variant subtype="Binary asset" name="Binary call (asset)"/>
+                <variant subtype="Binary cash" name="Binary call (cash)"/>
+                <variant subtype="Average price option" name="ARO call"/>
+                <variant subtype="Turbo" name="Turbo call"/>
+                <variant subtype="Mini-future" name="Mini-future call"/>
+                <variant subtype="Forward start" name="Forward start call"/>
+                <variant subtype="CBBC" name="CBBC call"/>
+                <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                <variant subtype="Mini-future" name="Mini-future"/>
+                <variant subtype="Calendar spread option" name="Calendar spread call"/>
+            </cfi>
+            <cfi root="OPXXXX" name="Put">
+                <variant subtype="Down and in" name="Barrier down and in put"/>
+                <variant subtype="Down and out" name="Barrier down and out put"/>
+                <variant subtype="Up and in" name="Barrier up and in put"/>
+                <variant subtype="Up and out" name="Barrier up and out put"/>
+                <variant subtype="Binary asset" name="Binary put (asset)"/>
+                <variant subtype="Binary cash" name="Binary put (cash)"/>
+                <variant subtype="Average price option" name="ARO put"/>
+                <variant subtype="Turbo" name="Turbo put"/>
+                <variant subtype="Mini-future" name="Mini-future put"/>
+                <variant subtype="Forward start" name="Forward start put"/>
+                <variant subtype="CBBC" name="CBBC put"/>
+                <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                <variant subtype="Mini-future" name="Mini-future"/>
+                <variant subtype="Calendar spread option" name="Calendar spread put"/>
+            </cfi>
+            <cfi root="OMXXXX" name="Miscellaneous option"/>
+            <variant subtype="Mini-future" name="Mini-future"/>
+        </cfi>
+
+        <!-- Futures and forwards -->
+        <cfi root="FXXXXX" name="Future">
+            <cfi root="FFXXXX" name="Financial future">
+                <cfi root="FFCXXX" name="Financial future">
+                    <variant subtype="FX" name="F/X"/>
+                </cfi>
+                <variant subtype="Forward" name="Financial forward"/>
+            </cfi>
+            <cfi root="FCXXXX" name="Commodity future">
+                <variant subtype="Forward" name="Commodity forward"/>
+            </cfi>
+            <variant subtype="Dividend futures" name="Dividend futures"/>
+            <variant subtype="Forward" name="Forward"/>
+        </cfi>
+
+
+        <!-- Swaps -->
+        <cfi root="SXXXXX" name="Swaps">
+            <cfi root="SCXXXX" name="Credit swaps"/>
+            <cfi root="SEXXXX" name="Equity swaps"/>
+            <cfi root="SFXXXX" name="FX swaps"/>
+            <cfi root="SMXXXX" name="Miscellaneous swaps"/>
+            <cfi root="SRXXXX" name="Rates swaps"/>
+            <cfi root="STXXXX" name="Commodities swaps"/>
+        </cfi>
+
+        <!-- Referential -->
+        <cfi root="TXXXXX" name="Referential">
+            <cfi root="TCXXXX" name="Currency"/>
+            <cfi root="TTXXXX" name="Commodity"/>
+            <cfi root="TRXXXX" name="Rate"/>
+            <cfi root="TIXXXX" name="Index"/>
+            <cfi root="TDXXXX" name="Stock dividend"/>
+            <cfi root="TMXXXX" name="Miscellaneous referential"/>
+        </cfi>
+
+        <!-- Miscellaneous -->
+        <cfi root="MXXXXX" name="Miscellaneous">
+            <cfi root="MCXXXX" name="Composite">
+              <variant subtype="Interest rate swap" name="Interest rate swap"/>
+              <variant subtype="Equity swap" name="Equity swap"/>
+              <variant subtype="Inline warrant" name="Inline warrant"/>
+            </cfi>
+            <cfi root="MMXXXX" name="Other assets (miscellaneous)"/>
+            <cfi root="MRXXXX" name="Referential Instruments"/>
+        </cfi>
+
+        <!-- Collective investment vehicles -->
+        <cfi root="CXXXXX" name="Collective investment vehicles">
+            <cfi root="CBXXXX" name="Real estate investment trust (REIT)"/>
+            <cfi root="CEXXXX" name="Exchange-traded fund (ETF)"/>
+            <cfi root="CFXXXX" name="Fund of fund"/>
+            <cfi root="CHXXXX" name="Hedge fund"/>
+            <cfi root="CIXXXX" name="Standard (vanilla)investment funds/mutual fund"/>
+            <cfi root="CMXXXX" name="Miscellaneous collective investment vehicle"/>
+            <cfi root="CPXXXX" name="Private equity fund"/>
+            <cfi root="CSXXXX" name="Pension fund"/>
+        </cfi>
+
+        <!-- Non-listed and complex listed options -->
+        <cfi root="HXXXXX" name="Non-listed and complex listed option">
+            <cfi root="HCXXXX" name="Credit non-listed and complex listed option">
+                <cfi root="HCXAXX" name="Credit non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HCXBXX" name="Credit non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HCXDXX" name="Credit non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HCXEXX" name="Credit non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+            </cfi>
+            <cfi root="HEXXXX" name="Equity non-listed and complex listed option">
+              <cfi root="HEXAXX" name="Equity non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+              </cfi>
+                <cfi root="HEXBXX" name="Equity non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HEXDXX" name="Equity non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HEXEXX" name="Equity non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+            </cfi>
+            <cfi root="HFXXXX" name="FX non-listed and complex listed option">
+                <cfi root="HFXAXX" name="FX non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HFXBXX" name="FX non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HFXDXX" name="FX non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HFXEXX" name="FX non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+            </cfi>
+            <cfi root="HMXXXX" name="Miscellaneous non-listed and complex listed option">
+              <cfi root="HMXAXX" name="Miscellaneous non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+              </cfi>
+                <cfi root="HMXBXX" name="Miscellaneous non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HMXDXX" name="Miscellaneous non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HMXEXX" name="Miscellaneous non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+            </cfi>
+            <cfi root="HRXXXX" name="Rates non-listed and complex listed option">
+                <cfi root="HRXAXX" name="Rates non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HRXBXX" name="Rates non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HRXDXX" name="Rates non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HRXEXX" name="Rates non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+            </cfi>
+            <cfi root="HTXXXX" name="Commodities non-listed and complex listed option">
+                <cfi root="HTXAXX" name="Commodities non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HTXBXX" name="Commodities non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in call"/>
+                    <variant subtype="Down and out" name="Barrier down and out call"/>
+                    <variant subtype="Up and in" name="Barrier up and in call"/>
+                    <variant subtype="Up and out" name="Barrier up and out call"/>
+                    <variant subtype="Binary asset" name="Binary call (asset)"/>
+                    <variant subtype="Binary cash" name="Binary call (cash)"/>
+                    <variant subtype="Average price option" name="ARO call"/>
+                    <variant subtype="Turbo" name="Turbo call"/>
+                    <variant subtype="Mini-future" name="Mini-future call"/>
+                    <variant subtype="Forward start" name="Forward start call"/>
+                    <variant subtype="CBBC" name="CBBC call"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HTXDXX" name="Commodities non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+                <cfi root="HTXEXX" name="Commodities non-listed and complex listed option">
+                    <variant subtype="Down and in" name="Barrier down and in put"/>
+                    <variant subtype="Down and out" name="Barrier down and out put"/>
+                    <variant subtype="Up and in" name="Barrier up and in put"/>
+                    <variant subtype="Up and out" name="Barrier up and out put"/>
+                    <variant subtype="Binary asset" name="Binary put (asset)"/>
+                    <variant subtype="Binary cash" name="Binary put (cash)"/>
+                    <variant subtype="Average price option" name="ARO put"/>
+                    <variant subtype="Turbo" name="Turbo put warrant"/>
+                    <variant subtype="Mini-future" name="Mini-future put"/>
+                    <variant subtype="Forward start" name="Forward start put"/>
+                    <variant subtype="CBBC" name="CBBC put warrant"/>
+                    <variant subtype="EUSIPA 2300" name="Leverage certificate"/>
+                </cfi>
+            </cfi>
+        </cfi>
+
+        <!-- Spot -->
+        <cfi root="IXXXXX" name="Spot">
+            <cfi root="IFXXXX" name="FX spot"/>
+            <cfi root="ITXXXX" name="Commodities spot"/>
+        </cfi>
+
+        <!-- Forwards -->
+        <cfi root="JXXXXX" name="Forward">
+            <cfi root="JCXXXX" name="Credit forward">
+              <variant subtype="Forward" name="Credit forward"/>
+            </cfi>
+            <cfi root="JEXXXX" name="Equity forward">
+              <variant subtype="Forward" name="Equity forward"/>
+            </cfi>
+            <cfi root="JFXXXX" name="FX forward">
+              <variant subtype="Forward" name="FX forward"/>
+            </cfi>
+            <cfi root="JRXXXX" name="Rates forward">
+              <variant subtype="Forward" name="Rates forward"/>
+            </cfi>
+            <cfi root="JTXXXX" name="Commodities forward">
+              <variant subtype="Forward" name="Commodities forward"/>
+            </cfi>
+            <variant subtype="Forward" name="Forward"/>
+        </cfi>
+
+        <!-- Strategies -->
+        <cfi root="KXXXXX" name="Strategy">
+            <cfi root="KCXXXX" name="Credit strategy"/>
+            <cfi root="KEXXXX" name="Equity strategy"/>
+            <cfi root="KFXXXX" name="FX strategy"/>
+            <cfi root="KMXXXX" name="Miscellaneous strategy"/>
+            <cfi root="KRXXXX" name="Rates strategy"/>
+            <cfi root="KTXXXX" name="Commodities strategy"/>
+            <cfi root="KYXXXX" name="Mixed assets strategy"/>
+        </cfi>
+
+        <!-- Financing -->
+        <cfi root="LXXXXX" name="Financing">
+            <cfi root="LLXXXX" name="Loan-lease"/>
+            <cfi root="LRXXXX" name="Repurchase agreements"/>
+            <cfi root="LSXXXX" name="Securities lending"/>
+        </cfi>
+
+    </cfis>
+    <variants>
+      <variant subtype="Undefined" id="0"/>
+      <variant subtype="Forward" id="1"/>
+      <variant subtype="Turbo" id="2"/>
+      <variant subtype="Down and in" id="3"/>
+      <variant subtype="Down and out" id="4"/>
+      <variant subtype="Up and in" id="5"/>
+      <variant subtype="Up and out" id="6"/>
+      <variant subtype="Binary asset" id="7"/>
+      <variant subtype="Binary cash" id="8"/>
+      <variant subtype="Average price option" id="9"/>
+
+      <!-- Discount Certificate -->
+      <variant subtype="EUSIPA 1200" id="10"/>
+      <!-- Miscellaneous Leverage With Knock Out -->
+      <variant subtype="EUSIPA 2299" id="11"/>
+
+      <variant subtype="FX" id="12"/>
+
+      <variant subtype="Capped call" id="13"/>
+      <variant subtype="Mini-future" id="14"/>
+      <variant subtype="Dividend futures" id="15"/>
+      <variant subtype="Equity return" id="16"/>
+      <variant subtype="Interest rate swap" id="17"/>
+      <variant subtype="Equity swap" id="18"/>
+      <variant subtype="Forward start" id="19"/>
+      <!-- Tracker Certificate -->
+      <variant subtype="EUSIPA 1300" id="20"/>
+
+      <variant subtype="Capped put" id="21"/>
+
+      <!-- Capped and Uncapped Bonus Certificates -->
+      <variant subtype="EUSIPA 1250" id="22"/>
+      <variant subtype="EUSIPA 1320" id="23"/>
+
+      <!-- Callable Bull Bear Contracts -->
+      <variant subtype="CBBC" id="24"/>
+
+      <!-- Constant Leverage Certificates -->
+      <variant subtype="EUSIPA 2300" id="25"/>
+
+      <!-- Express Certificates -->
+      <variant subtype="EUSIPA 1260" id="26"/>
+
+      <!-- Inline warrant -->
+      <variant subtype="Inline warrant" id="27"/>
+
+      <!-- Calendar spread option -->
+      <variant subtype="Calendar spread option" id="28"/>
+
+<!--
+      <variant subtype="EUSIPA 2199" id=""/>
+      <variant subtype="EUSIPA 2200" id=""/>
+      <variant subtype="EUSIPA 2200" id=""/>
+      <variant subtype="EUSIPA 2210" id=""/>
+      <variant subtype="EUSIPA 1300" id=""/>
+      <variant subtype="EUSIPA 1320" id=""/>
+      <variant subtype="EUSIPA 1310" id=""/>
+      <variant subtype="EUSIPA 1340" id=""/>
+      <variant subtype="EUSIPA 1399" id=""/>
+      <variant subtype="EUSIPA 1220" id=""/>
+      <variant subtype="EUSIPA 1230" id=""/>
+      <variant subtype="EUSIPA 1260" id=""/>
+      <variant subtype="EUSIPA 1299" id=""/>
+      <variant subtype="EUSIPA 1100" id=""/>
+      <variant subtype="EUSIPA 1120" id=""/>
+      <variant subtype="EUSIPA 1140" id=""/>
+      <variant subtype="EUSIPA 1130" id=""/>
+      <variant subtype="EUSIPA 1199" id=""/>
+-->
+    </variants>
+<!--<documentation>
+        Defines supported instrument subtypes for CFI-roots along with human readable interpretations.
+    </documentation>
+-->
+</resource>

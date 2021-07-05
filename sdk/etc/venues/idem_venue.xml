@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Borsa Italiana IDEM" type="application/x-venue+xml">
+    <venues>
+        <venue name="Borsa Italiana IDEM" shortname="Borsa Italiana IDEM" identifier="e6537218-580d-11e3-8f32-645259696e55" description="Borsa Italiana IDEM">
+            <identifier>
+                <key name="group"/>
+                <key name="symbol"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="total volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Borsa Italiana IDEM SOLA venue.
+    </documentation>
+</resource>
+

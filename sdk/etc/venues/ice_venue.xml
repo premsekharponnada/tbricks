@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="ICE venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="ICE" shortname="ICE" identifier="5dceedcc-6c6d-11de-bc77-a7e23812436c" description="ICE iMpact" native_trd_required="yes">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="security_type" tag="167"/>
+                <key name="security_group" tag="1151"/>
+                <key name="security_sub_type" tag="762"/>
+                <key name="underlying_symbol" tag="311"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="transition type"/>
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+    
+    <documentation>
+        Venue identifier resource describing the ICE venue.
+    </documentation>
+</resource>

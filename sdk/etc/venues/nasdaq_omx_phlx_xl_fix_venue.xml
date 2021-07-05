@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ OMX PHLX XL FIX Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ OMX PHLX XL FIX" shortname="PHLX FIX" identifier="e8ace61d-127a-448b-8e98-01bbf69c3483" description="NASDAQ OMX PHLX XL FIX">
+            <identifier>
+                <!-- non-complex orders -->
+                <key name="Symbol"       tag="55"/>
+                <key name="MaturityDate" tag="541"/>
+                <key name="PutOrCall"    tag="201"/>
+                <key name="StrikePrice"  tag="202"/>
+
+                <!-- complex orders, maximum of 6 legs -->
+                <key name="LegSymbol1"       tag="600"/>
+                <key name="LegCFICode1"      tag="608"/>
+                <key name="LegMaturityDate1" tag="611"/>
+                <key name="LegStrikePrice1"  tag="612"/>
+                <key name="LegRatioQty1"     tag="623"/>
+                <key name="LegSide1"         tag="624"/>
+
+                <key name="LegSymbol2"       tag="600"/>
+                <key name="LegCFICode2"      tag="608"/>
+                <key name="LegMaturityDate2" tag="611"/>
+                <key name="LegStrikePrice2"  tag="612"/>
+                <key name="LegRatioQty2"     tag="623"/>
+                <key name="LegSide2"         tag="624"/>
+
+                <key name="LegSymbol3"       tag="600"/>
+                <key name="LegCFICode3"      tag="608"/>
+                <key name="LegMaturityDate3" tag="611"/>
+                <key name="LegStrikePrice3"  tag="612"/>
+                <key name="LegRatioQty3"     tag="623"/>
+                <key name="LegSide3"         tag="624"/>
+
+                <key name="LegSymbol4"       tag="600"/>
+                <key name="LegCFICode4"      tag="608"/>
+                <key name="LegMaturityDate4" tag="611"/>
+                <key name="LegStrikePrice4"  tag="612"/>
+                <key name="LegRatioQty4"     tag="623"/>
+                <key name="LegSide4"         tag="624"/>
+
+                <key name="LegSymbol5"       tag="600"/>
+                <key name="LegCFICode5"      tag="608"/>
+                <key name="LegMaturityDate5" tag="611"/>
+                <key name="LegStrikePrice5"  tag="612"/>
+                <key name="LegRatioQty5"     tag="623"/>
+                <key name="LegSide5"         tag="624"/>
+
+                <key name="LegSymbol6"       tag="600"/>
+                <key name="LegCFICode6"      tag="608"/>
+                <key name="LegMaturityDate6" tag="611"/>
+                <key name="LegStrikePrice6"  tag="612"/>
+                <key name="LegRatioQty6"     tag="623"/>
+                <key name="LegSide6"         tag="624"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="disclosed volume"/>
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="active volume" />
+            <field name="volume delta" />
+            <field name="validity type" value="last auction"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ OMX PHLX XL FIX Exchange venue.
+    </documentation>
+</resource>

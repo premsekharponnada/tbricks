@@ -1,0 +1,157 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:types="http://www.itiviti.com/types"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://www.itiviti.com/types" schemaLocation="types.xsd"/>
+
+    <xs:complexType name="parameters">
+        <xs:sequence>
+            <xs:element name="parameter" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="name"/>
+                            <xs:attribute type="xs:string" name="property"/>
+                            <xs:attribute type="xs:string" name="property_type" use="optional"/>
+                            <xs:attribute type="xs:string" name="default_high_watermark"/>
+                            <xs:attribute type="xs:string" name="default_type" use="optional"/>
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="limits">
+        <xs:sequence>
+            <xs:element name="limit" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType mixed="true">
+                    <xs:sequence>
+                        <xs:element name="parameters" type="parameters" maxOccurs="unbounded" minOccurs="0"/>                                                                               
+                    </xs:sequence>
+                    <xs:attribute type="xs:string" name="type" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="starting_timeout" use="optional"/>
+    </xs:complexType>
+
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="purges" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="csv" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <!-- TODO: noraml duration type -->
+                                    <xs:attribute name="expiration_time" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+
+                        <xs:attribute name="day" type="types:Day" use="required"/>
+                        <xs:attribute name="time" type="types:Time" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="limit_types">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="limit_type" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="source">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute type="xs:string" name="field"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="parameters" type="parameters" maxOccurs="unbounded" minOccurs="0"/>
+                                        <xs:element name="actions">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="action" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="name"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="limits_config">
+                    <xs:complexType>
+                        <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="component" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="limits" type="limits" maxOccurs="unbounded" minOccurs="0"/>
+                                        <xs:element name="services" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="service">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="limits" type="limits" maxOccurs="unbounded" minOccurs="0"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                                                            <xs:attribute type="xs:boolean" name="should_inherit" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="type" use="optional"/>
+                                    <xs:attribute type="xs:boolean" name="should_inherit" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="defaults" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="component" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="limits" type="limits" maxOccurs="unbounded" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="service">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="limits" type="limits" maxOccurs="unbounded" minOccurs="0"/>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="type" use="optional"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+            <xs:attribute type="xs:string" name="type"/>
+            <xs:attribute type="xs:byte" name="version"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

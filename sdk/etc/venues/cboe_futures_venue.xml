@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CBOE Futures Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="CBOE Futures Exchange"
+               shortname="CFE"
+               identifier="45aa257e-d61b-11e7-b2e0-eb02ac65f860"
+               description="CBOE Futures Exchange">
+            <identifier>
+                <key name="symbol"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the CBOE Futures Exchange venue.
+    </documentation>
+</resource>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="FEX" type="application/x-venue+xml">
+    <venues>
+        <venue name="FEX" shortname="FEX" identifier="d23c8412-21f9-11e8-8430-4a39463c763d" description="FEX">
+            <identifier>
+                <!-- new order single viid -->
+                <key name="Symbol" tag="55"/>
+                <key name="SecurityType" tag="167"/>
+                <key name="SecuritySubType" tag="762"/>
+                <key name="TradingSessionID" tag="336"/>
+                <!-- viid related to multileg-->
+            </identifier>
+        </venue>
+    </venues>
+    <capabilities>
+        <restriction message="order">
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="disclosed volume"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+    <documentation>
+        Venue identifier resource example for FEX.
+    </documentation>
+</resource>

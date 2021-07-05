@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="venue priority" type="application/x-venue-priority+xml">
+
+    <venuepriority type="trading">
+    </venuepriority>
+
+    <venuepriority type="trading reference data">
+    </venuepriority>
+    
+    <venuepriority type="market data">
+    </venuepriority>
+    
+    <documentation>
+        Trading/market-data default venue priority resource.
+    </documentation>
+</resource>                                                                                                                                                        

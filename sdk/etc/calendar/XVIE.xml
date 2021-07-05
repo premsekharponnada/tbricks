@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="XVIE" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+    </days>
+
+    <days year="2019">
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- St. Stephen’s Day -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="06-01" valid="no"/> <!-- Whit Monday -->
+        <day date="10-26" valid="no"/> <!-- National Holiday -->
+        <day date="12-24" valid="no"/> <!-- Christmas Eve -->
+        <day date="12-31" valid="no"/> <!-- Exchange Holiday -->
+    </days>
+
+    <documentation>
+        Calendar defining trading-days for XVIE (Vienna Stock Exchange).
+        Source https://www.wienerborse.at/en/trading/trading-information/trading-calendar
+    </documentation>
+</resource>

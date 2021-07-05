@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="London Stock Exchange SOLA" type="application/x-venue+xml">
+    <venues>
+        <venue name="London Stock Exchange SOLA" shortname="LSE SOLA" identifier="e3e559fa-2f94-11e5-a170-4353c77e56b0" description="London Stock Exchange SOLA">
+            <identifier>
+                <key name="group"/>
+                <key name="symbol"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="execution policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="minimum acceptable fill volume"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="validity type" value="today"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="minimum acceptable fill volume"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the London Stock Exchange SOLA venue.
+    </documentation>
+</resource>
+

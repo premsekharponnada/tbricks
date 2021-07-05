@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="MTAA" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+      <day date="01-01" valid="no"/>
+      <day date="05-01" valid="no"/>
+      <day date="08-15" valid="no"/>
+      <day date="12-24" valid="no"/>
+      <day date="12-25" valid="no"/>
+      <day date="12-26" valid="no"/>
+      <day date="12-31" valid="no"/>
+    </days>
+
+    <days year="2017">
+         <day date="04-14" valid="no"/>
+         <day date="04-17" valid="no"/>
+         <day date="08-15" valid="no"/>
+    </days>
+
+    <days year="2018">
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="04-02" valid="no"/> <!-- Easter Monday -->
+        <day date="08-15" valid="no"/> <!-- Assumption of Mary-->
+    </days>
+
+    <days year="2019">
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <documentation>
+        Calendar defining trading-days for MTAA (Borsa Italiana).
+        Source see ETFP.xml
+    </documentation>
+</resource>

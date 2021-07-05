@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="application/x-aquis-config+xml"/>
+                        <xs:enumeration value="application/x-aquis-securities+csv"/>
+                        <xs:enumeration value="application/x-aquis-ticktables+csv"/>
+                        <xs:enumeration value="application/x-phlx-cfi-codes+xml"/>
+                        <xs:enumeration value="application/x-password-strength-settings+xml"/>
+                        <xs:enumeration value="application/x-arca-config+xml"/>
+                        <xs:enumeration value="application/x-arca-pillar-config+xml"/>
+                        <xs:enumeration value="application/x-cboe-config+xml"/>
+                        <xs:enumeration value="application/x-cboe-vni-config+xml"/>
+                        <xs:enumeration value="application/x-cme-mdp3-configuration+xml"/>
+                        <xs:enumeration value="application/x-cme-msgw-configuration+xml"/>
+                        <xs:enumeration value="application/x-cme-ilink3-configuration+xml"/>
+                        <xs:enumeration value="application/x-genium-inet-config+xml"/>
+                        <xs:enumeration value="application/x-genium-inet-series-filter+xml"/>
+                        <xs:enumeration value="application/x-genium-inet-quote-modes+xml"/>
+                        <xs:enumeration value="application/x-tom-mtf-groups-mapping+xml"/>
+                        <xs:enumeration value="application/x-icap-genium-inet-config+xml"/>
+                        <xs:enumeration value="application/x-ise-mdi-config+xml"/>
+                        <xs:enumeration value="application/x-ets-config+xml"/>
+                        <xs:enumeration value="application/x-exegy-xcapi-config+xml"/>
+                        <xs:enumeration value="application/x-utp-config+xml"/>
+                        <xs:enumeration value="application/x-ouch-config+xml"/>
+                        <xs:enumeration value="application/x-burgundy-emapi-config+xml"/>
+                        <xs:enumeration value="application/x-venue+xml"/>
+                        <xs:enumeration value="application/x-venue-priority+xml"/>
+                        <xs:enumeration value="application/x-instrument-reference-data+xml"/>
+                        <xs:enumeration value="application/x-trading-information+xml"/>
+                        <xs:enumeration value="application/x-field-mapping-config+xml"/>
+                        <xs:enumeration value="application/x-fix-config+xml"/>
+                        <xs:enumeration value="application/x-fix-data-dictionary+xml"/>
+                        <xs:enumeration value="application/x-market-data-stream+xml"/>
+                        <xs:enumeration value="application/x-market-factory-tr-sbe-config+xml"/>
+                        <xs:enumeration value="application/x-mic+xml"/>
+                        <xs:enumeration value="application/x-currency+xml"/>
+                        <xs:enumeration value="application/x-calendar+xml"/>
+                        <xs:enumeration value="application/x-components+xml"/>
+                        <xs:enumeration value="application/x-activ-instrument-reference-data+xml"/>
+                        <xs:enumeration value="application/x-trading_phase-mapping+xml"/>
+                        <xs:enumeration value="application/x-ice-instrument-mappings-data+xml"/>
+                        <xs:enumeration value="application/x-purge+xml"/>
+                        <xs:enumeration value="application/x-swxess-mdi-config+xml"/>
+                        <xs:enumeration value="application/x-tradelect-config+xml"/>
+                        <xs:enumeration value="application/x-swx-cti-config+xml"/>
+                        <xs:enumeration value="application/x-quanthouse-config+xml"/>
+                        <xs:enumeration value="application/x-rbac-privilege+xml"/>
+                        <xs:enumeration value="application/x-oslo-sail-config+xml"/>
+                        <xs:enumeration value="application/x-matchnow-fee+xml"/>
+                        <xs:enumeration value="application/x-matchnow-itch-config+xml"/>
+                        <xs:enumeration value="application/x-millennium-tr-config+xml"/>
+                        <xs:enumeration value="application/x-monitoring-config+xml"/>
+                        <xs:enumeration value="application/x-opra-config+xml"/>
+                        <xs:enumeration value="application/x-orc-sd-config+xml"/>
+                        <xs:enumeration value="application/x-oslo-instruments+xml"/>
+                        <xs:enumeration value="application/x-oslo-pricetick+xml"/>
+                        <xs:enumeration value="application/x-oslo-trading+xml"/>
+                        <xs:enumeration value="application/x-oslo-index+xml"/>
+                        <xs:enumeration value="application/x-phlx-tr-config+xml"/>
+                        <xs:enumeration value="application/x-six-config+xml"/>
+                        <xs:enumeration value="application/x-lmax-config+xml"/>
+                        <xs:enumeration value="application/x-eurex-eti-config+xml"/>
+                        <xs:enumeration value="application/x-eurex-c7-config+xml"/>
+                        <xs:enumeration value="application/x-mp-config+xml"/>
+                        <xs:enumeration value="application/x-boe-config+xml"/>
+                        <xs:enumeration value="application/x-bats-boe-config+xml"/>
+                        <xs:enumeration value="application/x-user-mapping-config+xml"/>
+                        <xs:enumeration value="application/x-underlying-mapping-config+xml"/>
+                        <xs:enumeration value="application/x-overrides-config+xml"/>
+                        <xs:enumeration value="application/x-arca-ird-config+xml"/>
+                        <xs:enumeration value="application/xslt+xml"/>
+                        <xs:enumeration value="application/x-persist-market-data+xml"/>
+                        <xs:enumeration value="application/x-ise-dti-config+xml"/>
+                        <xs:enumeration value="application/x-orc-sd-market-capabilities+xml"/>
+                        <xs:enumeration value="application/x-orc-sd-dynamic-order-panel+xml"/>
+                        <xs:enumeration value="application/x-orc-sd-orcservers+xml"/>
+                        <xs:enumeration value="application/x-orc-sd-credentials+xml"/>
+                        <xs:enumeration value="application/x-orc-sd-algo-labels+xml"/>
+                        <xs:enumeration value="application/x-novasparks-bbf-configuration+xml"/>
+                        <xs:enumeration value="application/x-novasparks-nsmda-config+xml"/>
+                        <xs:enumeration value="application/x-novasparks-nsmda-trading-states+xml"/>
+                        <xs:enumeration value="application/x-java-config+xml"/>
+                        <xs:enumeration value="application/x-pool-config+xml"/>
+                        <xs:enumeration value="application/x-munchen-iqi-config+xml"/>
+                        <xs:enumeration value="application/x-zse-config+xml"/>
+                        <xs:enumeration value="application/x-budapest-config+xml"/>
+                        <xs:enumeration value="application/x-bucharest-arena-config+xml"/>
+                        <xs:enumeration value="application/x-tracing-session+xml"/>
+                        <xs:enumeration value="application/x-tracing-template+xml"/>
+                        <xs:enumeration value="application/x-trading-forts-config+xml"/>
+                        <xs:enumeration value="application/x-risk-rule-configuration+xml"/>
+                        <xs:enumeration value="application/x-tbricks-proxy-config+xml"/>
+                        <xs:enumeration value="application/x-catalys-app-config+xml"/>
+                        <xs:enumeration value="application/x-mx-hsvf-config+xml"/>
+                        <xs:enumeration value="application/x-mx-md-config+xml"/>
+                        <xs:enumeration value="application/x-mx-sail-config+xml"/>
+                        <xs:enumeration value="application/x-tmx-quantum-xa-xmt-config+xml"/>
+                        <xs:enumeration value="application/x-cats-ls-config+xml"/>
+                        <xs:enumeration value="application/x-price-feed-config+xml"/>
+                        <xs:enumeration value="application/x-is-fallback-config+xml"/>
+                        <xs:enumeration value="application/x-optiq-open-interest+xml"/>
+                        <xs:enumeration value="application/x-optiq-sd-cash+xml"/>
+                        <xs:enumeration value="application/x-optiq-sd-cash-ticks+xml"/>
+                        <xs:enumeration value="application/x-optiq-sd-derivatives+xml"/>
+                        <xs:enumeration value="application/x-optiq-sd-derivatives-spread-table+xml"/>
+                        <xs:enumeration value="application/x-optiq-sd-derivatives-ticks+xml"/>
+                        <xs:enumeration value="application/x-optiq-settlement-price+xml"/>
+                        <xs:enumeration value="application/x-optiq-streams+xml"/>
+                        <xs:enumeration value="application/x-optiq-tr-sbe-exchange-adaptor-config+xml"/>
+                        <xs:enumeration value="application/x-tokyo-se-streams-config+xml"/>
+                        <xs:enumeration value="application/x-euronext-tr-optiq-config+xml"/>
+                        <xs:enumeration value="application/x-tokyo-se-tr-esp-config+xml"/>
+                        <xs:enumeration value="application/x-tbricks-proxy-config+xml"/>
+                        <xs:enumeration value="application/x-cds-sync-config+xml"/>
+                        <xs:enumeration value="application/x-hkse-ocg-config+xml"/>
+                        <xs:enumeration value="application/x-hkse-ocg-instrument-filter+xml"/>
+                        <xs:enumeration value="application/x-hkfe-omd-d-config+xml"/>
+                        <xs:enumeration value="application/x-moex-equities-fast-config-stream+xml"/>
+                        <xs:enumeration value="application/x-moex-iqs-md-config-stream+xml"/>
+                        <xs:enumeration value="application/x-forts-fast-config+xml"/>
+                        <xs:enumeration value="application/x-reuters-rdm-trading-status-mappings+xml"/>
+                        <xs:enumeration value="application/x-reuters-elektron-config+xml"/>
+                        <xs:enumeration value="application/x-reuters-default-mappings+xml"/>
+                        <xs:enumeration value="application/x-bloomberg-config+xml"/>
+                        <xs:enumeration value="application/x-shfe-ctp-config+xml"/>
+                        <xs:enumeration value="application/x-b3-umdf-config+xml"/>
+                        <xs:enumeration value="application/x-b3-umdf-channel-definitions+xml"/>
+                        <xs:enumeration value="application/x-tfex-emapi-config+xml"/>
+                        <xs:enumeration value="application/x-market-factory-md-sbe-config+xml"/>
+                        <xs:enumeration value="application/x-krx-koscom-config+xml"/>
+                        <xs:enumeration value="application/x-krx-gmsh-config+xml"/>
+                        <xs:enumeration value="application/x-trfw-instrument-filter+xml"/>
+                        <xs:enumeration value="application/x-taifex-rtmd-config+xml"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="version" type="xs:integer"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

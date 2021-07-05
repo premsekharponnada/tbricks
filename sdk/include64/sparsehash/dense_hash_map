@@ -1,0 +1,665 @@
+// Copyright (c) 2005, Google Inc.
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//     * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//     * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+// ----
+//
+// This is just a very thin wrapper over densehashtable.h, just
+// like sgi stl's stl_hash_map is a very thin wrapper over
+// stl_hashtable.  The major thing we define is operator[], because
+// we have a concept of a data_type which stl_hashtable doesn't
+// (it only has a key and a value).
+//
+// NOTE: this is exactly like sparse_hash_map.h, with the word
+// "sparse" replaced by "dense", except for the addition of
+// set_empty_key().
+//
+//   YOU MUST CALL SET_EMPTY_KEY() IMMEDIATELY AFTER CONSTRUCTION.
+//
+// Otherwise your program will die in mysterious ways.  (Note if you
+// use the constructor that takes an InputIterator range, you pass in
+// the empty key in the constructor, rather than after.  As a result,
+// this constructor differs from the standard STL version.)
+//
+// In other respects, we adhere mostly to the STL semantics for
+// hash-map.  One important exception is that insert() may invalidate
+// iterators entirely -- STL semantics are that insert() may reorder
+// iterators, but they all still refer to something valid in the
+// hashtable.  Not so for us.  Likewise, insert() may invalidate
+// pointers into the hashtable.  (Whether insert invalidates iterators
+// and pointers depends on whether it results in a hashtable resize).
+// On the plus side, delete() doesn't invalidate iterators or pointers
+// at all, or even change the ordering of elements.
+//
+// Here are a few "power user" tips:
+//
+//    1) set_deleted_key():
+//         If you want to use erase() you *must* call set_deleted_key(),
+//         in addition to set_empty_key(), after construction.
+//         The deleted and empty keys must differ.
+//
+//    2) resize(0):
+//         When an item is deleted, its memory isn't freed right
+//         away.  This allows you to iterate over a hashtable,
+//         and call erase(), without invalidating the iterator.
+//         To force the memory to be freed, call resize(0).
+//         For tr1 compatibility, this can also be called as rehash(0).
+//
+//    3) min_load_factor(0.0)
+//         Setting the minimum load factor to 0.0 guarantees that
+//         the hash table will never shrink.
+//
+// Roughly speaking:
+//   (1) dense_hash_map: fastest, uses the most memory unless entries are small
+//   (2) sparse_hash_map: slowest, uses the least memory
+//   (3) hash_map / unordered_map (STL): in the middle
+//
+// Typically I use sparse_hash_map when I care about space and/or when
+// I need to save the hashtable on disk.  I use hash_map otherwise.  I
+// don't personally use dense_hash_set ever; some people use it for
+// small sets with lots of lookups.
+//
+// - dense_hash_map has, typically, about 78% memory overhead (if your
+//   data takes up X bytes, the hash_map uses .78X more bytes in overhead).
+// - sparse_hash_map has about 4 bits overhead per entry.
+// - sparse_hash_map can be 3-7 times slower than the others for lookup and,
+//   especially, inserts.  See time_hash_map.cc for details.
+//
+// See /usr/(local/)?doc/sparsehash-*/dense_hash_map.html
+// for information about how to use this class.
+
+#pragma once
+
+#include <algorithm>   // needed by stl_alloc
+#include <functional>  // for equal_to<>, select1st<>, etc
+#include <initializer_list> // for initializer_list
+#include <memory>      // for alloc
+#include <stdexcept>   // for out_of_range
+#include <utility>     // for pair<>
+#include <tuple>       // forward_as_tuple
+#include <type_traits> // for enable_if, is_constructible, etc
+#include "internal/densehashtable.h"  // IWYU pragma: export
+#include "internal/libc_allocator_with_realloc.h"
+#include "traits"
+
+namespace google {
+
+// a special template parameter - KeyConverter, is needed if user wants
+// to directly emplace into container values, from which container's keys
+// cannot be directly constructed; or use fully operator[] with such values;
+// KeyConverter is a functor, which convert a value to a tuple, containing
+// parameters for key constructor; those parameters will be perfectly
+// forwarded to a key constructor.
+
+template <class Key, class T, class HashFcn = std::hash<Key>,
+          class EqualKey = std::equal_to<Key>,
+          class Alloc = libc_allocator_with_realloc<std::pair<const Key, T>>,
+          class KeyConverter = sparsehash_internal::NoOp>
+class dense_hash_map
+  : public copy_characteristics<std::is_copy_constructible<T>::value> {
+ private:
+  typedef std::pair<const Key, T> ValueT;
+  typedef typename std::remove_const<Key>::type NonconstKey;
+  // trait:
+  //    can we use this type for hash calculation and equality comparison (with key value)
+  //    instead of key?
+  template <class K>
+  struct is_key_substitute {
+    // to enforce matching with overloads, not requiring
+    // a type cast, we have to disable the most generic
+    // overload (make it uncallable)
+    struct EqualFix : public EqualKey {
+      using EqualKey::operator();
+    private:
+      template <class L, class R>
+      void operator()(const L&, const R&) const;
+    };
+    // check, if we can call supplied hash and equalto functors
+    // with value of some type
+    typedef decay_to_pass_const_t<K> KeyT;
+    static constexpr bool value =
+        is_callable<EqualFix, KeyT, const NonconstKey&>::value &&
+        is_callable<HashFcn, KeyT>::value;
+  };
+  // types, which we can use in place of key
+  // for purposes of lookup
+  template <class K>
+  using key_comparable = typename std::enable_if<is_key_substitute<K>::value>::type;
+  // types, which we can NOT use in place of key
+  // for purposes of lookup
+  template <class K>
+  using non_key_comparable = typename std::enable_if<!is_key_substitute<K>::value>::type;
+  // trait:
+  //    can we construct key's value from
+  //    a value of this type?
+  template <class K>
+  struct is_key_constructible {
+    // to enforce matching with overloads, not requiring
+    // a type cast, we have to disable the most generic
+    // overload (make it uncallable)
+    struct ConverterFix : public KeyConverter {
+      using KeyConverter::operator();
+    private:
+      template <class R>
+      void operator()(const R&) const;
+    };
+    static constexpr bool simple = std::is_constructible<Key, K&&>::value;
+    static constexpr bool helper = !simple && is_callable<ConverterFix, K&&>::value;
+  };
+  // types, which we can use for purposes of lookup and from which
+  // we can construct key's value directly
+  template <class K>
+  using key_comparable_and_constructible = typename std::enable_if<
+        is_key_substitute<K>::value &&
+        is_key_constructible<K>::simple
+    >::type;
+  // types, from which we can construct key's value with a supplied helper
+  template <class K>
+  using helper_constructible = typename std::enable_if<is_key_constructible<K>::helper>::type;
+  // Before we do something with a Value, we need to compute
+  // its hash. So even if an user wants an in-place construction,
+  // we have to construct a Key before we could fully construct
+  // a Value (unless user supplied hash and equalto functors,
+  // which accept values of other than key types).
+  //
+  // Key extraction is straightforward for cases when we
+  // deal with values (internally) or with insertions -
+  // key is already constructed and we need to simply forward
+  // a reference to it.
+  // In case of emplace, key may be or may be not constructed.
+  // If it's already constructed, we need to carefully forward
+  // a reference to it, but if it's not constructed, we have no
+  // choice but to construct it and return by value. Caller is
+  // ready for it.
+  // Special case: user supplied hash and equalto functors, which
+  // accept values of other than key types; for this types only
+  // we can postpone key construction until it's needed for
+  // insertion. This cases are marked with relevant type traits.
+  struct ExtractKey {
+    // Implementation type tagging and result type deduction.
+    // If we have a Key, then result is a const reference to it,
+    // it will be used for hash computing.
+    // If we have to construct a Key, then result is a value,
+    // caller will carefully forward it to ConstructValue
+    template <class U>
+    using is_key = trait_or<
+        std::is_same<Key, typename std::decay<U>::type>,
+        is_key_substitute<U>
+      >;
+    template <bool v>
+    using bool_t = std::integral_constant<bool, v>;
+    template <class U>
+    using direct_tag = bool_t<is_key<U>::value>;
+    template <class U>
+    struct spec_decay {
+        typedef typename std::decay<U>::type UU;
+        typedef typename std::conditional<
+            std::is_pointer<UU>::value,
+            UU,
+            const UU&
+            >::type type;
+    };
+    template <class U>
+    using return_type = typename std::conditional<
+        is_key<U>::value,
+        typename spec_decay<U>::type,
+        Key>::type;
+
+    template <class U1, class U2>
+    return_type<U1> operator()(U1&& first, U2&&) const { return get_impl(std::forward<U1>(first), direct_tag<U1>{}); }
+    template <class U1, class U2>
+    return_type<U1> operator()(const std::pair<U1, U2>& p) const { return get_impl(p.first, direct_tag<U1>{}); }
+    template <class U1, class U2>
+    return_type<U1> operator()(std::pair<U1, U2>&& p) const { return get_impl(std::move(p.first), direct_tag<U1>{}); }
+    template <class KArg, class... VArgs>
+    return_type<KArg> operator()(std::piecewise_construct_t, std::tuple<KArg> key_arg, std::tuple<VArgs...>) const {
+        return get_impl(std::get<0>(key_arg), direct_tag<KArg>{});
+    }
+    template <class... KArgs, class... VArgs>
+    Key operator()(std::piecewise_construct_t, std::tuple<KArgs...> key_args, std::tuple<VArgs...>) const {
+        return sparsehash_internal::invoke_cons<Key>(key_args);
+    }
+  private:
+    const Key& get_impl(const Key& key, bool_t<true>) const { return key; }
+    template <class U>
+    const U& get_impl(const U& key, bool_t<true>) const { return key; }
+    template <class U>
+    Key get_impl(U&& arg, bool_t<false>) const { return Key(std::forward<U>(arg)); }
+  };
+  // Value (value_type) construction is splitted into 3 cases:
+  // 1) we need to move or copy a Value - just do that.
+  // 2) we have a const reference to a Key, meaning it's either
+  //    cannot be moved, or it's r-value reference is inside
+  //    the rest of the arguments; and the rest of the arguments
+  //    is enough to construct a Value, so we forward them to
+  //    Value's constructor.
+  //    Special subcase: we are dealing with a value of type,
+  //    which can be used as a key substitute for purposes of
+  //    hash computation and comparing with real key values,
+  //    but from which we cannot directly construct a key;
+  //    logic of lookup did not contstruct a key, so we need
+  //    to construct it here using supplied helper functor;
+  //    it returns a tuple, so luckily, we can take advantage
+  //    of piecewise constructor of container's values.
+  // 3) we have a r-value reference to a Key, meaning it was
+  //    constructed for purposes of hash computing and we need to
+  //    move it into a Value we construct here, while extracting
+  //    from the rest of the arguments the part, relevant to
+  //    payload construction - we want to call as less constructors
+  //    as possible.
+  struct ConstructValue
+    : public KeyConverter {
+    // 1st case - we are dealing with a Value here
+    template <class V, class = typename std::enable_if<std::is_same<ValueT, typename std::decay<V>::type>::value>::type>
+    void operator()(void* dst, V&& v) const {
+      new (dst) ValueT(std::forward<V>(v));
+    }
+    // 2nd case - we are just forwarding the rest of the arguments
+    template <class... Args>
+    void operator()(void* dst, const Key&, Args&& ...args) const {
+      new (dst) ValueT(std::forward<Args>(args)...);
+    }
+    template <class K, class... Args, class = key_comparable_and_constructible<K>>
+    void operator()(void* dst, const K&, Args&& ...args) const {
+      new (dst) ValueT(std::forward<Args>(args)...);
+    }
+    template <class K1, class K, class TArg, class = helper_constructible<K>>
+    void operator()(void* dst, K1&&, K&& k, TArg&& t) const {
+      new (dst) ValueT(std::piecewise_construct,
+        KeyConverter::operator()(std::forward<K>(k)),
+        std::forward_as_tuple(std::forward<TArg>(t)));
+    }
+    // 3rd case - we are forwarding r-value reference to a Key and
+    // extracting payload constructor's arguments.
+    // We can do that because Map's emplace method accepts the same arguments
+    // as value_type constructor - std::pair<const Key, T>(...).
+    template <class U1, class U2, class = typename std::enable_if<std::is_convertible<U2, T>::value>::type>
+    void operator()(void* dst, Key&& key, U1&&, U2&& second) const {
+      new (dst) ValueT(std::move(key), std::forward<U2>(second));
+    }
+    template <class U1, class U2>
+    void operator()(void* dst, Key&& key, const std::pair<U1, U2>& p) const {
+      new (dst) ValueT(std::move(key), p.second);
+    }
+    template <class U1, class U2>
+    void operator()(void* dst, Key&& key, std::pair<U1, U2>& p) const {
+      new (dst) ValueT(std::move(key), p.second);
+    }
+    template <class U1, class U2>
+    void operator()(void* dst, Key&& key, std::pair<U1, U2>&& p) const {
+      new (dst) ValueT(std::move(key), std::move(p.second));
+    }
+    template <class... FirstArgs, class... SecondArgs>
+    void operator()(void* dst, Key&& key, std::piecewise_construct_t, std::tuple<FirstArgs...>, std::tuple<SecondArgs...> second) const {
+      new (dst) ValueT(std::piecewise_construct, std::forward_as_tuple(std::move(key)), std::move(second));
+    }
+  };
+  struct DeletedKey {
+    NonconstKey deleted;
+    void set(const Key& k) { deleted = k; }
+    const Key& get() const { return deleted; }
+    bool check(const Key& k, const EqualKey& equal, const ExtractKey&) const {
+      return equal(k, deleted);
+    }
+    bool check(const ValueT& v, const EqualKey& equal, const ExtractKey& get_key) const {
+      return equal(get_key(v), deleted);
+    }
+    template <class K, class = key_comparable<K>>
+    bool check(const K& k, const EqualKey& equal, const ExtractKey&) const {
+      return equal(k, deleted);
+    }
+    void make(ValueT& value) const {
+      using NCKey = typename std::remove_cv<Key>::type;
+      const_cast<NCKey&>(value.first) = deleted;
+
+      // It would be nice to clear the rest of value here as well, in
+      // case it's taking up a lot of memory.  We do this by clearing
+      // the value.  This assumes T has a zero-arg constructor!
+      value.second = T();
+    }
+  };
+  struct EmptyKey {
+    NonconstKey empty;
+    void set(const Key& k) { empty = k; }
+    const Key& get() const { return empty; }
+    bool check(const Key& k, const EqualKey& equal, const ExtractKey&) const {
+      return equal(k, empty);
+    }
+    template <class K, class = key_comparable<K>>
+    bool check(const K& k, const EqualKey& equal, const ExtractKey&) const {
+      return equal(k, empty);
+    }
+    template <class V, class = non_key_comparable<V>>
+    bool check(V&& v, const EqualKey& equal, const ExtractKey& get_key) const {
+      return equal(get_key(std::forward<V>(v)), empty);
+    }
+    void construct(ValueT* value) const {
+      new (value) ValueT(std::piecewise_construct,
+                          std::forward_as_tuple(empty), std::forward_as_tuple());
+    }
+  };
+  // The actual data
+  typedef dense_hashtable<ValueT, Key, HashFcn, ExtractKey,
+                          DeletedKey, EmptyKey, ConstructValue, EqualKey, Alloc> ht;
+  ht rep;
+
+ public:
+  typedef typename ht::key_type key_type;
+  typedef T data_type;
+  typedef T mapped_type;
+  typedef typename ht::value_type value_type;
+  typedef typename ht::hasher hasher;
+  typedef typename ht::key_equal key_equal;
+  typedef Alloc allocator_type;
+
+  typedef typename ht::size_type size_type;
+  typedef typename ht::difference_type difference_type;
+  typedef typename ht::pointer pointer;
+  typedef typename ht::const_pointer const_pointer;
+  typedef typename ht::reference reference;
+  typedef typename ht::const_reference const_reference;
+
+  typedef typename ht::iterator iterator;
+  typedef typename ht::const_iterator const_iterator;
+  typedef typename ht::local_iterator local_iterator;
+  typedef typename ht::const_local_iterator const_local_iterator;
+
+  template <class K>
+  using accept_as_key = is_key_substitute<K>;
+
+  template <class K>
+  using key_constructible_trait = is_key_constructible<K>;
+
+  // Iterator functions
+  iterator begin() { return rep.begin(); }
+  iterator end() { return rep.end(); }
+  const_iterator begin() const { return rep.begin(); }
+  const_iterator end() const { return rep.end(); }
+  const_iterator cbegin() const { return rep.begin(); }
+  const_iterator cend() const { return rep.end(); }
+
+  // These come from tr1's unordered_map. For us, a bucket has 0 or 1 elements.
+  local_iterator begin(size_type i) { return rep.begin(i); }
+  local_iterator end(size_type i) { return rep.end(i); }
+  const_local_iterator begin(size_type i) const { return rep.begin(i); }
+  const_local_iterator end(size_type i) const { return rep.end(i); }
+  const_local_iterator cbegin(size_type i) const { return rep.begin(i); }
+  const_local_iterator cend(size_type i) const { return rep.end(i); }
+
+  // Accessor functions
+  allocator_type get_allocator() const { return rep.get_allocator(); }
+  hasher hash_funct() const { return rep.hash_funct(); }
+  hasher hash_function() const { return hash_funct(); }
+  key_equal key_eq() const { return rep.key_eq(); }
+
+  // Constructors
+  explicit dense_hash_map(size_type expected_max_items_in_table = 0,
+                          const hasher& hf = hasher(),
+                          const key_equal& eql = key_equal(),
+                          const allocator_type& alloc = allocator_type())
+      : rep(expected_max_items_in_table, hf, eql, ExtractKey(), DeletedKey(),
+            EmptyKey(), ConstructValue(), alloc) {}
+
+  template <class InputIterator>
+  dense_hash_map(InputIterator f, InputIterator l,
+                 const key_type& empty_key_val,
+                 size_type expected_max_items_in_table = 0,
+                 const hasher& hf = hasher(),
+                 const key_equal& eql = key_equal(),
+                 const allocator_type& alloc = allocator_type())
+      : rep(expected_max_items_in_table, hf, eql, ExtractKey(), DeletedKey(),
+            EmptyKey(), ConstructValue(), alloc) {
+    set_empty_key(empty_key_val);
+    rep.insert(f, l);
+  }
+  // We use the default copy constructor
+  // We use the default operator=()
+  // We use the default destructor
+
+  void clear() { rep.clear(); }
+  // This clears the hash map without resizing it down to the minimum
+  // bucket count, but rather keeps the number of buckets constant
+  void clear_no_resize() { rep.clear_no_resize(); }
+  void swap(dense_hash_map& hs) { rep.swap(hs.rep); }
+
+  // Functions concerning size
+  size_type size() const { return rep.size(); }
+  size_type max_size() const { return rep.max_size(); }
+  bool empty() const { return rep.empty(); }
+  size_type bucket_count() const { return rep.bucket_count(); }
+  size_type max_bucket_count() const { return rep.max_bucket_count(); }
+
+  // These are tr1 methods.  bucket() is the bucket the key is or would be in.
+  size_type bucket_size(size_type i) const { return rep.bucket_size(i); }
+  size_type bucket(const key_type& key) const { return rep.bucket(key); }
+  float load_factor() const { return size() * 1.0f / bucket_count(); }
+  float max_load_factor() const {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    return grow;
+  }
+  void max_load_factor(float new_grow) {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    rep.set_resizing_parameters(shrink, new_grow);
+  }
+  // These aren't tr1 methods but perhaps ought to be.
+  float min_load_factor() const {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    return shrink;
+  }
+  void min_load_factor(float new_shrink) {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    rep.set_resizing_parameters(new_shrink, grow);
+  }
+  // Deprecated; use min_load_factor() or max_load_factor() instead.
+  void set_resizing_parameters(float shrink, float grow) {
+    rep.set_resizing_parameters(shrink, grow);
+  }
+
+  void resize(size_type hint) { rep.resize(hint); }
+  void rehash(size_type hint) { resize(hint); }  // the tr1 name
+
+  // Lookup routines
+  iterator find(const key_type& key) { return rep.find(key); }
+  template <class K, class = key_comparable<K>>
+  iterator find(const K& key) { return rep.find(key); }
+  const_iterator find(const key_type& key) const { return rep.find(key); }
+  template <class K, class = key_comparable<K>>
+  const_iterator find(const K& key) const { return rep.find(key); }
+
+  data_type& operator[](const key_type& key) {
+    // If key is in the hashtable, returns find(key)->second,
+    // otherwise returns insert(value_type(key, T()).first->second.
+    // Note it does not create an empty T unless the find fails.
+    return rep.template find_or_insert<data_type>(key).second;
+  }
+  data_type& operator[](key_type&& key) {
+    return rep.template find_or_insert<data_type>(std::move(key)).second;
+  }
+  template <class K, class = key_comparable<K>>
+  data_type& operator[](K&& key) {
+    return rep.template find_or_insert<data_type>(std::forward<K>(key)).second;
+  }
+
+  data_type& at(const key_type& key) {
+    auto it = rep.find(key);
+    if (it != rep.end()) {
+      return it->second;
+    } else {
+      throw std::out_of_range("no such key in map");
+    }
+  }
+  const data_type& at(const key_type& key) const {
+    auto it = rep.find(key);
+    if (it != rep.end()) {
+      return it->second;
+    } else {
+      throw std::out_of_range("no such key in map");
+    }
+  }
+
+  size_type count(const key_type& key) const { return rep.count(key); }
+  template <class K, class = key_comparable<K>>
+  size_type count(const K& key) const { return rep.count(key); }
+
+  std::pair<iterator, iterator> equal_range(const key_type& key) {
+    return rep.equal_range(key);
+  }
+  template <class K, class = key_comparable<K>>
+  std::pair<iterator, iterator> equal_range(const K& key) {
+    return rep.equal_range(key);
+  }
+  std::pair<const_iterator, const_iterator> equal_range(
+      const key_type& key) const {
+    return rep.equal_range(key);
+  }
+  template <class K, class = key_comparable<K>>
+  std::pair<const_iterator, const_iterator> equal_range(
+      const K& key) const {
+    return rep.equal_range(key);
+  }
+
+  // Insertion routines
+  std::pair<iterator, bool> insert(const value_type& obj) {
+    return rep.insert(obj);
+  }
+
+  template <typename Pair, typename = typename std::enable_if<std::is_constructible<value_type, Pair&&>::value>::type>
+  std::pair<iterator, bool> insert(Pair&& obj) {
+    return rep.insert(std::forward<Pair>(obj));
+  }
+
+  // overload to allow {} syntax: .insert( { {key}, {args} } )
+  std::pair<iterator, bool> insert(value_type&& obj) {
+    return rep.insert(std::move(obj));
+  }
+
+  template <typename... Args>
+  std::pair<iterator, bool> emplace(Args&&... args) {
+    return rep.emplace(std::forward<Args>(args)...);
+  }
+
+  template <typename... Args>
+  std::pair<iterator, bool> emplace_hint(const_iterator hint, Args&&... args) {
+    return rep.emplace_hint(hint, std::forward<Args>(args)...);
+  }
+
+
+  template <class InputIterator>
+  void insert(InputIterator f, InputIterator l) {
+    rep.insert(f, l);
+  }
+  void insert(const_iterator f, const_iterator l) { rep.insert(f, l); }
+  void insert(std::initializer_list<value_type> ilist) { rep.insert(ilist.begin(), ilist.end()); }
+  // Required for std::insert_iterator; the passed-in iterator is ignored.
+  iterator insert(const_iterator, const value_type& obj) { return insert(obj).first; }
+  iterator insert(const_iterator, value_type&& obj) { return insert(std::move(obj)).first; }
+  template <class P, class = typename std::enable_if<
+                                        std::is_constructible<value_type, P&&>::value &&
+                                        !std::is_same<value_type, P>::value
+                                      >::type>
+  iterator insert(const_iterator, P&& obj) { return insert(std::forward<P>(obj)).first; }
+
+  // Deletion and empty routines
+  // THESE ARE NON-STANDARD!  I make you specify an "impossible" key
+  // value to identify deleted and empty buckets.  You can change the
+  // deleted key as time goes on, or get rid of it entirely to be insert-only.
+   // YOU MUST CALL THIS!
+  void set_empty_key(const key_type& key) { rep.set_empty_key(key); }
+  key_type empty_key() const {  return rep.empty_key(); }
+
+  void set_deleted_key(const key_type& key) { rep.set_deleted_key(key); }
+  void clear_deleted_key() { rep.clear_deleted_key(); }
+  key_type deleted_key() const { return rep.deleted_key(); }
+
+  // These are standard
+  size_type erase(const key_type& key) { return rep.erase(key); }
+  template <class K, class = key_comparable<K>>
+  size_type erase(const K& key) { return rep.erase(key); }
+  iterator erase(const_iterator it) { return rep.erase(it); }
+  iterator erase(const_iterator f, const_iterator l) { return rep.erase(f, l); }
+
+  // Comparison
+  bool operator==(const dense_hash_map& hs) const { return rep == hs.rep; }
+  bool operator!=(const dense_hash_map& hs) const { return rep != hs.rep; }
+
+  // I/O -- this is an add-on for writing hash map to disk
+  //
+  // For maximum flexibility, this does not assume a particular
+  // file type (though it will probably be a FILE *).  We just pass
+  // the fp through to rep.
+
+  // If your keys and values are simple enough, you can pass this
+  // serializer to serialize()/unserialize().  "Simple enough" means
+  // value_type is a POD type that contains no pointers.  Note,
+  // however, we don't try to normalize endianness.
+  typedef typename ht::NopointerSerializer NopointerSerializer;
+
+  // serializer: a class providing operator()(OUTPUT*, const value_type&)
+  //    (writing value_type to OUTPUT).  You can specify a
+  //    NopointerSerializer object if appropriate (see above).
+  // fp: either a FILE*, OR an ostream*/subclass_of_ostream*, OR a
+  //    pointer to a class providing size_t Write(const void*, size_t),
+  //    which writes a buffer into a stream (which fp presumably
+  //    owns) and returns the number of bytes successfully written.
+  //    Note basic_ostream<not_char> is not currently supported.
+  template <typename ValueSerializer, typename OUTPUT>
+  bool serialize(ValueSerializer serializer, OUTPUT* fp) {
+    return rep.serialize(serializer, fp);
+  }
+
+  // serializer: a functor providing operator()(INPUT*, value_type*)
+  //    (reading from INPUT and into value_type).  You can specify a
+  //    NopointerSerializer object if appropriate (see above).
+  // fp: either a FILE*, OR an istream*/subclass_of_istream*, OR a
+  //    pointer to a class providing size_t Read(void*, size_t),
+  //    which reads into a buffer from a stream (which fp presumably
+  //    owns) and returns the number of bytes successfully read.
+  //    Note basic_istream<not_char> is not currently supported.
+  // NOTE: Since value_type is std::pair<const Key, T>, ValueSerializer
+  // may need to do a const cast in order to fill in the key.
+  template <typename ValueSerializer, typename INPUT>
+  bool unserialize(ValueSerializer serializer, INPUT* fp) {
+    return rep.unserialize(serializer, fp);
+  }
+};
+
+// We need a global swap as well
+template <class Key, class T, class HashFcn, class EqualKey, class Alloc, class KeyConverter>
+inline void swap(dense_hash_map<Key, T, HashFcn, EqualKey, Alloc, KeyConverter>& hm1,
+                 dense_hash_map<Key, T, HashFcn, EqualKey, Alloc, KeyConverter>& hm2) {
+  hm1.swap(hm2);
+}
+
+template <class Key, class T, class HashFcn, class EqualKey, class KeyConverter>
+using dense_hash_map_tune = dense_hash_map<Key, T, HashFcn, EqualKey, libc_allocator_with_realloc<std::pair<const Key, T>>, KeyConverter>;
+
+}  // namespace google

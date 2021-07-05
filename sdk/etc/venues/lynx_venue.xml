@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource name="Lynx ATS venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="Lynx ATS"
+           shortname="Lynx"
+           identifier="14447312-7aa1-11e6-a1b0-ebae5a042493"
+           description="Lynx ATS">
+      <identifier>
+        <key name="symbol" tag="55"/>
+      </identifier>
+      <pools>
+        <pool name="board lot" default="yes" identifier="3092d482-29e2-11e7-8710-ed6a5c669901"/>
+        <pool name="odd lot" identifier="31b8b5ac-29e2-11e7-a740-ab913e4021a1"/>
+      </pools>
+    </venue>
+  </venues>
+
+  <capabilities>
+    <restriction message="order">
+      <field name="minimum acceptable volume" />
+      <field name="execution policy" value="buy minus" />
+      <field name="execution policy" value="sell plus" />
+      <field name="participation policy" value="dark lit sweep"/>
+      <field name="participation policy" value="indicative only"/>
+      <field name="validity type" value="infinite" />
+      <field name="validity type" value="until date" />
+      <field name="validity type" value="until datetime" />
+      <field name="validity type" value="until elapsed time" />
+      <field name="validity type" value="immediate on open" />
+      <field name="validity type" value="immediate on close" />
+      <field name="validity type" value="immediate on auction" />
+      <field name="transition type" value="market to limit" />
+      <field name="transition type" value="limit to market" />
+      <field name="price improvement not allowed"/>
+    </restriction>
+    <restriction message="order modify">
+        <field name="validity type"/>
+        <field name="disclosed volume"/>
+        <field name="price" value="empty"/>
+    </restriction>
+  </capabilities>
+
+  <documentation>
+    Venue identifier resource describing Lynx ATS.
+  </documentation>
+</resource>

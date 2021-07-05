@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SystematicIntenaliserVenue" type="application/x-venue+xml">
+  <venues>
+      <venue name="Systematic internaliser" shortname="SI" identifier="689378d6-3587-11e7-8530-77cfc5f98532" description="">
+          <identifier>
+              <key name="symbol" tag="55"/>
+          </identifier>
+          <pools>
+               <pool name="Retail clients" default="yes" identifier="99cedcd8-671e-11e7-b790-18108b240a04"/>
+               <pool name="Professional clients" identifier="acba035e-671e-11e7-baa0-615f49e96032"/>
+               <pool name="Eligible counterparties" identifier="b921efd0-671e-11e7-afe0-e25ddcf73933"/>
+               <pool name="Midpoint" identifier="3e704ce4-40cc-11e9-9380-4275128b6cfe"/>
+          </pools>
+      </venue>
+  </venues>
+
+  <capabilities>
+        <restriction message="order">
+            <!--<field name="validity type" value="immediate"/>>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="today"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="until datetime"/-->
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="price" value="empty"/>
+            <field name="total volume"/>
+        </restriction>
+    </capabilities>
+
+  <documentation>
+      Venue identifier resource for Systematic Internaliser Tbricks venue.
+  </documentation>
+</resource>

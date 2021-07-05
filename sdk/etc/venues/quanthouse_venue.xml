@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="QuantHouse" type="application/x-venue+xml">
+    <venues>
+        <venue name="QuantHouse" shortname="QuantHouse" identifier="511161b0-67d9-11df-b183-afaff568c59d" description="QuantHouse">
+            <identifier>
+                <key name="foscode" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource example for a QuantHouse venue.
+    </documentation>
+</resource>

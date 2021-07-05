@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="uuid">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="yes-no">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="order_price_type">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Limit"/>
+            <xs:enumeration value="VWAP"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="order_book_type">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Limit"/>
+            <xs:enumeration value="Price banded"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rounding_policy">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="None"/>
+            <xs:enumeration value="Fair"/>
+            <xs:enumeration value="Market"/>
+            <xs:enumeration value="Bank"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="venues" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="venue" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="identifier" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="key" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                                <xs:sequence>
+                                                                    <xs:element name="additional" minOccurs="0" maxOccurs="unbounded">
+                                                                        <xs:complexType>
+                                                                            <xs:attribute name="tag" type="xs:integer"/>
+                                                                            <xs:attribute name="value" type="xs:string"/>
+                                                                            <xs:attribute name="name" type="xs:Name"/>
+                                                                        </xs:complexType>
+                                                                    </xs:element>
+                                                                </xs:sequence>
+                                                            <xs:attribute name="name" type="xs:Name" use="required"/>
+                                                            <xs:attribute name="tag" type="xs:integer"/>
+                                                            <xs:attribute name="intermediate" type="xs:Name"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="pools" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="pool" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                                <xs:sequence>
+                                                                    <xs:element name="additional" minOccurs="0" maxOccurs="unbounded">
+                                                                        <xs:complexType>
+                                                                            <xs:attribute name="tag" type="xs:integer" use="required"/>
+                                                                            <xs:attribute name="value" type="xs:string" use="required"/>
+                                                                        </xs:complexType>
+                                                                    </xs:element>
+                                                                </xs:sequence>
+                                                            <xs:attribute name="name" type="xs:string" use="required"/>
+                                                            <xs:attribute name="identifier" type="uuid"/>
+                                                            <xs:attribute name="default" type="yes-no"/>
+                                                        </xs:complexType>
+                                                        <xs:unique name="unique_tag_identifier">
+                                                            <xs:selector xpath="additional"/>
+                                                            <xs:field xpath="@tag"/>
+                                                        </xs:unique>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                            <xs:unique name="unique_pool_identifier">
+                                                <xs:selector xpath="pool"/>
+                                                <xs:field xpath="@identifier"/>
+                                            </xs:unique>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" type="xs:string"/>
+                                    <xs:attribute name="shortname" type="xs:string"/>
+                                    <xs:attribute name="identifier" use="required" type="uuid"/>
+                                    <xs:attribute name="app_id" type="uuid"/>
+                                    <xs:attribute name="description" type="xs:string"/>
+                                    <xs:attribute name="native_trd_required" type="yes-no"/>
+                                    <xs:attribute name="entitlements" type="yes-no"/>
+                                    <xs:attribute name="algo_label_required" type="xs:string"/>
+                                    <xs:attribute name="order_price_type" type="order_price_type"/>
+                                    <xs:attribute name="order_book_type" type="order_book_type"/>
+                                    <xs:attribute name="rounding_policy" type="rounding_policy"/>
+                                    <xs:attribute name="exclude_from_market_data_aggregation" type="yes-no"/>
+                                    <xs:attribute name="receiver_lei" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="capabilities" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="restriction" minOccurs="1" maxOccurs="2">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="field" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="name" use="required">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="active volume"/>
+                                                            <xs:enumeration value="capacity"/>
+                                                            <xs:enumeration value="disclosed volume"/>
+                                                            <xs:enumeration value="execution policy"/>
+                                                            <xs:enumeration value="liquidity pool identifier"/>
+                                                            <xs:enumeration value="minimum acceptable volume"/>
+                                                            <xs:enumeration value="partial fill not allowed"/>
+                                                            <xs:enumeration value="participation policy"/>
+                                                            <xs:enumeration value="price"/>
+                                                            <xs:enumeration value="retain on disconnect"/>
+                                                            <xs:enumeration value="stop price"/>
+                                                            <xs:enumeration value="total volume"/>
+                                                            <xs:enumeration value="transition type"/>
+                                                            <xs:enumeration value="valid until datetime"/>
+                                                            <xs:enumeration value="validity type"/>
+                                                            <xs:enumeration value="volume delta"/>
+                                                            <xs:enumeration value="price improvement not allowed"/>
+                                                            <xs:enumeration value="market command"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="value" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="message" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="order"/>
+                                                <xs:enumeration value="order modify"/>
+                                                <xs:enumeration value="market command request"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="two_sided_rfq_response_required" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

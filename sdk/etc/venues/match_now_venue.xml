@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="MATCH NOW venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="MATCH NOW" shortname="MATCH NOW" identifier="9ae811d6-9625-11e6-a350-9f21339da0f8" description="TriAct Canada Marketplace MATCH Now system">
+            <identifier>
+                <key name="Symbol" tag="55"/>
+                <key name="SymbolSfx" tag="65"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="partial fill not allowed"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="bypass undisclosed"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the "TriAct Canada Marketplace MATCH Now system" venue.
+    </documentation>
+</resource>

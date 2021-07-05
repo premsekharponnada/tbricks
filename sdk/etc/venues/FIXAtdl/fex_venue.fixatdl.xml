@@ -1,0 +1,49 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="d23c8412-21f9-11e8-8430-4a39463c763d">
+  <Strategy uiRep="FEX" wireValue="FEX" version="1.0" name="FEX">
+    <Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f5adc6-a7cf-11e5-b809-3c870c3e9924">
+      <Description>Transition type</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="fex.key.SessionOrder">
+      <Description>Special Session order flag</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="fex.key.IgnorePriceValidityChecks">
+      <Description>Ignore price validity checks</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="fex.key.Account">
+      <Description>Account</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="fex.key.BrokerSeqNo">
+      <Description>Broker reference</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="fex.key.PrivateReference">
+      <Description>Data mapping id</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="fex.key.CancelOnUserLogoff">
+      <Description>Cancel on user log off</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="fex.key.BreakSoftLimitFlag">
+      <Description>Allow to break soft price limit</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="fex.key.BreakSoftQtyFlag">
+      <Description>Allow to break soft quantity limit</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:DropDownList_t" label="Transition type" ID="TransitionType" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="TransitionType" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="PartialFillNotAllowed" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Session order" ID="SessionOrder" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="fex.key.SessionOrder" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Ignore price validity checks" ID="IgnorePriceValidityChecks" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="fex.key.IgnorePriceValidityChecks" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Cancel on user log off" ID="CancelOnUserLogoff" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="fex.key.CancelOnUserLogoff" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Allow to break soft price limit" ID="BreakSoftLimitFlag" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="fex.key.BreakSoftLimitFlag" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Allow to break soft quantity limit" ID="BreakSoftQtyFlag" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="fex.key.BreakSoftQtyFlag" />
+        <lay:Control xsi:type="lay:TextField_t" label="Account" ID="Account" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="fex.key.Account" />
+        <lay:Control xsi:type="lay:TextField_t" label="Broker reference" ID="BrokerSeqNo" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="fex.key.BrokerSeqNo" />
+        <lay:Control xsi:type="lay:TextField_t" label="Private reference" ID="PrivateReference" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="fex.key.PrivateReference" />
+       </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

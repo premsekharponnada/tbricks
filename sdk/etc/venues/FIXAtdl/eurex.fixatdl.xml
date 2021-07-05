@@ -1,0 +1,25 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="1dd13251-941f-4045-a60a-ad6c5825cde1">
+  <Strategy uiRep="Eurex" wireValue="Eurex" version="1.0" name="Eurex" tbricks_message_type="requestForTrade">
+    <Parameter xsi:type="String_t" name="tbricks.Account">
+      <Description>Account</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tbricks.Reference">
+      <Description>Reference</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tbricks.Reference2">
+      <Description>Reference 2</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tbricks.Reference3">
+      <Description>Reference 3</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:TextField_t" label="Account" ID="Account" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="tbricks.Account" />
+        <lay:Control xsi:type="lay:TextField_t" label="Reference" ID="Reference" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="tbricks.Reference" />
+        <lay:Control xsi:type="lay:TextField_t" label="Reference2" ID="Reference 2" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="tbricks.Reference2" />
+        <lay:Control xsi:type="lay:TextField_t" label="Reference3" ID="Reference 3" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="tbricks.Reference3" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

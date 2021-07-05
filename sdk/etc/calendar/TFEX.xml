@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="TFEX" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days year="2019">
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="02-19" valid="no"/> <!-- Makha Bucha Day -->
+        <day date="04-08" valid="no"/> <!-- Substitution for Chakri Memorial Day -->
+        <day date="04-15" valid="no"/> <!-- Songkran Festival -->
+        <day date="04-16" valid="no"/> <!-- Substitution for Songkran Festival -->
+        <day date="05-01" valid="no"/> <!-- National Labour Day -->
+        <day date="05-06" valid="no"/> <!-- Special Holiday -->
+        <day date="05-20" valid="no"/> <!-- Substitution for Wisakha Bucha Day -->
+        <day date="06-03" valid="no"/> <!-- H.M.Queen Suthida Bajrasudhabimalalakshana's Birthday -->
+        <day date="07-16" valid="no"/> <!-- Asarnha Bucha Day -->
+        <day date="07-29" valid="no"/> <!-- Substitution for H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua's Birthday -->
+        <day date="08-12" valid="no"/> <!-- H.M. Queen Sirikit The Queen Mother's Birthday -->
+        <day date="10-14" valid="no"/> <!-- Substitution for H.M. King Bhumibol Adulyadej The Great Memorial Day -->
+        <day date="10-23" valid="no"/> <!-- Chulalongkorn Day -->
+        <day date="12-05" valid="no"/> <!-- H.M. King Bhumibol Adulyadej The Great's Birthday -->
+        <day date="12-10" valid="no"/> <!-- Constitution Day  -->
+        <day date="12-31" valid="no"/> <!-- New Year's Eve -->
+    </days>
+
+    <days year="2020">
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="02-10" valid="no"/> <!-- Substitution for Makha Bucha Day (Saturday 8th February 2020) -->
+        <day date="04-06" valid="no"/> <!-- Chakri Memorial Day -->
+        <day date="05-01" valid="no"/> <!-- National Labour Day -->
+        <day date="05-04" valid="no"/> <!-- Coronation Day -->
+        <day date="05-06" valid="no"/> <!-- Wisakha Bucha Day -->
+        <day date="06-03" valid="no"/> <!-- H.M.Queen Suthida Bajrasudhabimalalakshana's Birthday -->
+        <day date="07-06" valid="no"/> <!-- Substitution for Asarnha Bucha Day (Sunday 5th July 2020) -->
+        <day date="07-27" valid="no"/> <!-- Substitution for Songkran Festival -->
+        <day date="07-28" valid="no"/> <!-- H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday -->
+        <day date="08-12" valid="no"/> <!-- H.M. Queen Sirikit The Queen Mother’s Birthday / Mother’s Day -->
+        <day date="10-13" valid="no"/> <!-- H.M. King Bhumibol Adulyadej The Great Memorial Day -->
+        <day date="10-23" valid="no"/> <!-- Chulalongkorn Day -->
+        <day date="12-07" valid="no"/> <!-- Substitution for H.M. King Bhumibol Adulyadej The Great’s Birthday/ National Day / Father’s Day (Saturday 5th December 2020) -->
+        <day date="12-10" valid="no"/> <!-- Constitution Day -->
+        <day date="12-31" valid="no"/> <!-- New Year's Eve -->
+    </days>
+    <documentation>
+        Calendar defining trading-days for TFEX (Thailand Futures Exchange) and SET (Stock Exchange of Thailand).
+        Source https://www.tfex.co.th/en/about/holiday.html
+    </documentation>
+</resource>

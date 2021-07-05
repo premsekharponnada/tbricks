@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Xetra XQS" type="application/x-venue+xml">
+    <venues>
+        <venue name="Xetra XQS" shortname="Xetra XQS" identifier="e98520c4-9991-11e8-b6c0-c235663e66bf" description="Xetra XQS price feed interface">
+            <identifier>
+                <key name="SecurityID"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Xetra XQS price feed interface venue.
+    </documentation>
+</resource>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ OMX US Equities venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ OMX US Equities" shortname="NASDAQ OMX US Equities" identifier="e44a17f8-ab93-11e4-9890-f5e6620725b8" description="NASDAQ OMX US Equities">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ OMX US Equties venue.
+    </documentation>
+</resource>

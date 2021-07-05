@@ -1,0 +1,11 @@
+<map id="Plugin" name="Plugin">
+<area shape="rect" id="node1" title=" " alt="" coords="284,83,343,112"/>
+<area shape="rect" id="node5" href="$classtbricks_1_1FlowApp.html" title=" " alt="" coords="5,160,77,189"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1MarketDataProvider.html" title=" " alt="" coords="101,160,240,189"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1MatchingApp.html" title=" " alt="" coords="264,160,363,189"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1Pricing.html" title=" " alt="" coords="387,160,448,189"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1Strategy.html" title=" " alt="" coords="472,160,541,189"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1IStrategyEventHandler.html" title=" " alt="" coords="236,5,391,35"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1VisualizationApp.html" title=" " alt="" coords="448,237,565,267"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1StrategyApp.html" title=" " alt="" coords="460,315,553,344"/>
+</map>

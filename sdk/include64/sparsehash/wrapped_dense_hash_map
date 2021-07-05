@@ -1,0 +1,683 @@
+#pragma once
+
+#include <algorithm>   // needed by stl_alloc
+#include <functional>  // for equal_to<>, etc
+#include <memory>      // for alloc
+#include <stdexcept>   // for out_of_range
+#include <tuple>       // for tuple
+#include <type_traits> // for conditional, is_same and others
+#include <utility>     // for pair<>
+#include "internal/densehashtable.h"  // IWYU pragma: export
+#include "internal/libc_allocator_with_realloc.h"
+#include "traits"
+
+namespace sparsehash {
+
+namespace map_detail {
+
+template <class Key, class Value>
+class key_value_wrapper {
+ public:
+  typedef std::pair<const Key, Value> value_type;
+ private:
+  typedef Key key_type;
+  enum class State { empty, deleted, value };
+  State state_;
+  value_type data_;
+  explicit key_value_wrapper(State state) : state_(state) {}
+ public:
+  template <class EqualT>
+  struct Equal: public EqualT {
+    Equal() = default;
+    Equal(const EqualT& other): EqualT(other) {}
+    Equal(EqualT&& other): EqualT(std::move(other)) {}
+    bool operator() (const key_value_wrapper& lhs, const key_value_wrapper& rhs) const {
+      return lhs.state_ == rhs.state_ &&
+        (lhs.state_ != State::value || EqualT::operator() (lhs.key(), rhs.key()));
+    }
+    bool operator() (const key_value_wrapper& lhs, const Key& rhs) const {
+      return lhs.state_ == State::value &&
+        EqualT::operator() (lhs.key(), rhs);
+    }
+    bool operator() (const Key& lhs, const key_value_wrapper& rhs) const {
+      return rhs.state_ == State::value &&
+        EqualT::operator() (lhs, rhs.key());
+    }
+    bool operator() (const Key& lhs, const Key& rhs) const {
+      return EqualT::operator() (lhs, rhs);
+    }
+    template <class K>
+    auto operator() (const K& lhs, const key_value_wrapper& rhs) const
+      -> typename std::enable_if<google::is_callable<EqualT, decltype(lhs), decltype(rhs.key())>::value, bool>::type
+    {
+      return rhs.state_ == State::value &&
+        EqualT::operator() (lhs, rhs.key());
+    }
+    template <class K>
+    auto operator() (const K& lhs, const Key& rhs) const
+      -> typename std::enable_if<google::is_callable<EqualT, decltype(lhs), decltype(rhs)>::value, bool>::type
+    {
+      return EqualT::operator() (lhs, rhs);
+    }
+  };
+  template <class HashT>
+  struct Hash: public HashT {
+    Hash() = default;
+    Hash(const HashT& other): HashT(other) {}
+    Hash(HashT&& other): HashT(std::move(other)) {}
+    size_t operator() (const key_value_wrapper& w) const {
+      return HashT::operator() (w.key());
+    }
+    size_t operator() (const Key& v) const {
+      return HashT::operator() (v);
+    }
+    template <class K>
+    auto operator() (const K& v) const
+      -> typename std::enable_if<google::is_callable<HashT, decltype(v)>::value, size_t>::type
+    {
+      return HashT::operator() (v);
+    }
+  };
+  static key_value_wrapper get_empty() { return key_value_wrapper(State::empty); }
+  static key_value_wrapper get_deleted() { return key_value_wrapper(State::deleted); }
+  key_value_wrapper() : state_(State::empty) {}
+  //
+  // the same constructors as std::pair<const Key, Value> has
+  key_value_wrapper(const Key& key, const Value& value)
+    : state_(State::value), data_(key, value)
+  {}
+  template <class K, class V>
+  key_value_wrapper(K&& key, V&& value)
+    : state_(State::value), data_(std::forward<K>(key), std::forward<V>(value))
+  {}
+  template <class K, class V>
+  explicit key_value_wrapper(const std::pair<K, V>& p)
+    : state_(State::value), data_(p)
+  {}
+  template <class K, class V>
+  explicit key_value_wrapper(std::pair<K, V>&& p)
+    : state_(State::value), data_(std::move(p))
+  {}
+  template <class... Args1, class... Args2>
+  key_value_wrapper(std::piecewise_construct_t,
+      std::tuple<Args1...>&& key_args,
+      std::tuple<Args2...>&& value_args)
+    : state_(State::value), data_(std::piecewise_construct, std::move(key_args), std::move(value_args))
+  {}
+  key_value_wrapper(const key_value_wrapper&) = default;
+  key_value_wrapper(key_value_wrapper&&) = default;
+  //
+  // setters
+  void set_empty() {
+    if (state_ == State::value) {
+      const_cast<key_type&>(data_.first) = Key();
+      data_.second = Value();
+    }
+    state_ = State::empty;
+  }
+  void set_deleted() {
+    if (state_ == State::value) {
+      const_cast<key_type&>(data_.first) = Key();
+      data_.second = Value();
+    }
+    state_ = State::deleted;
+  }
+  //
+  // accessors
+  bool is_empty() const { return state_ == State::empty; }
+  bool is_deleted() const { return state_ == State::deleted; }
+  const Key& key() const { return data_.first; }
+  value_type& unwrap() { return data_; }
+  const value_type& unwrap() const { return data_; }
+  //
+  // utility
+  friend bool operator== (const key_value_wrapper& lhs, const key_value_wrapper& rhs) {
+    return lhs.state_ == rhs.state_ && (lhs.state_ != State::value || lhs.data_ == rhs.data_);
+  }
+  friend bool operator!= (const key_value_wrapper& lhs, const key_value_wrapper& rhs) {
+    return lhs.state_ != rhs.state_ || lhs.state_ == State::value && lhs.data_ != rhs.data_;
+  }
+  friend bool operator< (const key_value_wrapper& lhs, const key_value_wrapper& rhs) {
+    return lhs.state_ == State::value && lhs.state_ == rhs.state_ && lhs.data_ < rhs.data_;
+  }
+};
+
+template <class Key, class Value, class UnderlyingIterator, class UnderlyingConstIterator>
+struct wrapped_traits {
+  typedef std::pair<const Key, Value> value_type;
+  typedef value_type* pointer;
+  typedef const value_type* const_pointer;
+  typedef value_type& reference;
+  typedef const value_type& const_reference;
+  typedef wrapped_traits<Key, Value, UnderlyingIterator, UnderlyingConstIterator> traits;
+  class wrapped_iterator
+    : public UnderlyingIterator {
+   public:
+    typedef typename traits::value_type value_type;
+    typedef typename traits::pointer pointer;
+    typedef typename traits::const_pointer const_pointer;
+    typedef typename traits::reference reference;
+    typedef typename traits::const_reference const_reference;
+
+    wrapped_iterator() = default;
+    explicit wrapped_iterator(const UnderlyingIterator& it): UnderlyingIterator(it) {}
+    explicit wrapped_iterator(UnderlyingIterator&& it): UnderlyingIterator(std::move(it)) {}
+    wrapped_iterator(const wrapped_iterator&) = default;
+    wrapped_iterator(wrapped_iterator&&) = default;
+    wrapped_iterator& operator= (const wrapped_iterator&) = default;
+    wrapped_iterator& operator= (wrapped_iterator&&) = default;
+
+    reference operator* () { return UnderlyingIterator::operator*().unwrap(); }
+    const_reference operator* () const { return UnderlyingIterator::operator*().unwrap(); }
+    pointer operator-> () { return &(operator*()); }
+    const_pointer operator-> () const { return &(operator*()); }
+    wrapped_iterator& operator++ () {
+      UnderlyingIterator::operator++();
+      return *this;
+    }
+    wrapped_iterator operator++ (int) {
+      return wrapped_iterator(UnderlyingIterator::operator++(0));
+    }
+  };
+  class wrapped_const_iterator
+    : public UnderlyingConstIterator {
+   public:
+    typedef typename traits::value_type value_type;
+    typedef typename traits::const_pointer pointer;
+    typedef typename traits::const_pointer const_pointer;
+    typedef typename traits::const_reference reference;
+    typedef typename traits::const_reference const_reference;
+
+    wrapped_const_iterator() = default;
+    wrapped_const_iterator(const wrapped_iterator& it): UnderlyingConstIterator(it) {}
+    explicit wrapped_const_iterator(const UnderlyingConstIterator& it): UnderlyingConstIterator(it) {}
+    explicit wrapped_const_iterator(UnderlyingConstIterator&& it): UnderlyingConstIterator(std::move(it)) {}
+    wrapped_const_iterator(const wrapped_const_iterator&) = default;
+    wrapped_const_iterator(wrapped_const_iterator&&) = default;
+    wrapped_const_iterator& operator= (const wrapped_const_iterator&) = default;
+    wrapped_const_iterator& operator= (wrapped_const_iterator&&) = default;
+
+    reference operator* () const { return UnderlyingConstIterator::operator*().unwrap(); }
+    pointer operator-> () const { return &(operator*()); }
+    wrapped_const_iterator& operator++ () {
+      UnderlyingConstIterator::operator++();
+      return *this;
+    }
+    wrapped_const_iterator operator++ (int) {
+      return wrapped_const_iterator(UnderlyingConstIterator::operator++(0));
+    }
+  };
+};
+
+} // map_detail namespace
+
+// a special template parameter - KeyConverter, is needed if user wants
+// to directly emplace into container values, from which container's keys
+// cannot be directly constructed; or use fully operator[] with such values;
+// KeyConverter is a functor, which convert a value to a tuple, containing
+// parameters for key constructor; those parameters will be perfectly
+// forwarded to a key constructor.
+
+template <class Key, class Value, class HashFcn = std::hash<Key>,
+          class EqualKey = std::equal_to<Key>, class KeyConverter = google::sparsehash_internal::NoOp,
+          template <class...> class Alloc = google::libc_allocator_with_realloc>
+class wrapped_dense_hash_map
+  : public google::copy_characteristics<std::is_copy_constructible<Value>::value> {
+ private:
+  typedef map_detail::key_value_wrapper<Key, Value> wrapped_type;
+  typedef typename wrapped_type::value_type payload_type;
+  typedef typename wrapped_type::template Equal<EqualKey> equal_key;
+  typedef typename wrapped_type::template Hash<HashFcn> hash_key;
+  typedef Alloc<wrapped_type> alloc_value;
+  // trait:
+  //    can we use this type for hash calculation and equality comparison (with key value)
+  //    instead of key?
+  template <class K>
+  struct is_key_substitute {
+    // to enforce matching with overloads, not requiring
+    // a type cast, we have to disable the most generic
+    // overload (make it uncallable)
+    struct EqualFix : public EqualKey {
+      using EqualKey::operator();
+    private:
+      template <class L, class R>
+      void operator() (const L&, const R&) const;
+    };
+    // check, if we can call supplied hash and equalto functors
+    // with value of some type
+    typedef google::decay_to_pass_const_t<K> KeyT;
+    static constexpr bool value =
+        google::is_callable<EqualFix, KeyT, const Key&>::value &&
+        google::is_callable<HashFcn, KeyT>::value;
+  };
+  // types, which we can use in place of key
+  // for purposes of lookup
+  template <class K>
+  using key_comparable = typename std::enable_if<is_key_substitute<K>::value>::type;
+  // trait:
+  //    can we construct key's value from
+  template <class K>
+  struct is_key_constructible {
+    // to enforce matching with overloads, not requiring
+    // a type cast, we have to disable the most generic
+    // overload (make it uncallable)
+    struct ConverterFix : public KeyConverter {
+      using KeyConverter::operator();
+    private:
+      template <class R>
+      void operator() (const R&) const;
+    };
+    static constexpr bool simple = std::is_constructible<Key, K&&>::value;
+    static constexpr bool helper = !simple && google::is_callable<ConverterFix, K&&>::value;
+  };
+  // types, which we can use for purposes of lookup and from which
+  // we can construct key's value directly
+  template <class K>
+  using key_comparable_and_constructible = typename std::enable_if<
+        is_key_substitute<K>::value &&
+        is_key_constructible<K>::simple
+    >::type;
+  // types, from which we can construct key's value with a supplied helper
+  template <class K>
+  using helper_constructible = typename std::enable_if<is_key_constructible<K>::helper>::type;
+  struct extract_key {
+    // simpliest case - we got a value from underlying hashtable
+    const Key& operator()(const wrapped_type& w) const {
+      return w.key();
+    }
+    const Key& operator()(wrapped_type& w) const {
+      return w.key();
+    }
+    const Key& operator()(wrapped_type&& w) const {
+      return w.key();
+    }
+
+    template <class U>
+    using is_key = google::trait_or<
+        std::is_same<Key, typename std::decay<U>::type>,
+        std::is_same<wrapped_type, typename std::decay<U>::type>,
+        is_key_substitute<U>>;
+    template <bool v>
+    using bool_t = std::integral_constant<bool, v>;
+    template <class U>
+    using direct_tag = bool_t<is_key<U>::value>;
+    template <class U>
+    struct spec_decay {
+        typedef typename std::decay<U>::type UU;
+        typedef typename std::conditional<
+            std::is_pointer<UU>::value,
+            UU,
+            const UU&
+            >::type type;
+    };
+    template <class U>
+    using return_type = typename std::conditional<
+        is_key<U>::value,
+        typename spec_decay<U>::type,
+        Key>::type;
+
+    template <class U1, class U2>
+    return_type<U1> operator()(U1&& first, U2&&) const { return get_impl(std::forward<U1>(first), direct_tag<U1>{}); }
+    template <class U1, class U2>
+    return_type<U1> operator()(const std::pair<U1, U2>& p) const { return get_impl(p.first, direct_tag<U1>{}); }
+    template <class U1, class U2>
+    return_type<U1> operator()(std::pair<U1, U2>&& p) const { return get_impl(std::move(p.first), direct_tag<U1>{}); }
+    template <class KArg, class... VArgs>
+    return_type<KArg> operator()(std::piecewise_construct_t, std::tuple<KArg> key_arg, std::tuple<VArgs...>) const {
+        return get_impl(std::get<0>(key_arg), direct_tag<KArg>{});
+    }
+    template <class... KArgs, class... VArgs>
+    Key operator()(std::piecewise_construct_t, std::tuple<KArgs...> key_args, std::tuple<VArgs...>) const {
+        return google::sparsehash_internal::invoke_cons<Key>(key_args);
+    }
+  private:
+    const Key& get_impl(const Key& key, bool_t<true>) const { return key; }
+    const Key& get_impl(const wrapped_type& w, bool_t<true>) const { return w.key(); }
+    template <class U>
+    const U& get_impl(const U& key, bool_t<true>) const { return key; }
+    template <class U>
+    Key get_impl(U&& arg, bool_t<false>) const { return Key(std::forward<U>(arg)); }
+  };
+  struct construct_value
+    : public KeyConverter {
+    // 1st case - we are dealing with a hashtable's value here
+    template <typename V, typename = typename std::enable_if<std::is_same<wrapped_type, typename std::decay<V>::type>::value>::type>
+    void operator()(void* dst, V&& v) const {
+      new (dst) wrapped_type(std::forward<V>(v));
+    }
+    // 2nd case - we are just forwarding the rest of the arguments
+    template <typename... Args>
+    void operator()(void* dst, const Key&, Args&& ...args) const {
+      new (dst) wrapped_type(std::forward<Args>(args)...);
+    }
+    template <class K, class... Args>
+    auto operator()(void* dst, const K&, Args&& ...args) const
+      -> key_comparable_and_constructible<K>
+    {
+      new (dst) wrapped_type(std::forward<Args>(args)...);
+    }
+    template <class K1, class K, class TArg, class = helper_constructible<K>>
+    void operator()(void* dst, K1&&, K&& k, TArg&& t) const {
+      new (dst) wrapped_type(std::piecewise_construct,
+        KeyConverter::operator()(std::forward<K>(k)),
+        std::forward_as_tuple(std::forward<TArg>(t)));
+    }
+    // 3rd case - we are forwarding r-value reference to a Key and
+    // extracting payload constructor's arguments.
+    // We can do that because Map's emplace method accepts the same arguments
+    // as value_type constructor - std::pair<const Key, T>(...).
+    template <class U1, class U2, class = typename std::enable_if<std::is_convertible<U2, Value>::value>::type>
+    void operator()(void* dst, Key&& key, U1&&, U2&& second) const {
+      new (dst) wrapped_type(std::move(key), std::forward<U2>(second));
+    }
+    template <class U1, class U2>
+    void operator()(void* dst, Key&& key, const std::pair<U1, U2>& p) const {
+      new (dst) wrapped_type(std::move(key), p.second);
+    }
+    template <class U1, class U2>
+    void operator()(void* dst, Key&& key, std::pair<U1, U2>& p) const {
+      new (dst) wrapped_type(std::move(key), p.second);
+    }
+    template <class U1, class U2>
+    void operator()(void* dst, Key&& key, std::pair<U1, U2>&& p) const {
+      new (dst) wrapped_type(std::move(key), std::move(p.second));
+    }
+    template <class... FirstArgs, class... SecondArgs>
+    void operator()(void* dst, Key&& key, std::piecewise_construct_t, std::tuple<FirstArgs...>, std::tuple<SecondArgs...> second) const {
+      new (dst) wrapped_type(std::piecewise_construct, std::forward_as_tuple(std::move(key)), std::move(second));
+    }
+  };
+  struct deleted_key {
+    void set(const Key&) const {}       // these two methods aren't used
+    Key get() const { return Key(); }   // just for interface compatibility
+    bool check(const wrapped_type& w, const equal_key&, const extract_key&) const {
+      return w.is_deleted();
+    }
+    template <class T>
+    bool check(const T&, const equal_key&, const extract_key&) const {
+      return false;
+    }
+    void make(wrapped_type& value) const {
+      value.set_deleted();
+    }
+  };
+  struct empty_key {
+    void set(const Key&) const {}       // these two methods aren't used
+    Key get() const { return Key(); }   // just for interface compatibility
+    bool check(const wrapped_type& w, const equal_key&, const extract_key&) const {
+      return w.is_empty();
+    }
+    template <class T>
+    bool check(const T&, const equal_key&, const extract_key&) const {
+      return false;
+    }
+    void construct(wrapped_type* value) const {
+      new (value) wrapped_type(wrapped_type::get_empty());
+    }
+  };
+
+  typedef google::dense_hashtable<wrapped_type, Key, hash_key, extract_key, deleted_key,
+                                  empty_key, construct_value, equal_key, alloc_value> ht;
+  typedef map_detail::wrapped_traits<Key, Value,
+          typename ht::iterator, typename ht::const_iterator> map_traits;
+  ht rep;
+ public:
+  typedef Key key_type;
+  typedef Value mapped_type;
+  typedef typename map_traits::value_type value_type;
+  typedef typename ht::hasher hasher;
+  typedef typename ht::key_equal key_equal;
+  typedef alloc_value allocator_type;
+
+  typedef typename ht::size_type size_type;
+  typedef typename ht::difference_type difference_type;
+  typedef typename map_traits::pointer pointer;
+  typedef typename map_traits::const_pointer const_pointer;
+  typedef typename map_traits::reference reference;
+  typedef typename map_traits::const_reference const_reference;
+
+  typedef typename map_traits::wrapped_iterator iterator;
+  typedef typename map_traits::wrapped_const_iterator const_iterator;
+  typedef iterator local_iterator;
+  typedef const_iterator const_local_iterator;
+
+  template <class K>
+  using accept_as_key = is_key_substitute<K>;
+
+  // Iterator functions
+  iterator begin() { return iterator(rep.begin()); }
+  iterator end() { return iterator(rep.end()); }
+  const_iterator begin() const { return const_iterator(rep.begin()); }
+  const_iterator end() const { return const_iterator(rep.end()); }
+  const_iterator cbegin() const { return const_iterator(rep.begin()); }
+  const_iterator cend() const { return const_iterator(rep.end()); }
+
+  // These come from std's unordered_set. For us, a bucket has 0 or 1 elements.
+  local_iterator begin(size_type i) { return local_iterator(rep.begin(i)); }
+  local_iterator end(size_type i) { return local_iterator(rep.end(i)); }
+  const_local_iterator begin(size_type i) const { return const_local_iterator(rep.begin(i)); }
+  const_local_iterator end(size_type i) const { return const_local_iterator(rep.end(i)); }
+  const_local_iterator cbegin(size_type i) const { return const_local_iterator(rep.begin(i)); }
+  const_local_iterator cend(size_type i) const { return const_local_iterator(rep.end(i)); }
+
+  // Accessor functions
+  allocator_type get_allocator() const { return rep.get_allocator(); }
+  hasher hash_function() const { return rep.hash_funct(); }
+  key_equal key_eq() const { return rep.key_eq(); }
+
+  // Constructors
+  explicit wrapped_dense_hash_map(size_type expected_max_items_in_table = 0,
+                                  const hasher& hf = hasher(),
+                                  const key_equal& eql = key_equal(),
+                                  const allocator_type& alloc = allocator_type())
+      : rep(expected_max_items_in_table, hf, eql, extract_key(), deleted_key(), empty_key(), construct_value(), alloc) {
+    // we don't need to set values of empty and deleted keys
+    // but we do need side effects of calling these two methods
+    rep.set_empty_key(Key());   // this Key value is not used
+    rep.set_deleted_key(Key()); // this Key value is not used
+  }
+
+  template <class InputIterator>
+  wrapped_dense_hash_map(InputIterator f, InputIterator l,
+                         size_type expected_max_items_in_table = 0,
+                         const hasher& hf = hasher(),
+                         const key_equal& eql = key_equal(),
+                         const allocator_type& alloc = allocator_type())
+      : rep(expected_max_items_in_table, hf, eql, extract_key(), deleted_key(), empty_key(), construct_value(), alloc) {
+    // we don't need to set values of empty and deleted keys
+    // but we do need side effects of calling these two methods
+    rep.set_empty_key(Key());   // this Key value is not used
+    rep.set_deleted_key(Key()); // this Key value is not used
+    rep.insert(f, l);
+  }
+  // We use the default copy/move constructor
+  // We use the default operator=()
+  // We use the default destructor
+
+  void clear() { rep.clear(); }
+  // This clears the hash set without resizing it down to the minimum
+  // bucket count, but rather keeps the number of buckets constant
+  void clear_no_resize() { rep.clear_no_resize(); }
+  void swap(wrapped_dense_hash_map& hs) { rep.swap(hs.rep); }
+
+  // Functions concerning size
+  size_type size() const { return rep.size(); }
+  size_type max_size() const { return rep.max_size(); }
+  bool empty() const { return rep.empty(); }
+  size_type bucket_count() const { return rep.bucket_count(); }
+  size_type max_bucket_count() const { return rep.max_bucket_count(); }
+
+  // These are std methods.  bucket() is the bucket the key is or would be in.
+  size_type bucket_size(size_type i) const { return rep.bucket_size(i); }
+  size_type bucket(const key_type& key) const { return rep.bucket(key); }
+  float load_factor() const { return size() * 1.0f / bucket_count(); }
+  float max_load_factor() const {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    return grow;
+  }
+  void max_load_factor(float new_grow) {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    rep.set_resizing_parameters(shrink, new_grow);
+  }
+  // These aren't std methods but perhaps ought to be.
+  float min_load_factor() const {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    return shrink;
+  }
+  void min_load_factor(float new_shrink) {
+    float shrink, grow;
+    rep.get_resizing_parameters(&shrink, &grow);
+    rep.set_resizing_parameters(new_shrink, grow);
+  }
+
+  void resize(size_type hint) { rep.resize(hint); }
+  void rehash(size_type hint) { resize(hint); }  // the std name
+
+  // Lookup routines
+  iterator find(const key_type& key) { return iterator(rep.find(key)); }
+  template <class K, class = key_comparable<K>>
+  iterator find(const K& key) { return iterator(rep.find(key)); }
+  const_iterator find(const key_type& key) const { return const_iterator(rep.find(key)); }
+  template <class K, class = key_comparable<K>>
+  const_iterator find(const K& key) const { return const_iterator(rep.find(key)); }
+
+  mapped_type& operator[](const key_type& key) {
+    // If key is in the hashtable, returns find(key)->second,
+    // otherwise returns insert(value_type(key, T()).first->second.
+    // Note it does not create an empty T unless the find fails.
+    return rep.template find_or_insert<mapped_type>(key).unwrap().second;
+  }
+  mapped_type& operator[](key_type&& key) {
+    return rep.template find_or_insert<mapped_type>(std::move(key)).unwrap().second;
+  }
+  template <class K, class = key_comparable<K>>
+  mapped_type& operator[](K&& key) {
+    return rep.template find_or_insert<mapped_type>(std::forward<K>(key)).unwrap().second;
+  }
+
+  mapped_type& at(const key_type& key) {
+    auto it = rep.find(key);
+    if (it != rep.end()) {
+      return it->unwrap().second;
+    } else {
+      throw std::out_of_range("no such key in map");
+    }
+  }
+  const mapped_type& at(const key_type& key) const {
+    auto it = rep.find(key);
+    if (it != rep.end()) {
+      return it->unwrap().second;
+    } else {
+      throw std::out_of_range("no such key in map");
+    }
+  }
+  template <class K, class = key_comparable<K>>
+  mapped_type& at(const K& key) {
+    auto it = rep.find(key);
+    if (it != rep.end()) {
+      return it->unwrap().second;
+    } else {
+      throw std::out_of_range("no such key in map");
+    }
+  }
+  template <class K, class = key_comparable<K>>
+  const mapped_type& at(const K& key) const {
+    auto it = rep.find(key);
+    if (it != rep.end()) {
+      return it->unwrap().second;
+    } else {
+      throw std::out_of_range("no such key in map");
+    }
+  }
+
+  size_type count(const key_type& key) const { return rep.count(key); }
+  template <class K, class = key_comparable<K>>
+  size_type count(const K& key) const { return rep.count(key); }
+
+  std::pair<iterator, iterator> equal_range(const key_type& key) {
+    auto res = rep.equal_range(key);
+    return std::make_pair(iterator(std::move(res.first)), iterator(std::move(res.second)));
+  }
+  template <class K, class = key_comparable<K>>
+  std::pair<iterator, iterator> equal_range(const K& key) {
+    auto res = rep.equal_range(key);
+    return std::make_pair(iterator(std::move(res.first)), iterator(std::move(res.second)));
+  }
+  std::pair<const_iterator, const_iterator> equal_range(const key_type& key) const {
+    auto res = rep.equal_range(key);
+    return std::make_pair(const_iterator(std::move(res.first)), const_iterator(std::move(res.second)));
+  }
+  template <class K, class = key_comparable<K>>
+  std::pair<const_iterator, const_iterator> equal_range(const K& key) const {
+    auto res = rep.equal_range(key);
+    return std::make_pair(const_iterator(std::move(res.first)), const_iterator(std::move(res.second)));
+  }
+
+  // Insertion routines
+  std::pair<iterator, bool> insert(const value_type& obj) {
+    auto res = rep.insert(obj);
+    return std::make_pair(iterator(res.first), res.second);
+  }
+
+  template <typename P, typename = typename std::enable_if<std::is_constructible<payload_type, P&&>::value>::type>
+  std::pair<iterator, bool> insert(P&& obj) {
+    auto res = rep.insert(std::forward<P>(obj));
+    return std::make_pair(iterator(res.first), res.second);
+  }
+
+  std::pair<iterator, bool> insert(value_type&& obj) {
+    auto res = rep.insert(std::move(obj));
+    return std::make_pair(iterator(res.first), res.second);
+  }
+
+  // hint is ignored
+  iterator insert(const_iterator, const value_type& obj) { return insert(obj).first; }
+  template <typename P, typename = typename std::enable_if<std::is_constructible<payload_type, P&&>::value>::type>
+  iterator insert(const_iterator, P&& obj) { return insert(std::forward<P>(obj)).first; }
+  iterator insert(const_iterator, value_type&& obj) { return insert(std::move(obj)).first; }
+
+  template <class InputIterator>
+  void insert(InputIterator f, InputIterator l) {
+    rep.insert(f, l);
+  }
+
+  void insert(std::initializer_list<payload_type> ilist) { insert(ilist.begin(), ilist.end()); }
+
+  template <class... Args>
+  std::pair<iterator, bool> emplace(Args&&... args) {
+    auto res = rep.emplace(std::forward<Args>(args)...);
+    return std::make_pair(iterator(res.first), res.second);
+  }
+
+  template <class... Args>
+  iterator emplace_hint(const_iterator hint, Args&&... args) {
+    return iterator(rep.emplace_hint(hint, std::forward<Args>(args)...));
+  }
+
+  // Deletion routines
+  size_type erase(const key_type& key) { return rep.erase(key); }
+  template <class K, class = key_comparable<K>>
+  size_type erase(const K& key) { return rep.erase(key); }
+  iterator erase(const_iterator it) { return iterator(rep.erase(it)); }
+  iterator erase(const_iterator f, const_iterator l) { return iterator(rep.erase(f, l)); }
+
+  // Comparison
+  friend bool operator== (const wrapped_dense_hash_map& lhs, const wrapped_dense_hash_map& rhs) {
+    return lhs.rep == rhs.rep;
+  }
+  friend bool operator!= (const wrapped_dense_hash_map& lhs, const wrapped_dense_hash_map& rhs) {
+    return lhs.rep != rhs.rep;
+  }
+};
+
+template <class Key, class Val, class HashFcn, class EqualKey, class KeyConverter, template <class...> class Alloc>
+inline void swap(wrapped_dense_hash_map<Key, Val, HashFcn, EqualKey, KeyConverter, Alloc>& hm1,
+                 wrapped_dense_hash_map<Key, Val, HashFcn, EqualKey, KeyConverter, Alloc>& hm2) {
+  hm1.swap(hm2);
+}
+
+} // sparsehash namespace
+

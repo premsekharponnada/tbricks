@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="feed" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="exchange" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="code" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="rule" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="condition" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="field" type="xs:string" use="required"/>
+                                                <xs:attribute name="min_length" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="switch" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="case" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="value" type="xs:string" use="required"/>
+                                                            <xs:attribute name="phase" type="xs:string" use="required"/>
+                                                            <xs:attribute name="description" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="value_start_position" type="xs:string"/>
+                                                <xs:attribute name="value_length" type="xs:string"/>
+                                                <xs:attribute name="exclude_value_start_position" type="xs:string"/>
+                                                <xs:attribute name="exclude_value_length" type="xs:string"/>
+                                                <xs:attribute name="regex" type="xs:string"/>
+                                                <xs:attribute name="trim_spaces" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CFI_ISO10962_2001" type="application/x-cfi-tree+xml">
+<categories>
+<category code="E" name="Equity">
+    <group  code="S"            name="Common/Ordinary shares">
+        <attribute name="Voting right">
+            <value code="V"                    name="Voting" ></value>
+            <value code="N"                    name="Non-Voting" ></value>
+            <value code="R"                    name="Restricted" ></value>
+            <value code="E"                    name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Ownership/transfer restrictions">
+            <value code="T"                    name="Restrictions" ></value>
+            <value code="U"                    name="Free" ></value>
+        </attribute>
+        <attribute name="Payment status">
+            <value code="F"                    name="Fully Paid" ></value>
+            <value code="O"                    name="Nil Paid" ></value>
+            <value code="P"                    name="Partly Paid" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="P"            name="Preferred/Preference shares">
+        <attribute name="Voting right">
+            <value code="V"                    name="Voting" ></value>
+            <value code="N"                    name="Non-Voting" ></value>
+            <value code="R"                    name="Restricted" ></value>
+            <value code="E"                    name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Redemption">
+            <value code="R"                    name="Redeemable" ></value>
+            <value code="E"                    name="Extendible" ></value>
+            <value code="T"                    name="Redeemable/Extendible" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F"                    name="Fixed Rate Income" ></value>
+            <value code="C"                    name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P"                    name="Participating Income" ></value>
+            <value code="Q"                    name="Cumulative, Participating Income" ></value>
+            <value code="A"                    name="Adjustable/Variable Rate Income" ></value>
+            <value code="N"                    name="Normal Rate Income" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="R"            name="Preference shares">
+      <attribute name="Voting right">
+            <value code="V"                    name="Voting" ></value>
+            <value code="N"                    name="Non-Voting" ></value>
+            <value code="R"                    name="Restricted" ></value>
+            <value code="E"                    name="Enhanced voting" ></value>
+      </attribute>
+      <attribute name="Redemption">
+            <value code="R"                    name="Redeemable" ></value>
+            <value code="E"                    name="Extendible" ></value>
+            <value code="T"                    name="Redeemable/Extendible" ></value>
+      </attribute>
+      <attribute name="Income">
+            <value code="F"                    name="Fixed Rate Income" ></value>
+            <value code="C"                    name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P"                    name="Participating Income" ></value>
+            <value code="Q"                    name="Cumulative, Participating Income" ></value>
+            <value code="A"                    name="Adjustable/Variable Rate Income" ></value>
+            <value code="N"                    name="Normal Rate Income" ></value>
+      </attribute>
+      <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+      </attribute>
+    </group>
+    <group  code="C"            name="Common/Ordinary convertible shares">
+        <attribute name="Voting right">
+            <value code="V"                    name="Voting" ></value>
+            <value code="N"                    name="Non-Voting" ></value>
+            <value code="R"                    name="Restricted" ></value>
+            <value code="E"                    name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Ownership/transfer restrictions">
+            <value code="T"                    name="Restrictions" ></value>
+            <value code="U"                    name="Free" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F"                    name="Fixed Rate Income" ></value>
+            <value code="C"                    name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P"                    name="Participating Income" ></value>
+            <value code="Q"                    name="Cumulative, Participating Income" ></value>
+            <value code="A"                    name="Adjustable/Variable Rate Income" ></value>
+            <value code="N"                    name="Normal Rate Income" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="F"            name="Preferred / Preference convertible shares">
+        <attribute name="Voting right">
+            <value code="V"                    name="Voting" ></value>
+            <value code="N"                    name="Non-Voting" ></value>
+            <value code="R"                    name="Restricted" ></value>
+            <value code="E"                    name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Redemption">
+            <value code="R"                    name="Redeemable" ></value>
+            <value code="E"                    name="Extendible" ></value>
+            <value code="T"                    name="Redeemable/Extendible" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F"                    name="Fixed Rate Income" ></value>
+            <value code="C"                    name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P"                    name="Participating Income" ></value>
+            <value code="Q"                    name="Cumulative, Participating Income" ></value>
+            <value code="A"                    name="Adjustable/Variable Rate Income" ></value>
+            <value code="N"                    name="Normal Rate Income" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="V"            name="Preference convertible shares">
+        <attribute name="Voting right">
+            <value code="V"                    name="Voting" ></value>
+            <value code="N"                    name="Non-Voting" ></value>
+            <value code="R"                    name="Restricted" ></value>
+            <value code="E"                    name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Redemption">
+            <value code="R"                    name="Redeemable" ></value>
+            <value code="E"                    name="Extendible" ></value>
+            <value code="T"                    name="Redeemable/Extendible" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F"                    name="Fixed Rate Income" ></value>
+            <value code="C"                    name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P"                    name="Participating Income" ></value>
+            <value code="Q"                    name="Cumulative, Participating Income" ></value>
+            <value code="A"                    name="Adjustable/Variable Rate Income" ></value>
+            <value code="N"                    name="Normal Rate Income" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="U"            name="Units, i.e. unit trusts/mutual funds/OPCVM/OICVM">
+      <attribute name="Closed/open-end">
+            <value code="C"                    name="Closed-end" ></value>
+            <value code="O"                    name="Open-end" ></value>
+      </attribute>
+      <attribute name="Distribution policy">
+            <value code="I"                    name="Income funds" ></value>
+            <value code="G"                    name="Growth funds" ></value>
+            <value code="M"                    name="Mixed funds" ></value>
+      </attribute>
+      <attribute name="Assets">
+            <value code="R"                    name="Real estate" ></value>
+            <value code="S"                    name="Securities" ></value>
+            <value code="M"                    name="Mixed-general" ></value>
+            <value code="C"                    name="Commodities" ></value>
+            <value code="D"                    name="Derivatives" ></value>
+      </attribute>
+      <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+      </attribute>
+    </group>
+    <group  code="M"            name="Others (miscellaneous)">
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="D" name="Debt instruments">
+    <group  code="B"            name="Bonds">
+        <attribute name="Type of interest">
+            <value code="F"                    name="Fixed Rate" ></value>
+            <value code="Z"                    name="Zero Rate/Discounted" ></value>
+            <value code="V"                    name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee">
+            <value code="T"                    name="Government/State Guarantee" ></value>
+            <value code="G"                    name="Joint Guarantee" ></value>
+            <value code="S"                    name="Secured" ></value>
+            <value code="U"                    name="Unsecured/Unguaranteed" ></value>
+        </attribute>
+        <attribute name="Redemption/Reimbursement">
+            <value code="F"                    name="Fixed Maturity" ></value>
+            <value code="G"                    name="Fixed Maturity with Call Feature" ></value>
+            <value code="C"                    name="Fixed Maturity with Put Feature" ></value>
+            <value code="D"                    name="Fixed Maturity with Put and Call" ></value>
+            <value code="A"                    name="Amortization Plan" ></value>
+            <value code="B"                    name="Amortization Plan with Call Feature" ></value>
+            <value code="T"                    name="Amortization Plan with Put Feature" ></value>
+            <value code="L"                    name="Amortization Plan with Put and Call" ></value>
+            <value code="P"                    name="Perpetual" ></value>
+            <value code="Q"                    name="Perpetual with Call Feature" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="C"            name="Convertible bonds">
+        <attribute name="Type of interest">
+            <value code="F"                    name="Fixed Rate" ></value>
+            <value code="Z"                    name="Zero Rate/Discounted" ></value>
+            <value code="V"                    name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee">
+            <value code="T"                    name="Government/State Guarantee" ></value>
+            <value code="G"                    name="Joint Guarantee" ></value>
+            <value code="S"                    name="Secured" ></value>
+            <value code="U"                    name="Unsecured/Unguaranteed" ></value>
+        </attribute>
+        <attribute name="Redemption/Reimbursement">
+            <value code="F"                    name="Fixed Maturity" ></value>
+            <value code="G"                    name="Fixed Maturity with Call Feature" ></value>
+            <value code="C"                    name="Fixed Maturity with Put Feature" ></value>
+            <value code="D"                    name="Fixed Maturity with Put and Call" ></value>
+            <value code="A"                    name="Amortization Plan" ></value>
+            <value code="B"                    name="Amortization Plan with Call Feature" ></value>
+            <value code="T"                    name="Amortization Plan with Put Feature" ></value>
+            <value code="L"                    name="Amortization Plan with Put and Call" ></value>
+            <value code="P"                    name="Perpetual" ></value>
+            <value code="Q"                    name="Perpetual with Call Feature" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="W"            name="Bonds with warrants attached">
+        <attribute name="Type of interest">
+            <value code="F"                    name="Fixed Rate" ></value>
+            <value code="Z"                    name="Zero Rate/Discounted" ></value>
+            <value code="V"                    name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee">
+            <value code="T"                    name="Government/State Guarantee" ></value>
+            <value code="G"                    name="Joint Guarantee" ></value>
+            <value code="S"                    name="Secured" ></value>
+            <value code="U"                    name="Unsecured/Unguaranteed" ></value>
+        </attribute>
+        <attribute name="Redemption/Reimbursement">
+            <value code="F"                    name="Fixed Maturity" ></value>
+            <value code="G"                    name="Fixed Maturity with Call Feature" ></value>
+            <value code="C"                    name="Fixed Maturity with Put Feature" ></value>
+            <value code="D"                    name="Fixed Maturity with Put and Call" ></value>
+            <value code="A"                    name="Amortization Plan" ></value>
+            <value code="B"                    name="Amortization Plan with Call Feature" ></value>
+            <value code="T"                    name="Amortization Plan with Put Feature" ></value>
+            <value code="L"                    name="Amortization Plan with Put and Call" ></value>
+            <value code="P"                    name="Perpetual" ></value>
+            <value code="Q"                    name="Perpetual with Call Feature" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="T"            name="Medium term notes">
+        <attribute name="Type of interest">
+            <value code="F"                    name="Fixed Rate" ></value>
+            <value code="Z"                    name="Zero Rate/Discounted" ></value>
+            <value code="V"                    name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee">
+            <value code="T"                    name="Government/State Guarantee" ></value>
+            <value code="G"                    name="Joint Guarantee" ></value>
+            <value code="S"                    name="Secured" ></value>
+            <value code="U"                    name="Unsecured/Unguaranteed" ></value>
+        </attribute>
+        <attribute name="Redemption/Reimbursement">
+            <value code="F"                    name="Fixed Maturity" ></value>
+            <value code="G"                    name="Fixed Maturity with Call Feature" ></value>
+            <value code="C"                    name="Fixed Maturity with Put Feature" ></value>
+            <value code="D"                    name="Fixed Maturity with Put and Call" ></value>
+            <value code="A"                    name="Amortization Plan" ></value>
+            <value code="B"                    name="Amortization Plan with Call Feature" ></value>
+            <value code="T"                    name="Amortization Plan with Put Feature" ></value>
+            <value code="L"                    name="Amortization Plan with Put and Call" ></value>
+            <value code="P"                    name="Perpetual" ></value>
+            <value code="Q"                    name="Perpetual with Call Feature" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="M"            name="Other (miscellaneous)">
+        <attribute name="Type of interest">
+            <value code="F"                    name="Fixed Rate" ></value>
+            <value code="Z"                    name="Zero Rate/Discounted" ></value>
+            <value code="V"                    name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee">
+            <value code="T"                    name="Government/State Guarantee" ></value>
+            <value code="G"                    name="Joint Guarantee" ></value>
+            <value code="S"                    name="Secured" ></value>
+            <value code="U"                    name="Unsecured/Unguaranteed" ></value>
+        </attribute>
+        <attribute name="Redemption/Reimbursement">
+            <value code="F"                    name="Fixed Maturity" ></value>
+            <value code="G"                    name="Fixed Maturity with Call Feature" ></value>
+            <value code="C"                    name="Fixed Maturity with Put Feature" ></value>
+            <value code="D"                    name="Fixed Maturity with Put and Call" ></value>
+            <value code="A"                    name="Amortization Plan" ></value>
+            <value code="B"                    name="Amortization Plan with Call Feature" ></value>
+            <value code="T"                    name="Amortization Plan with Put Feature" ></value>
+            <value code="L"                    name="Amortization Plan with Put and Call" ></value>
+            <value code="P"                    name="Perpetual" ></value>
+            <value code="Q"                    name="Perpetual with Call Feature" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="Y"            name="Money Market Instruments">
+        <attribute name="Type of interest">
+            <value code="F"                    name="Fixed Rate" ></value>
+            <value code="Z"                    name="Zero Rate/Discounted" ></value>
+            <value code="V"                    name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee">
+            <value code="T"                    name="Government/State Guarantee" ></value>
+            <value code="G"                    name="Joint Guarantee" ></value>
+            <value code="S"                    name="Secured" ></value>
+            <value code="U"                    name="Unsecured/Unguaranteed" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="R" name="Entitlements (rights)">
+    <group  code="A"            name="Allotments (Bonus Rights)">
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="S"            name="Subscription Rights">
+        <attribute name="Underlying assets">
+            <value code="S"                    name="Common/Ordinary Shares" ></value>
+            <value code="P"                    name="Preferred/Preference Shares" ></value>
+            <value code="C"                    name="Common/Ordinary Convertible Shares" ></value>
+            <value code="F"                    name="Preferred/Preference Convertible Shares" ></value>
+            <value code="B"                    name="Bonds" ></value>
+            <value code="V"                    name="Preference convertible shares" ></value>
+            <value code="O"                    name="Others" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="P"            name="Purchase Rights">
+        <attribute name="Underlying assets">
+            <value code="S"                    name="Common/Ordinary Shares" ></value>
+            <value code="P"                    name="Preferred/Preference Shares" ></value>
+            <value code="C"                    name="Common/Ordinary Convertible Shares" ></value>
+            <value code="F"                    name="Preferred/Preference Convertible Shares" ></value>
+            <value code="B"                    name="Bonds" ></value>
+            <value code="V"                    name="Preference convertible shares" ></value>
+            <value code="O"                    name="Others" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="W"            name="Warrants">
+        <attribute name="Underlying assets">
+            <value code="B"                    name="Baskets" ></value>
+            <value code="S"                    name="Equities" ></value>
+            <value code="D"                    name="Debt Instruments/Interest Rates" ></value>
+            <value code="T"                    name="Commodities" ></value>
+            <value code="C"                    name="Currencies" ></value>
+            <value code="I"                    name="Indices" ></value>
+            <value code="M"                    name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Type">
+            <value code="T"                    name="Traditional Warrants" ></value>
+            <value code="N"                    name="Naked Warrants" ></value>
+            <value code="C"                    name="Covered Warrants" ></value>
+        </attribute>
+        <attribute name="Call/Put">
+            <value code="C"                    name="Call" ></value>
+            <value code="P"                    name="Put" ></value>
+            <value code="B"                    name="Call and Put" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+    <group  code="M"            name="Other (miscellaneous)">
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B"                    name="Bearer" ></value>
+            <value code="R"                    name="Registered" ></value>
+            <value code="N"                    name="Bearer/Registered" ></value>
+            <value code="Z"                    name="Bearer depository receipt" ></value>
+            <value code="A"                    name="Registered depository receipt (e.g. ADR)" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="O" name="Listed options">
+    <group  code="C"            name="Call options">
+        <attribute name="Type of scheme">
+            <value code="A"                    name="American" ></value>
+            <value code="E"                    name="European" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B"                    name="Baskets" ></value>
+            <value code="S"                    name="Stock-Equities" ></value>
+            <value code="D"                    name="Debt Instruments" ></value>
+            <value code="T"                    name="Commodities" ></value>
+            <value code="C"                    name="Currencies" ></value>
+            <value code="I"                    name="Indices" ></value>
+            <value code="O"                    name="Options" ></value>
+            <value code="F"                    name="Futures" ></value>
+            <value code="W"                    name="Swaps" ></value>
+            <value code="M"                    name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P"                    name="Physical" ></value>
+            <value code="C"                    name="Cash" ></value>
+        </attribute>
+        <attribute name="Standardized/non-standardized">
+            <value code="S"                    name="Standardized" ></value>
+            <value code="N"                    name="Non-Standardized" ></value>
+        </attribute>
+    </group>
+    <group  code="P"            name="Put options">
+        <attribute name="Type of scheme">
+            <value code="A"                    name="American" ></value>
+            <value code="E"                    name="European" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B"                    name="Baskets" ></value>
+            <value code="S"                    name="Stock-Equities" ></value>
+            <value code="D"                    name="Debt Instruments" ></value>
+            <value code="T"                    name="Commodities" ></value>
+            <value code="C"                    name="Currencies" ></value>
+            <value code="I"                    name="Indices" ></value>
+            <value code="O"                    name="Options" ></value>
+            <value code="F"                    name="Futures" ></value>
+            <value code="W"                    name="Swaps" ></value>
+            <value code="M"                    name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P"                    name="Physical" ></value>
+            <value code="C"                    name="Cash" ></value>
+        </attribute>
+        <attribute name="Standardized/non-standardized">
+            <value code="S"                    name="Standardized" ></value>
+            <value code="N"                    name="Non-Standardized" ></value>
+        </attribute>
+    </group>
+    <group  code="M"            name="Other (miscellaneous)">
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="F" name="Futures">
+    <group  code="F"            name="Financial futures">
+        <attribute name="Underlying assets">
+            <value code="B"                    name="Baskets" ></value>
+            <value code="S"                    name="Stock-Equities" ></value>
+            <value code="D"                    name="Debt Instruments" ></value>
+            <value code="C"                    name="Currencies" ></value>
+            <value code="I"                    name="Indices" ></value>
+            <value code="O"                    name="Options" ></value>
+            <value code="F"                    name="Futures" ></value>
+            <value code="W"                    name="Swaps" ></value>
+            <value code="M"                    name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P"                    name="Physical" ></value>
+            <value code="C"                    name="Cash" ></value>
+        </attribute>
+        <attribute name="Standardized/non-standardized">
+            <value code="S"                    name="Standardized" ></value>
+            <value code="N"                    name="Non-Standardized" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="C"            name="Commodities futures">
+        <attribute name="Underlying assets">
+            <value code="E"                    name="Extraction Resources" ></value>
+            <value code="A"                    name="Agriculture" ></value>
+            <value code="I"                    name="Industrial Products" ></value>
+            <value code="S"                    name="Services" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P"                    name="Physical" ></value>
+            <value code="C"                    name="Cash" ></value>
+        </attribute>
+        <attribute name="Standardized/non-standardized">
+            <value code="S"                    name="Standardized" ></value>
+            <value code="N"                    name="Non-Standardized" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="M" name="Others (miscellaneous)">
+    <group  code="R"            name="Referential Instruments">
+        <attribute code="MR : Further grouping">
+            <value code="C"                    name="Currencies" ></value>
+            <value code="T"                    name="Commodities" ></value>
+            <value code="R"                    name="Interest Rates" ></value>
+            <value code="I"                    name="Indices" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="M"            name="Other assets">
+        <attribute name="Further grouping">
+            <value code="R"                    name="Real Estate Deeds" ></value>
+            <value code="I"                    name="Insurance Policies" ></value>
+            <value code="E"                    name="Escrow Receipts" ></value>
+            <value code="F"                    name="Forwards" ></value>
+            <value code="P"                    name="Precious Metal Receipts" ></value>
+            <value code="M"                    name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X"                    name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+</categories>
+</resource>

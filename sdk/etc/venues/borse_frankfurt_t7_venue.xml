@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Borse Frankfurt T7 venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Borse Frankfurt T7" shortname="Borse Frankfurt T7" identifier="f6c2c6e2-2018-11ea-a550-be525efee803" description="Borse Frankfurt T7" algo_label_required="true">
+            <identifier>
+                <key name="productid"/>
+                <key name="instrumentid"/>
+                <key name="instrumenttype"/>
+                <key name="volumefactor"/>
+                <key name="nolegs"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities two_sided_rfq_response_required="yes">
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="participation policy"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="retain on disconnect"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Definition of Borse Frankfurt T7 venue
+        Covers ETI / EOBI / MDI components.
+    </documentation>
+</resource>

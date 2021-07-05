@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NeoNet venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NeoNet" shortname="NeoNet" identifier="abff9315-b1c3-4089-82e0-7760c0d82eee" description="NeoNet">
+            <identifier>
+                <key name="currency"/>
+                <key name="exdestination"/>
+                <key name="isin"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NeoNet venue.
+    </documentation>
+</resource>

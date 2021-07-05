@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="session" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="url" type="xs:string" use="required"/>
+                        <xs:attribute name="alternate_url" type="xs:string" use="optional"/>
+                        <xs:attribute name="trader" type="xs:string" use="required"/>
+                        <xs:attribute name="password" type="xs:string" use="required"/>
+                        <xs:attribute name="mic" type="xs:string" use="optional"/>
+                    </xs:complexType>
+                </xs:element> 
+
+                <xs:element name="map" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="key" type="xs:string" use="required"/>
+                        <xs:attribute name="inside" type="xs:string" use="required"/>
+                        <xs:attribute name="outside" type="xs:string" use="optional"/>
+                    </xs:complexType>
+                </xs:element> 
+
+                <xs:element name="default" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="key" type="xs:string" use="required"/>
+                        <xs:attribute name="value" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element> 
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

@@ -1,0 +1,1 @@
+Open-source licenses for bundled software are presented in this directory. Users are invited to review the terms of the licenses.

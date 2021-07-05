@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="HU" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="03-15" valid="no"/> <!-- 1848 Revolution Memorial Day -->
+        <day date="05-01" valid="no"/> <!-- Labor Day -->
+        <day date="08-20" valid="no"/> <!-- Hungary National Day -->
+        <day date="10-23" valid="no"/> <!-- 1956 Revolution Memorial Day -->
+        <day date="11-01" valid="no"/> <!-- All Saints' Day -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- Boxing Day -->
+    </days>
+
+    <days year="2019">
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="06-10" valid="no"/> <!-- Whit Monday -->
+        <day date="08-19" valid="no"/> <!-- Hungary National Day holiday -->
+        <day date="12-24" valid="no"/> <!-- Christmas Eve (Extra holiday) -->
+        <day date="12-27" valid="no"/> <!-- Boxing Day (Extra holiday) -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="06-01" valid="no"/> <!-- Whit Monday -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for HU (Hungary).
+        Source https://www.timeanddate.com/holidays/hungary/
+    </documentation>
+</resource>

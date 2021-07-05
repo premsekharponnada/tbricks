@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="components" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="component" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="executables" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="executable" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="name" type="xs:string" use="required"/>
+                                                            <xs:attribute name="introduced" type="xs:string" use="required"/>
+                                                            <xs:attribute name="depreciated" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="services" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="service" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="type" type="xs:string" use="required"/>
+                                                            <xs:attribute name="default" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="identifier" type="xs:string" use="required"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="description" type="xs:string"/>
+                                    <xs:attribute name="cpu" type="xs:double"/>
+                                    <xs:attribute name="memory" type="xs:double"/>
+                                    <xs:attribute name="storage" type="xs:string" use="required"/>
+                                    <xs:attribute name="introduced" type="xs:string" use="required"/>
+                                    <xs:attribute name="depreciated" type="xs:string"/>
+                                    <xs:attribute name="startdays" type="xs:string" use="required"/>
+                                    <xs:attribute name="stopdays" type="xs:string" use="required"/>
+                                    <xs:attribute name="starttime" type="xs:string"/>
+                                    <xs:attribute name="stoptime" type="xs:string"/>
+                               </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NGM Elasticia venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NGM Elasticia" shortname="NGM Elasticia" identifier="33646430-4660-11e0-8f27-6618571d865d" description="NGM Elasticia" native_trd_required="yes">
+            <identifier>
+                <key name="securityid" tag="48">
+                    <additional tag="22" value="M"/> <!-- 'M' = Marketplace-assigned identifier -->
+                </key>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="last auction"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NGM Elasticia venue.
+    </documentation>
+</resource>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CATS OS" type="application/x-venue+xml">
+    <venues>
+        <venue name="CATS OS" shortname="CATS OS" identifier="fcb2bdce-83bc-11e6-9940-3c9475742b63" description="CATS OS FIX Interface">
+            <identifier>
+                <key name="ISIN" tag="48"/>
+                <key name="WKN" tag="48"/>
+                <key name="SecurityType" tag="167"/>
+                <key name="SecurityDesc" tag="107"/>
+                <key name="MaturityMonthYear" tag="200"/>
+                <key name="MaturityDay" tag="205"/>
+                <key name="Currency" tag="15"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+    
+    <documentation>
+        Venue identifier resource describing the CATS OS FIX Interface venue.
+    </documentation>
+</resource>

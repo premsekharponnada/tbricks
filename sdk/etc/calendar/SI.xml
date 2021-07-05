@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SI" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="01-02" valid="no"/> <!-- New Year holiday -->
+        <day date="02-08" valid="no"/> <!-- Prešeren Day -->
+        <day date="04-27" valid="no"/> <!-- Day of Uprising Against Occupation -->
+        <day date="05-01" valid="no"/> <!-- Labor Day -->
+        <day date="05-02" valid="no"/> <!-- Labor Day holiday -->
+        <day date="06-25" valid="no"/> <!-- Statehood Day -->
+        <day date="08-15" valid="no"/> <!-- Assumption of Mary -->
+        <day date="10-31" valid="no"/> <!-- Reformation Day -->
+        <day date="11-01" valid="no"/> <!-- Remembrance Day -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- Independence and Unity Day -->
+    </days>
+
+    <days year="2019">
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2020">
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for SI (Slovenia).
+        Source https://www.timeanddate.com/holidays/slovenia/
+    </documentation>
+</resource>

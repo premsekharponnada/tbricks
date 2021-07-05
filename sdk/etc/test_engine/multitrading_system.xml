@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="system config" type="application/x-system-config+xml">
+    <system identifier="49f43d5e-7a16-11df-8d47-799432e9605f" short_name="system" name="system">
+        <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1" short_name="node1" host_name="host1"/>
+        <subsystem identifier="89f4beec-7a16-11df-bcf1-550000000001" short_name="subsystem1" default="true" name="subsystem1">
+            <services>
+                <service identifier="e10f3114-3cf1-11e5-ad00-8e5209f6e6f0"
+                         short_name="is"
+                         class="3"
+                         type="Instrument">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="6750350c-c3bd-11e3-ab50-1f87a9b14551"
+                         short_name="se"
+                         class="10"
+                         type="Strategy Engine">
+                    <node identifier="0740b544-bc04-11e3-b300-c16fb8c45212"/>
+                </service>
+                <service identifier="8150350c-c3bd-11e3-ab50-1f87a1434551"
+                         short_name="tp"
+                         class="12"
+                         type="Trade Persistence">
+                    <node identifier="0740b544-bc04-11e3-b300-c16fb8c45212"/>
+                </service>
+                <service identifier="ebc89e2e-8425-11e7-bd50-bcac4a7cbeb5"
+                         short_name="op"
+                         class="6"
+                         type="Order Persistence">
+                    <node identifier="0740b544-bc04-11e3-b300-c16fb8c45212"/>
+                </service>
+                
+            <!--Internal venue services -->                
+                <service identifier="4a74ae9e-4275-11e5-bd50-e3f948de108e"
+                         short_name="md1"
+                         class="4"
+                         type="FIX Market Data"
+                         venue_identifier="0f9e71de-6942-4615-a8a7-76272ad9d3e3">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="36190d5e-7a17-11df-9386-3d0010000001"
+                         short_name="tr1"
+                         class="13"
+                         type="FIX Trading"
+                         venue_identifier="0f9e71de-6942-4615-a8a7-76272ad9d3e3">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="2e8ad82a-d708-11e5-9bb0-36443fb2b18d"
+                         short_name="trd1"
+                         class="24"
+                         type="TradingReferenceData"
+                         venue_identifier="0f9e71de-6942-4615-a8a7-76272ad9d3e3">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>                
+                
+            <!--Liffe venue services -->      
+                <service identifier="4a74ae9e-4275-11e5-bd50-e3f948de1082"
+                         short_name="md2"
+                         class="4"
+                         type="FIX Market Data"
+                         venue_identifier="2ac47736-82ff-4d3e-b809-cdd575fd65fd">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="36190d5e-7a17-11df-9386-3d0010000002"
+                         short_name="tr-2"
+                         class="13"
+                         type="FIX Trading"
+                         venue_identifier="2ac47736-82ff-4d3e-b809-cdd575fd65fd">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="2e8ad82a-d708-11e5-9bb0-36443fb2b182"
+                         short_name="trd-2"
+                         class="24"
+                         type="TradingReferenceData"
+                         venue_identifier="2ac47736-82ff-4d3e-b809-cdd575fd65fd">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                
+            <!--NeoNet venue services -->                      
+                <service identifier="4a74ae9e-4275-11e5-bd50-e3f948de1083"
+                         short_name="md3"
+                         class="4"
+                         type="FIX Market Data"
+                         venue_identifier="abff9315-b1c3-4089-82e0-7760c0d82eee">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="36190d5e-7a17-11df-9386-3d0010000003"
+                         short_name="tr3"
+                         class="13"
+                         type="FIX Trading"
+                         venue_identifier="abff9315-b1c3-4089-82e0-7760c0d82eee">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="2e8ad82a-d708-11e5-9bb0-36443fb2b183"
+                         short_name="trd3"
+                         class="24"
+                         type="TradingReferenceData"
+                         venue_identifier="abff9315-b1c3-4089-82e0-7760c0d82eee">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+            </services>
+        </subsystem>
+    </system>
+</resource>

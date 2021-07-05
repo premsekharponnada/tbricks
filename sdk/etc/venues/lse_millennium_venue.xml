@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="LSE venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="LSE Millennium" shortname="LSE Millennium" identifier="9ec834ca-cf8e-11df-92a9-13a175108342" description="LSE Millennium">
+            <identifier>
+                <key name="security_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="execution policy"/>
+            <field name="transition type"/>
+            <field name="validity type" value="infinite"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="price" value="empty"/>
+            <field name="retain on disconnect"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the LSE Millennium venue.
+    </documentation>
+</resource>

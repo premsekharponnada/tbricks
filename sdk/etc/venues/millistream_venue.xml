@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Millistream" type="application/x-venue+xml">
+    <venues>
+        <venue name="Millistream" shortname="Millistream" identifier="677d3a34-7b38-4436-ba8a-0f2a63b854be" description="Millistream">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- Market Data venue, capabilities are not required -->
+
+    <documentation>
+        Venue identifier resource for Millistream.
+    </documentation>
+</resource>

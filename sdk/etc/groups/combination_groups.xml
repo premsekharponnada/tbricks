@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<resource long_name="Combination groups" type="application/x-group+xml"> 
+    <groups>
+        <group id="cd1d06b8-670e-11df-85b5-8304ccef2f56" name="Combinations" long_name="Standard combinations" type="combinations"/> 
+
+        <group id="0ba3cbb0-670f-11df-89c6-25ca22e29162" name="Futures" description="Combinations category" long_name="Futures combinations" parent="cd1d06b8-670e-11df-85b5-8304ccef2f56"/> 
+        <group id="832c4a6e-bd64-11e2-a706-f9d5a0549fe0" name="ICS" description="Combination type" long_name="Inter commodity spread" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+        <group id="d2e5b922-575b-11df-bcaa-5b4c80ccc924" name="FCS" description="Combination type" long_name="Future calendar spread" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+        <group id="d45880f0-575b-11df-bc39-ebffbea5b361" name="FB" description="Combination type" long_name="Future butterfly" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+        <group id="d4efcc6c-575b-11df-83b2-61b63d9de8e6" name="FCo" description="Combination type" long_name="Future condor" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+        <group id="d54c8d4e-575b-11df-87fa-b18f0b7bb14e" name="FST" description="Combination type" long_name="Strip" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+        <group id="d59f3fee-575b-11df-80f3-4999e81f48b7" name="FP" description="Combination type" long_name="Pack" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+        <group id="d5de5684-575b-11df-98c2-858db0535f77" name="FBu" description="Combination type" long_name="Bundle" parent="0ba3cbb0-670f-11df-89c6-25ca22e29162"/>
+
+        <group id="49b91ecc-6710-11df-9029-25136c0bce12" name="Options" description="Combinations category" long_name="Options combinations" parent="cd1d06b8-670e-11df-85b5-8304ccef2f56"/> 
+        <group id="d60e378c-575b-11df-80da-6b7a129b2e6e" name="JR" description="Combination type" long_name="Jelly roll" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="84326d36-6997-11df-9b02-53278935aea1" name="CB" description="Combination type" long_name="Call butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="9ceef5e0-46c7-11e3-bf68-d7f6eb7a5d73" name="CCB" description="Combination type" long_name="Call calendar butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d40c4012-4058-11e2-9e42-15f1cfe99412" name="SCB" description="Combination type" long_name="Skinny call butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d6378a10-575b-11df-bf2a-5b9fe7473ef5" name="PB" description="Combination type" long_name="Put butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="c53cf542-46c7-11e3-b146-86241b7145b3" name="PCB" description="Combination type" long_name="Put calendar butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="dfb1af38-4058-11e2-af2c-0b5c4a040bf8" name="SPB" description="Combination type" long_name="Skinny put butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d66d894e-575b-11df-aa9c-29eced234898" name="CS" description="Combination type" long_name="Call spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d69d460c-575b-11df-b797-6fa7e19cbce1" name="PS" description="Combination type" long_name="Put spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d6cc31d8-575b-11df-963c-8fda34c8aa53" name="CCS" description="Combination type" long_name="Call calendar spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d6f9d20a-575b-11df-af6b-fb9ace19a2d8" name="PCS" description="Combination type" long_name="Put calendar spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d7263fe8-575b-11df-84fe-e9326bd90939" name="CDCS" description="Combination type" long_name="Call diagonal calendar spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d755e2f2-575b-11df-b8c9-cd1412e9dfb2" name="PDCS" description="Combination type" long_name="Put diagonal calendar spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d781b512-575b-11df-ad05-fbcf6661a2b7" name="G" description="Combination type" long_name="Guts" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d7afce52-575b-11df-ba71-914fffe03048" name="RCS" description="Combination type" long_name="2x1 ratio call spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="7fbbea36-24cd-11e2-baf8-9ed5f9fd6e3d" name="RCS 1x2" description="Combination type" long_name="1x2 ratio call spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="861c4e2a-24cd-11e2-923f-492bac84c799" name="RCS 1x3" description="Combination type" long_name="1x3 ratio call spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="86f597fa-71dc-11e2-bda3-c2529fa05804" name="RCS 2x3" description="Combination type" long_name="2x3 ratio call spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="0a13a7b4-4058-11e2-8b12-3e0a4c21765b" name="RCS 3x1" description="Combination type" long_name="3x1 ratio call spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d7da465a-575b-11df-a441-dba311f084fd" name="RPS" description="Combination type" long_name="2x1 ratio put spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="ea38fc3c-24cd-11e2-8130-2c7835671f71" name="RPS 1x2" description="Combination type" long_name="1x2 ratio put spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="ef816c92-24cd-11e2-aebe-28de187c5fa5" name="RPS 1x3" description="Combination type" long_name="1x3 ratio put spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="88fed8a4-71dc-11e2-a0b9-b301f88ea076" name="RPS 2x3" description="Combination type" long_name="2x3 ratio put spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="167f3b1c-4058-11e2-8ed4-529af72e765a" name="RPS 3x1" description="Combination type" long_name="3x1 ratio put spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d804fab2-575b-11df-b359-23fdb8cf86b0" name="IBF" description="Combination type" long_name="Iron butterfly" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d82ff0c8-575b-11df-ab8a-d7326a8338dc" name="Co" description="Combination type" long_name="Combo" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d85aae8a-575b-11df-86af-69e65d689981" name="St" description="Combination type" long_name="Strangle" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d880ac48-575b-11df-adaa-e9372fb32dad" name="CL" description="Combination type" long_name="Call ladder" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d8aef2b0-575b-11df-bace-b5cba375818e" name="PL" description="Combination type" long_name="Put ladder" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d8da1af8-575b-11df-b293-75f47d9296ce" name="OS" description="Combination type" long_name="Options strip" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d9070acc-575b-11df-84b7-33e39ac3eb9a" name="StrCS" description="Combination type" long_name="Straddle calendar spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="da3350fe-575b-11df-adbd-671ceb3b412c" name="DStrCS" description="Combination type" long_name="Diagonal straddle calendar spread" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="da5a2620-575b-11df-9029-c3f2a99ff460" name="Str" description="Combination type" long_name="Straddle" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="da84b6f6-575b-11df-ab0d-3f4d8e5f7559" name="CCo" description="Combination type" long_name="Call condor" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="e3f47ac4-69a7-11df-916f-a594496ed53e" name="PCo" description="Combination type" long_name="Put condor" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="dab04d02-575b-11df-a1d4-f7d8a8a61767" name="B" description="Combination type" long_name="Box" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="db288010-575b-11df-a8e4-b9955814d526" name="Synth C-R" description="Combination type" long_name="Synthetic conversion-reversal" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="a1d6ef22-24cc-11e2-bbfb-9d41b819eeb7" name="F" description="Combination type" long_name="Fence" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="db6bcc08-575b-11df-bf3c-cbc75d213591" name="ICo" description="Combination type" long_name="Iron condor" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="dbb48c68-575b-11df-8f60-b7f400367baf" name="3-Way CSvP" description="Combination type" long_name="Call spread vs put" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="dc18e0b4-575b-11df-b188-c59feaa63a84" name="3-Way PSvC" description="Combination type" long_name="Put spread vs call" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="dc63a1da-575b-11df-b3d0-b13c7ca30768" name="3-Way StrvC" description="Combination type" long_name="Straddle vs call" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d3f9f50c-575c-11df-b9a9-47a16437aad4" name="3-Way StrvP" description="Combination type" long_name="Straddle vs put" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="cc582fde-71db-11e2-9cb8-71dc70e19108" name="CD" description="Combination type" long_name="Call double" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="d2827b3a-71db-11e2-827f-7bb96aeed8ce" name="PD" description="Combination type" long_name="Put double" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="f3914366-71df-11e2-828e-fa5177e7d318" name="StrS" description="Combination type" long_name="Straddle strip" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+        <group id="0dccbf54-5288-11ea-b500-646921a68401" name="StrSW" description="Combination type" long_name="Straddle swap" parent="49b91ecc-6710-11df-9029-25136c0bce12"/>
+
+        <group id="7f4fc1dc-6713-11df-97bb-8590a7c12415" name="Delta neutral" description="Combinations category" long_name="Delta neutral combinations" parent="cd1d06b8-670e-11df-85b5-8304ccef2f56"/> 
+        <group id="d4705472-575c-11df-a24a-19059ce82a41" name="CVolT" description="Combination type" long_name="Call volatility trade" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d4e254f0-575c-11df-977e-a3da1431391a" name="PVolT" description="Combination type" long_name="Put volatility trade" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d552985a-575c-11df-a6fb-a5d0d3804e38" name="CSvU" description="Combination type" long_name="Call spread vs underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d5c00eb2-575c-11df-8b6a-b10cf42a451d" name="PSvU" description="Combination type" long_name="Put spread vs underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d6324220-575c-11df-9a29-0b66d65515d6" name="StvbU" description="Combination type" long_name="Straddle vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d6a0fbde-575c-11df-aa15-6bb4d6d97a84" name="StvsU" description="Combination type" long_name="Straddle vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d70da4aa-575c-11df-bcd2-a73c367931cb" name="StrvbU" description="Combination type" long_name="Strangle vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d76e8d74-575c-11df-b24c-a323e0ba1e89" name="StrvsU" description="Combination type" long_name="Strangle vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d7dc15d8-575c-11df-905d-ed9e24470620" name="CSvPvU" description="Combination type" long_name="Call spread vs sell put vs underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d84e355a-575c-11df-b763-d308db7c0f96" name="PSvCvU" description="Combination type" long_name="Put spread vs sell call vs underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d8ba1626-575c-11df-9fb7-05b72b6fedcf" name="CLvbU" description="Combination type" long_name="Call ladder vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d92c9ac0-575c-11df-be27-e3e980864d7c" name="CLvsU" description="Combination type" long_name="Call ladder vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d9998900-575c-11df-80a5-950ba54fb119" name="PLvbU" description="Combination type" long_name="Put ladder vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="da01df8c-575c-11df-9360-7bcf62c9aac2" name="PLvsU" description="Combination type" long_name="Put ladder vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="da6e1b98-575c-11df-853b-5ddaf9880ab5" name="CvU" description="Combination type" long_name="Combo vs underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="dade3e32-575c-11df-adcf-ad645cef97af" name="CCSvbU" description="Combination type" long_name="Call calendar spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="db41619c-575c-11df-b741-3f32ccccbb26" name="CCSvsU" description="Combination type" long_name="Call calendar spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="dba8dfe8-575c-11df-bf95-dde76e6420b7" name="PCSvbU" description="Combination type" long_name="Put calendar spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="48600454-575d-11df-bae4-0f52c8c94937" name="PCSvsU" description="Combination type" long_name="Put calendar spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="48d32c68-575d-11df-82b5-c3ec844b4544" name="RCSvbU" description="Combination type" long_name="2x1 Ratio call spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="494ec292-575d-11df-a267-e96a655a2a68" name="RCSvsU" description="Combination type" long_name="2x1 Ratio call spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="49cee7f6-575d-11df-b77e-c789229c6ec7" name="RPSvbU" description="Combination type" long_name="2x1 Ratio put spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="4a416a42-575d-11df-9979-0741afb5dcb2" name="RPSvsU" description="Combination type" long_name="2x1 Ratio put spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="4aad0950-575d-11df-8e7d-213126f37438" name="C-R" description="Combination type" long_name="Conversion-reversal" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="079e135a-673f-11e0-b848-56e685aa5647" name="StrCSvbU" description="Combination type" long_name="Straddle calendar spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="08601626-673f-11e0-9806-b13b3be4d7e2" name="StrCSvsU" description="Combination type" long_name="Straddle calendar spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="9b61ec14-673b-11e0-9223-cbb2491a61f6" name="CDCSvbU" description="Combination type" long_name="Call diagonal calendar spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="a2a3f710-673b-11e0-a30e-b5fdd2349174" name="CDCSvsU" description="Combination type" long_name="Call diagonal calendar spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="a7255810-673b-11e0-a9ae-45e719a6a710" name="PDCSvbU" description="Combination type" long_name="Put diagonal calendar spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="ac4f7bfe-673b-11e0-86f3-65f344c77f11" name="PDCSvsU" description="Combination type" long_name="Put diagonal calendar spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="edd98306-673d-11e0-bf2a-3b59618df41b" name="GvbU" description="Combination type" long_name="Guts vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="f6a0cb8e-673d-11e0-9d83-9477b038971f" name="GvsU" description="Combination type" long_name="Guts vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="b0d59244-673b-11e0-a8bc-19778dfc8309" name="CBvbU" description="Combination type" long_name="Call butterfly vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="b5eb345a-673b-11e0-95d5-348e71aab397" name="CBvsU" description="Combination type" long_name="Call butterfly vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="badea97e-673b-11e0-9ae3-1559b2748b71" name="PBvbU" description="Combination type" long_name="Put butterfly vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="c168bb22-673b-11e0-ab27-9a0350901e03" name="PBvsU" description="Combination type" long_name="Put butterfly vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="c609e67e-673b-11e0-a189-7ec6e50244a3" name="IBFvbU" description="Combination type" long_name="Iron butterfly vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="cc3bf30c-673b-11e0-b75f-caaf290173d9" name="IBFvsU" description="Combination type" long_name="Iron butterfly vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d10f4456-673b-11e0-987c-5a229ee213ad" name="DStrCSvbU" description="Combination type" long_name="Diagonal straddle calendar spread vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="d6d85d00-673b-11e0-bb1a-2eff4ae226b1" name="DStrCSvsU" description="Combination type" long_name="Diagonal straddle calendar spread vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="db73a7ac-673b-11e0-b9eb-da4e94ef7e0c" name="CCovbU" description="Combination type" long_name="Call condor vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="e02e4a2c-673b-11e0-9019-0990e42c840c" name="CCovsU" description="Combination type" long_name="Call condor vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="e62fe4e4-673b-11e0-b393-5a8af0edac7a" name="PCovbU" description="Combination type" long_name="Put condor vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="eb859826-673b-11e0-ba21-4ba6b29bd06e" name="PCovsU" description="Combination type" long_name="Put condor vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="efe6690e-673b-11e0-8702-7bb4a871b929" name="ICovbU" description="Combination type" long_name="Iron condor vs buy underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="f3f6992e-673b-11e0-b642-b69bcabc0bed" name="ICovsU" description="Combination type" long_name="Iron condor vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="e6872a50-7e79-11e6-91d0-753ff5baa8fb" name="FvsU" description="Combination type" long_name="Fence vs sell underlying" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+        <group id="3e21a038-b31c-11e7-9f80-ad507ac30d36" name="BT" description="Combination type" long_name="Basis trade" parent="7f4fc1dc-6713-11df-97bb-8590a7c12415"/>
+
+        <group id="127e9026-68ab-11df-b2a2-8ff678fb9931" name="Generic" description="Combinations category" long_name="Generic unclassified combinations" parent="cd1d06b8-670e-11df-85b5-8304ccef2f56"/> 
+    </groups> 
+</resource>

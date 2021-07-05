@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="novasparks venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Novasparks StrikeLight Market Data API" shortname="NovaSparks Strike" identifier="3f490292-dbda-11e9-83d0-02241b548dba" description="NovaSparks StrikeLight Market Data API FPGA feed adapter">
+            <identifier>
+                <key name="symbol" tag="55" />
+                <key name="mic"    tag="100"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- Market Data venue, capabilities are not required -->
+
+    <documentation>
+        Venue identifier resource describing the Novasparks StrikeLight Market Data API V3 venue.
+    </documentation>
+</resource>

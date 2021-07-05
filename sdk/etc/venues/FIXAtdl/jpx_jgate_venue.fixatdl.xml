@@ -1,0 +1,54 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core" tbricks_venue_identifier="1a469a34-b5e8-11e5-9dc0-9b1f70cf7de8">
+    <Strategy uiRep="Japan Exchange Group" wireValue="Japan Exchange Group" version="1.0" name="JPX JGate">
+        <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+            <Description>Partial fill not allowed</Description>
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.OrderCapacity">
+            <Description>Order Capacity</Description>
+            <EnumPair wireValue="0" index="0" enumID="Client" />
+            <EnumPair wireValue="9" index="1" enumID="House" />
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.InternalUseCode">
+            <Description>Internal Use Code</Description>
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.Reference">
+            <Description>Reference</Description>
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.Client">
+            <Description>Client</Description>
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.GiveUp">
+            <Description>Give-up</Description>
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.APIChannel">
+            <Description>API Channel</Description>
+        </Parameter>
+        <Parameter xsi:type="String_t" name="jpx.key.AlgorithmFlag">
+            <Description>Algorithm Flag</Description>
+            <EnumPair wireValue="3" index="0" enumID="MarketMakingStrategy" />
+            <EnumPair wireValue="4" index="1" enumID="ArbitrageStrategy" />
+            <EnumPair wireValue="5" index="2" enumID="DirectionalStrategy" />
+            <EnumPair wireValue="6" index="3" enumID="OtherStrategy" />
+        </Parameter>
+        <lay:StrategyLayout>
+            <lay:StrategyPanel title="Order settings:" orientation="VERTICAL">
+                <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" initValue="false" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+                <lay:Control xsi:type="lay:DropDownList_t" label="Order Capacity" parameterRef="jpx.key.OrderCapacity" controlWidth="150" labelWidth="120" labelLocation="Left" ID="OrderCapacity">
+                    <lay:ListItem uiRep="Client" enumID="Client" />
+                    <lay:ListItem uiRep="House" enumID="House" />
+                </lay:Control>
+                <lay:Control xsi:type="lay:TextField_t" label="Internal Use Code" ID="InternalUseCode" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="jpx.key.InternalUseCode" />
+                <lay:Control xsi:type="lay:TextField_t" label="Reference" ID="Reference" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="jpx.key.Reference" />
+                <lay:Control xsi:type="lay:TextField_t" label="Client" ID="Client" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="jpx.key.Client" />
+                <lay:Control xsi:type="lay:TextField_t" label="Give-up" ID="GiveUp" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="jpx.key.GiveUp" />
+                <lay:Control xsi:type="lay:TextField_t" label="API Channel" ID="APIChannel" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="jpx.key.APIChannel" />
+                <lay:Control xsi:type="lay:DropDownList_t" label="Algorithm Flag" parameterRef="jpx.key.AlgorithmFlag" controlWidth="150" labelWidth="120" labelLocation="Left" ID="AlgorithmFlag">
+                    <lay:ListItem uiRep="Market Making Strategy" enumID="MarketMakingStrategy" />
+                    <lay:ListItem uiRep="Arbitrage Strategy" enumID="ArbitrageStrategy" />
+                    <lay:ListItem uiRep="Directional Strategy" enumID="DirectionalStrategy" />
+                    <lay:ListItem uiRep="Other Strategy" enumID="OtherStrategy" />
+                </lay:Control>
+            </lay:StrategyPanel>
+        </lay:StrategyLayout>
+    </Strategy>
+</Strategies>

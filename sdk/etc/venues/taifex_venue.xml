@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="TAIFEX venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="TAIFEX" shortname="TAIFEX" identifier="ddcc8e6c-35ac-11ea-a4d0-ba8a394fddbb" description="Taiwan Futures Exchange">
+            <identifier>
+                <key name="prod_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <documentation>
+        Venue identifier resource describing the Taiwan Futures Exchange venue.
+    </documentation>
+</resource>

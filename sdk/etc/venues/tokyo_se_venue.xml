@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Tokyo Stock Exchange venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="Tokyo SE" shortname="Tokyo SE" identifier="b1d6e334-3c6b-11e8-9840-e8b675425603" description="Tokyo Stock Exchange" native_trd_required="yes">
+        <identifier>
+            <key name="security_id"/>
+            <key name="security_type"/>
+        </identifier>
+    </venue>
+  </venues>
+
+  <capabilities>
+      <restriction message="order">
+          <field name="execution policy" value="buy minus" />
+          <field name="execution policy" value="sell plus" />
+          <field name="execution policy" value="sell undisclosed" />
+          <field name="participation policy"/>
+          <field name="partial fill not allowed"/>
+          <field name="disclosed volume"/>
+          <field name="transition type" value="market to limit" />
+          <field name="validity type" value="until date"/>
+          <field name="validity type" value="until elapsed time"/>
+          <field name="validity type" value="until datetime"/>
+          <field name="validity type" value="infinite"/>
+          <field name="validity type" value="immediate on auction"/>
+          <field name="validity type" value="last auction"/>
+     </restriction>
+     <restriction message="order modify">
+          <field name="execution policy"/>
+          <field name="total volume" value="+"/>
+          <field name="active volume" value="+"/>
+          <field name="volume delta" value="+"/>
+          <field name="disclosed volume"/>
+          <field name="price" value="empty"/>
+     </restriction>
+  </capabilities>
+
+  <documentation>
+       Venue identifier resource describing the Tokyo Stock Exchange venue.
+  </documentation>
+</resource>

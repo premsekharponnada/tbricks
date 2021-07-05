@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Activ venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="market data activ" shortname="Activ" identifier="2f9c0573-5825-484a-b34f-573b0738c6e3" description="Activ market data">
+            <identifier>
+                <key name="symbol"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- Market Data venue, capabilities are not required -->
+
+    <documentation>
+        Venue identifier resource describing the Activ venue.
+    </documentation>
+</resource>

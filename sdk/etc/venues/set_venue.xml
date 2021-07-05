@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SET venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="SET" shortname="SET" identifier="af8c6df0-2569-11e9-a6c0-94a9760cbb1c" description="Stock Exchange of Thailand">
+            <identifier>
+                <key name="symbol"/>
+                <key name="orderbook_id"/>
+                <key name="ol_orderbook_id"/>
+            </identifier>
+            <pools>
+                <pool name="board lot" identifier="57d88888-2572-11e9-9e00-989757deabb1" default="yes"/>
+                <pool name="odd lot" identifier="751366d4-2572-11e9-b630-93d96fbde464"/>
+            </pools>
+        </venue>
+    </venues>
+
+   <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market" />
+            <field name="capacity" value="riskless principal"/>
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="immediate on auction"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="liquidity pool identifier"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the SET venue.
+    </documentation>
+</resource>
+

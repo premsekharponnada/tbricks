@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="TSX Venture" type="application/x-venue+xml">
+    <venues>
+        <venue name="TSX Venture Exchange" shortname="TSX Venture Exchange" identifier="eeb5c92e-451d-11e6-9400-3b036c1fcf50" description="TSX Venture Exchange">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+               <!-- lit liquidity pools (board lot, odd lot, and special terms) -->
+               <pool name="board lot" default="yes" identifier="89f3df74-2142-4274-8063-73e1cd82e9eb"/>
+               <pool name="odd lot" identifier="1eb320de-3738-44ed-8db3-e8774f44d43b"/>
+               <pool name="special" identifier="2961d3a5-9681-4a69-a2b4-461c104dfaeb"/>
+               <!-- dark pool -->
+               <pool name="dark" identifier="45d8e40a-1324-11e7-aee0-c59948e3e73c"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="transition type"  value="market to limit"/>
+            <field name="transition type"  value="limit to market"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+    <documentation>
+        Venue identifier resource describing the TSE Venture venue.
+    </documentation>
+</resource>

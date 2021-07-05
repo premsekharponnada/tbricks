@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Aequitas venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="Aequitas FIX Exchange" shortname="Aequitas" identifier="a5a394da-7f3f-11e6-a440-980198ca0f9a" description="Aequitas FIX">
+      <identifier>
+        <key name="symbol" tag="55"/>
+        <key name="destination" tag="100"/>
+      </identifier>
+      <pools>
+         <!-- lit book -->
+         <pool name="lit" identifier="c42c574c-f470-11e6-a8b0-4c0ae69e9596"/>
+         <!-- sst book -->
+         <pool name="sst" identifier="ccbca96a-f467-11e6-bb50-5c2888a1d7c6"/>
+         <!-- cross book -->
+         <pool name="cross" identifier="42552216-f543-11e6-99c0-94ad54dcb980"/>
+         <!-- neo book -->
+         <pool name="neo" identifier="5ad01440-34e5-11e7-8cf0-280efc9c7930"/>
+         <!-- dark book -->
+         <pool name="dark" identifier="6c1a81c2-34e5-11e7-8660-90481c061c33"/>
+      </pools>
+    </venue>
+  </venues>
+
+  <capabilities>
+    <restriction message="order">
+      <field name="execution policy" value="buy minus"/>
+      <field name="execution policy" value="sell plus"/>
+      <field name="participation policy" value="dark lit sweep"/>
+      <field name="participation policy" value="indicative only"/>
+      <field name="validity type"    value="until elapsed time"/>
+      <field name="validity type"    value="immediate on auction"/>
+      <field name="transition type"  value="market to limit"/>
+      <field name="transition type"  value="limit to market"/>
+      <field name="price improvement not allowed"/>
+    </restriction>
+    <restriction message="order modify">
+        <field name="validity type" value="immediate on open"/>
+        <field name="validity type" value="immediate on close"/>
+        <field name="price" value="empty"/>
+    </restriction>
+  </capabilities>
+  <documentation>
+    Venue identifier resource describing Aequitas FIX.
+  </documentation>
+</resource>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Burgundy" type="application/x-venue+xml">
+    <venues>
+        <venue name="Burgundy" shortname="Burgundy" identifier="1071a7be-14af-11df-90c7-a9e7a444ea3a" description="Burgundy">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+   <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource example for a Burgundy trading service.
+    </documentation>
+</resource>
+

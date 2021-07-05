@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+<!-- <xs:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="shared/field_mapping.xsd" /> -->
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="header" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="field" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="tag" type="xs:integer" use="required"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="value" type="xs:string"/>
+                                    <xs:attribute name="override" type="xs:string"/>
+                                    <xs:attribute name="disabled" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+		<xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+                <xs:element name="message" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="field" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="tag" type="xs:integer" use="required"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="value" type="xs:string"/>
+                                    <xs:attribute name="override" type="xs:string"/>
+                                    <xs:attribute name="disabled" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="handle" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="CxlRejResponseTo" type="xs:integer"/>
+                                    <xs:attribute name="Text" type="xs:string"/>
+                                    <xs:attribute name="ExecType" type="xs:string"/>
+                                    <xs:attribute name="OrdStatus" type="xs:string"/>
+                                    <xs:attribute name="TimeInForce" type="xs:string"/>
+                                    <xs:attribute name="order_transaction_state" type="xs:string"/>
+                                    <xs:attribute name="keep_order_alive" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="group" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="field" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="tag" type="xs:integer" use="required"/>
+                                                <xs:attribute name="name" type="xs:string" use="required"/>
+                                                <xs:attribute name="value" type="xs:string"/>
+                                                <xs:attribute name="override" type="xs:string"/>
+                                                <xs:attribute name="disabled" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="tag" type="xs:integer" use="required"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="MsgType" type="xs:string" use="required"/>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                        <xs:attribute name="disabled" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+
+                    <!-- FIXatdl style mappings of internal pass-through order parameters to FIX space. -->
+                    <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:attribute name="identifier" type="xs:string" use="required"/>
+                            <xs:attribute name="name" type="xs:string" use="required"/>
+                            <xs:attribute name="fixTag" type="xs:integer"/> <!-- obsolete -->
+                            <xs:attribute name="tag" type="xs:integer"/> <!-- new spelling of 'fixTag' -->
+                            <xs:attribute name="type" type="xs:string" use="required"/>
+                            <xs:attribute name="use" type="xs:string" use="optional"/>
+                        </xs:complexType>
+                    </xs:element>
+
+                    <!-- Mappings of standard Tbricks instrument parameters to FIX SedDef space. -->
+                    <xs:element name="instrument_parameter" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="instrument_parameter" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                      <xs:attribute name="identifier" type="xs:string" use="required"/>
+                                      <xs:attribute name="name" type="xs:string" use="required"/>
+                                      <xs:attribute name="fixTag" type="xs:integer"/>
+                                      <xs:attribute name="type" type="xs:string" use="required"/>
+                                  </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="identifier" type="xs:string" use="required"/>
+                            <xs:attribute name="name" type="xs:string" use="required"/>
+                            <xs:attribute name="fixTag" type="xs:integer"/>
+                            <xs:attribute name="type" type="xs:string" use="required"/>
+                        </xs:complexType>
+                    </xs:element>
+
+                </xs:choice>
+
+                <xs:element name="documentation" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>
+

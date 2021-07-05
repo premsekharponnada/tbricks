@@ -1,0 +1,9 @@
+********************************************************************************
+** Tbricks AB. Software uses the following software package                   **
+** distributed under license terms cited below:                               **
+********************************************************************************
+** NAME:    MurmurHash2, 64-bit versions, by Austin Appleby                   **
+** URL:     https://sites.google.com/site/murmurhash/MurmurHash2_64.cpp       **
+********************************************************************************
+
+

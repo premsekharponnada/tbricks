@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="TFEX venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="TFEX" shortname="TFEX" identifier="ce8c8d70-2564-11e9-89e0-6b4d3d649d7b" description="Thailand Futures Exchange">
+            <identifier>
+                <key name="symbol"/>
+                <key name="orderbook_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+   <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="execution policy"/>
+            <field name="capacity" value="riskless principal"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on auction"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the TFEX venue.
+    </documentation>
+</resource>
+

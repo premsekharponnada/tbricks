@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="HKFE venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="HKFE" shortname="HKFE" identifier="db8b15f6-f0f8-11e7-b240-ea65dadc641a" description="Hong Kong Futures Exchange">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities two_sided_rfq_response_required="yes">
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="disclosed volume"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="participation policy"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing HKFE.
+    </documentation>
+</resource>

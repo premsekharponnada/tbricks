@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="EuroTLX venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="EuroTLX Equities" shortname="EuroTLX Equities" identifier="ed54b65e-beec-11e7-b7d0-d9bb73589025" description="EuroTLX Equities">
+            <identifier>
+                <key name="security_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="transition type"/>
+            <field name="stop price"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="price" value="empty"/>
+            <field name="retain on disconnect"/>
+            <field name="stop price"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the EuroTLX Cash Equity (Millennium) venue.
+    </documentation>
+</resource>

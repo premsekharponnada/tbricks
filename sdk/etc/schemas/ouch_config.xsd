@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">    
+        <xs:complexType>
+            <xs:sequence>        	
+		        <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+            </xs:sequence>                        
+    	    <xs:attribute name="name" type="xs:string" use="required"/>
+    	    <xs:attribute name="type" type="xs:string" use="required"/>
+	    </xs:complexType>
+    </xs:element>
+</xs:schema>
+

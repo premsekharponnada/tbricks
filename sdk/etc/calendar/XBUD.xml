@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="XBUD" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+    </days>
+
+    <days year="2019">
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="03-15" valid="no"/> <!-- National Holiday -->
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="07-10" valid="no"/> <!-- Whit Monday -->
+        <day date="08-19" valid="no"/> <!-- Public Holiday -->
+        <day date="08-20" valid="no"/> <!-- National Holiday -->
+        <day date="10-23" valid="no"/> <!-- National Holiday -->
+        <day date="11-01" valid="no"/> <!-- All Saints Day -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-25" valid="no"/> <!-- Christmas -->
+        <day date="12-26" valid="no"/> <!-- Christmas -->
+        <day date="12-27" valid="no"/> <!-- Public Holiday -->
+        <day date="12-31" valid="no"/> <!-- New Year's Eve -->
+    </days>
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="06-01" valid="no"/> <!-- Whit Monday -->
+        <day date="08-20" valid="no"/> <!-- National Holiday -->
+        <day date="08-21" valid="no"/> <!-- Public Holiday -->
+        <day date="10-23" valid="no"/> <!-- National Holiday -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-31" valid="no"/> <!-- New Year's Eve -->
+    </days>
+    <documentation>
+        Calendar defining trading-days for XBUD (Budapest Stock Exchange).
+        Source https://www.bse.hu/Products-and-Services/Trading-information/tranding-calendar-2019
+    </documentation>
+</resource>

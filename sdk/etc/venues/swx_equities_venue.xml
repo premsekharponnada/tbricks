@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SIX Swiss Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="SIX Swiss Exchange"
+               shortname="SIX Swiss Exchange"
+               identifier="7a5f12aa-879f-11e1-a71c-7c859890727d"
+               description="SIX Swiss Exchange">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="target_book" tag="9303"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="transition type"/>
+            <field name="participation policy" value="bypass undisclosed"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the SIX Swiss Exchange venue.
+    </documentation>
+</resource>

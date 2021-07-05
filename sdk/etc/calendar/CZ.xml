@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CZ" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="05-01" valid="no"/> <!-- Labor Day -->
+        <day date="05-08" valid="no"/> <!-- Victory in Europe Day -->
+        <day date="07-05" valid="no"/> <!-- Saints Cyril and Methodius -->
+        <day date="07-06" valid="no"/> <!-- Jan Hus Day -->
+        <day date="09-28" valid="no"/> <!-- St. Wenceslas Day -->
+        <day date="10-28" valid="no"/> <!-- Independent Czechoslovak State Day -->
+        <day date="11-17" valid="no"/> <!-- Struggle for Freedom and Democracy Day -->
+        <day date="12-24" valid="no"/> <!-- Christmas Eve -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- St. Stephen's Day -->
+    </days>
+
+    <days year="2019">
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for CZ (Czech Republic).
+        Source https://www.timeanddate.com/holidays/czech/
+    </documentation>
+</resource>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SGX-DT venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="SGX-DT" shortname="SGX-DT" identifier="8778b276-852d-11e6-ba30-bd2f51739deb" description="SGX Derivatives Trading">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="participation policy"/>
+            <field name="price improvement not allowed"/>
+            <field name="disclosed volume"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="stop price"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing SGX-DT.
+    </documentation>
+</resource>

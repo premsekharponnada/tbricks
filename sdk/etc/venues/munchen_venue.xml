@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Munchen MM" type="application/x-venue+xml">
+    <venues>
+        <venue name="Borse Munchen MM" shortname="Munchen MM" identifier="72708a04-f598-11e5-8720-103db1e0d02a" description="Borse Munchen Market Maker">
+            <identifier>
+                <key name="SecurityID" tag="48">
+                    <additional tag="22" value="4"/>
+                </key>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+    
+    <documentation>
+        Venue identifier resource describing the Borse Munchen Market Maker venue.
+    </documentation>
+</resource>

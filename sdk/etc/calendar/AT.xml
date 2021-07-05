@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="AT" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="01-06" valid="no"/> <!-- Epiphany -->
+        <day date="05-01" valid="no"/> <!-- Labor Day -->
+        <day date="05-02" valid="no"/> <!-- Labor Day holiday -->
+        <day date="08-15" valid="no"/> <!-- Assumption of Mary -->
+        <day date="10-26" valid="no"/> <!-- National Day -->
+        <day date="11-01" valid="no"/> <!-- All Saints' Day -->
+        <day date="12-08" valid="no"/> <!-- Immaculate Conception -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- St. Stephen's Day -->
+    </days>
+
+    <days year="2019">
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-30" valid="no"/> <!-- Ascension Day -->
+        <day date="06-10" valid="no"/> <!-- Whit Monday -->
+        <day date="06-20" valid="no"/> <!-- Corpus Christi -->
+    </days>
+
+    <days year="2020">
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-21" valid="no"/> <!-- Ascension Day -->
+        <day date="06-01" valid="no"/> <!-- Whit Monday -->
+        <day date="06-11" valid="no"/> <!-- Corpus Christi -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for AT (Austria).
+        Source https://www.timeanddate.com/holidays/austria/
+    </documentation>
+</resource>

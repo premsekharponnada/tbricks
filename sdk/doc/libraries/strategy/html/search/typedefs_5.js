@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['identifiers_21128',['Identifiers',['../classtbricks_1_1Portfolio_a458bdd75db03a2ca546518cc712a4cc5.html#a458bdd75db03a2ca546518cc712a4cc5',1,'tbricks::Portfolio']]],
+  ['identifiersvalue_21129',['IdentifiersValue',['../classtbricks_1_1Portfolio_a5927c5e65bffad45c893bb13561294ff.html#a5927c5e65bffad45c893bb13561294ff',1,'tbricks::Portfolio']]],
+  ['initializertype_21130',['InitializerType',['../classtbricks_1_1visualization_1_1RowEntity_a36fdf51582564196d166b40e90efc2f3.html#a36fdf51582564196d166b40e90efc2f3',1,'tbricks::visualization::RowEntity']]],
+  ['instrumentfilter_21131',['InstrumentFilter',['../classtbricks_1_1LimitsWarmupRequest_a2c1cb2bde3d94d0546ff5c3c960d2235.html#a2c1cb2bde3d94d0546ff5c3c960d2235',1,'tbricks::LimitsWarmupRequest']]],
+  ['instruments_5ft_21132',['instruments_t',['../classtbricks_1_1StrategyInstruments_a0fe6fa8326e8bd0f86c1849449b82567.html#a0fe6fa8326e8bd0f86c1849449b82567',1,'tbricks::StrategyInstruments']]],
+  ['instrumentvalues_21133',['InstrumentValues',['../classtbricks_1_1CalculatedInstrumentValues_ab08f1721fbbbc2cc36db820e0bf0ef09.html#ab08f1721fbbbc2cc36db820e0bf0ef09',1,'tbricks::CalculatedInstrumentValues']]],
+  ['isselected_21134',['IsSelected',['../classtbricks_1_1visualization_1_1ViewModelUpdate_1_1Iterator_ab6971a8f1eebb93e28c791f5ac21762d.html#ab6971a8f1eebb93e28c791f5ac21762d',1,'tbricks::visualization::ViewModelUpdate::Iterator::IsSelected()'],['../classtbricks_1_1visualization_1_1ViewModelUpdate_1_1SelectionUpdate_ab6971a8f1eebb93e28c791f5ac21762d.html#ab6971a8f1eebb93e28c791f5ac21762d',1,'tbricks::visualization::ViewModelUpdate::SelectionUpdate::IsSelected()']]],
+  ['iterator_21135',['iterator',['../classtbricks_1_1Hash_ac2aef02eb4802aa5eba5d8b2d3622832.html#ac2aef02eb4802aa5eba5d8b2d3622832',1,'tbricks::Hash::iterator()'],['../classtbricks_1_1Set_ac2aef02eb4802aa5eba5d8b2d3622832.html#ac2aef02eb4802aa5eba5d8b2d3622832',1,'tbricks::Set::iterator()'],['../classtbricks_1_1SparseHash_ac2aef02eb4802aa5eba5d8b2d3622832.html#ac2aef02eb4802aa5eba5d8b2d3622832',1,'tbricks::SparseHash::iterator()'],['../classtbricks_1_1SparseSet_ac2aef02eb4802aa5eba5d8b2d3622832.html#ac2aef02eb4802aa5eba5d8b2d3622832',1,'tbricks::SparseSet::iterator()']]]
+];

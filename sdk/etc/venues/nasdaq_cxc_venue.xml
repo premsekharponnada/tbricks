@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ CXC Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ CXC" shortname="NASDAQ CXC" identifier="0376f534-5e5c-11e6-a110-9a2a18b395ce" description="NASDAQ CXC">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+                <pool name="board lot" default="yes" identifier="b0a06d54-f951-11e6-b6c0-49aab98db643"/>
+                <pool name="odd lot" identifier="0dd1f7b4-f951-11e6-aea0-8dfbc89f4061"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ CXC Exchange venue.
+    </documentation>
+</resource>

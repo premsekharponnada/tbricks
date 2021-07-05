@@ -1,0 +1,39 @@
+<map id="Throttle" name="Throttle">
+<area shape="rect" id="node1" title=" " alt="" coords="128,472,195,501"/>
+<area shape="rect" id="node5" href="$classtbricks_1_1BestPriceThrottle.html" title=" " alt="" coords="264,112,387,141"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1CommonThrottle.html" title=" " alt="" coords="267,299,384,328"/>
+<area shape="rect" id="node23" href="$classtbricks_1_1InstrumentGroupThrottle.html" title=" " alt="" coords="244,419,407,448"/>
+<area shape="rect" id="node25" href="$classtbricks_1_1InstrumentThrottle.html" title=" " alt="" coords="261,472,389,501"/>
+<area shape="rect" id="node27" href="$classtbricks_1_1ParametersThrottle.html" title=" " alt="" coords="259,525,392,555"/>
+<area shape="rect" id="node39" href="$classtbricks_1_1StatisticsThrottle.html" title=" " alt="" coords="265,853,385,883"/>
+<area shape="rect" id="node57" href="$classtbricks_1_1TradingLimitRuleThrottle.html" title=" " alt="" coords="244,1280,407,1309"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,472,79,501"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1AskPriceChangeThrottle.html" title=" " alt="" coords="480,5,643,35"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1AskVolumeChangeThrottle.html" title=" " alt="" coords="472,59,651,88"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1BidPriceChangeThrottle.html" title=" " alt="" coords="481,112,641,141"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1BidVolumeChangeThrottle.html" title=" " alt="" coords="475,165,648,195"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1BasicThrottle.html" title=" " alt="" coords="512,219,611,248"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1MaximumUpdateTimeThrottle.html" title=" " alt="" coords="464,272,659,301"/>
+<area shape="rect" id="node21" href="$classtbricks_1_1MinimumUpdateRateThrottle.html" title=" " alt="" coords="467,325,656,355"/>
+<area shape="rect" id="node29" href="$classtbricks_1_1InstrumentAggregateParametersThrottle.html" title=" " alt="" coords="456,378,667,425"/>
+<area shape="rect" id="node31" href="$classtbricks_1_1InstrumentGroupAggregateParametersThrottle.html" title=" " alt="" coords="472,447,651,494"/>
+<area shape="rect" id="node33" href="$classtbricks_1_1InstrumentGroupParametersThrottle.html" title=" " alt="" coords="468,517,655,563"/>
+<area shape="rect" id="node35" href="$classtbricks_1_1InstrumentParametersThrottle.html" title=" " alt="" coords="464,587,659,616"/>
+<area shape="rect" id="node37" href="$classtbricks_1_1StrategyParametersThrottle.html" title=" " alt="" coords="471,640,652,669"/>
+<area shape="rect" id="node41" href="$classtbricks_1_1ClosingPriceChangeThrottle.html" title=" " alt="" coords="469,693,653,723"/>
+<area shape="rect" id="node43" href="$classtbricks_1_1HighPriceChangeThrottle.html" title=" " alt="" coords="477,747,645,776"/>
+<area shape="rect" id="node45" href="$classtbricks_1_1LastPriceChangeThrottle.html" title=" " alt="" coords="479,800,644,829"/>
+<area shape="rect" id="node47" href="$classtbricks_1_1LastVolumeChangeThrottle.html" title=" " alt="" coords="472,853,651,883"/>
+<area shape="rect" id="node49" href="$classtbricks_1_1LowPriceChangeThrottle.html" title=" " alt="" coords="479,907,644,936"/>
+<area shape="rect" id="node51" href="$classtbricks_1_1OpeningPriceChangeThrottle.html" title=" " alt="" coords="467,960,656,989"/>
+<area shape="rect" id="node53" href="$classtbricks_1_1TurnoverChangeThrottle.html" title=" " alt="" coords="480,1013,643,1043"/>
+<area shape="rect" id="node55" href="$classtbricks_1_1TurnoverVolumeChangeThrottle.html" title=" " alt="" coords="459,1067,664,1096"/>
+<area shape="rect" id="node59" href="$classtbricks_1_1AtMarketVolumeThrottle.html" title=" " alt="" coords="480,1120,643,1149"/>
+<area shape="rect" id="node61" href="$classtbricks_1_1MaxPriceThrottle.html" title=" " alt="" coords="501,1173,621,1203"/>
+<area shape="rect" id="node63" href="$classtbricks_1_1MinPriceThrottle.html" title=" " alt="" coords="503,1227,620,1256"/>
+<area shape="rect" id="node65" href="$classtbricks_1_1ShortSellVolumeThrottle.html" title=" " alt="" coords="480,1280,643,1309"/>
+<area shape="rect" id="node67" href="$classtbricks_1_1SoftMaxPriceThrottle.html" title=" " alt="" coords="489,1333,633,1363"/>
+<area shape="rect" id="node69" href="$classtbricks_1_1SoftMinPriceThrottle.html" title=" " alt="" coords="491,1387,632,1416"/>
+<area shape="rect" id="node71" href="$classtbricks_1_1SoftVolumeThrottle.html" title=" " alt="" coords="495,1440,628,1469"/>
+<area shape="rect" id="node73" href="$classtbricks_1_1VolumeThrottle.html" title=" " alt="" coords="507,1493,616,1523"/>
+</map>

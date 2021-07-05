@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="RU" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/>
+        <day date="01-02" valid="no"/>
+        <day date="01-03" valid="no"/>
+        <day date="01-04" valid="no"/>
+        <day date="01-05" valid="no"/>
+        <day date="01-07" valid="no"/>
+        <day date="02-23" valid="no"/> <!-- Defender of the Fatherland Day -->
+        <day date="03-08" valid="no"/>
+        <day date="05-01" valid="no"/>
+        <day date="05-09" valid="no"/>
+        <day date="06-12" valid="no"/> <!-- Russia Day-->
+        <day date="11-04" valid="no"/> <!-- Unity Day-->
+    </days>
+
+    <days year="2013">
+        <day date="01-01" valid="no"/>
+        <day date="01-02" valid="no"/>
+        <day date="01-03" valid="no"/>
+        <day date="01-04" valid="no"/>
+        <day date="01-07" valid="no"/>
+        <day date="03-08" valid="no"/>
+        <day date="05-01" valid="no"/>
+        <day date="05-09" valid="no"/>
+        <day date="06-12" valid="no"/>
+        <day date="11-04" valid="no"/>
+        <day date="12-31" valid="no"/>
+    </days>
+
+    <days year="2014">
+        <day date="01-01" valid="no"/>
+        <day date="01-02" valid="no"/>
+        <day date="01-03" valid="no"/>
+        <day date="01-07" valid="no"/>
+        <day date="03-10" valid="no"/>
+        <day date="05-01" valid="no"/>
+        <day date="05-09" valid="no"/>
+        <day date="06-12" valid="no"/>
+        <day date="11-04" valid="no"/>
+        <day date="12-31" valid="no"/>
+    </days>
+
+    <days year="2015">
+        <day date="01-01" valid="no"/>
+        <day date="01-02" valid="no"/>
+        <day date="01-07" valid="no"/>
+        <day date="02-23" valid="no"/>
+        <day date="03-09" valid="no"/>
+        <day date="05-04" valid="no"/>
+        <day date="05-11" valid="no"/>
+        <day date="06-12" valid="no"/>
+        <day date="11-04" valid="no"/>
+        <day date="12-31" valid="no"/>
+    </days>
+
+    <days year="2016">
+        <day date="01-01" valid="no"/>
+        <day date="01-07" valid="no"/>
+        <day date="01-08" valid="no"/>
+        <day date="02-23" valid="no"/>
+        <day date="03-08" valid="no"/>
+        <day date="05-02" valid="no"/>
+        <day date="05-03" valid="no"/>
+        <day date="05-09" valid="no"/>
+        <day date="06-13" valid="no"/>
+        <day date="11-04" valid="no"/>
+    </days>
+
+    <days year="2017">
+        <day date="01-02" valid="no"/>
+        <day date="02-23" valid="no"/>
+        <day date="03-08" valid="no"/>
+        <day date="05-01" valid="no"/>
+        <day date="05-08" valid="no"/>
+        <day date="05-09" valid="no"/>
+        <day date="06-12" valid="no"/>
+        <day date="11-06" valid="no"/>
+    </days>
+
+    <days year="2018">
+        <day date="01-08" valid="no"/> <!-- New Year Holiday -->
+        <day date="03-09" valid="no"/>
+        <day date="04-30" valid="no"/> <!-- Spring and Labor Day-->
+        <day date="05-02" valid="no"/> <!-- Spring and Labor Day-->
+        <day date="06-09" valid="yes"/>
+        <day date="06-11" valid="no"/> <!-- substitute day for 06-09 -->
+        <day date="11-05" valid="no"/> <!-- Unity Day-->
+        <day date="12-29" valid="yes"/>
+        <day date="12-31" valid="no"/> <!-- substiture day for 12-29-->
+    </days>
+
+    <days year="2019">
+        <day date="01-08" valid="no"/> <!-- New Year Holiday -->
+        <day date="02-25" valid="no"/> <!-- Substitution for Defenter of the Fatherland Day -->
+        <day date="05-02" valid="no"/> <!-- Spring and Labor Day-->
+        <day date="05-03" valid="no"/> <!-- Spring and Labor Day-->
+    </days>
+
+    <days year="2020">
+        <day date="01-06" valid="no"/> <!-- New Year Holiday -->
+        <day date="01-08" valid="no"/> <!-- New Year Holiday -->
+        <day date="02-24" valid="no"/> <!-- Substitution for Defenter of the Fatherland Day -->
+        <day date="03-09" valid="no"/> <!-- Substitution for International Women's Day -->
+
+        <day date="05-04" valid="no"/> <!-- Public Holiday (Moved from Jan 4) -->
+        <day date="05-05" valid="no"/> <!-- Public Holiday (Moved from Jan 5) -->
+        <day date="05-11" valid="no"/> <!-- Substitution for Victory Day -->
+        <day date="06-24" valid="no"/> <!-- Victory Day 75th Anniversary -->
+
+        <day date="07-01" valid="no"/> <!-- Constitutional Referendum Holiday -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for RU (Russia).
+        Source https://www.timeanddate.com/holidays/russia/
+    </documentation>
+</resource>
+

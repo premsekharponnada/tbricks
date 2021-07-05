@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rankings>
+   <ranking
+      identifier="0c72baec-c739-11e1-87b7-be84e16cd6ae"
+      name="MM quoting multi-level"
+      description="Ranking used for MM quoting multi-level"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:64c7c864-c738-11e1-87b7-be84e16cd6ae" />
+      <order
+         item="uuid:ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="2232f05a-f27b-11e1-8bbb-3c870c3e9924"
+      name="MM peg"
+      description="Ranking used for MM peg"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:f8d2106a-f27a-11e1-8bbb-3c870c3e9924" />
+      <order
+         item="uuid:ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="462f1f22-d198-11e2-bb45-3e99245e0d1c"
+      name="MM quote responder"
+      description="Ranking used for MM quote responder"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:6d052202-d195-11e2-bb45-3e99245e0d1c" />
+      <order
+         item="uuid:ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="586cf076-32d2-11e1-9cc9-eda4fff76405"
+      name="Risk"
+      description="Risk ranking"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:fbebb976-32d2-11e1-8e88-cf8d809fed42" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="5e325302-32d2-11e1-be6e-e748d6d66bf3"
+      name="Global"
+      description="Global ranking"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="8baf2b37-cbf0-11e1-83c8-06b747deb312"
+      name="MM shared"
+      description="Ranking used for MM shared data lookups"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="c4140f68-32d1-11e1-84fa-2edb198d3926"
+      name="Trading"
+      description="Trading ranking"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="dfde92a8-c738-11e1-87b7-be84e16cd6ae"
+      name="MM hidden"
+      description="Ranking used for MM hidden"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:4afea20e-c738-11e1-87b7-be84e16cd6ae" />
+      <order
+         item="uuid:ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+   <ranking
+      identifier="fd39d682-c738-11e1-87b7-be84e16cd6ae"
+      name="MM quoting"
+      description="Ranking used for MM quoting"
+      type="parameter_context"
+      type_identifier="00000000-0000-0000-0000-000000000000"
+      system="true"
+      metadata_packaging_type="system">
+      <order
+         item="uuid:45bda54c-c738-11e1-87b7-be84e16cd6ae" />
+      <order
+         item="uuid:ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb" />
+      <order
+         item="uuid:132459a4-32d3-11e1-8b7d-898c7bb483ce" />
+      <order
+         item="uuid:f4414006-32d2-11e1-8d0a-141222d69e81" />
+   </ranking>
+</rankings>

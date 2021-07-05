@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Brasil Bolsa Balcao PUMA Trading System" type="application/x-venue+xml">
+    <venues>
+        <venue name="B3 PUMA" shortname="B3" identifier="f8bc8e1a-99a0-11e8-b460-8c0b6fc11775" description="B3 PUMA Trading System">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="market command request">
+            <field name="market command" value="suspend participant"/>
+            <field name="market command" value="resume participant"/>
+            <field name="market command" value="halt participant"/>
+            <field name="market command" value="delay opening"/>
+            <field name="market command" value="open delayed trading"/>
+            <field name="market command" value="set last auction price"/>
+            <field name="market command" value="start trading"/>
+            <field name="market command" value="knockout"/>
+            <field name="market command" value="enter buyback phase"/>
+            <field name="market command" value="sold out"/>
+            <field name="market command" value="soft knock out"/>
+            <field name="market command" value="underlying not quoted"/>
+            <field name="market command" value="underlying quoted"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing they Brasil Bolsa Balcao PUMA trading system.
+    </documentation>
+</resource>

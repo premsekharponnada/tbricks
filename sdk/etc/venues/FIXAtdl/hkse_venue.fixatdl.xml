@@ -1,0 +1,76 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="759e6f8c-e17a-11e7-b590-4870c8d66751">
+  <Strategy uiRep="Hong Kong Stock Exchange " wireValue="Hong Kong Stock Exchange" version="1.0" name="HKSE">
+    <Parameter xsi:type="Int_t" name="OrderCapacity" tbricks_property_identifier="cc0d6d94-e1e2-11e5-9e24-9049f1f1bbe9">
+      <Description>Order capacity</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="LiquidityPool" tbricks_property_identifier="c52b0d08-d811-11e6-884d-e9ebb3a6db3c">
+      <Description>Liquidity Pool</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="ExecutionPolicy" tbricks_property_identifier="bb1e5eae-e1a3-11e7-b809-3c870c3e9924">
+      <Description>Execution Policy</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="PostingAction" tbricks_property_identifier="c41e0652-9649-11e8-a68b-b3a6db3c870c">
+      <Description>Posting Action</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.Account">
+      <Description>Broker ID</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.ExecutionInstruction">
+      <Description>Execution Instructions</Description>
+      <EnumPair enumID="CheckBoth" wireValue="0" index="0"></EnumPair>
+      <EnumPair enumID="IgnorePriceValidityCheck" wireValue="1" index="1"></EnumPair>
+      <EnumPair enumID="IgnoreNotionalValueCheck" wireValue="2" index="2"></EnumPair>
+      <EnumPair enumID="IgnorePriceAndNotionalValueChecks" wireValue="3" index="3"></EnumPair>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.OrderRestrictions">
+      <Description>Order Restrictions</Description>
+      <EnumPair enumID="IndexArbitrage" wireValue="2" index="0"></EnumPair>
+      <EnumPair enumID="ActingMMOrSpecialInSecurity" wireValue="5" index="1"></EnumPair>
+      <EnumPair enumID="ActingMMOrSpecialInUnderlying" wireValue="6" index="2"></EnumPair>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.MaxPriceLevels">
+      <Description>Max Price Levels</Description>
+      <EnumPair enumID="Level1" wireValue="1" index="0"></EnumPair>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.OddLotCounterParty">
+      <Description>Odd Lot Counter Party</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.OddLotOrderId">
+      <Description>Odd Lot Order ID</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="hkse.key.Text">
+      <Description>Text</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Order settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:TextField_t" label="Broker ID" ID="BrokerID" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.Account" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" initValue="false" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Max Price Levels" ID="MaxPriceLevels" initValue="Level1" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.MaxPriceLevels">
+          <lay:ListItem enumID="Level1" uiRep="Level 1" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Execution Policy" ID="ExecutionPolicy" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="ExecutionPolicy" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Execution Instructions" ID="ExecutionInstruction" initValue="IgnorePriceAndNotionalValueChecks" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.ExecutionInstruction" >
+          <lay:ListItem enumID="CheckBoth" uiRep="Check Both" />
+          <lay:ListItem enumID="IgnorePriceValidityCheck" uiRep="Ignore Price Validity Check" />
+          <lay:ListItem enumID="IgnoreNotionalValueCheck" uiRep="Ignore Notional Value Check" />
+          <lay:ListItem enumID="IgnorePriceAndNotionalValueChecks" uiRep="Ignore Price And Notional Value Checks" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Order Capacity" ID="OrderCapacity" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="OrderCapacity" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Order Restrictions" ID="OrderRestrictions" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.OrderRestrictions" >
+          <lay:ListItem enumID="IndexArbitrage" uiRep="Index Arbitrage" />
+          <lay:ListItem enumID="ActingMMOrSpecialInSecurity" uiRep="Acting as MM Or Special In Security" />
+          <lay:ListItem enumID="ActingMMOrSpecialInUnderlying" uiRep="Acting as MM Or Special In Underlying" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Posting Action" ID="PostingAction" initValue="{NULL}" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PostingAction" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Liquidity Pool" ID="LiquidityPool" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="LiquidityPool" />
+        <lay:Control xsi:type="lay:TextField_t" label="Odd Lot Counter Party" ID="OddLotCounterParty" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.OddLotCounterParty" />
+        <lay:Control xsi:type="lay:TextField_t" label="Odd Lot Order ID" ID="OddLotOrderID" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.OddLotOrderId" />
+        <lay:Control xsi:type="lay:TextField_t" label="Text" ID="Text" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="hkse.key.Text" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

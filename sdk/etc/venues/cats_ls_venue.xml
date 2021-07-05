@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CATS LS" type="application/x-venue+xml">
+    <venues>
+        <venue name="CATS LS" shortname="CATS LS" identifier="be2efdb8-817a-11e6-a460-463456f5402f" description="CATS LS price feed interface">
+            <identifier>
+                <key name="SecurityID" tag="48"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+    
+    <documentation>
+        Venue identifier resource describing the CATS LS price feed interface venue.
+    </documentation>
+</resource>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="system config" type="application/x-system-config+xml">
+    <system identifier="49f43d5e-7a16-11df-8d47-799432e9605f" short_name="system" name="system">
+        <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1" short_name="node1" host_name="host1"/>
+        <subsystem identifier="89f4beec-7a16-11df-bcf1-550000000001" short_name="subsystem1" default="true" name="subsystem1">
+            <services>
+                <service identifier="e10f3114-3cf1-11e5-ad00-8e5209f6e6f0"
+                         short_name="is"
+                         class="3"
+                         type="Instrument">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="4a74ae9e-4275-11e5-bd50-e3f948de108e"
+                         short_name="md"
+                         class="4"
+                         type="FIX Market Data"
+                         venue_identifier="0f9e71de-6942-4615-a8a7-76272ad9d3e3">
+                    <node identifier="867a26c0-3cef-11e5-9160-1fa100c8a1b1"/>
+                </service>
+                <service identifier="8150350c-c3bd-11e3-ab50-1f87a1434551"
+                         short_name="tp"
+                         class="12"
+                         type="Trade Persistence">
+                    <node identifier="0740b544-bc04-11e3-b300-c16fb8c45212"/>
+                </service>
+            </services>
+        </subsystem>
+    </system>
+</resource>

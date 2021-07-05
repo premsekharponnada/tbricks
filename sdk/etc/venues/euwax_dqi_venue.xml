@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Euwax DQI" type="application/x-venue+xml">
+    <venues>
+        <venue name="Euwax DQI" shortname="Euwax DQI" identifier="507dd4dc-8386-11e8-9690-fbcefa631095" description="Euwax DQI price feed interface">
+            <identifier>
+                <key name="SecurityID" tag="48"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Euwax DQI price feed interface venue.
+    </documentation>
+</resource>

@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Aug 25 08:04:07 CEST 2020
+byte-buddy-1.8.21.jar>orc_mirror=
+byte-buddy-1.8.21.pom>orc_mirror=

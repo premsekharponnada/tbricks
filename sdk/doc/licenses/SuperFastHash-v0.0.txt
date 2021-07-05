@@ -1,0 +1,9 @@
+********************************************************************************
+** Tbricks AB. Software uses the following software package                   **
+** distributed under license terms cited below:                               **
+********************************************************************************
+** NAME:    Paul Hsieh's SuperFastHash function                               **
+** URL:     http://www.azillionmonkeys.com/qed/hash.html                      **
+********************************************************************************
+
+

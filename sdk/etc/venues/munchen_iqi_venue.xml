@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Munchen IQI" type="application/x-venue+xml">
+    <venues>
+        <venue name="Borse Munchen IQI" shortname="Munchen IQI" identifier="23a28bb2-c338-11e5-8cb0-5f1176880e4b" description="Borse Munchen Indicative Quoting Interface">
+            <identifier>
+                <key name="Symbol" tag="55"/>
+                <key name="Currency" tag="15"/>
+                <key name="SecurityID" tag="48">
+                    <additional tag="22" value="4"/>
+                </key>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Borse Munchen Indicative Quoting Interface venue.
+    </documentation>
+</resource>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Xetra venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="xetra" shortname="Xetra" identifier="2048ed67-7f65-4eb7-a44e-a042931de0bf" description="Xetra" algo_label_required="true">
+            <identifier>
+                <key name="isincode"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="partial fill not allowed"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Xetra venue, both ETS and EBS/MDI.
+    </documentation>
+</resource>

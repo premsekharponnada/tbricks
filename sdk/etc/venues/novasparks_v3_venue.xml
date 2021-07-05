@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="novasparks venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Novasparks V3" shortname="NovaTick" identifier="4d1dd7f2-8eeb-11e5-99d0-0b26233aecf0" description="Novasparks FPGA Gen3 feed adapter">
+            <identifier>
+                <key name="triplet" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Novasparks V3 venue.
+    </documentation>
+</resource>

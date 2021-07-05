@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Montreal Exchange MX" type="application/x-venue+xml">
+    <venues>
+        <venue name="Montreal Exchange" shortname="MX" identifier="eb4c1582-3bb3-11e5-96f0-0749f3645930" description="Montreal Exchange">
+            <identifier>
+                <key name="id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="validity type" value="today"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="total volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Montreal Exchange MX SOLA venue.
+    </documentation>
+</resource>
+

@@ -1,0 +1,20 @@
+<map id="StrategyFilterCondition" name="StrategyFilterCondition">
+<area shape="rect" id="node1" title=" " alt="" coords="283,427,437,456"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1StrategyByAncestorFilter.html" title=" " alt="" coords="508,5,676,35"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1StrategyByCreatedDateTimeFilter.html" title=" " alt="" coords="497,58,687,105"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1StrategyByExtraDataFilter.html" title=" " alt="" coords="505,128,679,157"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1StrategyByExtraDataFilter_1_1ByKey.html" title=" " alt="" coords="561,181,623,211"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1StrategyByIdentifierFilter.html" title=" " alt="" coords="509,235,675,264"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1StrategyByInstrumentIdentifiersFilter.html" title=" " alt="" coords="489,287,695,334"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1StrategyByModifiedDateTimeFilter.html" title=" " alt="" coords="496,357,688,403"/>
+<area shape="rect" id="node21" href="$classtbricks_1_1StrategyByOwnerFilter.html" title=" " alt="" coords="515,427,669,456"/>
+<area shape="rect" id="node23" href="$classtbricks_1_1StrategyByParameterFilter.html" title=" " alt="" coords="504,480,680,509"/>
+<area shape="rect" id="node25" href="$classtbricks_1_1StrategyByParentFilter.html" title=" " alt="" coords="515,533,669,563"/>
+<area shape="rect" id="node27" href="$classtbricks_1_1StrategyByRootFilter.html" title=" " alt="" coords="520,587,664,616"/>
+<area shape="rect" id="node29" href="$classtbricks_1_1StrategyByStateFilter.html" title=" " alt="" coords="519,640,665,669"/>
+<area shape="rect" id="node31" href="$classtbricks_1_1StrategyByTypeFilter.html" title=" " alt="" coords="520,693,664,723"/>
+<area shape="rect" id="node33" href="$classtbricks_1_1StrategyIsModifiedSinceCreation.html" title=" " alt="" coords="485,747,699,776"/>
+<area shape="rect" id="node35" href="$classtbricks_1_1StrategyIsTopmostFilter.html" title=" " alt="" coords="511,800,673,829"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1FilterCondition.html" title=" " alt="" coords="128,427,235,456"/>
+<area shape="rect" id="node4" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,427,79,456"/>
+</map>

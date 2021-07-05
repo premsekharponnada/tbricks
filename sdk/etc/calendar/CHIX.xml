@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CHIX" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- Boxing Day -->
+    </days>
+                        
+    <days year="2013">
+        <day date="03-29" valid="no"/> <!-- Good Friday -->
+        <day date="04-01" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2014">
+        <day date="04-18" valid="no"/> <!-- Good Friday -->
+        <day date="04-21" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2015">
+        <day date="04-03" valid="no"/> <!-- Good Friday -->
+        <day date="04-06" valid="no"/> <!-- Easter Monday -->
+    </days>
+                                                
+    <days year="2016">
+        <day date="03-25" valid="no"/> <!-- Good Friday -->
+        <day date="03-28" valid="no"/> <!-- Easter Monday -->
+    </days>
+
+    <days year="2017">
+        <day date="04-14" valid="no"/> <!-- Good Friday -->
+        <day date="04-17" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+    </days>
+
+    <days year="2018">
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="04-02" valid="no"/> <!-- Easter Monday -->
+        <day date="05-07" valid="no"/> <!-- Early May Bank Holiday -->
+        <day date="05-28" valid="no"/> <!-- Spring Bank Holiday -->
+        <day date="08-27" valid="no"/> <!-- Summer Bank Holiday -->
+    </days>
+
+    <days year="2019">
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-06" valid="no"/> <!-- Early May Bank Holiday -->
+        <day date="05-27" valid="no"/> <!-- Spring Bank Holiday -->
+        <day date="08-05" valid="no"/> <!-- Summer Bank Holiday -->
+    </days>
+
+    <days year="2020">
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-08" valid="no"/> <!-- Early May Bank Holiday -->
+        <day date="05-25" valid="no"/> <!-- Spring Bank Holiday -->
+        <day date="08-31" valid="no"/> <!-- Summer Bank Holiday -->
+        <day date="12-28" valid="no"/> <!-- Boxing Day OBS -->
+    </days>
+
+    <documentation>
+        Calendar defining trading-days for CHIX (Chi-X).
+        Source https://markets.cboe.com/newsroom/hours/europe/calendar/
+    </documentation>
+</resource>

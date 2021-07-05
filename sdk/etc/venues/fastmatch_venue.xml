@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource name="Fastmatch FX venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Fastmatch FX" shortname="Fastmatch FX" identifier="c948fae7-7838-4f59-982e-26692fc6d061" description="Fastmatch FX Currency Exchange">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="stop price"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="minimum acceptable fill volume"/>
+            <field name="price" value="empty"/>
+            <field name="disclosed volume"/>
+            <field name="stop price"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing Fastmatch FX venue.
+    </documentation>
+</resource>
+

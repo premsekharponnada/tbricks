@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Tradelink" type="application/x-venue+xml">
+    <venues>
+        <venue name="Tradelink" shortname="Tradelink" identifier="422514a0-a9d7-11e8-b140-e84405b2de40" description="Tradelink RFQ interface">
+            <identifier>
+                <key name="SecurityID" tag="48">
+                    <additional tag="22" value="4"/>
+                </key>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Tradelink RFQ interface venue.
+    </documentation>
+</resource>

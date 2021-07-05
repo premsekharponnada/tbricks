@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Spread tables" type="application/x-spread-table+xml">
+    <spreads>
+        <!--  NYSE Liffe -->
+        <!--  XLIF -->
+        <spread group="b84bd35c-5f6f-47fd-b083-21ab440542b4" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="20.01" period="months" maturity="0" spread="0.70" type="absolute"/>
+            <price bid="30.01" period="months" maturity="0" spread="0.90" type="absolute"/>
+            <price bid="40.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="50.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.70" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.75" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="1.25" type="absolute"/>
+            <price bid="20.01" period="months" maturity="12" spread="1.75" type="absolute"/>
+            <price bid="30.01" period="months" maturity="12" spread="2.50" type="absolute"/>
+            <price bid="40.01" period="months" maturity="12" spread="3.50" type="absolute"/>
+            <price bid="50.00" period="months" maturity="12" spread="4.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="18" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="18" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="18" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="18" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="18" spread="1.50" type="absolute"/>
+            <price bid="20.01" period="months" maturity="18" spread="2.00" type="absolute"/>
+            <price bid="30.01" period="months" maturity="18" spread="3.00" type="absolute"/>
+            <price bid="40.01" period="months" maturity="18" spread="4.00" type="absolute"/>
+            <price bid="50.00" period="months" maturity="18" spread="5.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="9" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="9" spread="0.40" type="absolute"/>
+            <price bid="2.51" period="months" maturity="9" spread="0.45" type="absolute"/>
+            <price bid="5.01" period="months" maturity="9" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="9" spread="0.80" type="absolute"/>
+            <price bid="20.01" period="months" maturity="9" spread="1.25" type="absolute"/>
+            <price bid="30.01" period="months" maturity="9" spread="1.80" type="absolute"/>
+            <price bid="40.01" period="months" maturity="9" spread="2.25" type="absolute"/>
+            <price bid="50.00" period="months" maturity="9" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="ffcea12e-843c-4271-8c1a-5aa0293389a1" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.60" type="absolute"/>
+        </spread>
+        <spread group="7f2cf326-d598-4f2e-ad4c-9e796646ec5c" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.55" type="absolute"/>
+        </spread>
+        <spread group="2fa47820-fe42-4d7e-901d-e51af6bd5136" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="e012199f-f569-4338-bf94-25d4d391028f" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="ff73ffc9-2241-4cc9-8427-7a367fb2eb83" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="45fc3a7d-7fdb-411e-a956-40efa0acc6d9" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.70" type="absolute"/>
+        </spread>
+        <spread group="1e09700b-9c7a-4ad1-a54d-68e86b6b7e88" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.65" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.75" type="absolute"/>
+        </spread>
+        <spread group="542fa430-1ea6-4141-9c62-e309b0418254" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="ee549d35-bcc2-467b-801b-e698bf5c0a50" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.55" type="absolute"/>
+        </spread>
+        <spread group="8a69fdf7-6fa1-4702-8449-98ecebc64e98" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="b1943ddc-2710-49eb-bef0-a2f09af8e9ec" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="e803e5df-36fb-479b-976b-af7262f6e29f" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.70" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.55" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.65" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.80" type="absolute"/>
+        </spread>
+        <spread group="45e14650-7680-460f-93d2-a53b94f89204" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="4b879dc5-de27-402b-9f42-f076df65d38a" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="7172332a-a265-4984-966a-74b3608e2435" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="08f070d1-5d45-4e6b-8484-a252ade93086" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.65" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.55" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.70" type="absolute"/>
+        </spread>
+        <spread group="94a19630-2d7a-4c4f-8450-7ac0123e53f9" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="25b74e27-637a-4c59-a9b4-f7ef1758f293" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="ef101ac0-56da-4371-b75c-4653e8adcf56" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="c87fb2f0-fc89-4c11-9e7f-b8f04caf65fe" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.40" type="absolute"/>
+        </spread>
+        <spread group="e8152af7-2f27-4f77-a812-c4fe9a3fb23b" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.45" type="absolute"/>
+        </spread>
+        <spread group="188f0e71-8d43-4a77-8772-e1899849936e" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.60" type="absolute"/>
+        </spread>
+        <spread group="aed6cee3-f3ab-4e65-8611-cfb99203ab0c" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+        </spread>
+        <spread group="4affdc44-e780-4c4d-aa70-9311208ae7d9" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="4d5e354d-ca7b-450e-b241-d7a2c50976ea" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.60" type="absolute"/>
+        </spread>
+        <spread group="94dd95cb-74c2-46f8-900a-b506f1630707" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.65" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.65" type="absolute"/>
+        </spread>
+        <spread group="f3d5181d-c021-4bef-a7fb-43aeba0432c9" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.55" type="absolute"/>
+        </spread>
+        <spread group="698bcf34-2812-4441-9193-416b58cb0aa8" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="0cfde304-15b2-428f-86f4-6ff2604c16eb" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="6fabd2a8-9266-4cdf-bc17-6b246ad25cd7" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="d359999d-0f4c-4d4b-b21c-c30a51539060" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="954ddf9d-6fa6-4f4a-9a7e-42eed53d209e" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.65" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="1.25" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="1.75" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.70" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="1.25" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="1.75" type="absolute"/>
+        </spread>
+        <spread group="4990e38d-40e8-4768-8241-6953b8ca6f44" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="672f62a3-08a2-40a6-9472-b013bffb82e7" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.65" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="1.25" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="1.75" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.70" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="1.25" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="1.75" type="absolute"/>
+        </spread>
+        <spread group="a609966c-9025-4443-8b92-ee8a59fc2c6c" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.55" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.60" type="absolute"/>
+        </spread>
+        <spread group="25b6982c-8c67-42ba-8fe6-2eb62eacbe58" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="e0ebdfbb-4f38-4417-ae82-24c1f3a347c6" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="2a0799dd-300a-4778-a7e1-6ad1bb4e63ab" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="f9e586d0-ac0c-4b69-8926-d2061776508c" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.45" type="absolute"/>
+        </spread>
+        <spread group="8b5d4048-752d-4d55-8637-11e17ccaba4a" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.60" type="absolute"/>
+        </spread>
+        <spread group="305d464a-d550-4574-8b78-91bb5b9e4eb0" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.45" type="absolute"/>
+        </spread>
+        <spread group="044795a8-eab6-4246-975b-f973496f7924" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="f119e7fb-7ae7-4875-8afe-16dce9385b08" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="1e0b3bae-f82f-4e6d-a56f-8d7fa84ed0df" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="bc74d616-1206-4f3a-a365-12c996e5f3cc" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="6b19201d-f71f-4ad2-b294-bb3ec70d26e4" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="0d1d784c-ea65-41c9-ab4f-41eedc70fec4" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="446bd039-7c7a-4624-a9e7-9f7bf04afdaf" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.35" type="absolute"/>
+        </spread>
+        <spread group="577cfeec-09e8-404c-b0c2-a9daf2ad1b40" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="158bf955-ffca-4e93-ab6d-6a48711318eb" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+        </spread>
+        <spread group="f6ff8c45-ee4a-46e8-86a6-d29c491ec458" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.60" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.75" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.75" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="1.00" type="absolute"/>
+        </spread>
+        <spread group="767d2885-196d-409e-9f98-3a8665774ef9" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.20" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.55" type="absolute"/>
+        </spread>
+        <spread group="d8e83008-6af8-41c4-8011-4f7d3d17e67a" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="3.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="1.00" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="2.00" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="3.00" type="absolute"/>
+        </spread>
+        <spread group="b3615457-8c3a-4113-9a17-fb05a6cb134a" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.25" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.35" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="0.45" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.20" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.30" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.40" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="0.50" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.15" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.25" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.35" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.45" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="0.55" type="absolute"/>
+        </spread>
+        <spread group="1e005565-1f12-4aba-8cf7-f4e51d9fe3b5" default="1" type="absolute">
+            <price bid="0.00" period="months" maturity="0" spread="0.20" type="absolute"/>
+            <price bid="0.51" period="months" maturity="0" spread="0.30" type="absolute"/>
+            <price bid="2.51" period="months" maturity="0" spread="0.40" type="absolute"/>
+            <price bid="5.01" period="months" maturity="0" spread="0.50" type="absolute"/>
+            <price bid="10.01" period="months" maturity="0" spread="0.60" type="absolute"/>
+            <price bid="20.00" period="months" maturity="0" spread="1.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="12" spread="0.25" type="absolute"/>
+            <price bid="0.51" period="months" maturity="12" spread="0.35" type="absolute"/>
+            <price bid="2.51" period="months" maturity="12" spread="0.45" type="absolute"/>
+            <price bid="5.01" period="months" maturity="12" spread="0.55" type="absolute"/>
+            <price bid="10.01" period="months" maturity="12" spread="0.75" type="absolute"/>
+            <price bid="20.00" period="months" maturity="12" spread="1.00" type="absolute"/>
+            <price bid="0.00" period="months" maturity="24" spread="0.30" type="absolute"/>
+            <price bid="0.51" period="months" maturity="24" spread="0.40" type="absolute"/>
+            <price bid="2.51" period="months" maturity="24" spread="0.50" type="absolute"/>
+            <price bid="5.01" period="months" maturity="24" spread="0.60" type="absolute"/>
+            <price bid="10.01" period="months" maturity="24" spread="0.75" type="absolute"/>
+            <price bid="20.00" period="months" maturity="24" spread="1.00" type="absolute"/>
+        </spread>
+    </spreads>
+</resource>

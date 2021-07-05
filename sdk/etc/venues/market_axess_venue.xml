@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Market Axess NOW venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Market Axess" shortname="Market Axess" identifier="9b0bf704-3249-11ea-b900-356fbd755a7b" description="Market Axess. Universal Market Data Feed">
+            <identifier>
+                <key name="symbol"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- Market Data venue, capabilities are not required -->
+
+    <documentation>
+        Venue identifier resource describing the "Market Axess. Universal Market Data Feed" venue.
+    </documentation>
+</resource>

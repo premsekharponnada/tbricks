@@ -1,0 +1,86 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="8778b276-852d-11e6-ba30-bd2f51739deb">
+  <Strategy uiRep="Tbricks" wireValue="Tbricks" version="1.0" name="Tbricks">
+    <Parameter xsi:type="String_t" name="com.sgxdt.ex_client">
+      <Description>ExClient. 16 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.sgxdt.exchange_info">
+      <Description>ExchangeInfo. 32 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.sgxdt.customer_info">
+      <Description>CustomerInfo. 32 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.sgxdt.giveup_member">
+      <Description>GiveUpMember. 7 chars.</Description>
+    </Parameter>
+    <Parameter xsi:type="Price_t" name="StopPrice" tbricks_property_identifier="84796894-1770-11e2-9e47-3c870c3e9924">
+      <Description>Stop price</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="DisclosedVolume" tbricks_property_identifier="bc9e0d54-6779-4675-aa9c-6e769c30529e">
+      <Description>Disclosed volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f5adc6-a7cf-11e5-b809-3c870c3e9924">
+      <Description>Transition type</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="com.sgxdt.half_tick">
+      <Description>Half tick enabled</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="com.sgxdt.stp_key" minValue="0" maxValue="65535">
+      <Description>STP key. 0 to 65535</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="com.sgxdt.stop_condition">
+      <Description>Stop condition</Description>
+      <EnumPair enumID="NoCondition" wireValue="0" index="0"  />
+      <EnumPair enumID="BidPriceLargerOrEqualsStopPrice" wireValue="1" />
+      <EnumPair enumID="BidPriceLessOrEqualsStopPrice" wireValue="2" />
+      <EnumPair enumID="AskPriceLargerOrEqualsStopPrice" wireValue="3" />
+      <EnumPair enumID="AskPriceLessOrEqualsStopPrice" wireValue="4" />
+      <EnumPair enumID="LastTradedLargerOrEqualsStopPrice" wireValue="5" />
+      <EnumPair enumID="LastTradedLessOrEqualsStopPrice" wireValue="6" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="com.sgxdt.stop_instrument">
+      <Description>Stop instrument</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:TextField_t" label="Ex Client:" ID="ExClient" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.ex_client" />
+        <lay:Control xsi:type="lay:TextField_t" label="Exchange Info:" ID="ExchangeInfo" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.exchange_info" />
+        <lay:Control xsi:type="lay:TextField_t" label="Customer Info:" ID="CustomerInfo" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.customer_info" />
+        <lay:Control xsi:type="lay:TextField_t" label="Give-Up Member:" ID="GiveUpMember" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.giveup_member" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Disclosed volume:" ID="DisclosedVolume" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="DisclosedVolume" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Transition type:" ID="TransitionType" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TransitionType" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Half tick enabled" ID="HalfTickEnabled" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.half_tick" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="STP Key (0-65535):" ID="STPKey" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.stp_key" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Stop price:" ID="StopPrice" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="StopPrice">
+            <flow:StateRule enabled="true">
+                <val:Edit logicOperator="OR">
+                    <val:Edit field="StopCondition" operator="EQ" value="BidPriceLargerOrEqualsStopPrice" />
+                    <val:Edit field="StopCondition" operator="EQ" value="BidPriceLessOrEqualsStopPrice" />
+                    <val:Edit field="StopCondition" operator="EQ" value="AskPriceLargerOrEqualsStopPrice" />
+                    <val:Edit field="StopCondition" operator="EQ" value="AskPriceLessOrEqualsStopPrice" />
+                    <val:Edit field="StopCondition" operator="EQ" value="LastTradedLargerOrEqualsStopPrice" />
+                    <val:Edit field="StopCondition" operator="EQ" value="LastTradedLessOrEqualsStopPrice" />
+                </val:Edit>
+            </flow:StateRule>
+            <flow:StateRule enabled="false">
+                <val:Edit field="StopCondition" operator="EQ" value="NoCondition" />
+            </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Stop Condition:" ID="StopCondition" initValue="NoCondition" labelLocation="Left" labelWidth="120" controlWidth="250" parameterRef="com.sgxdt.stop_condition" >
+            <lay:ListItem enumID="NoCondition" uiRep="No Condition" />
+            <lay:ListItem enumID="BidPriceLargerOrEqualsStopPrice" uiRep="Bid price larger or equals stop price" />
+            <lay:ListItem enumID="BidPriceLessOrEqualsStopPrice" uiRep="Bid price less or equals stop price" />
+            <lay:ListItem enumID="AskPriceLargerOrEqualsStopPrice" uiRep="Ask price larger or equals than stop price" />
+            <lay:ListItem enumID="AskPriceLessOrEqualsStopPrice" uiRep="Ask price less or equals stop price" />
+            <lay:ListItem enumID="LastTradedLargerOrEqualsStopPrice" uiRep="Last traded price larger or equals than stop price" />
+            <lay:ListItem enumID="LastTradedLessOrEqualsStopPrice" uiRep="Last traded price less or equals stop price" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:TextField_t" label="Stop Instrument:" ID="StopInstrument" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="com.sgxdt.stop_instrument" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

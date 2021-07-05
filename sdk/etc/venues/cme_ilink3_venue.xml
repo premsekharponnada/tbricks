@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CME iLink 3.0 venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="CME iLink 3.0" shortname="CME iLink 3.0" identifier="44f066fe-1861-11ea-9100-0abc6122be9f" description="CME iLink 3.0" native_trd_required="yes">
+            <identifier>
+                <key name="security_id" tag="48"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="volume delta"/> <!-- TB-40700: suppress volume delta updates to support chasing modifications -->
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Static venue resource for the CME iLink 3.0 venue.
+    </documentation>
+</resource>

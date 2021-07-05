@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="JSE Equities venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="JSE Equities Millennium" shortname="JSE Equities Millennium" identifier="7049b99c-659f-11e9-a180-5c4cea9c5931" description="JSE Equities Millennium">
+            <identifier>
+                <key name="security_id"/>
+                <key name="target_book"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="execution policy"/>
+            <field name="transition type"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="price" value="empty"/>
+            <field name="total volume"/>
+            <field name="retain on disconnect"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the JSE Equities Millennium venue.
+    </documentation>
+</resource>

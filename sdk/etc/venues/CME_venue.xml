@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CME venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="CME" shortname="CME" identifier="b3a5de91-bef1-4edd-8ee0-66aae9bf31fe" description="CME" native_trd_required="yes">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="securitydesc" tag="107"/>
+                <key name="securitytype" tag="167"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="volume delta"/> <!-- TB-40700: suppress volume delta updates to support chasing modifications -->
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Static venue resource for CME, needed due to the complex properties of CME. The venue resource identifier and structure of the VIID needs to be invariant.
+    </documentation>
+</resource>

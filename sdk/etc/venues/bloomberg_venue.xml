@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Bloomberg" type="application/x-venue+xml">
+    <venues>
+        <venue name="Bloomberg" shortname="Bloomberg" identifier="2388a3e4-daf5-11e0-83bd-71ccc2b0e078" description="Bloomberg" entitlements="yes">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- Market Data venue, capabilities are not required -->
+
+    <documentation>
+        Bloomberg
+    </documentation>
+</resource>

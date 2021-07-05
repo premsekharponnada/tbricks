@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['wait_5ffor_5fexecut_5finstruction_21059',['WAIT_FOR_EXECUT_INSTRUCTION',['../structtbricks_1_1FIX_1_1Enum_1_1ListExecInstType_a518edb0874539b2afdfde430bc3a39d7.html#a518edb0874539b2afdfde430bc3a39d7',1,'tbricks::FIX::Enum::ListExecInstType']]],
+  ['warehouse_5finstruction_21060',['WAREHOUSE_INSTRUCTION',['../structtbricks_1_1FIX_1_1Enum_1_1AllocType_aff682e73516107f096eda181d9a60065.html#aff682e73516107f096eda181d9a60065',1,'tbricks::FIX::Enum::AllocType']]],
+  ['warehouse_5frecap_21061',['WAREHOUSE_RECAP',['../structtbricks_1_1FIX_1_1Enum_1_1ExecRestatementReason_a65ce78a747151942c5718f3ad686fc1c.html#a65ce78a747151942c5718f3ad686fc1c',1,'tbricks::FIX::Enum::ExecRestatementReason::WAREHOUSE_RECAP()'],['../structtbricks_1_1FIX_1_1Enum_1_1AllocReportType_a65ce78a747151942c5718f3ad686fc1c.html#a65ce78a747151942c5718f3ad686fc1c',1,'tbricks::FIX::Enum::AllocReportType::WAREHOUSE_RECAP()']]],
+  ['warehouse_5frequest_5frejected_21062',['WAREHOUSE_REQUEST_REJECTED',['../structtbricks_1_1FIX_1_1Enum_1_1AllocRejCode_ab141c6dc46b3ec8d589e0f0082568c32.html#ab141c6dc46b3ec8d589e0f0082568c32',1,'tbricks::FIX::Enum::AllocRejCode']]],
+  ['weeks_21063',['WEEKS',['../structtbricks_1_1FIX_1_1Enum_1_1MaturityMonthYearIncrementUnits_ad94070c0709768fa52e0cea7bc96c7ca.html#ad94070c0709768fa52e0cea7bc96c7ca',1,'tbricks::FIX::Enum::MaturityMonthYearIncrementUnits::WEEKS()'],['../structtbricks_1_1FIX_1_1Enum_1_1OrderDelayUnit_ad94070c0709768fa52e0cea7bc96c7ca.html#ad94070c0709768fa52e0cea7bc96c7ca',1,'tbricks::FIX::Enum::OrderDelayUnit::WEEKS()']]],
+  ['weighted_5faverage_5fprice_5ftrade_21064',['WEIGHTED_AVERAGE_PRICE_TRADE',['../structtbricks_1_1FIX_1_1Enum_1_1TrdType_a73d6c8fad71fefed47067faa23259f2b.html#a73d6c8fad71fefed47067faa23259f2b',1,'tbricks::FIX::Enum::TrdType']]],
+  ['when_5fand_5fif_5fissued_21065',['WHEN_AND_IF_ISSUED',['../structtbricks_1_1FIX_1_1Enum_1_1InstrAttribType_ac345f302d8239f71a323385b0fa6cf21.html#ac345f302d8239f71a323385b0fa6cf21',1,'tbricks::FIX::Enum::InstrAttribType']]],
+  ['with_5for_5fwithout_21066',['WITH_OR_WITHOUT',['../structtbricks_1_1FIX_1_1Enum_1_1OrdType_abbd550b31887b5effb5255a72ec02767.html#abbd550b31887b5effb5255a72ec02767',1,'tbricks::FIX::Enum::OrdType']]],
+  ['wn_21067',['WN',['../structtbricks_1_1FIX_1_1Enum_1_1TrdSubType_a595dd0fdb9b5d07738464ee5fc45909e.html#a595dd0fdb9b5d07738464ee5fc45909e',1,'tbricks::FIX::Enum::TrdSubType']]],
+  ['worked_5fprincipal_5ftrade_21068',['WORKED_PRINCIPAL_TRADE',['../structtbricks_1_1FIX_1_1Enum_1_1TrdType_a608a5b427a9374177e48e71a6111d05c.html#a608a5b427a9374177e48e71a6111d05c',1,'tbricks::FIX::Enum::TrdType']]],
+  ['wrong_5fside_21069',['WRONG_SIDE',['../structtbricks_1_1FIX_1_1Enum_1_1DKReason_aaf1e0c22b6e876d74dfc676aaea1a3ea.html#aaf1e0c22b6e876d74dfc676aaea1a3ea',1,'tbricks::FIX::Enum::DKReason']]],
+  ['wt_21070',['WT',['../structtbricks_1_1FIX_1_1Enum_1_1TrdSubType_a45abeac7ee8634665d249143b653a02f.html#a45abeac7ee8634665d249143b653a02f',1,'tbricks::FIX::Enum::TrdSubType']]]
+];

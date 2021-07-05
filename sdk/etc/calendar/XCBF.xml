@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="XCBF" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="07-04" valid="no"/> <!-- Four of July -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+    </days>
+                        
+    <days year="2015">
+        <day date="01-19" valid="no"/> <!-- Martin Luther King Day -->
+        <day date="02-16" valid="no"/> <!-- Presidents Day -->
+        <day date="04-03" valid="no"/> <!-- Good Friday -->
+        <day date="05-25" valid="no"/> <!-- Memorial Day -->
+        <day date="07-03" valid="no"/> <!-- Independence Day (Observed July 3) -->
+        <day date="09-07" valid="no"/> <!-- Labour Day -->
+        <day date="11-26" valid="no"/> <!-- Thanksgiving -->
+    </days>
+    <days year="2016">
+        <day date="01-18" valid="no"/> <!-- Martin  Luther King Day -->
+        <day date="02-15" valid="no"/> <!-- Presidents Day -->
+        <day date="03-25" valid="no"/> <!-- Good Friday -->
+        <day date="05-30" valid="no"/> <!-- Memorial Day -->
+        <day date="09-05" valid="no"/> <!-- Labour Day -->
+        <day date="11-24" valid="no"/> <!-- Thanksgiving -->
+    </days>
+    <days year="2017">
+        <day date="01-02" valid="no"/> <!-- New Year (observed) -->
+        <day date="01-16" valid="no"/> <!-- Martin  Luther King Day -->
+        <day date="02-20" valid="no"/> <!-- Presidents Day -->
+        <day date="04-14" valid="no"/> <!-- Good Friday -->
+        <day date="05-29" valid="no"/> <!-- Memorial Day -->
+        <day date="09-04" valid="no"/> <!-- Labour Day -->
+        <day date="11-23" valid="no"/> <!-- Thanksgiving -->
+    </days>
+    <days year="2018">
+        <day date="01-15" valid="no"/> <!-- Martin  Luther King Day -->
+        <day date="02-19" valid="no"/> <!-- Presidents Day -->
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="05-28" valid="no"/> <!-- Memorial Day -->
+        <day date="09-03" valid="no"/> <!-- Labour Day -->
+        <day date="11-22" valid="no"/> <!-- Thanksgiving -->
+    </days>
+    <days year="2019">
+        <day date="01-01" valid="no"/> <!-- New Year's Day -->
+        <day date="01-21" valid="no"/> <!-- Martin  Luther King Day -->
+        <day date="02-18" valid="no"/> <!-- Presidents Day -->
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="05-27" valid="no"/> <!-- Memorial Day -->
+        <day date="09-02" valid="no"/> <!-- Labour Day -->
+        <day date="11-28" valid="no"/> <!-- Thanksgiving -->
+    </days>
+    <days year="2020">
+        <day date="01-20" valid="no"/> <!-- Martin  Luther King Day -->
+        <day date="02-17" valid="no"/> <!-- Presidents Day -->
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="05-18" valid="no"/> <!-- Victoria Day (Canada) -->
+        <day date="05-25" valid="no"/> <!-- Memorial Day -->
+        <day date="07-01" valid="no"/> <!-- Canada Day (Canada) -->
+        <day date="07-03" valid="no"/> <!-- Independence Day (observed) -->
+        <day date="08-03" valid="no"/> <!-- Terry Fox Day (Canada) -->
+        <day date="09-07" valid="no"/> <!-- Labour Day -->
+        <day date="10-12" valid="no"/> <!-- Thanksgiving Day (Canada) -->
+        <day date="11-11" valid="no"/> <!-- Remembrance Day (Canada) -->
+        <day date="11-26" valid="no"/> <!-- Thanksgiving -->
+        <day date="12-28" valid="no"/> <!-- Boxing Day (observed) -->
+    </days>
+    <documentation>
+        Calendar defining trading-days for XCBF (CBOE Chicago Futures Exchange).
+        Source https://www.theice.com/publicdocs/futures_us/exchange_notices/ExNot2018HolidayCal.pdf
+    </documentation>
+</resource>

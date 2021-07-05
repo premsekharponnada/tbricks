@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:types="http://www.itiviti.com/types"
+    elementFormDefault="qualified" attributeFormDefault="unqualified" 
+    version="1.0">
+
+    <xs:import namespace="http://www.itiviti.com/types" schemaLocation="types.xsd"/>
+
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="tickrules" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tickrule" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="price" type="xs:float"/>
+                                                <xs:attribute name="tick" type="xs:float"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="identifier" type="xs:string" use="required"/>
+                                    <xs:attribute name="venue" type="types:UUID"/>
+                                    <xs:attribute name="default" type="xs:float"/>
+                               </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="information" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded" >
+                            <xs:choice>
+
+                                <xs:element name="map">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="key" minOccurs="0" maxOccurs="unbounded">
+                                                <xs:complexType>
+                                                    <xs:attribute name="mic" type="xs:string"/>
+                                                    <xs:attribute name="name" type="xs:string"/>
+                                                    <xs:attribute name="value" type="xs:string"/>
+                                                    <xs:attribute name="mask" type="xs:string"/>
+                                                    <xs:attribute name="liquidity_pool_identifier" type="types:UUID"/>
+                                                    <xs:attribute name="is_default_pool" type="types:Boolean"/>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                        <xs:attribute name="venue" type="types:UUID"/>
+                                        <xs:attribute name="identifier" type="xs:string"/>
+                                        <xs:attribute name="tick" type="xs:double"/>
+                                        <xs:attribute name="precedence" type="xs:integer"/>
+                                        <xs:attribute name="volincrement" type="xs:float"/>
+                                        <xs:attribute name="lotvolume" type="xs:float"/>
+                                        <xs:attribute name="volminimum" type="xs:float"/>
+                                        <xs:attribute name="minimum_price" type="xs:float"/>
+                                        <xs:attribute name="minimum_match_price" type="xs:float"/>
+                                        <xs:attribute name="minimum_allowed_price" type="xs:float"/>
+                                        <xs:attribute name="minimum_disclosed_volume" type="xs:float"/>
+                                        <xs:attribute name="price_correction">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:float">
+                                                    <xs:minExclusive value="0.0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:attribute>
+                                        <xs:attribute name="currency" type="xs:string"/>
+                                    </xs:complexType>
+                                </xs:element>
+
+                                <xs:element name="identifier">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="key" minOccurs="0" maxOccurs="unbounded">
+                                                <xs:complexType>
+                                                    <xs:attribute name="name" type="xs:string"/>
+                                                    <xs:attribute name="value" type="xs:string"/>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                        <xs:attribute name="venue" type="types:UUID"/>
+                                        <xs:attribute name="identifier" type="xs:string"/>
+                                        <xs:attribute name="tick" type="xs:double"/>
+                                        <xs:attribute name="precedence" type="xs:integer"/>
+                                        <xs:attribute name="volincrement" type="xs:float"/>
+                                        <xs:attribute name="lotvolume" type="xs:float"/>
+                                        <xs:attribute name="volminimum" type="xs:float"/>
+                                        <xs:attribute name="minimum_price" type="xs:float"/>
+                                        <xs:attribute name="minimum_match_price" type="xs:float"/>
+                                        <xs:attribute name="minimum_allowed_price" type="xs:float"/>
+                                        <xs:attribute name="minimum_disclosed_volume" type="xs:float"/>
+                                        <xs:attribute name="price_correction">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:float">
+                                                    <xs:minExclusive value="0.0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:attribute>
+                                        <xs:attribute name="currency" type="xs:string"/>
+                                    </xs:complexType>
+                                </xs:element>
+
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="application/x\-trading\-information\+xml"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+       </xs:complexType>
+     </xs:element>
+
+ </xs:schema>

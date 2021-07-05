@@ -1,0 +1,20 @@
+<map id="IVirtualService" name="IVirtualService">
+<area shape="rect" id="node1" title=" " alt="" coords="5,448,112,477"/>
+<area shape="rect" id="node3" href="$classtbricks_1_1test_1_1VirtualCalculationEngine.html" title=" " alt="" coords="196,5,359,35"/>
+<area shape="rect" id="node5" href="$classtbricks_1_1test_1_1VirtualDistributionEngine.html" title=" " alt="" coords="195,59,360,88"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1test_1_1VirtualLimitEngine.html" title=" " alt="" coords="215,112,340,141"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1test_1_1VirtualPluginEngine.html" title=" " alt="" coords="211,165,344,195"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1test_1_1VirtualServiceDirectedQuoteRequest.html" title=" " alt="" coords="184,218,371,265"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1test_1_1VirtualServiceDirectedQuoting.html" title=" " alt="" coords="179,288,376,317"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1test_1_1VirtualServiceExpitTrading.html" title=" " alt="" coords="189,341,365,371"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1test_1_1VirtualServiceInstrument.html" title=" " alt="" coords="195,395,360,424"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1test_1_1VirtualServiceMarketData.html" title=" " alt="" coords="192,448,363,477"/>
+<area shape="rect" id="node21" href="$classtbricks_1_1test_1_1VirtualServiceMatchingEngine.html" title=" " alt="" coords="180,501,375,531"/>
+<area shape="rect" id="node23" href="$classtbricks_1_1test_1_1VirtualServiceOrderPersistence.html" title=" " alt="" coords="176,555,379,584"/>
+<area shape="rect" id="node25" href="$classtbricks_1_1test_1_1VirtualServiceQuoting.html" title=" " alt="" coords="204,608,351,637"/>
+<area shape="rect" id="node27" href="$classtbricks_1_1test_1_1VirtualServiceRequestForQuote.html" title=" " alt="" coords="192,661,363,707"/>
+<area shape="rect" id="node29" href="$classtbricks_1_1test_1_1VirtualServiceTradePersistence.html" title=" " alt="" coords="175,731,380,760"/>
+<area shape="rect" id="node31" href="$classtbricks_1_1test_1_1VirtualServiceTrading.html" title=" " alt="" coords="204,784,351,813"/>
+<area shape="rect" id="node33" href="$classtbricks_1_1test_1_1VirtualServiceTradingReferenceData.html" title=" " alt="" coords="160,837,395,867"/>
+<area shape="rect" id="node35" href="$classtbricks_1_1test_1_1VirtualXRayEngine.html" title=" " alt="" coords="212,891,343,920"/>
+</map>

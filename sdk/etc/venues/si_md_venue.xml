@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="SystematicIntenaliserVenue" type="application/x-venue+xml">
+  <venues>
+      <venue name="Systematic internaliser Price Distribution" shortname="SI PD" identifier="e6d946a2-67dd-11e7-a1c0-1d9e3b65ebf4" description="" app_id="8102f66a-6d29-11e7-a68b-b3a6db3c870c">
+          <identifier>
+              <key name="symbol" tag="55"/>
+          </identifier>
+          <pools>
+               <pool name="Retail clients" default="yes" identifier="99cedcd8-671e-11e7-b790-18108b240a04"/>
+               <pool name="Professional clients" identifier="acba035e-671e-11e7-baa0-615f49e96032"/>
+               <pool name="Eligible counterparties" identifier="b921efd0-671e-11e7-afe0-e25ddcf73933"/>
+               <pool name="Midpoint" identifier="3e704ce4-40cc-11e9-9380-4275128b6cfe"/>
+          </pools>
+      </venue>
+  </venues>
+
+  <documentation>
+      Venue identifier resource for Systematic Internaliser Tbricks venue.
+  </documentation>
+</resource>

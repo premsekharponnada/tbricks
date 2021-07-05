@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="XLJU" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+    </days>
+
+    <days year="2019">
+        <day date="01-01" valid="no"/> <!-- New Year -->
+        <day date="01-02" valid="no"/> <!-- National Holiday -->
+        <day date="02-08" valid="no"/> <!-- National Holiday -->
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="05-02" valid="no"/> <!-- National Holiday -->
+        <day date="07-25" valid="no"/> <!-- National Holiday -->
+        <day date="08-15" valid="no"/> <!-- National Holiday -->
+        <day date="10-31" valid="no"/> <!-- National Holiday -->
+        <day date="11-01" valid="no"/> <!-- National Holiday -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- St. Stephen’s Day -->
+        <day date="12-31" valid="no"/> <!-- National Holiday -->
+    </days>
+    <days year="2020">
+        <day date="01-02" valid="no"/> <!-- National Holiday -->
+        <day date="04-10" valid="no"/> <!-- Exchange Holiday -->
+        <day date="04-13" valid="no"/> <!-- Good Friday -->
+        <day date="04-27" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labour Day -->
+        <day date="06-25" valid="no"/> <!-- National Holiday -->
+        <day date="12-24" valid="no"/> <!-- Chritsmas Eve -->
+        <day date="12-31" valid="no"/> <!-- Exchange Holiday -->
+    </days>
+    <documentation>
+        Calendar defining trading-days for XLJU (Ljubljana Stock Exchange).
+        Source http://www.ljse.si/cgi-bin/jve.cgi?doc=3861
+    </documentation>
+</resource>

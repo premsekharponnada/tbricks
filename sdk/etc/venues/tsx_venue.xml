@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Toronto Stock Exchange" type="application/x-venue+xml">
+    <venues>
+        <venue name="Toronto Stock Exchange" shortname="Toronto Stock Exchange" identifier="2cb19fc6-b565-11e5-a110-c65e4514460a" description="Toronto Stock Exchange Quantum XA">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+               <!-- lit liquidity pools (board lot, odd lot, and special terms) -->
+               <pool name="board lot" default="yes" identifier="ab9a3beb-853b-4662-a610-533296f735ca"/>
+               <pool name="odd lot" identifier="9666f92e-7665-4e98-809e-182eead51ae7"/>
+               <pool name="special" identifier="72f197ee-c171-4298-9e41-09b0e0106e21"/>
+               <!-- dark pool -->
+               <pool name="dark" identifier="a17d4c0c-1323-11e7-8530-c416292b6059"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="transition type"  value="market to limit"/>
+            <field name="transition type"  value="limit to market"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="market command request">
+            <field name="market command" value="suspend participant"/>
+            <field name="market command" value="resume participant"/>
+            <field name="market command" value="halt participant"/>
+            <field name="market command" value="delay opening"/>
+            <field name="market command" value="open delayed trading"/>
+            <field name="market command" value="set last auction price"/>
+            <field name="market command" value="start trading"/>
+            <field name="market command" value="knockout"/>
+            <field name="market command" value="enter buyback phase"/>
+            <field name="market command" value="sold out"/>
+            <field name="market command" value="soft knock out"/>
+            <field name="market command" value="underlying not quoted"/>
+            <field name="market command" value="underlying quoted"/>
+        </restriction>
+    </capabilities>
+    <documentation>
+        Venue identifier resource describing the Toronto Stock Exchange venue.
+    </documentation>
+</resource>

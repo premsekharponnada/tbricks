@@ -1,0 +1,2016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CFI_ISO10962_2015" type="application/x-cfi-tree+xml">
+<categories>
+<category code="E" cfi="EXXXXX" name="Equity">
+    <group code="S" cfi="ESXXXX" name="Common/Ordinary shares">
+        <attribute name="Voting right">
+            <value code="V" cfi="ESVXXX" name="Voting" ></value>
+            <value code="N" cfi="ESNXXX" name="Non-Voting" ></value>
+            <value code="R" cfi="ESRXXX" name="Restricted" ></value>
+            <value code="E" cfi="ESEXXX" name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Ownership/transfer/sales restrictions">
+            <value code="T" cfi="ESXTXX" name="Restrictions" ></value>
+            <value code="U" cfi="ESXUXX" name="Free" ></value>
+        </attribute>
+        <attribute name="Payment status">
+            <value code="F" cfi="ESXXFX" name="Fully Paid" ></value>
+            <value code="O" cfi="ESXXOX" name="Nil Paid" ></value>
+            <value code="P" cfi="ESXXPX" name="Partly Paid" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="ESXXXB" name="Bearer" ></value>
+            <value code="R" cfi="ESXXXR" name="Registered" ></value>
+            <value code="N" cfi="ESXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="ESXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="P" cfi="EPXXXX" name="Preferred/Preference shares">
+        <attribute name="Voting right">
+            <value code="V" cfi="EPVXXX" name="Voting" ></value>
+            <value code="N" cfi="EPNXXX" name="Non-Voting" ></value>
+            <value code="R" cfi="EPRXXX" name="Restricted" ></value>
+            <value code="E" cfi="EPEXXX" name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Redemption">
+            <value code="R" cfi="EPXRXX" name="Redeemable" ></value>
+            <value code="E" cfi="EPXEXX" name="Extendible" ></value>
+            <value code="T" cfi="EPXTXX" name="Redeemable/Extendible" ></value>
+            <value code="G" cfi="EPXGXX" name="Exchangeable" ></value>
+            <value code="A" cfi="EPXAXX" name="Redeemable/Exchangeable/Extendible" ></value>
+            <value code="C" cfi="EPXCXX" name="Redeemable/Exchangeable" ></value>
+            <value code="N" cfi="EPXNXX" name="Perpetual" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F" cfi="EPXXFX" name="Fixed Rate Income" ></value>
+            <value code="C" cfi="EPXXCX" name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P" cfi="EPXXPX" name="Participating Income" ></value>
+            <value code="Q" cfi="EPXXQX" name="Cumulative, Participating Income" ></value>
+            <value code="A" cfi="EPXXAX" name="Adjustable/Variable Rate Income" ></value>
+            <value code="N" cfi="EPXXNX" name="Normal Rate Income" ></value>
+            <value code="U" cfi="EPXXUX" name="Auction Rate Income" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="EPXXXB" name="Bearer" ></value>
+            <value code="R" cfi="EPXXXR" name="Registered" ></value>
+            <value code="N" cfi="EPXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="EPXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="ECXXXX" name="Common/Ordinary convertible shares">
+        <attribute name="Voting right">
+            <value code="V" cfi="ECVXXX" name="Voting" ></value>
+            <value code="N" cfi="ECNXXX" name="Non-Voting" ></value>
+            <value code="R" cfi="ECRXXX" name="Restricted" ></value>
+            <value code="E" cfi="ECEXXX" name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Ownership/transfer/sales restrictions">
+            <value code="T" cfi="ECXTXX" name="Restrictions" ></value>
+            <value code="U" cfi="ECXUXX" name="Free" ></value>
+        </attribute>
+        <attribute name="Payment status">
+            <value code="F" cfi="ECXXFX" name="Fully Paid" ></value>
+            <value code="O" cfi="ECXXOX" name="Nil Paid" ></value>
+            <value code="P" cfi="ECXXPX" name="Partly Paid" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="ECXXXB" name="Bearer" ></value>
+            <value code="R" cfi="ECXXXR" name="Registered" ></value>
+            <value code="N" cfi="ECXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="ECXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="EFXXXX" name="Preferred / Preference convertible shares">
+        <attribute name="Voting right">
+            <value code="V" cfi="EFVXXX" name="Voting" ></value>
+            <value code="N" cfi="EFNXXX" name="Non-Voting" ></value>
+            <value code="R" cfi="EFRXXX" name="Restricted" ></value>
+            <value code="E" cfi="EFEXXX" name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Redemption">
+            <value code="R" cfi="EFXRXX" name="Redeemable" ></value>
+            <value code="E" cfi="EFXEXX" name="Extendible" ></value>
+            <value code="T" cfi="EFXTXX" name="Redeemable/Extendible" ></value>
+            <value code="G" cfi="EFXGXX" name="Exchangeable" ></value>
+            <value code="A" cfi="EFXAXX" name="Redeemable/Exchangeable/Extendible" ></value>
+            <value code="C" cfi="EFXCXX" name="Redeemable/Exchangeable" ></value>
+            <value code="N" cfi="EFXNXX" name="Perpetual" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F" cfi="EFXXFX" name="Fixed Rate Income" ></value>
+            <value code="C" cfi="EFXXCX" name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P" cfi="EFXXPX" name="Participating Income" ></value>
+            <value code="Q" cfi="EFXXQX" name="Cumulative, Participating Income" ></value>
+            <value code="A" cfi="EFXXAX" name="Adjustable/Variable Rate Income" ></value>
+            <value code="N" cfi="EFXXNX" name="Normal Rate Income" ></value>
+            <value code="U" cfi="EFXXUX" name="Auction Rate Income" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="EFXXXB" name="Bearer" ></value>
+            <value code="R" cfi="EFXXXR" name="Registered" ></value>
+            <value code="N" cfi="EFXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="EFXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="L" cfi="ELXXXX" name="Limited partnership units">
+        <attribute name="Voting right">
+            <value code="V" cfi="ELVXXX" name="Voting" ></value>
+            <value code="N" cfi="ELNXXX" name="Non-Voting" ></value>
+            <value code="R" cfi="ELRXXX" name="Restricted" ></value>
+            <value code="E" cfi="ELEXXX" name="Enhanced voting" ></value>
+        </attribute>
+        <attribute name="Ownership/transfer/sales restrictions">
+            <value code="T" cfi="ELXTXX" name="Restrictions" ></value>
+            <value code="U" cfi="ELXUXX" name="Free" ></value>
+        </attribute>
+        <attribute name="Payment status">
+            <value code="F" cfi="ELXXFX" name="Fully Paid" ></value>
+            <value code="O" cfi="ELXXOX" name="Nil Paid" ></value>
+            <value code="P" cfi="ELXXPX" name="Partly Paid" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="ELXXXB" name="Bearer" ></value>
+            <value code="R" cfi="ELXXXR" name="Registered" ></value>
+            <value code="N" cfi="ELXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="ELXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="D" cfi="EDXXXX" name="Depositary receipts on equities">
+        <attribute name="Instrument dependency">
+            <value code="S" cfi="EDSXXX" name="Common/Ordinary Shares" ></value>
+            <value code="P" cfi="EDPXXX" name="Preferred/Preference Shares" ></value>
+            <value code="C" cfi="EDCXXX" name="Common/Ordinary Convertible Shares" ></value>
+            <value code="F" cfi="EDFXXX" name="Preferred/Preference Convertible Shares" ></value>
+            <value code="L" cfi="EDLXXX" name="Limited Partnership Units" ></value>
+            <value code="M" cfi="EDMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Redemption/conversion of the underlying assets">
+            <value code="R" cfi="EDXRXX" name="Redeemable" ></value>
+            <value code="N" cfi="EDXNXX" name="Perpetual" ></value>
+            <value code="B" cfi="EDXBXX" name="Convertible" ></value>
+            <value code="D" cfi="EDXDXX" name="Convertible/Redeemable" ></value>
+        </attribute>
+        <attribute name="Income">
+            <value code="F" cfi="EDXXFX" name="Fixed Rate Income" ></value>
+            <value code="C" cfi="EDXXCX" name="Cumulative, Fixed Rate Income" ></value>
+            <value code="P" cfi="EDXXPX" name="Participating Income" ></value>
+            <value code="Q" cfi="EDXXQX" name="Cumulative, Participating Income" ></value>
+            <value code="A" cfi="EDXXAX" name="Adjustable/Variable Rate Income" ></value>
+            <value code="N" cfi="EDXXNX" name="Normal Rate Income" ></value>
+            <value code="U" cfi="EDXXUX" name="Auction Rate Income" ></value>
+            <value code="D" cfi="EDXXDX" name="Dividends" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="EDXXXB" name="Bearer" ></value>
+            <value code="R" cfi="EDXXXR" name="Registered" ></value>
+            <value code="N" cfi="EDXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="EDXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="Y" cfi="EYXXXX" name="Structured instruments (participation)">
+        <attribute name="Type">
+            <value code="A" cfi="EYAXXX" name="Tracker Certificate" ></value>
+            <value code="B" cfi="EYBXXX" name="Outperforming Certificate" ></value>
+            <value code="C" cfi="EYCXXX" name="Bonus Certificate" ></value>
+            <value code="D" cfi="EYDXXX" name="Outperformance Bonus Certificate" ></value>
+            <value code="E" cfi="EYEXXX" name="Twin-Win-Certificate" ></value>
+            <value code="M" cfi="EYMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution">
+            <value code="D" cfi="EYXDXX" name="Dividend Payments" ></value>
+            <value code="Y" cfi="EYXYXX" name="No Payments" ></value>
+            <value code="M" cfi="EYXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Repayment">
+            <value code="F" cfi="EYXXFX" name="Cash Repayment" ></value>
+            <value code="V" cfi="EYXXVX" name="Physical Repayment" ></value>
+            <value code="E" cfi="EYXXEX" name="Elect at Settlement" ></value>
+            <value code="M" cfi="EYXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B" cfi="EYXXXB" name="Baskets" ></value>
+            <value code="S" cfi="EYXXXS" name="Equities" ></value>
+            <value code="D" cfi="EYXXXD" name="Debt Instruments" ></value>
+            <value code="G" cfi="EYXXXG" name="Derivatives" ></value>
+            <value code="T" cfi="EYXXXT" name="Commodities" ></value>
+            <value code="C" cfi="EYXXXC" name="Currencies" ></value>
+            <value code="I" cfi="EYXXXI" name="Indices" ></value>
+            <value code="N" cfi="EYXXXN" name="Interest Rates" ></value>
+            <value code="M" cfi="EYXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="EMXXXX" name="Others (Miscellaneous)">
+        <attribute name="N/A">
+            <value code="X" cfi="EMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="EMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="EMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="EMXXXB" name="Bearer" ></value>
+            <value code="R" cfi="EMXXXR" name="Registered" ></value>
+            <value code="N" cfi="EMXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="EMXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="C" cfi="CXXXXX" name="Collective investment vehicles">
+    <group  code="I" cfi="CIXXXX" name="Standard (vanilla) investment funds/mutual funds">
+        <attribute name="Closed/open-end">
+            <value code="O" cfi="CIOXXX" name="Open-End" ></value>
+            <value code="C" cfi="CICXXX" name="Closed-End" ></value>
+            <value code="M" cfi="CIMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution policy">
+            <value code="I" cfi="CIXIXX" name="Income Funds" ></value>
+            <value code="G" cfi="CIXGXX" name="Accumulation Funds" ></value>
+            <value code="J" cfi="CIXJXX" name="Mixed Funds" ></value>
+        </attribute>
+        <attribute name="Assets">
+            <value code="R" cfi="CIXXRX" name="Real Estate" ></value>
+            <value code="B" cfi="CIXXBX" name="Debt Instruments" ></value>
+            <value code="E" cfi="CIXXEX" name="Equities" ></value>
+            <value code="V" cfi="CIXXVX" name="Convertible Securities" ></value>
+            <value code="L" cfi="CIXXLX" name="Mixed" ></value>
+            <value code="C" cfi="CIXXCX" name="Commodities" ></value>
+            <value code="D" cfi="CIXXDX" name="Derivatives" ></value>
+            <value code="F" cfi="CIXXFX" name="Referential Instruments" ></value>
+            <value code="K" cfi="CIXXKX" name="Credits" ></value>
+            <value code="M" cfi="CIXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Security type and investors restrictions">
+            <value code="S" cfi="CIXXXS" name="Shares" ></value>
+            <value code="Q" cfi="CIXXXQ" name="Shares for QI" ></value>
+            <value code="U" cfi="CIXXXU" name="Units" ></value>
+            <value code="Y" cfi="CIXXXY" name="Units for QI" ></value>
+        </attribute>
+    </group>
+    <group  code="H" cfi="CHXXXX" name="Hedge funds">
+        <attribute name="Investment strategy">
+            <value code="D" cfi="CHDXXX" name="Directional" ></value>
+            <value code="R" cfi="CHRXXX" name="Relative Value" ></value>
+            <value code="S" cfi="CHSXXX" name="Security Selection" ></value>
+            <value code="E" cfi="CHEXXX" name="Event-Driven" ></value>
+            <value code="A" cfi="CHAXXX" name="Artibrage" ></value>
+            <value code="N" cfi="CHNXXX" name="Multi-Strategy" ></value>
+            <value code="L" cfi="CHLXXX" name="Asset-Based Lending" ></value>
+            <value code="M" cfi="CHMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="CHXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="CHXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="CHXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="B" cfi="CBXXXX" name="Real estate investment trusts (REITs)">
+        <attribute name="Closed/open-end">
+            <value code="O" cfi="CBOXXX" name="Open-End" ></value>
+            <value code="C" cfi="CBCXXX" name="Closed-End" ></value>
+            <value code="M" cfi="CBMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution policy">
+            <value code="I" cfi="CBXIXX" name="Income Funds" ></value>
+            <value code="G" cfi="CBXGXX" name="Accumulation Funds" ></value>
+            <value code="J" cfi="CBXJXX" name="Mixed Funds" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="CBXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Security type and investors restrictions">
+            <value code="S" cfi="CBXXXS" name="Shares" ></value>
+            <value code="Q" cfi="CBXXXQ" name="Shares for QI" ></value>
+            <value code="U" cfi="CBXXXU" name="Units" ></value>
+            <value code="Y" cfi="CBXXXY" name="Units for QI" ></value>
+        </attribute>
+    </group>
+    <group  code="E" cfi="CEXXXX" name="Exchange-traded funds (ETFs)">
+        <attribute name="Closed/open-end">
+            <value code="O" cfi="CEOXXX" name="Open-End" ></value>
+            <value code="C" cfi="CECXXX" name="Closed-End" ></value>
+            <value code="M" cfi="CEMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution policy">
+            <value code="I" cfi="CEXIXX" name="Income Funds" ></value>
+            <value code="G" cfi="CEXGXX" name="Accumulation Funds" ></value>
+            <value code="J" cfi="CEXJXX" name="Mixed Funds" ></value>
+        </attribute>
+        <attribute name="Assets">
+            <value code="R" cfi="CEXXRX" name="Real Estate" ></value>
+            <value code="B" cfi="CEXXBX" name="Debt Instruments" ></value>
+            <value code="E" cfi="CEXXEX" name="Equities" ></value>
+            <value code="V" cfi="CEXXVX" name="Convertible Securities" ></value>
+            <value code="L" cfi="CEXXLX" name="Mixed" ></value>
+            <value code="C" cfi="CEXXCX" name="Commodities" ></value>
+            <value code="D" cfi="CEXXDX" name="Derivatives" ></value>
+            <value code="F" cfi="CEXXFX" name="Referential Instruments" ></value>
+            <value code="K" cfi="CEXXKX" name="Credits" ></value>
+            <value code="M" cfi="CEXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Security type">
+            <value code="S" cfi="CEXXXS" name="Shares" ></value>
+            <value code="U" cfi="CEXXXU" name="Units" ></value>
+        </attribute>
+    </group>
+    <group  code="S" cfi="CSXXXX" name="Pension funds">
+        <attribute name="Closed/open-end">
+            <value code="O" cfi="CSOXXX" name="Open-End" ></value>
+            <value code="C" cfi="CSCXXX" name="Closed-End" ></value>
+            <value code="M" cfi="CSMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Strategy/style">
+            <value code="B" cfi="CSXBXX" name="Balanced/Conservative" ></value>
+            <value code="G" cfi="CSXGXX" name="Growth" ></value>
+            <value code="L" cfi="CSXLXX" name="Life Style" ></value>
+            <value code="M" cfi="CSXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Type">
+            <value code="R" cfi="CSXXRX" name="Defined Benefit" ></value>
+            <value code="B" cfi="CSXXBX" name="Defined Contribution" ></value>
+            <value code="M" cfi="CSXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Security type">
+            <value code="S" cfi="CSXXXS" name="Shares" ></value>
+            <value code="U" cfi="CSXXXU" name="Units" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="CFXXXX" name="Funds of funds">
+        <attribute name="Closed/open-end">
+            <value code="O" cfi="CFOXXX" name="Open-End" ></value>
+            <value code="C" cfi="CFCXXX" name="Closed-End" ></value>
+            <value code="M" cfi="CFMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution policy">
+            <value code="I" cfi="CFXIXX" name="Income Funds" ></value>
+            <value code="G" cfi="CFXGXX" name="Accumulation Funds" ></value>
+            <value code="J" cfi="CFXJXX" name="Mixed Funds" ></value>
+        </attribute>
+        <attribute name="Type of funds">
+            <value code="I" cfi="CFXXIX" name="Standard (Vanilla)" ></value>
+            <value code="H" cfi="CFXXHX" name="Hedge Funds" ></value>
+            <value code="B" cfi="CFXXBX" name="REIT" ></value>
+            <value code="E" cfi="CFXXEX" name="ETF" ></value>
+            <value code="P" cfi="CFXXPX" name="Private Equity Funds" ></value>
+            <value code="M" cfi="CFXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Security type and investors restrictions">
+            <value code="S" cfi="CFXXXS" name="Shares" ></value>
+            <value code="Q" cfi="CFXXXQ" name="Shares for QI" ></value>
+            <value code="U" cfi="CFXXXU" name="Units" ></value>
+            <value code="Y" cfi="CFXXXY" name="Units for QI" ></value>
+        </attribute>
+    </group>
+    <group  code="P" cfi="CPXXXX" name="Private equity funds">
+        <attribute name="Closed/open-end">
+            <value code="O" cfi="CPOXXX" name="Open-End" ></value>
+            <value code="C" cfi="CPCXXX" name="Closed-End" ></value>
+            <value code="M" cfi="CPMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution policy">
+            <value code="I" cfi="CPXIXX" name="Income Funds" ></value>
+            <value code="G" cfi="CPXGXX" name="Accumulation Funds" ></value>
+            <value code="J" cfi="CPXJXX" name="Mixed Funds" ></value>
+        </attribute>
+        <attribute name="Assets">
+            <value code="R" cfi="CPXXRX" name="Real Estate" ></value>
+            <value code="B" cfi="CPXXBX" name="Debt Instruments" ></value>
+            <value code="E" cfi="CPXXEX" name="Equities" ></value>
+            <value code="V" cfi="CPXXVX" name="Convertible Securities" ></value>
+            <value code="L" cfi="CPXXLX" name="Mixed" ></value>
+            <value code="C" cfi="CPXXCX" name="Commodities" ></value>
+            <value code="D" cfi="CPXXDX" name="Derivatives" ></value>
+            <value code="F" cfi="CPXXFX" name="Referential Instruments" ></value>
+            <value code="K" cfi="CPXXKX" name="Credits" ></value>
+            <value code="M" cfi="CPXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Security type and investors restrictions">
+            <value code="S" cfi="CPXXXS" name="Shares" ></value>
+            <value code="Q" cfi="CPXXXQ" name="Shares for QI" ></value>
+            <value code="U" cfi="CPXXXU" name="Units" ></value>
+            <value code="Y" cfi="CPXXXY" name="Units for QI" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="CMXXXX" name="Others (Miscellaneous)">
+        <attribute name="N/A">
+            <value code="X" cfi="CMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="CMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="CMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Security type and investors restrictions">
+            <value code="S" cfi="CMXXXS" name="Shares" ></value>
+            <value code="Q" cfi="CMXXXQ" name="Shares for QI" ></value>
+            <value code="U" cfi="CMXXXU" name="Units" ></value>
+            <value code="Y" cfi="CMXXXY" name="Units for QI" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="D" cfi="DXXXXX" name="Debt instruments">
+    <group  code="B" cfi="DBXXXX" name="Bonds">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DBFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DBZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DBVXXX" name="Variable" ></value>
+            <value code="C" cfi="DBCXXX" name="Cash Payment" ></value>
+            <value code="K" cfi="DBKXXX" name="Payment in Kind" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DBXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DBXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DBXSXX" name="Secured" ></value>
+            <value code="U" cfi="DBXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DBXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DBXNXX" name="Senior" ></value>
+            <value code="O" cfi="DBXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DBXQXX" name="Junior" ></value>
+            <value code="J" cfi="DBXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DBXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DBXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DBXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DBXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DBXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DBXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DBXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DBXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DBXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DBXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DBXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DBXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DBXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DBXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DBXXXR" name="Registered" ></value>
+            <value code="N" cfi="DBXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DBXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="DCXXXX" name="Convertible bonds">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DCFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DCZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DCVXXX" name="Variable" ></value>
+            <value code="K" cfi="DCKXXX" name="Payment in Kind" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DCXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DCXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DCXSXX" name="Secured" ></value>
+            <value code="U" cfi="DCXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DCXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DCXNXX" name="Senior" ></value>
+            <value code="O" cfi="DCXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DCXQXX" name="Junior" ></value>
+            <value code="J" cfi="DCXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DCXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DCXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DCXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DCXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DCXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DCXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DCXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DCXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DCXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DCXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DCXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DCXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DCXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DCXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DCXXXR" name="Registered" ></value>
+            <value code="N" cfi="DCXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DCXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="W" cfi="DWXXXX" name="Bonds with warrants attached">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DWFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DWZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DWVXXX" name="Variable" ></value>
+            <value code="K" cfi="DWKXXX" name="Payment in Kind" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DWXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DWXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DWXSXX" name="Secured" ></value>
+            <value code="U" cfi="DWXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DWXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DWXNXX" name="Senior" ></value>
+            <value code="O" cfi="DWXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DWXQXX" name="Junior" ></value>
+            <value code="J" cfi="DWXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DWXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DWXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DWXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DWXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DWXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DWXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DWXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DWXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DWXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DWXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DWXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DWXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DWXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DWXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DWXXXR" name="Registered" ></value>
+            <value code="N" cfi="DWXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DWXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="DTXXXX" name="Medium term notes">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DTFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DTZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DTVXXX" name="Variable" ></value>
+            <value code="K" cfi="DTKXXX" name="Payment in Kind" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DTXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DTXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DTXSXX" name="Secured" ></value>
+            <value code="U" cfi="DTXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DTXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DTXNXX" name="Senior" ></value>
+            <value code="O" cfi="DTXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DTXQXX" name="Junior" ></value>
+            <value code="J" cfi="DTXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DTXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DTXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DTXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DTXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DTXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DTXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DTXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DTXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DTXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DTXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DTXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DTXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DTXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DTXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DTXXXR" name="Registered" ></value>
+            <value code="N" cfi="DTXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DTXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="S" cfi="DSXXXX" name="Structured products (capital protection)">
+        <attribute name="Type">
+            <value code="A" cfi="DSAXXX" name="Capital Protection Certificate with Participation" ></value>
+            <value code="B" cfi="DSBXXX" name="Capital Protection Convertible Certificate" ></value>
+            <value code="C" cfi="DSCXXX" name="Barrier Capital Protection Certificate" ></value>
+            <value code="D" cfi="DSDXXX" name="Capital Protection Certificate with Coupons" ></value>
+            <value code="M" cfi="DSMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution">
+            <value code="F" cfi="DSXFXX" name="Fixed Interest Payments" ></value>
+            <value code="D" cfi="DSXDXX" name="Dividend Payments" ></value>
+            <value code="V" cfi="DSXVXX" name="Variable Interest Payments" ></value>
+            <value code="Y" cfi="DSXYXX" name="No Payments" ></value>
+            <value code="M" cfi="DSXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Repayment">
+            <value code="F" cfi="DSXXFX" name="Fixed Cash Repayment (Only Protected Capital Level)" ></value>
+            <value code="V" cfi="DSXXVX" name="Variable Cash Repayment" ></value>
+            <value code="M" cfi="DSXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B" cfi="DSXXXB" name="Baskets" ></value>
+            <value code="S" cfi="DSXXXS" name="Equities" ></value>
+            <value code="D" cfi="DSXXXD" name="Debt Instruments" ></value>
+            <value code="T" cfi="DSXXXT" name="Commodities" ></value>
+            <value code="C" cfi="DSXXXC" name="Currencies" ></value>
+            <value code="I" cfi="DSXXXI" name="Indices" ></value>
+            <value code="N" cfi="DSXXXN" name="Interest Rates" ></value>
+            <value code="M" cfi="DSXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="E" cfi="DEXXXX" name="Structured products (without capital protection)">
+        <attribute name="Type">
+            <value code="A" cfi="DEAXXX" name="Discount Certificate" ></value>
+            <value code="B" cfi="DEBXXX" name="Barrier Discount Certificate" ></value>
+            <value code="C" cfi="DECXXX" name="Reverse Convertible" ></value>
+            <value code="D" cfi="DEDXXX" name="Barrier Reverse Convertible" ></value>
+            <value code="E" cfi="DEEXXX" name="Express Certificate" ></value>
+            <value code="M" cfi="DEMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Distribution">
+            <value code="F" cfi="DEXFXX" name="Fixed Interest Payments" ></value>
+            <value code="D" cfi="DEXDXX" name="Dividend Payments" ></value>
+            <value code="V" cfi="DEXVXX" name="Variable Interest Payments" ></value>
+            <value code="Y" cfi="DEXYXX" name="No Payments" ></value>
+            <value code="M" cfi="DEXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Repayment">
+            <value code="R" cfi="DEXXRX" name="Repayment in Cash" ></value>
+            <value code="S" cfi="DEXXSX" name="Repayment in Assets" ></value>
+            <value code="C" cfi="DEXXCX" name="Repayment in Assets and Cash" ></value>
+            <value code="T" cfi="DEXXTX" name="Repayment in Assets or Cash" ></value>
+            <value code="M" cfi="DEXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B" cfi="DEXXXB" name="Baskets" ></value>
+            <value code="S" cfi="DEXXXS" name="Equities" ></value>
+            <value code="D" cfi="DEXXXD" name="Debt Instruments" ></value>
+            <value code="T" cfi="DEXXXT" name="Commodities" ></value>
+            <value code="C" cfi="DEXXXC" name="Currencies" ></value>
+            <value code="I" cfi="DEXXXI" name="Indices" ></value>
+            <value code="N" cfi="DEXXXN" name="Interest Rates" ></value>
+            <value code="M" cfi="DEXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="G" cfi="DGXXXX" name="Mortgage-backed securities">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DGFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DGZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DGVXXX" name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DGXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DGXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DGXSXX" name="Secured" ></value>
+            <value code="U" cfi="DGXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DGXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DGXNXX" name="Senior" ></value>
+            <value code="O" cfi="DGXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DGXQXX" name="Junior" ></value>
+            <value code="J" cfi="DGXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DGXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DGXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DGXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DGXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DGXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DGXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DGXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DGXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DGXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DGXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DGXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DGXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DGXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DGXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DGXXXR" name="Registered" ></value>
+            <value code="N" cfi="DGXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DGXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="A" cfi="DAXXXX" name="Asset-backed securities">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DAFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DAZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DAVXXX" name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DAXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DAXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DAXSXX" name="Secured" ></value>
+            <value code="U" cfi="DAXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DAXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DAXNXX" name="Senior" ></value>
+            <value code="O" cfi="DAXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DAXQXX" name="Junior" ></value>
+            <value code="J" cfi="DAXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DAXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DAXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DAXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DAXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DAXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DAXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DAXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DAXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DAXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DAXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DAXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DAXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DAXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DAXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DAXXXR" name="Registered" ></value>
+            <value code="N" cfi="DAXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DAXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="N" cfi="DNXXXX" name="Municipal bonds">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DNFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DNZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DNVXXX" name="Variable" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DNXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DNXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DNXSXX" name="Secured" ></value>
+            <value code="U" cfi="DNXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DNXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DNXNXX" name="Senior" ></value>
+            <value code="O" cfi="DNXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DNXQXX" name="Junior" ></value>
+            <value code="J" cfi="DNXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DNXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DNXXFX" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DNXXGX" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DNXXCX" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DNXXDX" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DNXXAX" name="Amortization Plan" ></value>
+            <value code="B" cfi="DNXXBX" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DNXXTX" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DNXXLX" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DNXXPX" name="Perpetual" ></value>
+            <value code="Q" cfi="DNXXQX" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DNXXRX" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DNXXEX" name="Extendible" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DNXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DNXXXR" name="Registered" ></value>
+            <value code="N" cfi="DNXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DNXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="D" cfi="DDXXXX" name="Depositary receipts on debt instruments">
+        <attribute name="Instrument dependency">
+            <value code="B" cfi="DDBXXX" name="Bonds" ></value>
+            <value code="C" cfi="DDCXXX" name="Convertible Bonds" ></value>
+            <value code="W" cfi="DDWXXX" name="Bonds with Warrants Attached" ></value>
+            <value code="T" cfi="DDTXXX" name="Medium-Term Notes" ></value>
+            <value code="Y" cfi="DDYXXX" name="Money Market Instruments" ></value>
+            <value code="G" cfi="DDGXXX" name="Mortgage-Backed Securities" ></value>
+            <value code="A" cfi="DDAXXX" name="Asset-Backed Securities" ></value>
+            <value code="N" cfi="DDNXXX" name="Municipal Bonds" ></value>
+            <value code="M" cfi="DDMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Type of interest">
+            <value code="F" cfi="DDXFXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DDXZXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DDXVXX" name="Variable" ></value>
+            <value code="C" cfi="DDXCXX" name="Cash Payment" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DDXXTX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DDXXGX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DDXXSX" name="Secured" ></value>
+            <value code="U" cfi="DDXXUX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DDXXPX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DDXXNX" name="Senior" ></value>
+            <value code="O" cfi="DDXXOX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DDXXQX" name="Junior" ></value>
+            <value code="J" cfi="DDXXJX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DDXXCX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="Redemption/reimbursement">
+            <value code="F" cfi="DDXXXF" name="Fixed Maturity" ></value>
+            <value code="G" cfi="DDXXXG" name="Fixed Maturity with Call Feature" ></value>
+            <value code="C" cfi="DDXXXC" name="Fixed Maturity with Put Feature" ></value>
+            <value code="D" cfi="DDXXXD" name="Fixed Maturity with Put and Call" ></value>
+            <value code="A" cfi="DDXXXA" name="Amortization Plan" ></value>
+            <value code="B" cfi="DDXXXB" name="Amortization Plan with Call Feature" ></value>
+            <value code="T" cfi="DDXXXT" name="Amortization Plan with Put Feature" ></value>
+            <value code="L" cfi="DDXXXL" name="Amortization Plan with Put and Call" ></value>
+            <value code="P" cfi="DDXXXP" name="Perpetual" ></value>
+            <value code="Q" cfi="DDXXXQ" name="Perpetual with Call Feature" ></value>
+            <value code="R" cfi="DDXXXR" name="Perpetual with Put Feature" ></value>
+            <value code="E" cfi="DDXXXE" name="Extendible" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="DMXXXX" name="Others (Miscellaneous)">
+        <attribute name="Type">
+            <value code="B" cfi="DMBXXX" name="Bank Loan" ></value>
+            <value code="P" cfi="DMPXXX" name="Promissory Note" ></value>
+            <value code="M" cfi="DMMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="DMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="DMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DMXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DMXXXR" name="Registered" ></value>
+            <value code="N" cfi="DMXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DMXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="Y" cfi="DYXXXX" name="Money Market Instruments">
+        <attribute name="Type of interest">
+            <value code="F" cfi="DYFXXX" name="Fixed Rate" ></value>
+            <value code="Z" cfi="DYZXXX" name="Zero Rate/Discounted" ></value>
+            <value code="V" cfi="DYVXXX" name="Variable" ></value>
+            <value code="K" cfi="DYKXXX" name="Payment in Kind" ></value>
+        </attribute>
+        <attribute name="Guarantee or ranking">
+            <value code="T" cfi="DYXTXX" name="Government/State Guarantee" ></value>
+            <value code="G" cfi="DYXGXX" name="Joint Guarantee" ></value>
+            <value code="S" cfi="DYXSXX" name="Secured" ></value>
+            <value code="U" cfi="DYXUXX" name="Unsecured/Unguaranteed" ></value>
+            <value code="P" cfi="DYXPXX" name="Negative Pledge" ></value>
+            <value code="N" cfi="DYXNXX" name="Senior" ></value>
+            <value code="O" cfi="DYXOXX" name="Senior Subordinated" ></value>
+            <value code="Q" cfi="DYXQXX" name="Junior" ></value>
+            <value code="J" cfi="DYXJXX" name="Junior Subordinated" ></value>
+            <value code="C" cfi="DYXCXX" name="Supranational" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="DYXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="DYXXXB" name="Bearer" ></value>
+            <value code="R" cfi="DYXXXR" name="Registered" ></value>
+            <value code="N" cfi="DYXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="DYXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="R" cfi="RXXXXX" name="Rights (Entitlements)">
+    <group  code="A" cfi="RAXXXX" name="Bonus Rights (Allotments)">
+        <attribute name="N/A">
+            <value code="X" cfi="RAXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RAXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RAXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="RAXXXB" name="Bearer" ></value>
+            <value code="R" cfi="RAXXXR" name="Registered" ></value>
+            <value code="N" cfi="RAXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="RAXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="S" cfi="RSXXXX" name="Subscription Rights">
+        <attribute name="Assets">
+            <value code="S" cfi="RSSXXX" name="Common/Ordinary Shares" ></value>
+            <value code="P" cfi="RSPXXX" name="Preferred/Preference Shares" ></value>
+            <value code="C" cfi="RSCXXX" name="Common/Ordinary Convertible Shares" ></value>
+            <value code="F" cfi="RSFXXX" name="Preferred/Preference Convertible Shares" ></value>
+            <value code="B" cfi="RSBXXX" name="Bonds" ></value>
+            <value code="I" cfi="RSIXXX" name="Combined Instruments" ></value>
+            <value code="M" cfi="RSMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RSXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RSXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="RSXXXB" name="Bearer" ></value>
+            <value code="R" cfi="RSXXXR" name="Registered" ></value>
+            <value code="N" cfi="RSXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="RSXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="P" cfi="RPXXXX" name="Purchase Rights">
+        <attribute name="Assets">
+            <value code="S" cfi="RPSXXX" name="Common/Ordinary Shares" ></value>
+            <value code="P" cfi="RPPXXX" name="Preferred/Preference Shares" ></value>
+            <value code="C" cfi="RPCXXX" name="Common/Ordinary Convertible Shares" ></value>
+            <value code="F" cfi="RPFXXX" name="Preferred/Preference Convertible Shares" ></value>
+            <value code="B" cfi="RPBXXX" name="Bonds" ></value>
+            <value code="I" cfi="RPIXXX" name="Combined Instruments" ></value>
+            <value code="M" cfi="RPMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RPXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RPXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="RPXXXB" name="Bearer" ></value>
+            <value code="R" cfi="RPXXXR" name="Registered" ></value>
+            <value code="N" cfi="RPXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="RPXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="W" cfi="RWXXXX" name="Warrants">
+        <attribute name="Underlying assets">
+            <value code="B" cfi="RWBXXX" name="Baskets" ></value>
+            <value code="S" cfi="RWSXXX" name="Equities" ></value>
+            <value code="D" cfi="RWDXXX" name="Debt Instruments" ></value>
+            <value code="T" cfi="RWTXXX" name="Commodities" ></value>
+            <value code="C" cfi="RWCXXX" name="Currencies" ></value>
+            <value code="I" cfi="RWIXXX" name="Indices" ></value>
+            <value code="M" cfi="RWMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Type">
+            <value code="T" cfi="RWXTXX" name="Traditional Warrants" ></value>
+            <value code="N" cfi="RWXNXX" name="Naked Warrants" ></value>
+            <value code="C" cfi="RWXCXX" name="Covered Warrants" ></value>
+        </attribute>
+        <attribute name="Call/put">
+            <value code="C" cfi="RWXXCX" name="Call" ></value>
+            <value code="P" cfi="RWXXPX" name="Put" ></value>
+            <value code="B" cfi="RWXXBX" name="Call and Put" ></value>
+        </attribute>
+        <attribute name="Exercise option style">
+            <value code="A" cfi="RWXXXA" name="American" ></value>
+            <value code="E" cfi="RWXXXE" name="European" ></value>
+            <value code="B" cfi="RWXXXB" name="Bermudan" ></value>
+            <value code="M" cfi="RWXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="RFXXXX" name="Mini-future certificates/constant leverage certificates">
+        <attribute name="Underlying assets">
+            <value code="B" cfi="RFBXXX" name="Baskets" ></value>
+            <value code="S" cfi="RFSXXX" name="Equities" ></value>
+            <value code="D" cfi="RFDXXX" name="Debt Instruments" ></value>
+            <value code="T" cfi="RFTXXX" name="Commodities" ></value>
+            <value code="C" cfi="RFCXXX" name="Currencies" ></value>
+            <value code="I" cfi="RFIXXX" name="Indices" ></value>
+            <value code="M" cfi="RFMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Barrier dependency type">
+            <value code="T" cfi="RFXTXX" name="Barrier Underlying Based" ></value>
+            <value code="N" cfi="RFXNXX" name="Barrier Instrument Based" ></value>
+            <value code="M" cfi="RFXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Long/Short">
+            <value code="C" cfi="RFXXCX" name="Long" ></value>
+            <value code="P" cfi="RFXXPX" name="Short" ></value>
+            <value code="M" cfi="RFXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Exercise option style">
+            <value code="A" cfi="RFXXXA" name="American" ></value>
+            <value code="E" cfi="RFXXXE" name="European" ></value>
+            <value code="B" cfi="RFXXXB" name="Bermudan" ></value>
+            <value code="M" cfi="RFXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="D" cfi="RDXXXX" name="Depositary receipts on entitlements">
+        <attribute name="Instrument dependency">
+            <value code="A" cfi="RDAXXX" name="Allotment (Bonus) Rights" ></value>
+            <value code="S" cfi="RDSXXX" name="Subscription Rights" ></value>
+            <value code="P" cfi="RDPXXX" name="Purchase Rights" ></value>
+            <value code="W" cfi="RDWXXX" name="Warrants" ></value>
+            <value code="M" cfi="RDMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RDXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RDXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="RDXXXB" name="Bearer" ></value>
+            <value code="R" cfi="RDXXXR" name="Registered" ></value>
+            <value code="N" cfi="RDXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="RDXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="RMXXXX" name="Others (Miscellaneous)">
+        <attribute name="N/A">
+            <value code="X" cfi="RMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="RMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="O" cfi="OXXXXX" name="Listed options">
+    <group  code="C" cfi="OCXXXX" name="Call options">
+        <attribute name="Exercise option style">
+            <value code="A" cfi="OCAXXX" name="American" ></value>
+            <value code="E" cfi="OCEXXX" name="European" ></value>
+            <value code="B" cfi="OCBXXX" name="Bermudan" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B" cfi="OCXBXX" name="Baskets" ></value>
+            <value code="S" cfi="OCXSXX" name="Equities" ></value>
+            <value code="D" cfi="OCXDXX" name="Debt Instruments" ></value>
+            <value code="T" cfi="OCXTXX" name="Commodities" ></value>
+            <value code="C" cfi="OCXCXX" name="Currencies" ></value>
+            <value code="I" cfi="OCXIXX" name="Indices" ></value>
+            <value code="O" cfi="OCXOXX" name="Options" ></value>
+            <value code="F" cfi="OCXFXX" name="Futures" ></value>
+            <value code="W" cfi="OCXWXX" name="Swaps" ></value>
+            <value code="N" cfi="OCXNXX" name="Interest Rates" ></value>
+            <value code="M" cfi="OCXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="OCXXPX" name="Physical" ></value>
+            <value code="C" cfi="OCXXCX" name="Cash" ></value>
+            <value code="N" cfi="OCXXNX" name="Non-Deliverable" ></value>
+            <value code="E" cfi="OCXXEX" name="Elect at Exercise" ></value>
+        </attribute>
+        <attribute name="Standardized / Non-Standardized">
+            <value code="S" cfi="OCXXXS" name="Standardized" ></value>
+            <value code="N" cfi="OCXXXN" name="Non-Standardized" ></value>
+        </attribute>
+    </group>
+    <group  code="P" cfi="OPXXXX" name="Put options">
+        <attribute name="Exercise option style">
+            <value code="A" cfi="OPAXXX" name="American" ></value>
+            <value code="E" cfi="OPEXXX" name="European" ></value>
+            <value code="B" cfi="OPBXXX" name="Bermudan" ></value>
+        </attribute>
+        <attribute name="Underlying assets">
+            <value code="B" cfi="OPXBXX" name="Baskets" ></value>
+            <value code="S" cfi="OPXSXX" name="Equities" ></value>
+            <value code="D" cfi="OPXDXX" name="Debt Instruments" ></value>
+            <value code="T" cfi="OPXTXX" name="Commodities" ></value>
+            <value code="C" cfi="OPXCXX" name="Currencies" ></value>
+            <value code="I" cfi="OPXIXX" name="Indices" ></value>
+            <value code="O" cfi="OPXOXX" name="Options" ></value>
+            <value code="F" cfi="OPXFXX" name="Futures" ></value>
+            <value code="W" cfi="OPXWXX" name="Swaps" ></value>
+            <value code="N" cfi="OPXNXX" name="Interest Rates" ></value>
+            <value code="M" cfi="OPXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="OPXXPX" name="Physical" ></value>
+            <value code="C" cfi="OPXXCX" name="Cash" ></value>
+            <value code="N" cfi="OPXXNX" name="Non-Deliverable" ></value>
+            <value code="E" cfi="OPXXEX" name="Elect at Exercise" ></value>
+        </attribute>
+        <attribute name="Standardized / Non-Standardized">
+            <value code="S" cfi="OPXXXS" name="Standardized" ></value>
+            <value code="N" cfi="OPXXXN" name="Non-Standardized" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="OMXXXX" name="Others (Miscellaneous)">
+        <attribute name="N/A">
+            <value code="X" cfi="OMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="OMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="OMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="OMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="F" cfi="FXXXXX" name="Futures">
+    <group  code="F" cfi="FFXXXX" name="Financial futures">
+        <attribute name="Underlying assets">
+            <value code="B" cfi="FFBXXX" name="Baskets" ></value>
+            <value code="S" cfi="FFSXXX" name="Equities" ></value>
+            <value code="D" cfi="FFDXXX" name="Debt Instruments" ></value>
+            <value code="C" cfi="FFCXXX" name="Currencies" ></value>
+            <value code="I" cfi="FFIXXX" name="Indices" ></value>
+            <value code="O" cfi="FFOXXX" name="Options" ></value>
+            <value code="F" cfi="FFFXXX" name="Futures" ></value>
+            <value code="W" cfi="FFWXXX" name="Swaps" ></value>
+            <value code="N" cfi="FFNXXX" name="Interest Rates" ></value>
+            <value code="V" cfi="FFVXXX" name="Stock Dividend" ></value>
+            <value code="M" cfi="FFMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="FFXPXX" name="Physical" ></value>
+            <value code="C" cfi="FFXCXX" name="Cash" ></value>
+            <value code="N" cfi="FFXNXX" name="Non-Deliverable" ></value>
+        </attribute>
+        <attribute name="Standardized / Non-Standardized">
+            <value code="S" cfi="FFXXSX" name="Standardized" ></value>
+            <value code="N" cfi="FFXXNX" name="Non-Standardized" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="FFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="FCXXXX" name="Commodities futures">
+        <attribute name="Underlying assets">
+            <value code="E" cfi="FCEXXX" name="Extraction Resources" ></value>
+            <value code="A" cfi="FCAXXX" name="Agriculture" ></value>
+            <value code="I" cfi="FCIXXX" name="Industrial Products" ></value>
+            <value code="S" cfi="FCSXXX" name="Services" ></value>
+            <value code="N" cfi="FCNXXX" name="Environmental" ></value>
+            <value code="P" cfi="FCPXXX" name="Polypropylene Products" ></value>
+            <value code="H" cfi="FCHXXX" name="Generated Resources" ></value>
+            <value code="M" cfi="FCMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="FCXPXX" name="Physical" ></value>
+            <value code="C" cfi="FCXCXX" name="Cash" ></value>
+            <value code="N" cfi="FCXNXX" name="Non-Deliverable" ></value>
+        </attribute>
+        <attribute name="Standardized / Non-Standardized">
+            <value code="S" cfi="FCXXSX" name="Standardized" ></value>
+            <value code="N" cfi="FCXXNX" name="Non-Standardized" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="FCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="S" cfi="SXXXXX" name="Swaps">
+    <group  code="R" cfi="SRXXXX" name="Rates">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="SRAXXX" name="Basis swap" ></value>
+            <value code="C" cfi="SRCXXX" name="Fixed-Floating" ></value>
+            <value code="D" cfi="SRDXXX" name="Fixed-Fixed" ></value>
+            <value code="G" cfi="SRGXXX" name="Inflation rate index" ></value>
+            <value code="H" cfi="SRHXXX" name="Overnight Index Swap (OIS)" ></value>
+            <value code="Z" cfi="SRZXXX" name="Zero coupon" ></value>
+            <value code="M" cfi="SRMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Notional">
+            <value code="C" cfi="SRXCXX" name="Constant" ></value>
+            <value code="D" cfi="SRXDXX" name="Accreting" ></value>
+            <value code="I" cfi="SRXIXX" name="Amortizing" ></value>
+            <value code="Y" cfi="SRXYXX" name="Custom" ></value>
+        </attribute>
+        <attribute name="Single or multi-currency">
+            <value code="S" cfi="SRXXSX" name="Single-Currency" ></value>
+            <value code="C" cfi="SRXXCX" name="Cross-Currency" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="SRXXXC" name="Cash" ></value>
+            <value code="P" cfi="SRXXXP" name="Physical" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="STXXXX" name="Commodities">
+        <attribute name="Underlying assets">
+            <value code="J" cfi="STJXXX" name="Energy" ></value>
+            <value code="K" cfi="STKXXX" name="Metals" ></value>
+            <value code="A" cfi="STAXXX" name="Agriculture" ></value>
+            <value code="N" cfi="STNXXX" name="Environmental" ></value>
+            <value code="G" cfi="STGXXX" name="Freight" ></value>
+            <value code="P" cfi="STPXXX" name="Polypropylene Products" ></value>
+            <value code="S" cfi="STSXXX" name="Fertilizer" ></value>
+            <value code="T" cfi="STTXXX" name="Paper" ></value>
+            <value code="I" cfi="STIXXX" name="Indices" ></value>
+            <value code="Q" cfi="STQXXX" name="Multi-Commodity" ></value>
+            <value code="M" cfi="STMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="T" cfi="STXTXX" name="Total return" ></value>
+            <value code="C" cfi="STXCXX" name="Contract for difference" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="STXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="STXXXC" name="Cash" ></value>
+            <value code="P" cfi="STXXXP" name="Physical" ></value>
+            <value code="E" cfi="STXXXE" name="Elect at settlement" ></value>
+        </attribute>
+    </group>
+    <group  code="E" cfi="SEXXXX" name="Equity">
+        <attribute name="Underlying assets">
+            <value code="S" cfi="SESXXX" name="Single stock" ></value>
+            <value code="I" cfi="SEIXXX" name="Indices" ></value>
+            <value code="B" cfi="SEBXXX" name="Baskets" ></value>
+            <value code="M" cfi="SEMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="P" cfi="SEXPXX" name="Price" ></value>
+            <value code="D" cfi="SEXDXX" name="Dividend" ></value>
+            <value code="V" cfi="SEXVXX" name="Variance" ></value>
+            <value code="L" cfi="SEXLXX" name="Volatility" ></value>
+            <value code="T" cfi="SEXTXX" name="Total return" ></value>
+            <value code="C" cfi="SEXCXX" name="Contract for difference" ></value>
+            <value code="M" cfi="SEXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="SEXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="SEXXXC" name="Cash" ></value>
+            <value code="P" cfi="SEXXXP" name="Physical" ></value>
+            <value code="E" cfi="SEXXXE" name="Elect at settlement" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="SCXXXX" name="Credit">
+        <attribute name="Underlying assets">
+            <value code="U" cfi="SCUXXX" name="Single code" ></value>
+            <value code="V" cfi="SCVXXX" name="Index tranche" ></value>
+            <value code="I" cfi="SCIXXX" name="Indices" ></value>
+            <value code="B" cfi="SCBXXX" name="Baskets" ></value>
+            <value code="M" cfi="SCMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="C" cfi="SCXCXX" name="Credit default" ></value>
+            <value code="T" cfi="SCXTXX" name="Total return" ></value>
+            <value code="M" cfi="SCXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Underlying issuer type">
+            <value code="C" cfi="SCXXCX" name="Corporate" ></value>
+            <value code="S" cfi="SCXXSX" name="Sovereign" ></value>
+            <value code="L" cfi="SCXXLX" name="Local" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="SCXXXC" name="Cash" ></value>
+            <value code="P" cfi="SCXXXP" name="Physical" ></value>
+            <value code="A" cfi="SCXXXA" name="Auction" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="SFXXXX" name="Foreign exchange">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="SFAXXX" name="Spot-Forward swap" ></value>
+            <value code="C" cfi="SFCXXX" name="Forward-forward swap" ></value>
+            <value code="M" cfi="SFMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="SFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="SFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="SFXXXP" name="Physical" ></value>
+            <value code="N" cfi="SFXXXN" name="Non-Deliverable" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="SMXXXX" name="Others (Miscellaneous)">
+        <attribute name="Underlying assets">
+            <value code="P" cfi="SMPXXX" name="Commercial property (or proerty derivative)" ></value>
+            <value code="M" cfi="SMMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="SMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="SMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="SMXXXC" name="Cash" ></value>
+            <value code="P" cfi="SMXXXP" name="Physical" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="H" cfi="HXXXXX" name="Non-listed and complex listed options">
+    <group  code="R" cfi="HRXXXX" name="Rates">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="HRAXXX" name="Basis swap" ></value>
+            <value code="C" cfi="HRCXXX" name="Fixed-Floating" ></value>
+            <value code="D" cfi="HRDXXX" name="Fixed-Fixed" ></value>
+            <value code="G" cfi="HRGXXX" name="Inflation rate index" ></value>
+            <value code="H" cfi="HRHXXX" name="Overnight Index Swap (OIS)" ></value>
+            <value code="O" cfi="HROXXX" name="Options" ></value>
+            <value code="R" cfi="HRRXXX" name="Forwards" ></value>
+            <value code="F" cfi="HRFXXX" name="Futures" ></value>
+            <value code="M" cfi="HRMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Option style and type">
+            <value code="A" cfi="HRXAXX" name="European Call" ></value>
+            <value code="B" cfi="HRXBXX" name="American Call" ></value>
+            <value code="C" cfi="HRXCXX" name="Bermudan Call" ></value>
+            <value code="D" cfi="HRXDXX" name="European Put" ></value>
+            <value code="E" cfi="HRXEXX" name="American Put" ></value>
+            <value code="F" cfi="HRXFXX" name="Bermudan Put" ></value>
+            <value code="G" cfi="HRXGXX" name="European Chooser" ></value>
+            <value code="H" cfi="HRXHXX" name="American Chooser" ></value>
+            <value code="I" cfi="HRXIXX" name="Bermudan Chooser" ></value>
+        </attribute>
+        <attribute name="Valuation method or trigger">
+            <value code="V" cfi="HRXXVX" name="Vanilla" ></value>
+            <value code="A" cfi="HRXXAX" name="Asian" ></value>
+            <value code="D" cfi="HRXXDX" name="Digital (Binary)" ></value>
+            <value code="B" cfi="HRXXBX" name="Barrier" ></value>
+            <value code="G" cfi="HRXXGX" name="Digital barrier" ></value>
+            <value code="L" cfi="HRXXLX" name="Lookback" ></value>
+            <value code="P" cfi="HRXXPX" name="Other path dependent" ></value>
+            <value code="M" cfi="HRXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="HRXXXC" name="Cash" ></value>
+            <value code="P" cfi="HRXXXP" name="Physical" ></value>
+            <value code="E" cfi="HRXXXE" name="Elect at Exercise" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="HTXXXX" name="Commodities">
+        <attribute name="Underlying assets">
+            <value code="J" cfi="HTJXXX" name="Energy" ></value>
+            <value code="K" cfi="HTKXXX" name="Metals" ></value>
+            <value code="A" cfi="HTAXXX" name="Agriculture" ></value>
+            <value code="N" cfi="HTNXXX" name="Environmental" ></value>
+            <value code="G" cfi="HTGXXX" name="Freight" ></value>
+            <value code="P" cfi="HTPXXX" name="Polypropylene Products" ></value>
+            <value code="S" cfi="HTSXXX" name="Fertilizer" ></value>
+            <value code="T" cfi="HTTXXX" name="Paper" ></value>
+            <value code="I" cfi="HTIXXX" name="Indices" ></value>
+            <value code="Q" cfi="HTQXXX" name="Multi-Commodity" ></value>
+            <value code="O" cfi="HTOXXX" name="Options" ></value>
+            <value code="R" cfi="HTRXXX" name="Forwards" ></value>
+            <value code="F" cfi="HTFXXX" name="Futures" ></value>
+            <value code="W" cfi="HTWXXX" name="Swaps" ></value>
+            <value code="M" cfi="HTMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Option style and type">
+            <value code="A" cfi="HTXAXX" name="European Call" ></value>
+            <value code="B" cfi="HTXBXX" name="American Call" ></value>
+            <value code="C" cfi="HTXCXX" name="Bermudan Call" ></value>
+            <value code="D" cfi="HTXDXX" name="European Put" ></value>
+            <value code="E" cfi="HTXEXX" name="American Put" ></value>
+            <value code="F" cfi="HTXFXX" name="Bermudan Put" ></value>
+            <value code="G" cfi="HTXGXX" name="European Chooser" ></value>
+            <value code="H" cfi="HTXHXX" name="American Chooser" ></value>
+            <value code="I" cfi="HTXIXX" name="Bermudan Chooser" ></value>
+        </attribute>
+        <attribute name="Valuation method or trigger">
+            <value code="V" cfi="HTXXVX" name="Vanilla" ></value>
+            <value code="A" cfi="HTXXAX" name="Asian" ></value>
+            <value code="D" cfi="HTXXDX" name="Digital (Binary)" ></value>
+            <value code="B" cfi="HTXXBX" name="Barrier" ></value>
+            <value code="G" cfi="HTXXGX" name="Digital barrier" ></value>
+            <value code="L" cfi="HTXXLX" name="Lookback" ></value>
+            <value code="P" cfi="HTXXPX" name="Other path dependent" ></value>
+            <value code="M" cfi="HTXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="HTXXXC" name="Cash" ></value>
+            <value code="P" cfi="HTXXXP" name="Physical" ></value>
+            <value code="E" cfi="HTXXXE" name="Elect at Exercise" ></value>
+        </attribute>
+    </group>
+    <group  code="E" cfi="HEXXXX" name="Equity">
+        <attribute name="Underlying assets">
+            <value code="S" cfi="HESXXX" name="Single stock" ></value>
+            <value code="I" cfi="HEIXXX" name="Indices" ></value>
+            <value code="B" cfi="HEBXXX" name="Baskets" ></value>
+            <value code="O" cfi="HEOXXX" name="Options" ></value>
+            <value code="R" cfi="HERXXX" name="Forwards" ></value>
+            <value code="F" cfi="HEFXXX" name="Futures" ></value>
+            <value code="M" cfi="HEMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Option style and type">
+            <value code="A" cfi="HEXAXX" name="European Call" ></value>
+            <value code="B" cfi="HEXBXX" name="American Call" ></value>
+            <value code="C" cfi="HEXCXX" name="Bermudan Call" ></value>
+            <value code="D" cfi="HEXDXX" name="European Put" ></value>
+            <value code="E" cfi="HEXEXX" name="American Put" ></value>
+            <value code="F" cfi="HEXFXX" name="Bermudan Put" ></value>
+            <value code="G" cfi="HEXGXX" name="European Chooser" ></value>
+            <value code="H" cfi="HEXHXX" name="American Chooser" ></value>
+            <value code="I" cfi="HEXIXX" name="Bermudan Chooser" ></value>
+        </attribute>
+        <attribute name="Valuation method or trigger">
+            <value code="V" cfi="HEXXVX" name="Vanilla" ></value>
+            <value code="A" cfi="HEXXAX" name="Asian" ></value>
+            <value code="D" cfi="HEXXDX" name="Digital (Binary)" ></value>
+            <value code="B" cfi="HEXXBX" name="Barrier" ></value>
+            <value code="G" cfi="HEXXGX" name="Digital barrier" ></value>
+            <value code="L" cfi="HEXXLX" name="Lookback" ></value>
+            <value code="P" cfi="HEXXPX" name="Other path dependent" ></value>
+            <value code="M" cfi="HEXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="HEXXXC" name="Cash" ></value>
+            <value code="P" cfi="HEXXXP" name="Physical" ></value>
+            <value code="E" cfi="HEXXXE" name="Elect at Exercise" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="HCXXXX" name="Credit">
+        <attribute name="Underlying assets">
+            <value code="U" cfi="HCUXXX" name="CDS on a single code" ></value>
+            <value code="V" cfi="HCVXXX" name="CDS on an index tranche" ></value>
+            <value code="I" cfi="HCIXXX" name="CDS on an index" ></value>
+            <value code="W" cfi="HCWXXX" name="Swaps" ></value>
+            <value code="M" cfi="HCMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Option style and type">
+            <value code="A" cfi="HCXAXX" name="European Call" ></value>
+            <value code="B" cfi="HCXBXX" name="American Call" ></value>
+            <value code="C" cfi="HCXCXX" name="Bermudan Call" ></value>
+            <value code="D" cfi="HCXDXX" name="European Put" ></value>
+            <value code="E" cfi="HCXEXX" name="American Put" ></value>
+            <value code="F" cfi="HCXFXX" name="Bermudan Put" ></value>
+            <value code="G" cfi="HCXGXX" name="European Chooser" ></value>
+            <value code="H" cfi="HCXHXX" name="American Chooser" ></value>
+            <value code="I" cfi="HCXIXX" name="Bermudan Chooser" ></value>
+        </attribute>
+        <attribute name="Valuation method or trigger">
+            <value code="V" cfi="HCXXVX" name="Vanilla" ></value>
+            <value code="A" cfi="HCXXAX" name="Asian" ></value>
+            <value code="D" cfi="HCXXDX" name="Digital (Binary)" ></value>
+            <value code="B" cfi="HCXXBX" name="Barrier" ></value>
+            <value code="G" cfi="HCXXGX" name="Digital barrier" ></value>
+            <value code="L" cfi="HCXXLX" name="Lookback" ></value>
+            <value code="P" cfi="HCXXPX" name="Other path dependent" ></value>
+            <value code="M" cfi="HCXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="HCXXXC" name="Cash" ></value>
+            <value code="P" cfi="HCXXXP" name="Physical" ></value>
+            <value code="E" cfi="HCXXXE" name="Elect at Exercise" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="HFXXXX" name="Foreign exchange">
+        <attribute name="Underlying assets">
+            <value code="R" cfi="HFRXXX" name="Forwards" ></value>
+            <value code="F" cfi="HFFXXX" name="Futures" ></value>
+            <value code="T" cfi="HFTXXX" name="Spot-Forward swap" ></value>
+            <value code="V" cfi="HFVXXX" name="Volatility" ></value>
+            <value code="M" cfi="HFMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Option style and type">
+            <value code="A" cfi="HFXAXX" name="European Call" ></value>
+            <value code="B" cfi="HFXBXX" name="American Call" ></value>
+            <value code="C" cfi="HFXCXX" name="Bermudan Call" ></value>
+            <value code="D" cfi="HFXDXX" name="European Put" ></value>
+            <value code="E" cfi="HFXEXX" name="American Put" ></value>
+            <value code="F" cfi="HFXFXX" name="Bermudan Put" ></value>
+            <value code="G" cfi="HFXGXX" name="European Chooser" ></value>
+            <value code="H" cfi="HFXHXX" name="American Chooser" ></value>
+            <value code="I" cfi="HFXIXX" name="Bermudan Chooser" ></value>
+        </attribute>
+        <attribute name="Valuation method or trigger">
+            <value code="V" cfi="HFXXVX" name="Vanilla" ></value>
+            <value code="A" cfi="HFXXAX" name="Asian" ></value>
+            <value code="D" cfi="HFXXDX" name="Digital (Binary)" ></value>
+            <value code="B" cfi="HFXXBX" name="Barrier" ></value>
+            <value code="G" cfi="HFXXGX" name="Digital barrier" ></value>
+            <value code="L" cfi="HFXXLX" name="Lookback" ></value>
+            <value code="P" cfi="HFXXPX" name="Other path dependent" ></value>
+            <value code="M" cfi="HFXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="HFXXXC" name="Cash" ></value>
+            <value code="P" cfi="HFXXXP" name="Physical" ></value>
+            <value code="E" cfi="HFXXXE" name="Elect at Exercise" ></value>
+            <value code="N" cfi="HFXXXN" name="Non-Deliverable" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="HMXXXX" name="Others (Miscellaneous)">
+        <attribute name="Underlying assets">
+            <value code="P" cfi="HMPXXX" name="Commercial property (or proerty derivative)" ></value>
+            <value code="M" cfi="HMMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Option style and type">
+            <value code="A" cfi="HMXAXX" name="European Call" ></value>
+            <value code="B" cfi="HMXBXX" name="American Call" ></value>
+            <value code="C" cfi="HMXCXX" name="Bermudan Call" ></value>
+            <value code="D" cfi="HMXDXX" name="European Put" ></value>
+            <value code="E" cfi="HMXEXX" name="American Put" ></value>
+            <value code="F" cfi="HMXFXX" name="Bermudan Put" ></value>
+            <value code="G" cfi="HMXGXX" name="European Chooser" ></value>
+            <value code="H" cfi="HMXHXX" name="American Chooser" ></value>
+            <value code="I" cfi="HMXIXX" name="Bermudan Chooser" ></value>
+        </attribute>
+        <attribute name="Valuation method or trigger">
+            <value code="V" cfi="HMXXVX" name="Vanilla" ></value>
+            <value code="A" cfi="HMXXAX" name="Asian" ></value>
+            <value code="D" cfi="HMXXDX" name="Digital (Binary)" ></value>
+            <value code="B" cfi="HMXXBX" name="Barrier" ></value>
+            <value code="G" cfi="HMXXGX" name="Digital barrier" ></value>
+            <value code="L" cfi="HMXXLX" name="Lookback" ></value>
+            <value code="P" cfi="HMXXPX" name="Other path dependent" ></value>
+            <value code="M" cfi="HMXXMX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="HMXXXC" name="Cash" ></value>
+            <value code="P" cfi="HMXXXP" name="Physical" ></value>
+            <value code="E" cfi="HMXXXE" name="Elect at Exercise" ></value>
+            <value code="N" cfi="HMXXXN" name="Non-Deliverable" ></value>
+            <value code="A" cfi="HMXXXA" name="Auction" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="I" cfi="IXXXXX" name="Spot">
+    <group  code="F" cfi="IFXXXX" name="Foreign exchange">
+        <attribute name="N/A">
+            <value code="X" cfi="IFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="IFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="IFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="IFXXXP" name="Physical" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="ITXXXX" name="Commodities">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="ITAXXX" name="Agriculture" ></value>
+            <value code="J" cfi="ITJXXX" name="Energy" ></value>
+            <value code="K" cfi="ITKXXX" name="Metals" ></value>
+            <value code="N" cfi="ITNXXX" name="Environmental" ></value>
+            <value code="P" cfi="ITPXXX" name="Polypropylene Products" ></value>
+            <value code="S" cfi="ITSXXX" name="Fertilizer" ></value>
+            <value code="T" cfi="ITTXXX" name="Paper" ></value>
+            <value code="M" cfi="ITMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="ITXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="ITXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="ITXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="J" cfi="JXXXXX" name="Forwards">
+    <group  code="E" cfi="JEXXXX" name="Equity">
+        <attribute name="Underlying assets">
+            <value code="S" cfi="JESXXX" name="Equities" ></value>
+            <value code="I" cfi="JEIXXX" name="Indices" ></value>
+            <value code="B" cfi="JEBXXX" name="Baskets" ></value>
+            <value code="O" cfi="JEOXXX" name="Options" ></value>
+            <value code="F" cfi="JEFXXX" name="Futures" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="JEXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="C" cfi="JEXXCX" name="Contract for difference" ></value>
+            <value code="S" cfi="JEXXSX" name="Spread-bet" ></value>
+            <value code="F" cfi="JEXXFX" name="Forward price of underlying instrument" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="C" cfi="JEXXXC" name="Cash" ></value>
+            <value code="P" cfi="JEXXXP" name="Physical" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="JFXXXX" name="Foreign exchange">
+        <attribute name="Underlying assets">
+            <value code="T" cfi="JFTXXX" name="Spot" ></value>
+            <value code="R" cfi="JFRXXX" name="Forward" ></value>
+            <value code="O" cfi="JFOXXX" name="Options" ></value>
+            <value code="F" cfi="JFFXXX" name="Futures" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="JFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="C" cfi="JFXXCX" name="Contract for difference" ></value>
+            <value code="S" cfi="JFXXSX" name="Spread-bet" ></value>
+            <value code="F" cfi="JFXXFX" name="Forward price of underlying instrument" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="JFXXXP" name="Physical" ></value>
+            <value code="C" cfi="JFXXXC" name="Cash" ></value>
+            <value code="N" cfi="JFXXXN" name="Non-Deliverable" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="JCXXXX" name="Credit">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="JCAXXX" name="Single code" ></value>
+            <value code="I" cfi="JCIXXX" name="Indices" ></value>
+            <value code="B" cfi="JCBXXX" name="Baskets" ></value>
+            <value code="C" cfi="JCCXXX" name="CDS on a single code" ></value>
+            <value code="D" cfi="JCDXXX" name="CDS on an index" ></value>
+            <value code="G" cfi="JCGXXX" name="CDS on a basket" ></value>
+            <value code="O" cfi="JCOXXX" name="Options" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="JCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="S" cfi="JCXXSX" name="Spread-bet" ></value>
+            <value code="F" cfi="JCXXFX" name="Forward price of underlying instrument" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="JCXXXP" name="Physical" ></value>
+            <value code="C" cfi="JCXXXC" name="Cash" ></value>
+        </attribute>
+    </group>
+    <group  code="R" cfi="JRXXXX" name="Rates">
+        <attribute name="Underlying assets">
+            <value code="I" cfi="JRIXXX" name="Interest rate index" ></value>
+            <value code="O" cfi="JROXXX" name="Options" ></value>
+            <value code="M" cfi="JRMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="JRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="S" cfi="JRXXSX" name="Spread-bet" ></value>
+            <value code="F" cfi="JRXXFX" name="Forward price of underlying instrument" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="JRXXXP" name="Physical" ></value>
+            <value code="C" cfi="JRXXXC" name="Cash" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="JTXXXX" name="Commodities">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="JTAXXX" name="Agriculture" ></value>
+            <value code="B" cfi="JTBXXX" name="Baskets" ></value>
+            <value code="G" cfi="JTGXXX" name="Freight" ></value>
+            <value code="I" cfi="JTIXXX" name="Indices" ></value>
+            <value code="J" cfi="JTJXXX" name="Energy" ></value>
+            <value code="K" cfi="JTKXXX" name="Metals" ></value>
+            <value code="N" cfi="JTNXXX" name="Environmental" ></value>
+            <value code="P" cfi="JTPXXX" name="Polypropylene Products" ></value>
+            <value code="S" cfi="JTSXXX" name="Fertilizer" ></value>
+            <value code="T" cfi="JTTXXX" name="Paper" ></value>
+            <value code="M" cfi="JTMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="JTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Return or payout trigger">
+            <value code="C" cfi="JTXXCX" name="Contract for difference" ></value>
+            <value code="F" cfi="JTXXFX" name="Forward price of underlying instrument" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="JTXXXP" name="Physical" ></value>
+            <value code="C" cfi="JTXXXC" name="Cash" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="K" cfi="KXXXXX" name="Strategies">
+    <group  code="R" cfi="KRXXXX" name="Rates">
+        <attribute name="N/A">
+            <value code="X" cfi="KRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="KTXXXX" name="Commodities">
+        <attribute name="N/A">
+            <value code="X" cfi="KTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="E" cfi="KEXXXX" name="Equity">
+        <attribute name="N/A">
+            <value code="X" cfi="KEXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KEXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KEXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KEXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="C" cfi="KCXXXX" name="Credit">
+        <attribute name="N/A">
+            <value code="X" cfi="KCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="F" cfi="KFXXXX" name="Foreign exchange">
+        <attribute name="N/A">
+            <value code="X" cfi="KFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KFXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="Y" cfi="KYXXXX" name="Mixed assets">
+        <attribute name="N/A">
+            <value code="X" cfi="KYXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KYXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KYXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KYXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="KMXXXX" name="Others (Miscellaneous)">
+        <attribute name="N/A">
+            <value code="X" cfi="KMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="KMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="L" cfi="LXXXXX" name="Financing">
+    <group  code="L" cfi="LLXXXX" name="Loan-lease">
+        <attribute name="Underlying assets">
+            <value code="A" cfi="LLAXXX" name="Agriculture" ></value>
+            <value code="B" cfi="LLBXXX" name="Baskets" ></value>
+            <value code="J" cfi="LLJXXX" name="Energy" ></value>
+            <value code="K" cfi="LLKXXX" name="Metals" ></value>
+            <value code="N" cfi="LLNXXX" name="Environmental" ></value>
+            <value code="P" cfi="LLPXXX" name="Polypropylene Products" ></value>
+            <value code="S" cfi="LLSXXX" name="Fertilizer" ></value>
+            <value code="T" cfi="LLTXXX" name="Paper" ></value>
+            <value code="M" cfi="LLMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="LLXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="LLXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="P" cfi="LLXXXP" name="Physical" ></value>
+            <value code="C" cfi="LLXXXC" name="Cash" ></value>
+        </attribute>
+    </group>
+    <group  code="R" cfi="LRXXXX" name="Repurchase agreements">
+        <attribute name="Underlying assets">
+            <value code="G" cfi="LRGXXX" name="General collateral" ></value>
+            <value code="S" cfi="LRSXXX" name="Specific security collateral" ></value>
+            <value code="C" cfi="LRCXXX" name="Cash collateral" ></value>
+        </attribute>
+        <attribute name="Termination">
+            <value code="F" cfi="LRXFXX" name="Flexible" ></value>
+            <value code="N" cfi="LRXNXX" name="Overnight" ></value>
+            <value code="O" cfi="LRXOXX" name="Open" ></value>
+            <value code="T" cfi="LRXTXX" name="Term" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="LRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="D" cfi="LRXXXD" name="Delivery versus payment" ></value>
+            <value code="H" cfi="LRXXXH" name="Hold-in-custody" ></value>
+            <value code="T" cfi="LRXXXT" name="Tri-party" ></value>
+        </attribute>
+    </group>
+    <group  code="S" cfi="LSXXXX" name="Securities lending">
+        <attribute name="Underlying assets">
+            <value code="C" cfi="LSCXXX" name="Cash collateral" ></value>
+            <value code="G" cfi="LSGXXX" name="Government bonds" ></value>
+            <value code="P" cfi="LSPXXX" name="Corporate bonds" ></value>
+            <value code="T" cfi="LSTXXX" name="Convertible bonds" ></value>
+            <value code="E" cfi="LSEXXX" name="Equities" ></value>
+            <value code="L" cfi="LSLXXX" name="Letter of credit" ></value>
+            <value code="D" cfi="LSDXXX" name="Certificate of deposit" ></value>
+            <value code="W" cfi="LSWXXX" name="Warrants" ></value>
+            <value code="K" cfi="LSKXXX" name="Money Market Instruments" ></value>
+            <value code="M" cfi="LSMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Termination">
+            <value code="N" cfi="LSXNXX" name="Overnight" ></value>
+            <value code="O" cfi="LSXOXX" name="Open" ></value>
+            <value code="T" cfi="LSXTXX" name="Term" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="LSXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Delivery">
+            <value code="D" cfi="LSXXXD" name="Delivery versus payment" ></value>
+            <value code="F" cfi="LSXXXF" name="Free of payment" ></value>
+            <value code="H" cfi="LSXXXH" name="Hold-in-custody" ></value>
+            <value code="T" cfi="LSXXXT" name="Tri-party" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="T" cfi="TXXXXX" name="Reference instruments">
+    <group  code="C" cfi="TCXXXX" name="Currencies">
+        <attribute name="Type">
+            <value code="N" cfi="TCNXXX" name="National Currency" ></value>
+            <value code="L" cfi="TCLXXX" name="Legacy Currency" ></value>
+            <value code="C" cfi="TCCXXX" name="Bullion Coins" ></value>
+            <value code="M" cfi="TCMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="T" cfi="TTXXXX" name="Commodities">
+        <attribute name="Type of commodity">
+            <value code="E" cfi="TTEXXX" name="Extraction Resources" ></value>
+            <value code="A" cfi="TTAXXX" name="Agriculture" ></value>
+            <value code="I" cfi="TTIXXX" name="Industrial Products" ></value>
+            <value code="S" cfi="TTSXXX" name="Services" ></value>
+            <value code="N" cfi="TTNXXX" name="Environmental" ></value>
+            <value code="P" cfi="TTPXXX" name="Polypropylene Products" ></value>
+            <value code="H" cfi="TTHXXX" name="Generated Resources" ></value>
+            <value code="M" cfi="TTMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TTXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="R" cfi="TRXXXX" name="Interest rates">
+        <attribute name="Type of interest">
+            <value code="F" cfi="TRFXXX" name="Fixed Rate" ></value>
+            <value code="N" cfi="TRNXXX" name="Nominal" ></value>
+            <value code="V" cfi="TRVXXX" name="Variable" ></value>
+            <value code="R" cfi="TRRXXX" name="Real" ></value>
+            <value code="M" cfi="TRMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Frequency of calculation">
+            <value code="D" cfi="TRXDXX" name="Daily" ></value>
+            <value code="W" cfi="TRXWXX" name="Weekly" ></value>
+            <value code="N" cfi="TRXNXX" name="Monthly" ></value>
+            <value code="Q" cfi="TRXQXX" name="Quarterly" ></value>
+            <value code="S" cfi="TRXSXX" name="Semi-Annually" ></value>
+            <value code="A" cfi="TRXAXX" name="Annually" ></value>
+            <value code="M" cfi="TRXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TRXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="I" cfi="TIXXXX" name="Indices">
+        <attribute name="Assets">
+            <value code="E" cfi="TIEXXX" name="Equities" ></value>
+            <value code="D" cfi="TIDXXX" name="Debt" ></value>
+            <value code="F" cfi="TIFXXX" name="Collective Investment Vehicles" ></value>
+            <value code="R" cfi="TIRXXX" name="Real Estate" ></value>
+            <value code="T" cfi="TITXXX" name="Commodities" ></value>
+            <value code="C" cfi="TICXXX" name="Currencies" ></value>
+            <value code="M" cfi="TIMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Weighting types">
+            <value code="P" cfi="TIXPXX" name="Price Weighted" ></value>
+            <value code="C" cfi="TIXCXX" name="Capitalization Weighted" ></value>
+            <value code="E" cfi="TIXEXX" name="Equal Weighted" ></value>
+            <value code="F" cfi="TIXFXX" name="Modified Market Capitalization Weighted" ></value>
+            <value code="M" cfi="TIXMXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Index return types">
+            <value code="P" cfi="TIXXPX" name="Price Return" ></value>
+            <value code="N" cfi="TIXXNX" name="Net Total Return" ></value>
+            <value code="G" cfi="TIXXGX" name="Gross Total Return" ></value>
+            <value code="M" cfi="TIXXMX" name="Others (Miscellaneous)" ></value>
+        <attribute name="N/A">
+            <value code="X" cfi="TIXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        </attribute>
+    </group>
+    <group  code="B" cfi="TBXXXX" name="Baskets">
+        <attribute name="Composition">
+            <value code="E" cfi="TBEXXX" name="Equities" ></value>
+            <value code="D" cfi="TBDXXX" name="Debt" ></value>
+            <value code="F" cfi="TBFXXX" name="Collective Investment Vehicles" ></value>
+            <value code="I" cfi="TBIXXX" name="Indices" ></value>
+            <value code="T" cfi="TBTXXX" name="Commodities" ></value>
+            <value code="C" cfi="TBCXXX" name="Currencies" ></value>
+            <value code="M" cfi="TBMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TBXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TBXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TBXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="D" cfi="TDXXXX" name="Stock dividends">
+        <attribute name="Type of equity">
+            <value code="S" cfi="TDSXXX" name="Common Ordinary Shares" ></value>
+            <value code="P" cfi="TDPXXX" name="Preferred/Preference Shares" ></value>
+            <value code="C" cfi="TDCXXX" name="Common Ordinary Convertible Shares" ></value>
+            <value code="F" cfi="TDFXXX" name="Preferred/Preference Convertible Shares" ></value>
+            <value code="L" cfi="TDLXXX" name="Limited Partnership Units" ></value>
+            <value code="K" cfi="TDKXXX" name="Collective Investment Vehicles" ></value>
+            <value code="M" cfi="TDMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TDXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TDXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TDXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="TMXXXX" name="Others (Miscellaneous)">
+        <attribute name="N/A">
+            <value code="X" cfi="TMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="TMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+<category  code="M" cfi="MXXXXX" name="Others (Miscellaneous)">
+    <group  code="C" cfi="MCXXXX" name="Combined instruments">
+        <attribute name="Components">
+            <value code="S" cfi="MCSXXX" name="Combination of Shares" ></value>
+            <value code="B" cfi="MCBXXX" name="Combination of Bonds" ></value>
+            <value code="H" cfi="MCHXXX" name="Share and Bond" ></value>
+            <value code="A" cfi="MCAXXX" name="Share and Warrant" ></value>
+            <value code="W" cfi="MCWXXX" name="Warrant and Warrant" ></value>
+            <value code="U" cfi="MCUXXX" name="Fund Unit and Other Components" ></value>
+            <value code="M" cfi="MCMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="Ownership">
+            <value code="T" cfi="MCXTXX" name="Restrictions" ></value>
+            <value code="U" cfi="MCXUXX" name="Free" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="MCXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="Form">
+            <value code="B" cfi="MCXXXB" name="Bearer" ></value>
+            <value code="R" cfi="MCXXXR" name="Registered" ></value>
+            <value code="N" cfi="MCXXXN" name="Bearer/Registered" ></value>
+            <value code="M" cfi="MCXXXM" name="Others (Miscellaneous)" ></value>
+        </attribute>
+    </group>
+    <group  code="M" cfi="MMXXXX" name="Other assets">
+        <attribute name="Further grouping">
+            <value code="R" cfi="MMRXXX" name="Real Estate Deeds" ></value>
+            <value code="I" cfi="MMIXXX" name="Insurance Policies" ></value>
+            <value code="E" cfi="MMEXXX" name="Escrow Receipts" ></value>
+            <value code="T" cfi="MMTXXX" name="Trade Finance Instruments" ></value>
+            <value code="N" cfi="MMNXXX" name="Carbon Credit" ></value>
+            <value code="P" cfi="MMPXXX" name="Precious Metal Receipts" ></value>
+            <value code="S" cfi="MMSXXX" name="Other OTC Derivative Products" ></value>
+            <value code="M" cfi="MMMXXX" name="Others (Miscellaneous)" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="MMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="MMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+        <attribute name="N/A">
+            <value code="X" cfi="MMXXXX" name="Not Applicable/Undefined" ></value>
+        </attribute>
+    </group>
+</category>
+</categories>
+</resource>

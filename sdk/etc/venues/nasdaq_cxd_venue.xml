@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ CXD Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ CXD" shortname="NASDAQ CXD" identifier="3872ff24-9aea-11e6-8a70-eacb3b7e01cf" description="NASDAQ CXD">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+                <pool name="board lot" default="yes" identifier="b0affd18-2930-11e7-a3f0-6eb8943a5d29"/>
+                <pool name="odd lot" identifier="0ddfe8cc-2930-11e7-8270-a28716a552c8"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="disclosed volume"/>
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ CXD Exchange venue.
+    </documentation>
+</resource>

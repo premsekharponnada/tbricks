@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#
+# Plugin for scripts/server/server.sh script.
+#
+# Available variables:
+# _rootdir	Resolved installation directory
+# _sfx		Bitness
+# _prog		Full executable name
+# _name		Short executable name
+# _lib		Full path to the libraries
+
+# Don't bind all symbols at start
+unset LD_BIND_NOW
+unset DYLD_BIND_AT_LAUNCH
+unset LD_NOLAZYLOAD

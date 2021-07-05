@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:types="http://www.itiviti.com/types"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	vc:minVersion="1.1">
+
+<xs:import namespace="http://www.itiviti.com/types" schemaLocation="types.xsd"/>
+
+	<xs:element name="resource" type="ResourceType"/>
+
+	<xs:complexType name="ResourceType">
+		<xs:sequence>
+			<xs:element name="dacs" type="DacsType" minOccurs="0"/>
+			<xs:element name="connection" type="ConnectionType"/>
+			<xs:element name="summary_link_count" type="SummaryLinkCountType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="summary_link" type="SummaryLinkType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="types:Name" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="SummaryLinkCountType">
+		<xs:attribute name="display" type="xs:unsignedLong" use="required"/>
+		<xs:attribute name="count" type="xs:unsignedLong" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="SummaryLinkType">
+		<xs:attribute name="ric" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="DacsType">
+		<xs:sequence>
+			<xs:element name="user_mapping" type="UserMappingType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="disabled" type="types:Boolean"/>
+		<xs:attribute name="hosts"/>
+		<xs:attribute name="on_demand" type="types:Boolean"/>
+		<xs:attribute name="blackbox" type="types:Boolean"/>
+		<xs:attribute name="ping" type="types:Boolean"/>
+		<xs:attribute name="position"/>
+		<xs:attribute name="multiconnect" type="types:Boolean"/>
+		<xs:attribute name="application_id" type="xs:string"/>
+		<xs:attribute name="usage_logging_path" type="xs:string"/>
+		<xs:attribute name="usage_logging_size" type="xs:integer"/>
+	</xs:complexType>
+
+	<xs:complexType name="UserMappingType">
+		<xs:attribute name="user" type="xs:string" use="required"/>
+		<xs:attribute name="dacs_user" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="ConnectionType">
+		<xs:sequence>
+			<xs:element name="ema" type="EmaType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="service" type="ServiceType" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="user" type="xs:string" use="required"/>
+		<xs:attribute name="host" type="xs:string"/>
+		<xs:attribute name="port" type="xs:integer"/>
+		<xs:attribute name="password" type="xs:string"/>
+		<xs:attribute name="interface" type="xs:string"/>
+		<xs:attribute name="application_id" type="xs:string"/>
+		<xs:attribute name="consumer_name" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="EmaType">
+		<xs:attribute name="log_severity" type="LogSeverityType"/>
+		<xs:attribute name="log_file"/>
+		<xs:attribute name="trace_file"/>
+	</xs:complexType>
+
+	<xs:complexType name="ServiceType">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="download" type="DownloadType"/>
+				<xs:element name="depth_rule" type="DepthRuleType"/>
+				<xs:element name="field_mapping" type="FieldMappingType"/>
+				<xs:element name="contribution_mapping" type="ContributionMappingType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="name" type="types:Name" use="required"/>
+		<xs:attribute name="dacs" type="types:Boolean"/>
+		<xs:attribute name="default" type="types:Boolean"/>
+	</xs:complexType>
+
+	<xs:complexType name="DownloadType">
+		<xs:attribute name="code" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="DepthRuleType">
+		<xs:attribute name="level1_ric_pattern" use="required"/>
+		<xs:attribute name="level2_ric_rule"/>
+		<xs:attribute name="level2_ric_prefix"/>
+		<xs:attribute name="level2_ric_suffix"/>
+	</xs:complexType>
+
+	<xs:complexType name="FieldMappingType">
+		<xs:sequence>
+			<xs:element name="condition" type="ConditionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="reference_data" type="ReferenceDataType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="market_data" type="MarketDataType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="types:Name" use="required"/>
+		<xs:attribute name="ric_pattern" type="xs:string"/>
+		<xs:attribute name="ric" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="ConditionType">
+		<xs:attribute name="fid" type="xs:string" use="required"/>
+		<xs:attribute name="is_missed" type="types:Boolean"/>
+		<xs:attribute name="expect_match" type="types:Boolean"/>
+		<xs:attribute name="value_pattern" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="ReferenceDataType">
+		<xs:sequence>
+			<xs:element name="case" type="CaseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="field" type="ReferenceDataFieldType" use="required"/>
+		<xs:attribute name="value_fid" type="xs:string"/>
+		<xs:attribute name="constant_value" type="xs:string"/>
+		<xs:attribute name="empty_value" type="types:Boolean"/>
+		<xs:attribute name="switch" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="CaseType">
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="value_fid" type="xs:string"/>
+		<xs:attribute name="constant_value" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="MarketDataType">
+		<xs:sequence>
+			<xs:element name="enum" type="MarketDataEnumType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="field" type="MarketDataFieldType"/>
+		<xs:attribute name="destination" type="MarketDataFieldType"/>
+		<xs:attribute name="value_fid" type="xs:string"/>
+		<xs:attribute name="source" type="xs:string"/>
+		<xs:attribute name="constant_value" type="xs:string"/>
+		<xs:attribute name="key" type="types:UUID"/>
+	</xs:complexType>
+
+	<xs:complexType name="MarketDataEnumType">
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="key" type="xs:unsignedShort" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="ContributionMappingEnumType">
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="key" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="ContributionMappingType">
+		<xs:sequence>
+			<xs:element name="field" type="FieldType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="types:Name" use="required"/>
+		<xs:attribute name="ric_pattern" type="xs:string"/>
+		<xs:attribute name="ric" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="FieldType">
+		<xs:sequence>
+			<xs:element name="enum" type="ContributionMappingEnumType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="types:Name" use="required"/>
+		<xs:attribute name="fid" type="xs:string" use="required"/>
+		<xs:attribute name="constant_value" type="xs:string"/>
+		<xs:attribute name="magnitude" type="MagnitudeType"/>
+	</xs:complexType>
+
+	<xs:simpleType name="MagnitudeType">
+        <xs:union>
+	        <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="from:.+"/>
+                </xs:restriction>
+            </xs:simpleType>
+	        <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="-14"/>
+                    <xs:enumeration value="-13"/>
+                    <xs:enumeration value="-12"/>
+                    <xs:enumeration value="-11"/>
+                    <xs:enumeration value="-10"/>
+                    <xs:enumeration value="-9"/>
+                    <xs:enumeration value="-8"/>
+                    <xs:enumeration value="-7"/>
+                    <xs:enumeration value="-6"/>
+                    <xs:enumeration value="-5"/>
+                    <xs:enumeration value="-4"/>
+                    <xs:enumeration value="-3"/>
+                    <xs:enumeration value="-2"/>
+                    <xs:enumeration value="-1"/>
+                    <xs:enumeration value="0"/>
+                    <xs:enumeration value="1"/>
+                    <xs:enumeration value="2"/>
+                    <xs:enumeration value="3"/>
+                    <xs:enumeration value="4"/>
+                    <xs:enumeration value="5"/>
+                    <xs:enumeration value="6"/>
+                    <xs:enumeration value="7"/>
+                    <xs:enumeration value="NaN"/>
+                    <xs:enumeration value="-inf"/>
+                    <xs:enumeration value="inf"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+
+	<xs:simpleType name="ReferenceDataFieldType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="avoid_zero_prices"/>
+			<xs:enumeration value="barrier_level"/>
+			<xs:enumeration value="base_currency"/>
+			<xs:enumeration value="bond_type"/>
+			<xs:enumeration value="cfi"/>
+			<xs:enumeration value="cfi_version"/>
+			<xs:enumeration value="contract_size"/>
+			<xs:enumeration value="currency"/>
+			<xs:enumeration value="delivery_type"/>
+			<xs:enumeration value="exchange_symbol"/>
+			<xs:enumeration value="expiration_date"/>
+			<xs:enumeration value="expiration_type"/>
+			<xs:enumeration value="factor"/>
+			<xs:enumeration value="instrumentid2"/>
+			<xs:enumeration value="instrumentid2_source"/>
+			<xs:enumeration value="instrumentid"/>
+			<xs:enumeration value="instrumentid_source"/>
+			<xs:enumeration value="isin"/>
+			<xs:enumeration value="lo_limit"/>
+			<xs:enumeration value="long_name"/>
+			<xs:enumeration value="market_sector"/>
+			<xs:enumeration value="market_segment"/>
+			<xs:enumeration value="maturity_month_year"/>
+			<xs:enumeration value="mic"/>
+			<xs:enumeration value="min_order_size"/>
+			<xs:enumeration value="mnemonic"/>
+			<xs:enumeration value="multiplier"/>
+			<xs:enumeration value="orderbookid"/>
+			<xs:enumeration value="price_scale_value"/>
+			<xs:enumeration value="price_tick"/>
+			<xs:enumeration value="primary_mic"/>
+			<xs:enumeration value="product_group"/>
+			<xs:enumeration value="putcall"/>
+			<xs:enumeration value="record_type"/>
+			<xs:enumeration value="short_name"/>
+			<xs:enumeration value="strike_price"/>
+			<xs:enumeration value="symbol"/>
+			<xs:enumeration value="tick_rule_name"/>
+			<xs:enumeration value="tick_rule_prefix"/>
+			<xs:enumeration value="tick_value"/>
+			<xs:enumeration value="trading_units"/>
+			<xs:enumeration value="turnover_scale"/>
+			<xs:enumeration value="turnover_scale_value"/>
+			<xs:enumeration value="underlying_isin"/>
+			<xs:enumeration value="underlying_ric"/>
+			<xs:enumeration value="underlying_symbol"/>
+			<xs:enumeration value="underlying_type"/>
+			<xs:enumeration value="up_limit"/>
+			<xs:enumeration value="volume_increment"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="MarketDataFieldType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ask_price"/>
+			<xs:enumeration value="ask_volume"/>
+			<xs:enumeration value="bid_price"/>
+			<xs:enumeration value="bid_volume"/>
+			<xs:enumeration value="closing_price"/>
+			<xs:enumeration value="daily_settlement_price"/>
+			<xs:enumeration value="exchange_modified_date"/>
+			<xs:enumeration value="exchange_modified_time"/>
+			<xs:enumeration value="high_price"/>
+			<xs:enumeration value="indicative_auction_price"/>
+			<xs:enumeration value="indicative_auction_surplus_direction"/>
+			<xs:enumeration value="indicative_auction_surplus_volume"/>
+			<xs:enumeration value="indicative_auction_volume"/>
+			<xs:enumeration value="instrument_status"/>
+			<xs:enumeration value="last_auction_price"/>
+			<xs:enumeration value="last_auction_volume"/>
+			<xs:enumeration value="last_price"/>
+			<xs:enumeration value="last_price_offmarket"/>
+			<xs:enumeration value="last_volume"/>
+			<xs:enumeration value="last_volume_offmarket"/>
+			<xs:enumeration value="low_price"/>
+			<xs:enumeration value="news"/>
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="open_interest"/>
+			<xs:enumeration value="opening_price"/>
+			<xs:enumeration value="previous_closing_price"/>
+			<xs:enumeration value="skip"/>
+			<xs:enumeration value="trade_date"/>
+			<xs:enumeration value="trade_date_offmarket"/>
+			<xs:enumeration value="trade_id"/>
+			<xs:enumeration value="trade_id_offmarket"/>
+			<xs:enumeration value="trade_price"/>
+			<xs:enumeration value="trade_price_offmarket"/>
+			<xs:enumeration value="trade_time"/>
+			<xs:enumeration value="trade_time_offmarket"/>
+			<xs:enumeration value="trade_volume"/>
+			<xs:enumeration value="trade_volume_offmarket"/>
+			<xs:enumeration value="trading_phase"/>
+			<xs:enumeration value="trading_phase_external"/>
+			<xs:enumeration value="turnover"/>
+			<xs:enumeration value="turnover_volume"/>
+			<xs:enumeration value="parameters"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="LogSeverityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NoLogMsg"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="Error"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="Warning"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="Success"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="Verbose"/>
+			<xs:enumeration value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

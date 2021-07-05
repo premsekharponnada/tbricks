@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameter_contexts>
+   <parameter_context
+      identifier="132459a4-32d3-11e1-8b7d-898c7bb483ce"
+      name="Trading"
+      description="Parameters used by trading desk"
+      color_index="104"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="45bda54c-c738-11e1-87b7-be84e16cd6ae"
+      name="MM quoting"
+      description="Parameters used for MM quoting"
+      color_index="106"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="4afea20e-c738-11e1-87b7-be84e16cd6ae"
+      name="MM hidden"
+      description="Parameter used for MM hidden"
+      color_index="105"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="64c7c864-c738-11e1-87b7-be84e16cd6ae"
+      name="MM quoting multi-level"
+      description="Parameters used for MM multi-level quoting"
+      color_index="102"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="6d052202-d195-11e2-bb45-3e99245e0d1c"
+      name="MM quote responder"
+      description="Parameters used for MM quote responder"
+      color_index="111"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="ed8fe919-caa5-11e1-bcdb-49f1f1bbe9eb"
+      name="MM shared"
+      description="Parameters used by the MM app for shared state"
+      color_index="110"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="f4414006-32d2-11e1-8d0a-141222d69e81"
+      name="Global"
+      description="Global parameters, typically used as final fallback in a parameter ranking"
+      color_index="107"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="f8d2106a-f27a-11e1-8bbb-3c870c3e9924"
+      name="MM peg"
+      description="Parameters used for MM peg"
+      color_index="108"
+      system="true"
+      metadata_packaging_type="system" />
+   <parameter_context
+      identifier="fbebb976-32d2-11e1-8e88-cf8d809fed42"
+      name="Risk"
+      description="Parameters used by risk management, typically used for having a different view of pricing"
+      color_index="103"
+      system="true"
+      metadata_packaging_type="system" />
+</parameter_contexts>

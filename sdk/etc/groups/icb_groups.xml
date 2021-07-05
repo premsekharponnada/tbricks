@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<resource long_name="ICB groups" type="application/x-group+xml"> 
+    <groups>
+        <group id="500d9ac4-188f-46a2-beac-eeb2993ffc67" name="ICB" long_name="Industry Classification Benchmark" type="sector"/> 
+
+        <group id="e081aee0-1cad-427c-be02-cd7d766679be" name="0001" description="Industry" long_name="Oil &amp; Gas" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="f7379389-e24e-4ae3-ac0e-6627bce2c0d0" name="0500" description="Supersector" long_name="Oil &amp; Gas" parent="e081aee0-1cad-427c-be02-cd7d766679be"/>
+
+        <group id="6b9366bf-63ad-4748-a4a8-2b5842ea9f4d" name="0530" description="Sector" long_name="Oil &amp; Gas Producers" parent="f7379389-e24e-4ae3-ac0e-6627bce2c0d0"/>
+        <group id="8c82f500-3b1d-4e5c-b55a-91335cca4180" name="0533" description="Subsector" long_name="Exploration &amp; Production" parent="6b9366bf-63ad-4748-a4a8-2b5842ea9f4d"/>
+        <group id="86b50e0a-5136-40f6-9732-58b473ce3d8c" name="0537" description="Subsector" long_name="Integrated Oil &amp; Gas" parent="6b9366bf-63ad-4748-a4a8-2b5842ea9f4d"/>
+
+        <group id="57c5cb36-8658-4207-af5a-7631ce945cdc" name="0570" description="Sector" long_name="Oil Equipment, Services &amp; Distribution" parent="f7379389-e24e-4ae3-ac0e-6627bce2c0d0"/>
+        <group id="b19f04d9-86b9-4a29-8637-c4f5dd8616a9" name="0573" description="Subsector" long_name="Oil Equipment &amp; Services" parent="57c5cb36-8658-4207-af5a-7631ce945cdc"/>
+        <group id="f999505b-48c5-4239-86ae-af57c0cdcae1" name="0577" description="Subsector" long_name="Pipelines" parent="57c5cb36-8658-4207-af5a-7631ce945cdc"/>
+
+        <group id="38ad680c-ea4d-452e-b398-8b07d94365c0" name="0580" description="Sector" long_name="Alternative Energy" parent="f7379389-e24e-4ae3-ac0e-6627bce2c0d0"/>
+        <group id="0707e7eb-b009-49f0-8450-471309111ec2" name="0583" description="Subsector" long_name="Renewable Energy Equipment" parent="38ad680c-ea4d-452e-b398-8b07d94365c0"/>
+        <group id="542e2dfa-3e7e-4a4d-80ff-72f13aae78a7" name="0587" description="Subsector" long_name="Alternative Fuels" parent="38ad680c-ea4d-452e-b398-8b07d94365c0"/>
+
+
+
+        <group id="9b6c7807-a53c-4998-977b-bdc64d106988" name="1000" description="Industry" long_name="Basic Materials" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="d57c64f5-0067-4c6e-ada7-9b3869a7732d" name="1300" description="Supersector" long_name="Chemicals" parent="9b6c7807-a53c-4998-977b-bdc64d106988"/>
+        <group id="fb5ece71-b08b-479b-822e-f8eb4343a070" name="1700" description="Supersector" long_name="Basic resources" parent="9b6c7807-a53c-4998-977b-bdc64d106988"/>
+
+        <group id="e61492fd-366d-49fd-8d52-1cf0c763ac2b" name="1350" description="Sector" long_name="Chemicals" parent="d57c64f5-0067-4c6e-ada7-9b3869a7732d"/>
+        <group id="fb1a9098-6292-4d84-ba44-5d18db475837" name="1353" description="Subsector" long_name="Commodity Chemicals" parent="e61492fd-366d-49fd-8d52-1cf0c763ac2b"/>
+        <group id="04e175f3-72d3-44ad-accf-dc3b167d9d13" name="1357" description="Subsector" long_name="Specialty Chemicals" parent="e61492fd-366d-49fd-8d52-1cf0c763ac2b"/>
+
+        <group id="a58e5b41-c5fa-45ff-a357-909e70af8ef3" name="1730" description="Sector" long_name="Forestry &amp; Paper" parent="fb5ece71-b08b-479b-822e-f8eb4343a070"/>
+        <group id="b8247fd0-9a8c-44de-a92f-8610ef6e52e4" name="1733" description="Subsector" long_name="Forestry" parent="a58e5b41-c5fa-45ff-a357-909e70af8ef3"/>
+        <group id="57bf35c6-4381-4a1c-bcdb-5117b8a7795e" name="1737" description="Subsector" long_name="Paper" parent="a58e5b41-c5fa-45ff-a357-909e70af8ef3"/>
+
+        <group id="f2dec1d4-9248-431e-b86d-f480a3d44833" name="1750" description="Sector" long_name="Industrial Metals &amp; Mining" parent="fb5ece71-b08b-479b-822e-f8eb4343a070"/>
+        <group id="30746141-9a6b-4326-b801-5f4f4d0888de" name="1753" description="Subsector" long_name="Aluminum" parent="f2dec1d4-9248-431e-b86d-f480a3d44833"/>
+        <group id="8e888560-e9c7-4968-b1b1-77b75e86e14e" name="1755" description="Subsector" long_name="Nonferrous Metals" parent="f2dec1d4-9248-431e-b86d-f480a3d44833"/>
+        <group id="d605fcd5-9347-40d1-877a-c578cbe5853f" name="1757" description="Subsector" long_name="Iron &amp; Steel" parent="f2dec1d4-9248-431e-b86d-f480a3d44833"/>
+
+        <group id="4b828028-b3c3-4fb9-9c11-63eb736c19b4" name="1770" description="Sector" long_name="Mining" parent="fb5ece71-b08b-479b-822e-f8eb4343a070"/>
+        <group id="157c2cb7-d921-45f8-bf50-6de043502367" name="1771" description="Subsector" long_name="Coal" parent="4b828028-b3c3-4fb9-9c11-63eb736c19b4"/>
+        <group id="0ffc889c-af1f-4d8e-b2d7-b922031348dd" name="1773" description="Subsector" long_name="Diamonds &amp; Gemstones" parent="4b828028-b3c3-4fb9-9c11-63eb736c19b4"/>
+        <group id="a25f97f1-c9bc-4a36-85a7-7950f1131da3" name="1775" description="Subsector" long_name="General Mining" parent="4b828028-b3c3-4fb9-9c11-63eb736c19b4"/>
+        <group id="7730be22-d8de-4b64-bda8-daea6ed8eb6d" name="1777" description="Subsector" long_name="Gold Mining" parent="4b828028-b3c3-4fb9-9c11-63eb736c19b4"/>
+        <group id="65926925-7065-48c2-9b78-e2fc6bc2e189" name="1779" description="Subsector" long_name="Platinum &amp; Precious Metals" parent="4b828028-b3c3-4fb9-9c11-63eb736c19b4"/>
+
+
+
+
+        <group id="b4e5ca09-cc27-419b-8de4-4ddec343a861" name="2000" description="Industry" long_name="Industrials" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="dda7eb0d-da8a-4c22-9aa6-18a1060e80b3" name="2300" description="Supersector" long_name="Construction &amp; Materials" parent="b4e5ca09-cc27-419b-8de4-4ddec343a861"/>
+        <group id="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0" name="2700" description="Supersector" long_name="Industrial Goods &amp; Services" parent="b4e5ca09-cc27-419b-8de4-4ddec343a861"/>
+
+        <group id="3266ec77-58d2-4cef-9474-d14111a5e210" name="2350" description="Sector" long_name="Construction &amp; Materials" parent="dda7eb0d-da8a-4c22-9aa6-18a1060e80b3"/>
+        <group id="384e5fe1-c0f0-4ad1-a71b-820e92721773" name="2353" description="Subsector" long_name="Building Materials &amp; Fixtures" parent="3266ec77-58d2-4cef-9474-d14111a5e210"/>
+        <group id="98eede5f-5705-4181-8b98-0e233519fa9f" name="2357" description="Subsector" long_name="Heavy Construction" parent="3266ec77-58d2-4cef-9474-d14111a5e210"/>
+
+        <group id="08cf24ef-1bd1-4f31-ab05-74b96c750b31" name="2710" description="Sector" long_name="Aerospace &amp; Defense" parent="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0"/>
+        <group id="5d408fa1-d589-4cce-a988-078241e861bb" name="2713" description="Subsector" long_name="Aerospace" parent="08cf24ef-1bd1-4f31-ab05-74b96c750b31"/>
+        <group id="9f607516-07de-42a6-a575-8a79751bd448" name="2717" description="Subsector" long_name="Defense" parent="08cf24ef-1bd1-4f31-ab05-74b96c750b31"/>
+
+        <group id="705fea33-78e9-4036-acb0-8e6791d341bf" name="2720" description="Sector" long_name="General Industrials" parent="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0"/>
+        <group id="26515f46-3ea7-49ae-b62b-e4282ee22609" name="2723" description="Subsector" long_name="Containers &amp; Packaging" parent="705fea33-78e9-4036-acb0-8e6791d341bf"/>
+        <group id="f2e65e43-8ab1-4746-b46e-eaca8aff57bd" name="2727" description="Subsector" long_name="Diversified Industrials" parent="705fea33-78e9-4036-acb0-8e6791d341bf"/>
+
+        <group id="d1c9b4f0-7dd0-449a-9aed-2d8e10482309" name="2730" description="Sector" long_name="Electronic &amp; Electrical Equipment" parent="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0"/>
+        <group id="8dd6c976-e0e9-40b4-a2d6-e1f4c1824aac" name="2733" description="Subsector" long_name="Electrical Components &amp; Equipment" parent="d1c9b4f0-7dd0-449a-9aed-2d8e10482309"/>
+        <group id="29c0ecb0-a311-4b5a-8961-6aec73292d17" name="2737" description="Subsector" long_name="Electronic Equipment" parent="d1c9b4f0-7dd0-449a-9aed-2d8e10482309"/>
+
+        <group id="3f5288f4-69ad-4047-b1c6-6d2bf59e8c38" name="2750" description="Sector" long_name="Industrial Engineering" parent="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0"/>
+        <group id="7b87aa32-77c6-4383-be7f-db413e303062" name="2753" description="Subsector" long_name="Commercial Vehicles &amp; Trucks" parent="3f5288f4-69ad-4047-b1c6-6d2bf59e8c38"/>
+        <group id="c848dc70-7eb7-4dda-acd0-1877a80a8b6a" name="2757" description="Subsector" long_name="Industrial Machinery" parent="3f5288f4-69ad-4047-b1c6-6d2bf59e8c38"/>
+
+        <group id="66537067-cbff-4b3d-b124-0b4de6acf951" name="2770" description="Sector" long_name="Industrial Transportation" parent="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0"/>
+        <group id="d1eef1f5-7f28-4df3-98f8-af27a9f3eb52" name="2771" description="Subsector" long_name="Delivery Services" parent="66537067-cbff-4b3d-b124-0b4de6acf951"/>
+        <group id="a164e55c-59b2-4425-8900-82198a344fa6" name="2773" description="Subsector" long_name="Marine Transportation" parent="66537067-cbff-4b3d-b124-0b4de6acf951"/>
+        <group id="3c7252de-e46a-408a-8d61-8ecb0d4e8030" name="2775" description="Subsector" long_name="Railroads" parent="66537067-cbff-4b3d-b124-0b4de6acf951"/>
+        <group id="636546ac-c4e0-42d7-9a45-568b37953fe6" name="2777" description="Subsector" long_name="Transportation Services" parent="66537067-cbff-4b3d-b124-0b4de6acf951"/>
+        <group id="09ef9965-01e7-4c52-ac97-398962ad0b1b" name="2779" description="Subsector" long_name="Trucking" parent="66537067-cbff-4b3d-b124-0b4de6acf951"/>
+
+        <group id="84bee2f7-9d60-4530-95fa-4ad7633b1aec" name="2790" description="Sector" long_name="Support Services" parent="cce0ea4d-d659-48bd-aa40-43bf5e7ca4b0"/>
+        <group id="c094ccdf-02df-4a4a-a5f2-e41ed5fa00fd" name="2791" description="Subsector" long_name="Business Support Services" parent="84bee2f7-9d60-4530-95fa-4ad7633b1aec"/>
+        <group id="0705eaaa-baf1-41a4-99c5-5b593cd9c023" name="2793" description="Subsector" long_name="Business Training &amp; Employment Agencies" parent="84bee2f7-9d60-4530-95fa-4ad7633b1aec"/>
+        <group id="fd6f21f6-89df-4a8a-b878-54a737c1039d" name="2795" description="Subsector" long_name="Financial Administration" parent="84bee2f7-9d60-4530-95fa-4ad7633b1aec"/>
+        <group id="569f7d4c-3949-4595-af82-140cbe9da17e" name="2797" description="Subsector" long_name="Industrial Suppliers" parent="84bee2f7-9d60-4530-95fa-4ad7633b1aec"/>
+        <group id="34515d13-1210-4814-8735-b0c3c307c7da" name="2799" description="Subsector" long_name="Waste &amp; Disposal Services" parent="84bee2f7-9d60-4530-95fa-4ad7633b1aec"/>
+
+
+
+
+        <group id="0539b93f-472c-4835-99c4-b7a0a686ce3a" name="3000" description="Industry" long_name="Consumer Goods" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="4b6898b6-e4c6-45c8-8837-ffdcdb33081b" name="3300" description="Supersector" long_name="Automobiles &amp; Parts" parent="0539b93f-472c-4835-99c4-b7a0a686ce3a"/>
+        <group id="b5e424f2-0f8c-4b58-b2a3-6dfcf97c0db8" name="3500" description="Supersector" long_name="Food &amp; Beverage" parent="0539b93f-472c-4835-99c4-b7a0a686ce3a"/>
+        <group id="9389309c-ac76-4dc8-8bce-19af7c8ddc57" name="3700" description="Supersector" long_name="Personal &amp; Household Goods" parent="0539b93f-472c-4835-99c4-b7a0a686ce3a"/>
+
+        <group id="5910a618-1ce2-4e58-949b-3aa0d281f77e" name="3350" description="Sector" long_name="Automobiles &amp; Parts" parent="4b6898b6-e4c6-45c8-8837-ffdcdb33081b"/>
+        <group id="7becf41f-8743-40c3-acf3-4bfa3422b107" name="3353" description="Subsector" long_name="Automobiles" parent="5910a618-1ce2-4e58-949b-3aa0d281f77e"/>
+        <group id="d420d29e-4260-493e-aeb8-79d035cb06ed" name="3355" description="Subsector" long_name="Auto Parts" parent="5910a618-1ce2-4e58-949b-3aa0d281f77e"/>
+        <group id="d37a4d9a-439d-4b65-96ce-c3a9ab69380c" name="3357" description="Subsector" long_name="Tires" parent="5910a618-1ce2-4e58-949b-3aa0d281f77e"/>
+
+        <group id="709397e5-0a94-4e87-ac1d-be304665009d" name="3530" description="Sector" long_name="Beverages" parent="b5e424f2-0f8c-4b58-b2a3-6dfcf97c0db8"/>
+        <group id="3b019bbe-b0f8-42be-9436-28636a098ed6" name="3533" description="Subsector" long_name="Brewers" parent="709397e5-0a94-4e87-ac1d-be304665009d"/>
+        <group id="b36bdba1-71e5-4a97-8c69-987d743e8c8b" name="3535" description="Subsector" long_name="Distillers &amp; Vintners" parent="709397e5-0a94-4e87-ac1d-be304665009d"/>
+        <group id="e0871a81-570b-47e1-9551-c6d22dcd1a04" name="3537" description="Subsector" long_name="Soft Drinks" parent="709397e5-0a94-4e87-ac1d-be304665009d"/>
+
+        <group id="9feea7eb-6c75-4afb-a51d-cde643af3ea9" name="3570" description="Sector" long_name="Food Producers" parent="b5e424f2-0f8c-4b58-b2a3-6dfcf97c0db8"/>
+        <group id="b5193a10-b72e-4821-85a5-1103ed05f2f4" name="3573" description="Subsector" long_name="Farming &amp; Fishing" parent="9feea7eb-6c75-4afb-a51d-cde643af3ea9"/>
+        <group id="dc9ffe2d-2cf9-4355-8844-36de63ff2fb8" name="3577" description="Subsector" long_name="Food Products" parent="9feea7eb-6c75-4afb-a51d-cde643af3ea9"/>
+
+        <group id="a003e16a-90d1-4353-84b8-e50ffc48b5e5" name="3720" description="Sector" long_name="Household Goods &amp; Home Construction" parent="9389309c-ac76-4dc8-8bce-19af7c8ddc57"/>
+        <group id="342ab9bd-fb8e-4e69-b337-74654271ef9d" name="3722" description="Subsector" long_name="Durable Household Products" parent="a003e16a-90d1-4353-84b8-e50ffc48b5e5"/>
+        <group id="4775b985-4cd4-43b7-82a9-05dacdc20abb" name="3724" description="Subsector" long_name="Nondurable Household Products" parent="a003e16a-90d1-4353-84b8-e50ffc48b5e5"/>
+        <group id="e64d56cf-fd94-47f9-b5c3-2e2501fac4c2" name="3726" description="Subsector" long_name="Furnishings" parent="a003e16a-90d1-4353-84b8-e50ffc48b5e5"/>
+        <group id="c6d0b003-c0a9-4aa6-a7f6-296b9078cb01" name="3728" description="Subsector" long_name="Home Construction" parent="a003e16a-90d1-4353-84b8-e50ffc48b5e5"/>
+
+        <group id="37f27617-32c0-4695-b83b-3cc095707719" name="3740" description="Sector" long_name="Leisure Goods" parent="9389309c-ac76-4dc8-8bce-19af7c8ddc57"/>
+        <group id="13bb3b4b-8fc8-4d9a-b1a0-55180bf0d553" name="3743" description="Subsector" long_name="Consumer Electronics" parent="37f27617-32c0-4695-b83b-3cc095707719"/>
+        <group id="7e33cc79-0442-4299-a004-4b517d370670" name="3745" description="Subsector" long_name="Recreational Products" parent="37f27617-32c0-4695-b83b-3cc095707719"/>
+        <group id="9ad39409-1146-424d-b2e9-5cee29b05d5e" name="3747" description="Subsector" long_name="Toys" parent="37f27617-32c0-4695-b83b-3cc095707719"/>
+
+        <group id="e352a67b-9a5a-4e1f-a1f0-8aa59a7a467e" name="3760" description="Sector" long_name="Personal Goods" parent="9389309c-ac76-4dc8-8bce-19af7c8ddc57"/>
+        <group id="344873e1-e142-4837-888f-a3f33e4bb4b3" name="3763" description="Subsector" long_name="Clothing &amp; Accessories" parent="e352a67b-9a5a-4e1f-a1f0-8aa59a7a467e"/>
+        <group id="1c2f651d-1a0a-4536-b1c7-44bd88efd60a" name="3765" description="Subsector" long_name="Footwear" parent="e352a67b-9a5a-4e1f-a1f0-8aa59a7a467e"/>
+        <group id="bba6d5c9-1e9c-43e5-86a5-db7ce479f752" name="3767" description="Subsector" long_name="Personal Products" parent="e352a67b-9a5a-4e1f-a1f0-8aa59a7a467e"/>
+
+        <group id="bd35fcf2-252f-4d15-9a18-68501ea3128a" name="3780" description="Sector" long_name="Tobacco" parent="9389309c-ac76-4dc8-8bce-19af7c8ddc57"/>
+        <group id="93309c44-7695-4bbe-91cc-821e752c4cee" name="3785" description="Subsector" long_name="Tobacco" parent="bd35fcf2-252f-4d15-9a18-68501ea3128a"/>
+
+
+
+
+        <group id="f752f9d4-cf84-472b-be68-f6bfbb71afd2" name="4000" description="Industry" long_name="Health Care" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="84b5c68f-3a3f-4a68-88e3-707259579fbe" name="4500" description="Supersector" long_name="Health Care" parent="f752f9d4-cf84-472b-be68-f6bfbb71afd2"/>
+
+        <group id="7599bf76-8881-45ab-87b1-ffc790e34f65" name="4530" description="Sector" long_name="Health Care Equipment &amp; Services" parent="84b5c68f-3a3f-4a68-88e3-707259579fbe"/>
+        <group id="08e6da0f-3a64-4999-bf56-60cfc0d90d1e" name="4533" description="Subsector" long_name="Health Care Providers" parent="7599bf76-8881-45ab-87b1-ffc790e34f65"/>
+        <group id="496e1175-b82f-48f5-9912-dd889df45eba" name="4535" description="Subsector" long_name="Medical Equipment" parent="7599bf76-8881-45ab-87b1-ffc790e34f65"/>
+        <group id="6e73d037-728c-4c01-b0e4-127edb0cb5c5" name="4537" description="Subsector" long_name="Medical Supplies" parent="7599bf76-8881-45ab-87b1-ffc790e34f65"/>
+
+        <group id="4572530b-2c9f-4bb4-b8c3-2c3f3b0d3866" name="4570" description="Sector" long_name="Pharmaceuticals &amp; Biotechnology" parent="84b5c68f-3a3f-4a68-88e3-707259579fbe"/>
+        <group id="151306d2-da12-46ee-85ae-e9fa59d81e5b" name="4573" description="Subsector" long_name="Biotechnology" parent="4572530b-2c9f-4bb4-b8c3-2c3f3b0d3866"/>
+        <group id="58b141b5-964c-4eb7-a60c-1a3ea65b9bf1" name="4577" description="Subsector" long_name="Pharmaceuticals" parent="4572530b-2c9f-4bb4-b8c3-2c3f3b0d3866"/>
+
+
+
+
+        <group id="982c362d-d789-4dfe-8fb5-3bc510237392" name="5000" description="Industry" long_name="Consumer Services" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="23033808-119b-467c-bfc6-5e5242ed746e" name="5300" description="Supersector" long_name="Retail" parent="982c362d-d789-4dfe-8fb5-3bc510237392"/>
+        <group id="92a7bec2-1aac-4de8-9a86-0ba40d8e08e5" name="5500" description="Supersector" long_name="Media" parent="982c362d-d789-4dfe-8fb5-3bc510237392"/>
+        <group id="4d00a625-9a2e-4c0e-b654-cc696c9fc1ea" name="5700" description="Supersector" long_name="Travel &amp; Leisure" parent="982c362d-d789-4dfe-8fb5-3bc510237392"/>
+
+        <group id="de05e44c-712d-42db-9379-41f6728e58ed" name="5330" description="Sector" long_name="Food &amp; Drug Retailers" parent="23033808-119b-467c-bfc6-5e5242ed746e"/>
+        <group id="94c6602d-cfc3-49bc-8e64-031f3e5d8aee" name="5333" description="Subsector" long_name="Drug Retailers" parent="de05e44c-712d-42db-9379-41f6728e58ed"/>
+        <group id="3205334f-eb4d-4ecc-99d1-789553629ba5" name="5337" description="Subsector" long_name="Food Retailers &amp; Wholesalers" parent="de05e44c-712d-42db-9379-41f6728e58ed"/>
+
+        <group id="42668ae8-a7c3-45ac-af0c-5dc1692d60fc" name="5370" description="Sector" long_name="General Retailers" parent="23033808-119b-467c-bfc6-5e5242ed746e"/>
+        <group id="a36bc45f-654f-4fcb-819d-018be73b827d" name="5371" description="Subsector" long_name="Apparel Retailers" parent="42668ae8-a7c3-45ac-af0c-5dc1692d60fc"/>
+        <group id="bd5089cf-c816-4faf-a544-28fee818bdd9" name="5373" description="Subsector" long_name="Broadline Retailers" parent="42668ae8-a7c3-45ac-af0c-5dc1692d60fc"/>
+        <group id="e3c26533-b7bb-4e5c-abbd-c6bac6388746" name="5375" description="Subsector" long_name="Home Improvement Retailers" parent="42668ae8-a7c3-45ac-af0c-5dc1692d60fc"/>
+        <group id="5916a4b4-28ba-47f4-8529-395866df84f5" name="5377" description="Subsector" long_name="Specialized Consumer Services" parent="42668ae8-a7c3-45ac-af0c-5dc1692d60fc"/>
+        <group id="31bf8f2e-03d2-4c75-91b6-ac4739a434de" name="5379" description="Subsector" long_name="Specialty Retailers" parent="42668ae8-a7c3-45ac-af0c-5dc1692d60fc"/>
+
+        <group id="b906fa5d-4109-404b-8837-944902299470" name="5550" description="Sector" long_name="Media" parent="92a7bec2-1aac-4de8-9a86-0ba40d8e08e5"/>
+        <group id="016845d3-0286-42a2-bf75-77cc48b9f80e" name="5553" description="Subsector" long_name="Broadcasting &amp; Entertainment" parent="b906fa5d-4109-404b-8837-944902299470"/>
+        <group id="ff1f46f5-8457-4052-be96-e8b703dbb9b1" name="5555" description="Subsector" long_name="Media Agencies" parent="b906fa5d-4109-404b-8837-944902299470"/>
+        <group id="9cfe6ed5-1e6b-4363-9125-771e0d9af5c2" name="5557" description="Subsector" long_name="Publishing" parent="b906fa5d-4109-404b-8837-944902299470"/>
+
+        <group id="6b547c8d-0f8f-4687-ae0e-98d64aabf776" name="5750" description="Sector" long_name="Travel &amp; Leisure" parent="4d00a625-9a2e-4c0e-b654-cc696c9fc1ea"/>
+        <group id="37947eb4-669c-46b3-8fe3-36c48469402e" name="5751" description="Subsector" long_name="Airlines" parent="6b547c8d-0f8f-4687-ae0e-98d64aabf776"/>
+        <group id="d82b1196-f331-4b73-a1db-0d1e22af1066" name="5752" description="Subsector" long_name="Gambling" parent="6b547c8d-0f8f-4687-ae0e-98d64aabf776"/>
+        <group id="39558ec7-a779-430c-9be3-6b08d1679157" name="5753" description="Subsector" long_name="Hotels" parent="6b547c8d-0f8f-4687-ae0e-98d64aabf776"/>
+        <group id="c139cc28-f8a4-418f-bd8a-5b939b543abd" name="5755" description="Subsector" long_name="Recreational Services" parent="6b547c8d-0f8f-4687-ae0e-98d64aabf776"/>
+        <group id="951d8808-2b83-4698-8916-8d214be62880" name="5757" description="Subsector" long_name="Restaurants &amp; Bars" parent="6b547c8d-0f8f-4687-ae0e-98d64aabf776"/>
+        <group id="ff586879-da0e-44a2-9a78-c5075dcdd7e5" name="5759" description="Subsector" long_name="Travel &amp; Tourism" parent="6b547c8d-0f8f-4687-ae0e-98d64aabf776"/>
+
+
+
+
+        <group id="0ce25dee-c587-4aff-b822-2028f1fbd903" name="6000" description="Industry" long_name="Telecommunications" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="46d2fba8-cbc7-498e-939f-37d0d43d2ab8" name="6500" description="Supersector" long_name="Telecommunications" parent="0ce25dee-c587-4aff-b822-2028f1fbd903"/>
+
+        <group id="6bc8ba93-318b-41f1-bc03-acae7f24950f" name="6530" description="Sector" long_name="Fixed Line Telecommunications" parent="46d2fba8-cbc7-498e-939f-37d0d43d2ab8"/>
+        <group id="60fdeb25-dc7d-4f61-b424-4c62af63629d" name="6535" description="Subsector" long_name="Fixed Line Telecommunications" parent="6bc8ba93-318b-41f1-bc03-acae7f24950f"/>
+
+        <group id="10a652e6-89ff-45c2-9d88-845337f7c120" name="6570" description="Sector" long_name="Mobile Telecommunications" parent="46d2fba8-cbc7-498e-939f-37d0d43d2ab8"/>
+        <group id="a31281b0-6ae8-4070-982e-841a4224e71f" name="6575" description="Subsector" long_name="Mobile Telecommunications" parent="10a652e6-89ff-45c2-9d88-845337f7c120"/>
+
+
+
+
+
+        <group id="9ed325df-14a4-41e9-be75-9fd7689ea564" name="7000" description="Industry" long_name="Utilities" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="fee9a817-d7c2-44a7-afb3-813ec6000815" name="7500" description="Supersector" long_name="Utilities" parent="9ed325df-14a4-41e9-be75-9fd7689ea564"/>
+
+        <group id="25803d79-eb59-4b9a-ab27-6d2deb4d211b" name="7530" description="Sector" long_name="Electricity" parent="fee9a817-d7c2-44a7-afb3-813ec6000815"/>
+        <group id="6df0bf0d-14ba-4a16-a79b-839b93e4ed2d" name="7535" description="Subsector" long_name="Conventional Electricity" parent="25803d79-eb59-4b9a-ab27-6d2deb4d211b"/>
+        <group id="987cbaaa-93ba-4587-816f-7f5315662036" name="7537" description="Subsector" long_name="Alternative Electricity" parent="25803d79-eb59-4b9a-ab27-6d2deb4d211b"/>
+
+        <group id="abfd0567-9376-4085-967d-bf7efe76b3eb" name="7570" description="Sector" long_name="Gas, Water &amp; Multiutilities" parent="fee9a817-d7c2-44a7-afb3-813ec6000815"/>
+        <group id="1db78c5c-2d34-4321-aa48-64fb7cd7fa39" name="7573" description="Subsector" long_name="Gas Distribution" parent="abfd0567-9376-4085-967d-bf7efe76b3eb"/>
+        <group id="12bae43b-b027-4d20-9f81-b4c27296c724" name="7575" description="Subsector" long_name="Multiutilities" parent="abfd0567-9376-4085-967d-bf7efe76b3eb"/>
+        <group id="2d66be61-cbad-497e-9747-95c4a0cd450f" name="7577" description="Subsector" long_name="Water" parent="abfd0567-9376-4085-967d-bf7efe76b3eb"/>
+
+
+
+
+
+        <group id="f818c273-6d33-48b0-8c2d-461782c85df6" name="8000" description="Industry" long_name="Financials" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="28101d00-91ad-4401-b38c-d4d15fc8434a" name="8300" description="Supersector" long_name="Banks" parent="f818c273-6d33-48b0-8c2d-461782c85df6"/>
+        <group id="a579509d-b96f-4414-b8ec-0b2e2496396f" name="8500" description="Supersector" long_name="Insurance" parent="f818c273-6d33-48b0-8c2d-461782c85df6"/>
+        <group id="cca13469-eed4-4af9-910f-79c81f6ed433" name="8600" description="Supersector" long_name="Real Estate" parent="f818c273-6d33-48b0-8c2d-461782c85df6"/>
+        <group id="12d21493-f0da-4f95-ad97-1ba6ea5894c2" name="8700" description="Supersector" long_name="Financial Services" parent="f818c273-6d33-48b0-8c2d-461782c85df6"/>
+
+        <group id="ccf36922-4dcb-4550-afb4-d115fcf7558c" name="8350" description="Sector" long_name="Banks" parent="28101d00-91ad-4401-b38c-d4d15fc8434a"/>
+        <group id="1207c087-bfe7-4dc7-b71a-1237747b03af" name="8355" description="Subsector" long_name="Banks" parent="ccf36922-4dcb-4550-afb4-d115fcf7558c"/>
+
+        <group id="5919e03e-0cf5-44e1-80ff-e5027d830bbd" name="8530" description="Sector" long_name="Nonlife Insurance" parent="a579509d-b96f-4414-b8ec-0b2e2496396f"/>
+        <group id="b97d564e-9e10-4fe3-bd63-35bd1bb579c6" name="8532" description="Subsector" long_name="Full Line Insurance" parent="5919e03e-0cf5-44e1-80ff-e5027d830bbd"/>
+        <group id="51b6db25-5013-4e78-892f-f15149b2387f" name="8534" description="Subsector" long_name="Insurance Brokers" parent="5919e03e-0cf5-44e1-80ff-e5027d830bbd"/>
+        <group id="618f5cb3-5074-449b-b46b-633cdb7cfec9" name="8536" description="Subsector" long_name="Property &amp; Casualty Insurance" parent="5919e03e-0cf5-44e1-80ff-e5027d830bbd"/>
+        <group id="76c2ad43-2919-4485-a9b0-f376a8f5651a" name="8538" description="Subsector" long_name="Reinsurance" parent="5919e03e-0cf5-44e1-80ff-e5027d830bbd"/>
+
+        <group id="ed10f6d9-cf1e-4570-8741-d4137877fc30" name="8570" description="Sector" long_name="Life Insurance" parent="a579509d-b96f-4414-b8ec-0b2e2496396f"/>
+        <group id="5bb66f95-da40-4f46-a749-547efc95aa7f" name="8575" description="Subsector" long_name="Life Insurance" parent="ed10f6d9-cf1e-4570-8741-d4137877fc30"/>
+
+        <group id="fe82cb26-d04c-4e50-aed8-3db8ee0c61c0" name="8630" description="Sector" long_name="Real Estate Investment &amp; Services" parent="cca13469-eed4-4af9-910f-79c81f6ed433"/>
+        <group id="0e358474-e3dd-4cac-8428-07d4e01b52fc" name="8633" description="Subsector" long_name="Real Estate Holding &amp; Development" parent="fe82cb26-d04c-4e50-aed8-3db8ee0c61c0"/>
+        <group id="2033632a-f13f-4be0-a7bc-f0961d3f1ace" name="8637" description="Subsector" long_name="Real Estate Services" parent="fe82cb26-d04c-4e50-aed8-3db8ee0c61c0"/>
+
+        <group id="b6caeefa-765a-487d-9400-6b937a82c5c2" name="8670" description="Sector" long_name="Real Estate Investment Trusts" parent="cca13469-eed4-4af9-910f-79c81f6ed433"/>
+        <group id="68d2955c-6c98-4bef-a740-28bf8a1a8145" name="8671" description="Subsector" long_name="Industrial &amp; Office REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+        <group id="84369f7d-06db-4f82-b407-ff82c30058e0" name="8672" description="Subsector" long_name="Retail REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+        <group id="e739522d-df9e-4f5d-90db-e0e33eaae4ef" name="8673" description="Subsector" long_name="Residential REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+        <group id="5dae767f-f479-4bd8-9f51-2116ce2f5702" name="8674" description="Subsector" long_name="Diversified REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+        <group id="21448e4c-13b3-4e36-a9bf-7f09f746f091" name="8675" description="Subsector" long_name="Specialty REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+        <group id="2794a04f-4825-4d0e-bdde-f6f2d0903ca3" name="8676" description="Subsector" long_name="Mortgage REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+        <group id="11c4b6fd-ad98-4bb4-81e3-567bd869937b" name="8677" description="Subsector" long_name="Hotel &amp; Lodging REITs" parent="b6caeefa-765a-487d-9400-6b937a82c5c2"/>
+
+        <group id="d5ae92c1-c7a7-4c17-8420-b98a420706ff" name="8770" description="Sector" long_name="Financial Services" parent="12d21493-f0da-4f95-ad97-1ba6ea5894c2"/>
+        <group id="bb0dbbe3-dd2a-467b-bc4e-2e849051bb8c" name="8771" description="Subsector" long_name="Asset Managers" parent="d5ae92c1-c7a7-4c17-8420-b98a420706ff"/>
+        <group id="22dc7823-ffad-4eff-a9a3-2bfcc2d7f3cf" name="8773" description="Subsector" long_name="Consumer Finance" parent="d5ae92c1-c7a7-4c17-8420-b98a420706ff"/>
+        <group id="74544006-a4eb-4925-a76d-41f8d8e42049" name="8775" description="Subsector" long_name="Specialty Finance" parent="d5ae92c1-c7a7-4c17-8420-b98a420706ff"/>
+        <group id="9c82a43c-34b0-4d63-820a-1c631decf255" name="8777" description="Subsector" long_name="Investment Services" parent="d5ae92c1-c7a7-4c17-8420-b98a420706ff"/>
+        <group id="b0306278-2b7d-4aa3-b647-f4db5ab3d433" name="8779" description="Subsector" long_name="Mortgage Finance" parent="d5ae92c1-c7a7-4c17-8420-b98a420706ff"/>
+
+        <group id="2fd09c73-43d1-4e12-883c-b6bc4069079a" name="8980" description="Sector" long_name="Equity Investment Instruments" parent="12d21493-f0da-4f95-ad97-1ba6ea5894c2"/>
+        <group id="8afb7716-1c73-4ba6-8ca2-bdbcb8e2e4e4" name="8985" description="Subsector" long_name="Equity Investment Instruments" parent="2fd09c73-43d1-4e12-883c-b6bc4069079a"/>
+
+        <group id="1f7ad6c0-a6e8-42c7-8896-89ebc326238a" name="8990" description="Sector" long_name="Nonequity Investment Instruments" parent="12d21493-f0da-4f95-ad97-1ba6ea5894c2"/>
+        <group id="f8daa9de-429a-46af-a7f5-0bcddb07715d" name="8995" description="Subsector" long_name="Nonequity Investment Instruments" parent="1f7ad6c0-a6e8-42c7-8896-89ebc326238a"/>
+
+        <group id="098997bc-ecea-4dcc-af08-27448be4d4b1" name="9000" description="Industry" long_name="Technology" parent="500d9ac4-188f-46a2-beac-eeb2993ffc67"/> 
+        <group id="35abdde1-1dae-4b24-be8e-376c981ba3d5" name="9500" description="Supersector" long_name="Technology" parent="098997bc-ecea-4dcc-af08-27448be4d4b1"/>
+
+        <group id="e301a44d-ba0a-4df2-835b-6fa8adf00749" name="9530" description="Sector" long_name="Software &amp; Computer Services" parent="35abdde1-1dae-4b24-be8e-376c981ba3d5"/>
+        <group id="3898b6c4-86d2-4544-ba01-38a1d8f5beac" name="9533" description="Subsector" long_name="Computer Services" parent="e301a44d-ba0a-4df2-835b-6fa8adf00749"/>
+        <group id="bba94f98-4157-44d2-a0c8-dd8f6b77d7d9" name="9535" description="Subsector" long_name="Internet" parent="e301a44d-ba0a-4df2-835b-6fa8adf00749"/>
+        <group id="cdb0880c-67b4-403e-a51a-c5c30ace8942" name="9537" description="Subsector" long_name="Software" parent="e301a44d-ba0a-4df2-835b-6fa8adf00749"/>
+
+        <group id="a5838ce3-f92e-4299-9e87-8ef08c46d809" name="9570" description="Sector" long_name="Technology Hardware &amp; Equipment" parent="35abdde1-1dae-4b24-be8e-376c981ba3d5"/>
+        <group id="9ba41def-bc4d-4a71-99fd-72cc745fa07f" name="9572" description="Subsector" long_name="Computer Hardware" parent="a5838ce3-f92e-4299-9e87-8ef08c46d809"/>
+        <group id="a8a0bed7-ad12-4ece-8ae4-9dbd88c98de5" name="9574" description="Subsector" long_name="Electronic Office Equipment" parent="a5838ce3-f92e-4299-9e87-8ef08c46d809"/>
+        <group id="1eba9ebf-ad1f-4ce4-b76f-2bf4eaadb8df" name="9576" description="Subsector" long_name="Semiconductors" parent="a5838ce3-f92e-4299-9e87-8ef08c46d809"/>
+        <group id="32d683c8-3ba7-4acf-9d83-8627de610b35" name="9578" description="Subsector" long_name="Telecommunications Equipment" parent="a5838ce3-f92e-4299-9e87-8ef08c46d809"/>
+    </groups> 
+</resource>

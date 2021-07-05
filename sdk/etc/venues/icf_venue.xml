@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="ICF venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="ICF X-WATCH" shortname="ICF X-WATCH" identifier="3a092362-8bd6-11e7-ae90-e1950ecd26c2" description="ICF X-WATCH">
+            <identifier>
+                <key name="ISIN"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the ICF venue.
+    </documentation>
+</resource>
+

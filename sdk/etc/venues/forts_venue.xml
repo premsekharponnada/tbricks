@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="FORTS venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="MOEX Derivatives" shortname="FORTS" identifier="6fc663c4-1c2a-11e6-8b80-d756be112c75" description="MOEX Derivatives (FORTS)">
+            <identifier>
+                <key name="SecurityID" tag="48"/>
+                <key name="SecurityType" tag="167"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="price" value="empty"/>
+            <field name="disclosed volume"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the MOEX Derivatives (FORTS) venue.
+    </documentation>
+</resource>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Eurex C7 venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Eurex C7" shortname="Eurex C7" identifier="7579d16c-5d3f-11e4-9b90-8d488bc3c688" description="Eurex Clearing C7" algo_label_required="false">
+            <identifier>
+                <key name="sym"/>
+                <key name="mmy"/>
+                <key name="putcall"/>
+                <key name="strkpx"/>
+                <key name="optat"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Definition of Eurex venue for its Clearing C7 interface.
+        Covers Expit Trade component.
+    </documentation>
+</resource>
+

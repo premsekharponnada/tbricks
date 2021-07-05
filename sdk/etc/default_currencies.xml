@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="currency" type="application/x-currency+xml">
+
+    <currencies>
+        <currency code="AED" number="784" id="51a8a3b2-bd59-4fed-b343-e59d2185b0e1" name="UAE Dirham"/>
+        <currency code="AFN" number="971" id="d28935d6-0414-4dbd-ad76-d04328bd85cd" name="Afghani"/>
+        <currency code="ALL" number="008" id="b7acbf3d-2a36-414c-9ce8-84dbed38f714" name="Lek"/>
+        <currency code="AMD" number="051" id="c020dec6-dc47-418d-82aa-39e74bc61dfb" name="Armenian Dram"/>
+        <currency code="ANG" number="532" id="250ac99b-c49c-4ee6-a93f-700f69c166fc" name="Netherlands Antillian Guilder"/>
+        <currency code="AOA" number="973" id="a1da6894-8e36-48b0-a5ee-31badf6f0399" name="Kwanza"/>
+        <currency code="ARS" number="032" id="d9189565-96af-419e-9ec2-a27a38b2c83a" name="Argentine Peso"/>
+        <currency code="ATS" number="040" id="42b0ed26-f484-11e7-8920-a4ae4adb293a" name="Austrian schilling"/>
+        <currency code="AUD" number="036" id="1ead4ddb-e79a-4cd9-a3c6-4f1e6ad0d746" name="Australian Dollar"/>
+        <currency code="AWG" number="533" id="faba434d-7f24-4fd7-b7b8-22bf70463c56" name="Aruban Guilder"/>
+        <currency code="AZN" number="944" id="7431dd74-2278-4178-8eef-4909c0abde66" name="Azerbaijanian Manat"/>
+        <currency code="BAM" number="977" id="c081e1c2-6d9c-4783-82b3-938bbcdc9226" name="Convertible Marks"/>
+        <currency code="BBD" number="052" id="c340be63-62a3-4f89-9d7e-816ca123b44c" name="Barbados Dollar"/>
+        <currency code="BDT" number="050" id="95b3f903-8def-4223-a35e-1d07e5d3ea9f" name="Taka"/>
+        <currency code="BGN" number="975" id="9ae12ad7-f963-4cc6-bc2e-10303f1f34ff" name="Bulgarian Lev"/>
+        <currency code="BHD" number="048" id="f7558848-1ba8-43fc-bf54-62e7d1337608" name="Bahraini Dinar"/>
+        <currency code="BIF" number="108" id="df29713f-4957-4ba5-af8b-53a7b53dd76d" name="Burundi Franc"/>
+        <currency code="BMD" number="060" id="0fe455bd-a59c-45af-a3ad-08c3d762b5fa" name="Bermudian Dollar (customarily known as Bermuda Dollar)"/>
+        <currency code="BND" number="096" id="faab2371-fef8-4214-8e35-88ed1831eb5a" name="Brunei Dollar"/>
+        <currency code="BOB" number="068" id="0e36c1bd-f2ef-4aaa-9b92-356231878c14" name="BolivianoMvdol"/>
+        <currency code="BRL" number="986" id="6d37b3c4-5ab2-4b26-90eb-0b7bbfaac9d4" name="Brazilian Real"/>
+        <currency code="BSD" number="044" id="b7b8d970-57c3-4cb0-a7a1-803e0c3a0fba" name="Bahamian Dollar"/>
+        <currency code="BWP" number="072" id="204d2af2-4243-4049-87f1-86af4056d786" name="Pula"/>
+        <currency code="BYN" number="933" id="a0960833-97e9-4358-81b4-68f0536b1f9a" name="Belarusian Ruble"/>
+        <currency code="BZD" number="084" id="e66f2b8a-59ee-4c18-b717-5f7646fa2a55" name="Belize Dollar"/>
+        <currency code="CAD" number="124" id="11af23fd-36f5-430f-8e04-6648ce869dac" name="Canadian Dollar"/>
+        <currency code="CDF" number="976" id="d5c4f8c0-9ed2-4c31-920e-154261b4cee6" name="Franc Congolais"/>
+        <currency code="CHF" number="756" id="7aa9cd07-22ab-4acb-80e3-a3abf1dba22b" name="Swiss Franc"/>
+        <currency code="CLP" number="152" id="63dd353a-67ae-4750-9b97-e4bb8fe4b554" name="Chilean PesoUnidades de fomento "/>
+        <currency code="CNH" number="176" id="71101a64-2f24-11e7-a9f0-b151fe9ef4fa" name="Yuan Renminbi Offshore"/>
+        <currency code="CNY" number="156" id="062911ad-b84a-4a29-bdf7-b1653ec11fc5" name="Yuan Renminbi"/>
+        <currency code="COP" number="170" id="9e045576-d177-4933-ba89-b5a1393e75a3" name="Colombian PesoUnidad de Valor Real"/>
+        <currency code="CRC" number="188" id="63e44e71-16a8-4ed0-b68d-dd73341e7d31" name="Costa Rican Colon"/>
+        <currency code="CUP" number="192" id="dd2dd157-3840-4aa7-88b0-b36f09778f45" name="Cuban Peso"/>
+        <currency code="CVE" number="132" id="401ec075-1fe2-4e1b-9fe2-1e653e20f116" name="Cape Verde Escudo"/>
+        <currency code="CYP" number="196" id="4b8221c4-dba6-4b9a-b26f-7667616a8d39" name="Cyprus PoundEuro (effective 1 January 2008)"/>
+        <currency code="CZK" number="203" id="c63e765b-922b-4cdf-959d-2b58a6f4aa4d" name="Czech Koruna"/>
+        <currency code="DEM" number="280" id="c51ce2d2-ac72-11e8-9f30-7a4ef4930cbf" name="Deutsche Mark"/>
+        <currency code="DJF" number="262" id="ae8ee2dc-d5db-40c9-8268-863f7e8cf437" name="Djibouti Franc"/>
+        <currency code="DKK" number="208" id="4367a3cb-40b9-4a98-8ffd-e21e5ada9ec9" name="Danish Krone"/>
+        <currency code="DOP" number="214" id="77ddd8ca-2422-4456-8ca3-34844420ec6d" name="Dominican Peso"/>
+        <currency code="DZD" number="012" id="305e139f-383f-4441-9cde-7f7cfbce81d7" name="Algerian Dinar"/>
+        <currency code="EEK" number="233" id="36085fa9-6a12-4441-b7bf-1eb0ad527de7" name="Kroon"/>
+        <currency code="EGP" number="818" id="7d7e5cc9-6a51-4a3c-b7bd-d16db0984677" name="Egyptian Pound"/>
+        <currency code="ERN" number="232" id="af786bf3-c8f8-45a1-90a6-7b21d7883d9b" name="Nakfa"/>
+        <currency code="ETB" number="230" id="caea728c-2c67-4513-8d50-32a2ee432613" name="Ethiopian Birr"/>
+        <currency code="EUR" number="978" id="e72a085b-5904-4c17-b6a1-499e430c4e29" name="Euro"/>
+        <currency code="FJD" number="242" id="9dc18d8e-8bc2-48a5-a441-88ec341eab6c" name="Fiji Dollar"/>
+        <currency code="FKP" number="238" id="bd21079b-f3b5-4984-819a-87e89f61b8c5" name="Falkland Islands Pound"/>
+        <currency code="FRF" number="250" id="7615d964-5482-11ea-8090-6c5fcef10b38" name="French Franc"/>
+        <currency code="GBP" number="826" id="2deaa9c8-9dcb-44d6-82b1-3bee1a9c20fe" name="Pound Sterling"/>
+        <currency code="GEL" number="981" id="275494ed-5e92-4c78-bf80-258ab91475d3" name="Lari"/>
+        <currency code="GHS" number="936" id="4c10737e-06ed-4aec-a7fc-1d4bf1f323ab" name="Ghana Cedi"/>
+        <currency code="GIP" number="292" id="30f223ff-0746-4a1b-88ec-b15a070eedf5" name="Gibraltar Pound"/>
+        <currency code="GMD" number="270" id="5d60e1d5-fc0d-40d1-a8e5-96a83ac6f6ef" name="Dalasi"/>
+        <currency code="GNF" number="324" id="19cbfba5-1ff3-4f60-8ac3-3e271e2aa540" name="Guinea Franc"/>
+        <currency code="GTQ" number="320" id="867d33ed-9d4d-482d-95b4-5a20ed6c390c" name="Quetzal"/>
+        <currency code="GWP" number="624" id="ca2f579c-7f0d-41de-9965-d129fe7e77aa" name="Guinea-Bissau Peso"/>
+        <currency code="GYD" number="328" id="9341ee35-6ef3-4a61-bf95-528fd7095bf8" name="Guyana Dollar"/>
+        <currency code="HKD" number="344" id="e711d289-d61b-4eea-a6af-e4937d199d02" name="Hong Kong Dollar"/>
+        <currency code="HNL" number="340" id="2c5db4a9-5620-4858-886d-151ec8968e60" name="Lempira"/>
+        <currency code="HRK" number="191" id="4bbd34f8-39cf-437b-9649-81c38c9ad3d6" name="Croatian Kuna"/>
+        <currency code="HTG" number="332" id="5e30e9eb-0bdb-4d21-baf2-73a44b1e819b" name="GourdeUS Dollar"/>
+        <currency code="HUF" number="348" id="93b010d4-4b39-484f-a6e4-f13a47998f8a" name="Forint"/>
+        <currency code="IDR" number="360" id="e7267bc0-56a9-4739-93f5-9f0a3b6b0959" name="Rupiah"/>
+        <currency code="ILS" number="376" id="67d005d2-ce04-44ce-859f-2367f73051a4" name="New Israeli Sheqel"/>
+        <currency code="INR" number="356" id="5d1b6119-d174-4a4f-9c69-8d7ec9928e69" name="Indian RupeeNgultrum"/>
+        <currency code="IQD" number="368" id="08dbade2-49e9-485b-a858-c9eb9a64e468" name="Iraqi Dinar"/>
+        <currency code="IRR" number="364" id="7bc87684-d1ac-4435-9aab-2967397a07ce" name="Iranian Rial"/>
+        <currency code="ISK" number="352" id="75d3bb72-5b19-4a5f-8e43-bc396d160427" name="Iceland Krona"/>
+        <currency code="ITL" number="380" id="72021cac-5482-11ea-9910-f4895ad96d81" name="Italian Lira"/>
+        <currency code="JMD" number="388" id="b91273ff-80a8-4f72-94fa-077d28e860e6" name="Jamaican Dollar"/>
+        <currency code="JOD" number="400" id="8c22c3a2-2d24-46c5-ab4d-f2a46f42ed06" name="Jordanian Dinar"/>
+        <currency code="JPY" number="392" id="61b8964f-b1e7-4648-9449-7313255861ff" name="Yen"/>
+        <currency code="KES" number="404" id="f85168cd-1f37-4ff2-a145-d471e7e5fb4e" name="Kenyan Shilling"/>
+        <currency code="KGS" number="417" id="fe1501a0-17e3-4aae-bb0f-b660798a6d29" name="Som"/>
+        <currency code="KHR" number="116" id="bc35d6db-cc92-4a28-88ca-35be265ed940" name="Riel"/>
+        <currency code="KMF" number="174" id="f18a5472-4d36-410a-8e03-e4e66c38ae6d" name="Comoro Franc"/>
+        <currency code="KPW" number="408" id="427dbdec-5d9d-4b06-a1e0-7a8ebfb42e86" name="North Korean Won"/>
+        <currency code="KRW" number="410" id="73d03210-cccc-4d59-8d5d-3257796921f1" name="Won"/>
+        <currency code="KWD" number="414" id="b9751fac-3955-4778-abca-b8ce71f10127" name="Kuwaiti Dinar"/>
+        <currency code="KYD" number="136" id="a8834e96-75d3-452a-b688-56bcfba091fb" name="Cayman Islands Dollar"/>
+        <currency code="KZT" number="398" id="65ca4ed1-2332-4c4d-b68c-3222be4519f5" name="Tenge"/>
+        <currency code="LAK" number="418" id="98adf710-a249-4c37-9fe2-5e48d5900931" name="Kip"/>
+        <currency code="LBP" number="422" id="31303d17-7b05-4a53-ad1b-5cba4c230046" name="Lebanese Pound"/>
+        <currency code="LKR" number="144" id="995b8fdb-b3e7-4faa-9814-cadd745d3536" name="Sri Lanka Rupee"/>
+        <currency code="LRD" number="430" id="0ea68993-2b79-4229-99e8-170df75d48f2" name="Liberian Dollar"/>
+        <currency code="LTL" number="440" id="6d85a9bd-e33f-47b9-925c-98bc2eba97cf" name="Lithuanian Litas"/>
+        <currency code="LVL" number="428" id="d42648ab-960d-4746-993d-b995702a0e89" name="Latvian Lats"/>
+        <currency code="LYD" number="434" id="742ce80e-b6ed-4287-afbc-8c8c9a9f125f" name="Libyan Dinar"/>
+        <currency code="MAD" number="504" id="c5233d25-4650-4ed8-a81c-0d96b49bf309" name="Moroccan Dirham"/>
+        <currency code="MDL" number="498" id="7a80b204-85a2-457f-82f8-414ffaafbf28" name="Moldovan Leu"/>
+        <currency code="MGA" number="969" id="4da41ad7-e024-48fe-b5a2-dbab9271a243" name="Malagasy Ariary"/>
+        <currency code="MKD" number="807" id="51f693ae-b34c-4589-a753-aa4248264ea4" name="Denar"/>
+        <currency code="MMK" number="104" id="85d0222f-acea-412b-9cf8-287f86208e3b" name="Kyat"/>
+        <currency code="MNT" number="496" id="4b6bfccd-11d6-4c83-adc5-1f65883d7408" name="Tugrik"/>
+        <currency code="MOP" number="446" id="e3f540d5-7889-4c23-a3b0-f90f1b81ee84" name="Pataca"/>
+        <currency code="MRO" number="478" id="7987371d-f550-4ad3-865c-b853c05d4a63" name="Ouguiya"/>
+        <currency code="MTL" number="470" id="da8d01e5-fcae-4799-b82a-78cf7a9a97f2" name="Maltese LiraEuro (effective 1 January 2008)"/>
+        <currency code="MUR" number="480" id="9bf67e25-ce8e-45e3-8e3d-40cc38aea0d3" name="Mauritius Rupee"/>
+        <currency code="MVR" number="462" id="6663ea43-da05-4c2c-9adf-a38640846a3e" name="Rufiyaa"/>
+        <currency code="MWK" number="454" id="66c03cf5-6765-4ee3-8211-800ef799a0be" name="Kwacha"/>
+        <currency code="MXN" number="484" id="cb53c2ff-88f3-45c2-a55b-d59d8fed4d34" name="Mexican PesoMexican Unidad de Inversion (UDI)"/>
+        <currency code="MYR" number="458" id="8df3306e-8074-4f50-bebb-bcfcfca1f53f" name="Malaysian Ringgit"/>
+        <currency code="MZN" number="943" id="b0c2f700-8635-4faf-85dc-597fb8c5a31f" name="Metical "/>
+        <currency code="NAD" number="516" id="fb9ab54a-4ee9-11e9-a6a0-0b8d9d50cd3a" name="Namibia Dollar"/>
+        <currency code="NGN" number="566" id="5017d0ae-e9a7-47cc-8db6-532b95430ecf" name="Naira"/>
+        <currency code="NIO" number="558" id="366751d6-3f31-49cf-bafc-5c44d0d9e016" name="Cordoba Oro"/>
+        <currency code="NLG" number="528" id="d8f6fcde-ac72-11e8-8a00-79782db6d55a" name="Dutch Guilder"/>
+        <currency code="NOK" number="578" id="10c360cd-0e99-4319-8b99-e2160cb20bf3" name="Norwegian Krone"/>
+        <currency code="NPR" number="524" id="15b97b13-4d79-48eb-8345-97faaf84046b" name="Nepalese Rupee"/>
+        <currency code="NZD" number="554" id="c994130d-af37-45eb-bb3e-fe105d8dd47b" name="New Zealand Dollar"/>
+        <currency code="OMR" number="512" id="fe0b3119-6a47-437c-87eb-558c5701c3ce" name="Rial Omani"/>
+        <currency code="PAB" number="590" id="6e3f714d-68e7-4fd1-ae33-d7fe17a24987" name="BalboaUS Dollar"/>
+        <currency code="PEN" number="604" id="bb48d637-c190-47b5-9be7-931b0e55717e" name="Nuevo Sol"/>
+        <currency code="PGK" number="598" id="e31d3f18-6983-4d6e-aecb-96bfa313fe60" name="Kina"/>
+        <currency code="PHP" number="608" id="056ff6ce-f31d-471d-9740-40c361c4dbb7" name="Philippine Peso"/>
+        <currency code="PKR" number="586" id="4de7b22b-76b6-46b7-ba28-92b32be25fbb" name="Pakistan Rupee"/>
+        <currency code="PLN" number="985" id="793c172f-0d5e-4121-b2f1-8988b545bdba" name="Zloty"/>
+        <currency code="PYG" number="600" id="53f6c15e-36b2-42db-bf75-19fe26414e67" name="Guarani"/>
+        <currency code="QAR" number="634" id="430eb3ad-20d9-4bf7-b034-b3dc459b8b68" name="Qatari Rial"/>
+        <currency code="RON" number="946" id="2fc9afe2-0bcf-406d-a8b6-8658e332c747" name="New Leu"/>
+        <currency code="RSD" number="941" id="795b899e-039a-4bb0-984c-afce15ba21f0" name="Serbian Dinar"/>
+        <currency code="RUB" number="643" id="02fcee54-9c19-4ed9-a72c-2ca5fe633cb6" name="Russian Ruble"/>
+        <currency code="RWF" number="646" id="af0ae656-538d-4ad6-bb31-078544e295b8" name="Rwanda Franc"/>
+        <currency code="SAR" number="682" id="22974fb4-60bd-494b-a14e-de3b37ed34b1" name="Saudi Riyal"/>
+        <currency code="SBD" number="090" id="49c5ec1a-dbcb-4553-88de-8011db08e588" name="Solomon Islands Dollar"/>
+        <currency code="SCR" number="690" id="30871ebc-7847-4156-97f4-bb79f51a3834" name="Seychelles Rupee"/>
+        <currency code="SDG" number="938" id="36d014fa-f19f-411b-a85e-241fd58bbeb2" name="Sudanese Pound"/>
+        <currency code="SEK" number="752" id="c930f154-df1f-4309-9371-c71e9dbde369" name="Swedish Krona"/>
+        <currency code="SGD" number="702" id="8e41a77f-6fea-42de-a8f3-d7bf4403361a" name="Singapore Dollar"/>
+        <currency code="SHP" number="654" id="10500d93-d26d-484f-8939-96e4696eed8a" name="Saint Helena Pound"/>
+        <currency code="SIT" number="705" id="e0d8e796-ac72-11e8-a980-0cfa58eb5a29" name="Slovenian tolar"/>
+        <currency code="SKK" number="703" id="d4176350-866b-431c-9bb8-a7500c048dc1" name="Slovak Koruna"/>
+        <currency code="SLL" number="694" id="5350a603-28a2-4780-9485-d7aaca6c3cce" name="Leone"/>
+        <currency code="SOS" number="706" id="bad02fe5-1031-4dfe-93dd-b3844196af91" name="Somali Shilling"/>
+        <currency code="SRD" number="968" id="92cb270f-65d1-4e56-9a3c-70e734c0e257" name="Surinam Dollar"/>
+        <currency code="STD" number="678" id="9ab6695e-2ed6-450f-b6ec-b528b5ab69c2" name="Dobra"/>
+        <currency code="SVC" number="222" id="2af6998c-4bbd-4c0c-8dba-ed20b2eb52f5" name="El Salvador ColonUS Dollar"/>
+        <currency code="SYP" number="760" id="a584d595-f817-4a2e-bc91-a10c847b2dc8" name="Syrian Pound"/>
+        <currency code="SZL" number="748" id="6ce38c9f-4c75-4bae-950f-3e26c7b2f62b" name="Lilangeni"/>
+        <currency code="THB" number="764" id="b1f6834f-93e3-471a-99c9-7cce2b905fea" name="Baht"/>
+        <currency code="TJS" number="972" id="db32f225-8121-4d63-913e-2c900954e6d2" name="Somoni"/>
+        <currency code="TMM" number="795" id="489f7899-8d0c-4e37-bad2-c6b4db96d794" name="Manat"/>
+        <currency code="TND" number="788" id="03b603de-b029-4a39-866e-8d08fc3d63d3" name="Tunisian Dinar"/>
+        <currency code="TOP" number="776" id="cacf2a1d-4de4-4de2-9f08-77387a17199c" name="Pa'anga"/>
+        <currency code="TRY" number="949" id="13ba706d-8b36-4dc7-ba16-a9e6de4913b9" name="New Turkish Lira"/>
+        <currency code="TTD" number="780" id="efecc1ae-2344-4c59-bbfc-7b2c11ae0d44" name="Trinidad and Tobago Dollar"/>
+        <currency code="TWD" number="901" id="d737669f-e4ed-4536-a93e-32d0858a46ff" name="New Taiwan Dollar"/>
+        <currency code="TZS" number="834" id="3340d342-d2d8-4cde-a5de-e3d346a89a94" name="Tanzanian Shilling"/>
+        <currency code="UAH" number="980" id="66b0d7f4-6d37-47cb-bf7d-5ce0c4603d47" name="Hryvnia"/>
+        <currency code="UGX" number="800" id="371044f3-444c-4258-b5ec-0d89162736ad" name="Uganda Shilling"/>
+        <currency code="USD" number="840" id="8085f9be-5b2b-47a3-b6c8-a4ba136be1fd" name="US Dollar"/>
+        <currency code="UYU" number="858" id="2a38e583-72ee-407a-ac7c-c9a23506c134" name="Peso Uruguayo"/>
+        <currency code="UZS" number="860" id="d8d9763f-5a6d-47c6-8af2-bbf30607554e" name="Uzbekistan Sum"/>
+        <currency code="VEF" number="937" id="eea200e2-0523-4b8e-a4b7-460aa5e3b012" name="Bolivar Fuerte "/>
+        <currency code="VND" number="704" id="cbc8178c-ec35-4f11-ad6b-78249fff643d" name="Dong"/>
+        <currency code="VUV" number="548" id="060b7b12-d1c5-4b0a-93c2-1a4a62a4369c" name="Vatu"/>
+        <currency code="WST" number="882" id="3901c628-479a-449f-a491-59afb66c0250" name="Tala"/>
+        <currency code="XAF" number="950" id="b456d29e-10b2-4029-ae73-9054851cd6c4" name="CFA Franc BEAC "/>
+        <currency code="XAG" number="961" id="02f201e7-f59d-494e-ac03-c2566b4d0236" name="Silver"/>
+        <currency code="XAU" number="959" id="73e5f9b5-66af-4d4c-9e71-dd4272bd9deb" name="Gold"/>
+        <currency code="XBA" number="955" id="3db8025f-706d-4a43-b301-17c2ebc89143" name="Bond Markets Units European Composite Unit (EURCO)"/>
+        <currency code="XBB" number="956" id="761e7d28-97d1-4ee4-93ea-6e1900e8023c" name="European Monetary Unit (E.M.U.-6) "/>
+        <currency code="XBC" number="957" id="4b0bca2b-bb71-401f-8b80-1f2fd817c738" name="European Unit of Account 9(E.U.A.-9)"/>
+        <currency code="XBD" number="958" id="808c62eb-b031-4f13-ab47-6165052d5a39" name="European Unit of Account 17(E.U.A.-17)"/>
+        <currency code="XCD" number="951" id="4ebad7c3-40c8-4783-ab59-eb3034be9e7f" name="East Caribbean Dollar"/>
+        <currency code="XDR" number="960" id="81c1becc-232a-4e54-b475-bffc737601b6" name="SDR"/>
+        <currency code="XFO" number="175" id="800ae84e-2ec6-4954-843c-83a7db14dafe" name="Gold-Franc"/>
+        <currency code="XFU" number="173" id="5a6dc409-6cd9-4b81-9df0-dd53e4d015ae" name="UIC-Franc"/>
+        <currency code="XOF" number="952" id="cd852d58-cd05-4d97-a032-989eabe41b0b" name="CFA Franc BCEAO "/>
+        <currency code="XPD" number="964" id="f01de5c0-eded-4d96-8204-a02da1f2b157" name="Palladium"/>
+        <currency code="XPF" number="953" id="5d98b9a2-8ba3-4ceb-823d-89f5700b753d" name="CFP Franc"/>
+        <currency code="XPT" number="962" id="c902d7b1-d3b4-4776-9403-4e4f8cccbac9" name="Platinum"/>
+        <currency code="XTS" number="963" id="52b2612d-7258-4682-92fc-86f4bb543280" name="Testing currency"/>
+        <currency code="XVN" number="177" id="a6517a24-2f24-11e7-af60-b454a4dc7d73" name="Bitcoin"/>
+        <currency code="YER" number="886" id="636ec5fa-fb83-4aa3-b948-9eebe6ff77b8" name="Yemeni Rial"/>
+        <currency code="ZAR" number="710" id="181e6818-2c9a-41cf-967f-8c3821cef9bc" name="RandLoti"/>
+        <currency code="ZMW" number="967" id="5ad63b6e-242f-4f47-9c36-3ed7ab70d677" name="Kwacha"/>
+        <currency code="ZWD" number="716" id="786d9d89-909f-4b56-b8d8-a8bd34be9a6a" name="Zimbabwe Dollar"/>
+        <currency code="XXX" number="999" id="b5d71c32-cd84-416b-9d92-a1a144f7b1a2" name="No currency"/>
+    </currencies>
+
+    <documentation>
+        Currency information per. ISO 4217.
+        According ISO 4217 currencies XFO and XFU hasn't number.
+        CNH and XVN currencies does not included to ISO 4217.
+    </documentation>
+</resource>
+

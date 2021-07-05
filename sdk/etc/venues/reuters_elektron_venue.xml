@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Reuters Elektron Venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="elektron"
+               shortname="Reuters Elektron"
+               entitlements="yes"
+               identifier="7fe6fb5c-6259-11e8-99a0-b33e9ff4831f"
+               description="Reuters Elektron market data">
+            <identifier>
+                <key name="svc"/>
+                <key name="ric"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- Market Data venue, capabilities are not required -->
+
+    <documentation>
+        Venue identifier definition for Thomson Reuters Elektron Interface.
+    </documentation>
+</resource>

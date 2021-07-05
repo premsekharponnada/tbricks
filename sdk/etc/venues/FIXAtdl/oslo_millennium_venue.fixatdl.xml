@@ -1,0 +1,224 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="0ec56e5a-e536-11e1-b464-65dd30913fc9">
+  <Strategy uiRep="Oslo Børs Millennium" wireValue="Oslo millenium" version="1.0" name="OsloBors">
+    <Parameter xsi:type="Price_t" name="StopPrice" tbricks_property_identifier="84796894-1770-11e2-9e47-3c870c3e9924">
+      <Description>Stop price</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="DisclosedVolume" tbricks_property_identifier="bc9e0d54-6779-4675-aa9c-6e769c30529e">
+      <Description>Disclosed volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="MinAcceptableVolume" tbricks_property_identifier="4aa1b2de-e1e1-11e5-9e24-9049f1f1bbe9">
+      <Description>Min. acceptable volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="OrderCapacity" tbricks_property_identifier="cc0d6d94-e1e2-11e5-9e24-9049f1f1bbe9">
+      <Description>Order capacity</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="ParticipationPolicy" tbricks_property_identifier="1bf53f2f-530a-11e6-9e47-f1bbe9ebb3a6">
+      <Description>Participation policy</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="StrategyPricePolicy" tbricks_property_identifier="4fc6896f-8403-11e6-8a89-0d1c06b747de">
+      <Description>Strategy price policy</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <!--common orc parameter-->
+    <Parameter xsi:type="String_t" name="ExecutionStyle">
+      <EnumPair enumID="0" wireValue="Normal" index="0" />
+      <EnumPair enumID="1" wireValue="Interbank" index="1" />
+      <EnumPair enumID="2" wireValue="Cross" index="2" />
+      <EnumPair enumID="3" wireValue="Accept" index="3" />
+      <EnumPair enumID="4" wireValue="Custom" index="4" />
+      <EnumPair enumID="5" wireValue="Stop" index="5" />
+    </Parameter>
+    <!--orc fields-->
+    <Parameter xsi:type="String_t" name="A">
+      <Description>Account</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PD">
+      <Description>Pegged</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="HD">
+      <Description>Hidden</Description>
+    </Parameter>
+    <Parameter xsi:type="Price_t" name="ST">
+      <Description>Stop trigger</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="AT">
+      <Description>Account type</Description>
+      <EnumPair enumID="House" wireValue="3" index="0" />
+      <EnumPair enumID="Client" wireValue="1" index="1" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="CY">
+      <EnumPair enumID="RisklessPrincipal" wireValue="R" index="0" />
+      <EnumPair enumID="Principal" wireValue="P" index="1" />
+      <EnumPair enumID="Agency" wireValue="A" index="2" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="TT">
+      <Description>Trade type</Description>
+      <EnumPair enumID="OffBookTrade" wireValue="54" index="0" />
+      <EnumPair enumID="SpecialPriced" wireValue="30" index="1" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="TST">
+      <Description>Trade sub type</Description>
+      <EnumPair enumID="NegotiatedTrade" wireValue="1006" />
+      <EnumPair enumID="NegotiatedTradeDelayedPublication" wireValue="1005" index="0" />
+      <EnumPair enumID="OrdinaryTrade" wireValue="1000" index="1" />
+      <EnumPair enumID="OrdinaryTradeDelayedPublication" wireValue="1008" index="2" />
+      <EnumPair enumID="NotToMark" wireValue="20" index="3" />
+      <EnumPair enumID="DerivativeRelated" wireValue="3012" index="4" />
+      <EnumPair enumID="VWAPTrade" wireValue="3013" index="5" />
+      <EnumPair enumID="OTCTrade" wireValue="1009" index="6" />
+      <EnumPair enumID="OTCTradeDelayedPublication" wireValue="1013" index="7" />
+      <EnumPair enumID="SITrade" wireValue="1011" index="8" />
+      <EnumPair enumID="SITradeDelayedPublication" wireValue="1012" index="9" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="TGID">
+      <Description>Trader group id</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="CP">
+      <Description>Counterpart</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="PR">
+      <Description>Party role</Description>
+      <EnumPair enumID="Executing Firm" wireValue="1" index="0" />
+      <EnumPair enumID="Counterparty Firm" wireValue="17" index="1" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="CID">
+      <Description>Cross id</Description>
+    </Parameter>
+    <Parameter xsi:type="UTCDateOnly_t" name="SD">
+      <Description>Settlement date</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="PassiveOrderType">
+      <Description>Passive order</Description>
+      <value enumID="NoConstraintDefault" value="0" />
+      <value enumID="OnlyAcceptOrderIfSettingNewBBOorJoiningExistingBBO" wireValue="1" index="0" />
+      <value enumID="OnlyAcceptOrderIfWillBeAtBBOorWithinOneVisiblePricePoint" wireValue="2" index="1" />
+      <value enumID="OnlyAcceptOrderIfWillBeAtBBOorWithinTwoVisiblePricePoints" wireValue="3" index="2" />
+      <value enumID="OnlyAcceptOrderIfItWillNotMatchWithVisibleContraOrder" wireValue="99" index="3" />
+      <value enumID="OnlyAcceptOrderIfSettingNewVisibleBBO" wireValue="100" index="4" />
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Stop price" ID="StopPrice" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="StopPrice" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Disclosed volume" ID="DisclosedVolume" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="DisclosedVolume" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Min. acceptable volume" ID="MinAcceptVolume" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="MinAcceptableVolume" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Order capacity" ID="Capacity" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="OrderCapacity" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Participation policy" ID="ParticipationPolicy" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="ParticipationPolicy" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Strategy price policy" ID="StrategyPricePolicy" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="StrategyPricePolicy" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="PartialFillNotAllowed" />
+        <!--common orc control-->
+        <lay:Control xsi:type="lay:DropDownList_t" label ="Execution style" ID="ExecutionStyle" labelLocation="Left" labelWidth="120" controlWidth="150" visible="true" parameterRef="ExecutionStyle">
+          <lay:ListItem enumID="0" uiRep="Normal" />
+          <lay:ListItem enumID="1" uiRep="Interbank" />
+          <lay:ListItem enumID="2" uiRep="Cross" />
+          <lay:ListItem enumID="3" uiRep="Accept" />
+          <lay:ListItem enumID="4" uiRep="Custom" />
+          <lay:ListItem enumID="5" uiRep="Stop" />
+        </lay:Control>
+	<!--orc parameters' controls-->
+        <lay:Control xsi:type="lay:DropDownList_t" label="Account" ID="A" labelLocation="Left" labelWidth="120" controlWidth="150" visible="true" parameterRef="A" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Pegged" ID="PD" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PD">
+          <flow:StateRule visible="true">
+             <val:Edit field="ExecutionStyle" operator="EQ" value="0" />
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit field="ExecutionStyle" operator="NE" value="0" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:CheckBox_t" label="Hidden" ID="HD" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="HD" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Stop trigger" ID="ST" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="SP" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Account type" ID="AT" labelLocation="Left" labelWidth="120" controlWidth="150" visible="true" parameterRef="AT" >
+          <lay:ListItem enumID="House" uiRep="House" />
+          <lay:ListItem enumID="Client" uiRep="Client" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Capacity" ID="CY" labelLocation="Left" labelWidth="120" controlWidth="150" visible="true" parameterRef="CY" >
+          <lay:ListItem enumID="RisklessPrincipal" uiRep="Riskless Principal" />
+          <lay:ListItem enumID="Principal" uiRep="Principal" />
+          <lay:ListItem enumID="Agency" uiRep="Agency" />
+	</lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Trade type" ID="TT" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TT" >
+          <lay:ListItem enumID="OffBookTrade" uiRep="Off-Book Trade" />
+          <lay:ListItem enumID="SpecialPriced" uiRep="Special Priced" />
+          <flow:StateRule visible="true">
+             <val:Edit field="ExecutionStyle" operator="EQ" value="1" />
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit field="ExecutionStyle" operator="NE" value="1" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Trade sub type" ID="TST" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TST" >
+          <lay:ListItem enumID="NegotiatedTrade" uiRep="Negotiated trade" />
+          <lay:ListItem enumID="NegotiatedTradeDelayedPublication" uiRep="Negotiated trade - delayed publication" />
+          <lay:ListItem enumID="OrdinaryTrade" uiRep="Ordinary trade" />
+          <lay:ListItem enumID="OrdinaryTradeDelayedPublication" uiRep="Ordinary trade - delayed publication" />
+          <lay:ListItem enumID="NotToMark" uiRep="Not to Mark" />
+          <lay:ListItem enumID="DerivativeRelated" uiRep="Derivative Related" />
+          <lay:ListItem enumID="VWAPTrade" uiRep="VWAP Trade" />
+          <lay:ListItem enumID="OTCTrade" uiRep="OTC trade" />
+          <lay:ListItem enumID="OTCTradeDelayedPublication" uiRep="OTC trade - delayed publication" />
+          <lay:ListItem enumID="SITrade" uiRep="SI Trade" />
+          <lay:ListItem enumID="SITradeDelayedPublication" uiRep="SI Trade - delayed publication" />
+          <flow:StateRule visible="true">
+             <val:Edit field="ExecutionStyle" operator="EQ" value="1" />
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit field="ExecutionStyle" operator="NE" value="1" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Trader group id" ID="TGID" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TGID">
+          <flow:StateRule visible="true">
+             <val:Edit field="ExecutionStyle" operator="EQ" value="1" />
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit field="ExecutionStyle" operator="NE" value="1" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Counterpart" ID="CP" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="CP">
+          <flow:StateRule visible="true">
+             <val:Edit field="ExecutionStyle" operator="EQ" value="1" />
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit field="ExecutionStyle" operator="NE" value="1" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Party role" ID="PR" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PR">
+          <lay:ListItem enumID="ExecutingFirm" uiRep="Executing Firm" />
+          <lay:ListItem enumID="CounterpartyFirm" uiRep="Counterparty Firm" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Cross id" ID="CID" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="CID" />
+        <lay:Control xsi:type="lay:Clock_t" label="Settlement date" ID="SD" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="SD">
+          <flow:StateRule visible="true">
+             <val:Edit field="ExecutionStyle" operator="EQ" value="1" />
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit field="ExecutionStyle" operator="NE" value="1" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Passive order" ID="PassiveOrderType" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PassiveOrderType">
+          <lay:ListItem enumID="NoConstraintDefault" uiRep="No constraint (Default)" />
+          <lay:ListItem enumID="OnlyAcceptOrderIfSettingNewBBOorJoiningExistingBBO" uiRep="Only accept order if setting new BBO or joining existing BBO" />
+          <lay:ListItem enumID="OnlyAcceptOrderIfWillBeAtBBOorWithinOneVisiblePricePoint" uiRep="Only accept order if will be at BBO or within one visible price-point" />
+          <lay:ListItem enumID="OnlyAcceptOrderIfWillBeAtBBOorWithinTwoVisiblePricePoints" uiRep="Only accept order if will be at BBO or within two visible price-points" />
+          <lay:ListItem enumID="OnlyAcceptOrderIfItWillNotMatchWithVisibleContraOrder" uiRep="Only accept order if it will not match with visible contra order" />
+          <lay:ListItem enumID="OnlyAcceptOrderIfSettingNewVisibleBBO" uiRep="Only accept order if setting new visible BBO" />
+          <flow:StateRule visible="true">
+             <val:Edit logicOperator="OR">
+                <val:Edit field="ExecutionStyle" operator="EQ" value="0" />
+                <val:Edit field="ExecutionStyle" operator="EQ" value="4" />
+             </val:Edit>
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit logicOperator="OR">
+                <val:Edit field="ExecutionStyle" operator="EQ" value="1" />
+                <val:Edit field="ExecutionStyle" operator="EQ" value="2" />
+                <val:Edit field="ExecutionStyle" operator="EQ" value="3" />
+                <val:Edit field="ExecutionStyle" operator="EQ" value="5" />
+             </val:Edit>
+          </flow:StateRule>
+        </lay:Control>
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

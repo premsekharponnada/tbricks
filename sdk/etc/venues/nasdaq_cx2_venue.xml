@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ CX2 Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ CX2" shortname="NASDAQ CX2" identifier="81e55018-6afb-11e6-9bf0-de96f17feb2c" description="NASDAQ CX2">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+                <pool name="board lot" default="yes" identifier="b0a350be-2930-11e7-9140-d9a386257188"/>
+                <pool name="odd lot" identifier="0ddce1f2-2930-11e7-bd20-958f68f14b5b"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ CX2 Exchange venue.
+    </documentation>
+</resource>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Chicago Futures Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Chicago Futures Exchange"
+               shortname="CFE OLD"
+               identifier="9ba33b92-6b46-11e5-96b0-b5870607fea0"
+               description="Chicago Futures Exchange">
+            <identifier>
+                <key name="symbol"/>
+                <key name="class"/>
+                <key name="exchange"/>
+                <key name="inverted"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until datetime" />
+            <field name="validity type" value="until elapsed time" />
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Chicago Futures Exchange venue.
+    </documentation>
+</resource>

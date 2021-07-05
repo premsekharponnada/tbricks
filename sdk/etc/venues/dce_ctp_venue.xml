@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="DCE CTP venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="DCE CTP" shortname="DCE CTP" identifier="81dbd1cc-5c3a-11e9-a0b0-4a3dd19fc723" description="Dalian Commodity Exchange via CTP">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <!-- expresses the restrictions of capabilities -->
+    <capabilities>
+        <restriction message="order">
+            <field name="capacity"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="price improvement not allowed"/>
+            <field name="execution policy"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+        </restriction>
+        <restriction message="order modify"/>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the DCE CTP venue
+    </documentation>
+</resource>

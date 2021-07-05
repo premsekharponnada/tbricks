@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="venue">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:group name="repeating_elements">
+        <xs:choice>
+            <xs:sequence>
+
+                <xs:element name="venue" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mapping" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mapping" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="orc_keys" use="required">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="test"/>
+                                                            <xs:enumeration value="auto_traded_allowed_volume"/>
+                                                            <xs:enumeration value="auto_traded_volume_ask"/>
+                                                            <xs:enumeration value="auto_traded_volume_bid"/>
+                                                            <xs:enumeration value="base_price_multiplier"/>
+                                                            <xs:enumeration value="basecontract"/>
+                                                            <xs:enumeration value="contract_tag"/>
+                                                            <xs:enumeration value="currency"/>
+                                                            <xs:enumeration value="cusip"/>
+                                                            <xs:enumeration value="custom_lot_size"/>
+                                                            <xs:enumeration value="custom_min_volume"/>
+                                                            <xs:enumeration value="custom_tick_size"/>
+                                                            <xs:enumeration value="custom_volume_step"/>
+                                                            <xs:enumeration value="description"/>
+                                                            <xs:enumeration value="dividendcontract"/>
+                                                            <xs:enumeration value="exchange"/>
+                                                            <xs:enumeration value="expirydate"/>
+                                                            <xs:enumeration value="expirytime"/>
+                                                            <xs:enumeration value="feedcode"/>
+                                                            <xs:enumeration value="final_settlement_days"/>
+                                                            <xs:enumeration value="hedgecontract"/>
+                                                            <xs:enumeration value="isincode"/>
+                                                            <xs:enumeration value="issuer"/>
+                                                            <xs:enumeration value="kind"/>
+                                                            <xs:enumeration value="market"/>
+                                                            <xs:enumeration value="maturitydate"/>
+                                                            <xs:enumeration value="mic"/>
+                                                            <xs:enumeration value="model"/>
+                                                            <xs:enumeration value="multiplier"/>
+                                                            <xs:enumeration value="price_display"/>
+                                                            <xs:enumeration value="price_multiplier"/>
+                                                            <xs:enumeration value="quote_traded_allowed_volume"/>
+                                                            <xs:enumeration value="quote_traded_volume_ask"/>
+                                                            <xs:enumeration value="quote_traded_volume_bid"/>
+                                                            <xs:enumeration value="quote_volume_ask"/>
+                                                            <xs:enumeration value="quote_volume_bid"/>
+                                                            <xs:enumeration value="riskcontract"/>
+                                                            <xs:enumeration value="riskunderlying"/>
+                                                            <xs:enumeration value="sedol"/>
+                                                            <xs:enumeration value="settlement_calendar"/>
+                                                            <xs:enumeration value="settlement_days"/>
+                                                            <xs:enumeration value="spread"/>
+                                                            <xs:enumeration value="spread_bias"/>
+                                                            <xs:enumeration value="spread_table"/>
+                                                            <xs:enumeration value="strike_currency"/>
+                                                            <xs:enumeration value="strike_yield_name"/>
+                                                            <xs:enumeration value="strikeprice"/>
+                                                            <xs:enumeration value="submarket"/>
+                                                            <xs:enumeration value="suggest_logic"/>
+                                                            <xs:enumeration value="suggest_volume_logic"/>
+                                                            <xs:enumeration value="suggest_volume_min"/>
+                                                            <xs:enumeration value="symbol"/>
+                                                            <xs:enumeration value="trading_calendar"/>
+                                                            <xs:enumeration value="underlying"/>
+                                                            <xs:enumeration value="username"/>
+                                                            <xs:enumeration value="valoren"/>
+                                                            <xs:enumeration value="volatility"/>
+                                                            <xs:enumeration value="volatility_decrease_end"/>
+                                                            <xs:enumeration value="volatility_decrease_start"/>
+                                                            <xs:enumeration value="volatility_time_mode"/>
+                                                            <xs:enumeration value="volume_limit"/>
+                                                            <xs:enumeration value="yield_name"/>
+                                                            <xs:enumeration value="ytm_display"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="viid_keys" type="xs:string" use="required"/>
+                                                <xs:attribute name="dateformat" use="optional">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="standard"/>
+                                                            <xs:enumeration value="fix"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="delimiter" type="xs:string" use="optional"/>
+                                                <xs:attribute name="field" type="xs:string" use="optional"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+
+                        <xs:attribute name="identifier" type="venue" use="required"/>
+                        <xs:attribute name="shortname" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+            <xs:sequence>
+
+                <xs:element name="synthetic_currency" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="cds" type="xs:string" use="required"/>
+                        <xs:attribute name="tbricks" type="xs:string" use="required"/>
+                        <xs:attribute name="conversionfactor" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+            <xs:sequence>
+
+                <xs:element name="initial_position_sync_filter" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="position">
+                                <xs:complexType>
+                                    <xs:attribute name="use_aggregation" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="portfolios">
+        <xs:sequence>
+            <xs:element name="portfolio_filter" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="portfolio" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:attribute name="name" type="xs:string" use="required"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="c_filters">
+        <xs:sequence>
+            <xs:element name="cds_contract_filter" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cds_market" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="contract" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="custom_kind" type="xs:string" use="required"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+
+                                <xs:attribute name="name" type="xs:string" use="required"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="t_filters">
+        <xs:sequence>
+            <xs:element name="trade_filters" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="trade_filter" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="field" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="key" type="xs:string" use="required"/>
+                                            <xs:attribute name="value" type="xs:string" use="required"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="repeating_elements" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="repeating_elements" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="repeating_elements" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="repeating_elements" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="repeating_elements" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="repeating_elements" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+
+                <xs:sequence>
+                    <xs:group ref="t_filters" minOccurs="1" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="t_filters" minOccurs="1" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="portfolios" minOccurs="1" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="c_filters" minOccurs="1" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="portfolios" minOccurs="1" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="c_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="c_filters" minOccurs="1" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="portfolios" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:group ref="t_filters" minOccurs="0" maxOccurs="1"/>
+                    <xs:group ref="repeating_elements" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:choice>
+
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

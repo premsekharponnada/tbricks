@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ OMX Nordic Equity venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ OMX Nordic Equities"
+               shortname="NASDAQ OMX Nordic Equities"
+               identifier="db6c3f6b-387c-4c79-a2ba-da180596691e"
+               description="NASDAQ OMX Nordic Equities">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="target_book" tag="9303"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="disclosed volume"/>
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="validity type" value="today"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until date"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+        <restriction message="market command request">
+            <field name="market command" value="halt participant"/>
+            <field name="market command" value="set participation parameters"/>
+            <field name="market command" value="delay opening"/>
+            <field name="market command" value="open delayed trading"/>
+            <field name="market command" value="set last auction price"/>
+            <field name="market command" value="start trading"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ OMX Nordic Equities venue.
+    </documentation>
+</resource>

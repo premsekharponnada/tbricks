@@ -1,0 +1,108 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="81dbd1cc-5c3a-11e9-a0b0-4a3dd19fc723">
+  <Strategy uiRep="Dalian Commodity Exchange via CTP" wireValue="Dalian Commodity Exchange via CTP" version="1.0" name="DCE CTP">
+    <Parameter xsi:type="Price_t" name="StopPrice" tbricks_property_identifier="84796894-1770-11e2-9e47-3c870c3e9924">
+      <Description>Stop price</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="MinAcceptableVolume" tbricks_property_identifier="4aa1b2de-e1e1-11e5-9e24-9049f1f1bbe9">
+      <Description>Min. acceptable volume</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="dce_ctp.key.Account">
+      <Description>Investor ID</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="dce_ctp.key.ContingentCondition">
+      <Description>Contingent Condition</Description>
+      <EnumPair enumID="Immediately" wireValue="1" index="1"></EnumPair>
+      <EnumPair enumID="Touch" wireValue="2" index="2"></EnumPair>
+      <EnumPair enumID="TouchProfit" wireValue="3" index="3"></EnumPair>
+      <EnumPair enumID="LastPriceGreaterThanStopPrice" wireValue="5" index="5"></EnumPair>
+      <EnumPair enumID="LastPriceGreaterEqualStopPrice" wireValue="6" index="6"></EnumPair>
+      <EnumPair enumID="LastPriceLesserThanStopPrice" wireValue="7" index="7"></EnumPair>
+      <EnumPair enumID="LastPriceLesserEqualStopPrice" wireValue="8" index="8"></EnumPair>
+      <EnumPair enumID="AskPriceGreaterThanStopPrice" wireValue="9" index="9"></EnumPair>
+      <EnumPair enumID="AskPriceGreaterEqualStopPrice" wireValue="A" index="A"></EnumPair>
+      <EnumPair enumID="AskPriceLesserThanStopPrice" wireValue="B" index="B"></EnumPair>
+      <EnumPair enumID="AskPriceLesserEqualStopPrice" wireValue="C" index="C"></EnumPair>
+      <EnumPair enumID="BidPriceGreaterThanStopPrice" wireValue="D" index="D"></EnumPair>
+      <EnumPair enumID="BidPriceGreaterEqualStopPrice" wireValue="E" index="E"></EnumPair>
+      <EnumPair enumID="BidPriceLesserThanStopPrice" wireValue="F" index="F"></EnumPair>
+      <EnumPair enumID="BidPriceLesserEqualStopPrice" wireValue="H" index="H"></EnumPair>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="dce_ctp.key.HedgeFlag">
+      <Description>Hedge Flag</Description>
+      <EnumPair enumID="Speculation" wireValue="1" index="1"></EnumPair>
+      <EnumPair enumID="Arbitrage" wireValue="2" index="2"></EnumPair>
+      <EnumPair enumID="Hedge" wireValue="3" index="3"></EnumPair>
+      <EnumPair enumID="MarketMaker" wireValue="4" index="4"></EnumPair>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="dce_ctp.key.OffsetFlag">
+      <Description>Offset Flag</Description>
+      <EnumPair enumID="Auto" wireValue="A" index="0"></EnumPair>
+      <EnumPair enumID="Open" wireValue="0" index="1"></EnumPair>
+      <EnumPair enumID="Close" wireValue="1" index="2"></EnumPair>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Order settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" initValue="false" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+        <lay:Control xsi:type="lay:TextField_t" label="Investor ID" ID="InvestorID" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="dce_ctp.key.Account" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Min. acceptable volume" ID="MinAcceptVolume" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="MinAcceptableVolume" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Contingent Condition" ID="ContingentCondition" initValue="Immediately" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="dce_ctp.key.ContingentCondition" >
+          <lay:ListItem enumID="Immediately" uiRep="Immediately" />
+          <lay:ListItem enumID="Touch" uiRep="Touch" />
+          <lay:ListItem enumID="TouchProfit" uiRep="Touch profit" />
+          <lay:ListItem enumID="LastPriceGreaterThanStopPrice" uiRep="Last price greater than stop price" />
+          <lay:ListItem enumID="LastPriceGreaterEqualStopPrice" uiRep="Last price greater equal stop price" />
+          <lay:ListItem enumID="LastPriceLesserThanStopPrice" uiRep="Last price lesser than stop price" />
+          <lay:ListItem enumID="LastPriceLesserEqualStopPrice" uiRep="Last price lesser equal stop price" />
+          <lay:ListItem enumID="AskPriceGreaterThanStopPrice" uiRep="Ask price greater than stop price" />
+          <lay:ListItem enumID="AskPriceGreaterEqualStopPrice" uiRep="Ask price greater equal stop price" />
+          <lay:ListItem enumID="AskPriceLesserThanStopPrice" uiRep="Ask price lesser than stop price" />
+          <lay:ListItem enumID="AskPriceLesserEqualStopPrice" uiRep="Ask price lesser equal stop price" />
+          <lay:ListItem enumID="BidPriceGreaterThanStopPrice" uiRep="Bid price greater than stop price" />
+          <lay:ListItem enumID="BidPriceGreaterEqualStopPrice" uiRep="Bid price greater equal stop price" />
+          <lay:ListItem enumID="BidPriceLesserThanStopPrice" uiRep="Bid price lesser than stop price" />
+          <lay:ListItem enumID="BidPriceLesserEqualStopPrice" uiRep="Bid price lesser equal stop price" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Stop price" ID="StopPrice" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="StopPrice" >
+          <flow:StateRule visible="true">
+             <val:Edit logicOperator="OR">
+               <val:Edit field="ContingentCondition" operator="EQ" value="LastPriceGreaterThanStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="LastPriceGreaterEqualStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="LastPriceLesserThanStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="LastPriceLesserEqualStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="AskPriceGreaterThanStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="AskPriceGreaterEqualStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="AskPriceLesserThanStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="AskPriceLesserEqualStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="BidPriceGreaterThanStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="BidPriceGreaterEqualStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="BidPriceLesserThanStopPrice" />
+               <val:Edit field="ContingentCondition" operator="EQ" value="BidPriceLesserEqualStopPrice" />
+             </val:Edit>
+          </flow:StateRule>
+          <flow:StateRule visible="false">
+             <val:Edit logicOperator="OR">
+                 <val:Edit field="ContingentCondition" operator="EQ" value="Immediately" />
+                 <val:Edit field="ContingentCondition" operator="EQ" value="Touch" />
+                 <val:Edit field="ContingentCondition" operator="EQ" value="TouchProfit" />
+             </val:Edit>
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Offset Flag" ID="OffsetFlag" initValue="Auto" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="dce_ctp.key.OffsetFlag" >
+          <lay:ListItem enumID="Auto" uiRep="Auto" />
+          <lay:ListItem enumID="Open" uiRep="Open" />
+          <lay:ListItem enumID="Close" uiRep="Close" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Hedge Flag" ID="HedgeFlag" initValue="Speculation" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="dce_ctp.key.HedgeFlag" >
+          <lay:ListItem enumID="Speculation" uiRep="Speculation" />
+          <lay:ListItem enumID="Arbitrage" uiRep="Arbitrage" />
+          <lay:ListItem enumID="Hedge" uiRep="Hedge" />
+          <lay:ListItem enumID="MarketMaker" uiRep="Market maker" />
+        </lay:Control>
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

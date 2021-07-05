@@ -1,0 +1,58 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="2478771e-f3a4-11de-b5f3-eb1a190646c0">
+  <Strategy uiRep="NASDAQ OMX Nordic derivatives" wireValue="NASDAQ OMX Nordic derivatives" version="1.0" name="NASDAQ OMX Nordic derivatives">
+    <Parameter xsi:type="Price_t" name="StopPrice" tbricks_property_identifier="84796894-1770-11e2-9e47-3c870c3e9924">
+      <Description>Stop price</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="DisclosedVolume" tbricks_property_identifier="bc9e0d54-6779-4675-aa9c-6e769c30529e">
+      <Description>Disclosed volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f5adc6-a7cf-11e5-b809-3c870c3e9924">
+      <Description>Transition type</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="OrderCapacity" tbricks_property_identifier="cc0d6d94-e1e2-11e5-9e24-9049f1f1bbe9">
+      <Description>Order capacity</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="StrategyPricePolicy" tbricks_property_identifier="4fc6896f-8403-11e6-8a89-0d1c06b747de">
+      <Description>Strategy price policy</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="omx_de.key.StopCondition">
+      <Description>Stop condition</Description>
+      <EnumPair enumID="NoCondition" wireValue="0" />
+      <EnumPair enumID="LastTradedLargerOrEqualsStopPrice" wireValue="5" />
+      <EnumPair enumID="LastTradedLessOrEqualsStopPrice" wireValue="6" />
+    </Parameter>
+    <Parameter xsi:type="String_t" name="omx_de.key.StopInstrument">
+      <Description>Stop instrument</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Stop price:" ID="StopPrice" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="StopPrice">
+          <flow:StateRule enabled="true">
+            <val:Edit logicOperator="OR">
+              <val:Edit field="StopCondition" operator="EQ" value="LastTradedLargerOrEqualsStopPrice" />
+              <val:Edit field="StopCondition" operator="EQ" value="LastTradedLessOrEqualsStopPrice" />
+            </val:Edit>
+          </flow:StateRule>
+          <flow:StateRule enabled="false">
+              <val:Edit field="StopCondition" operator="EQ" value="NoCondition" />
+          </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:DropDownList_t" label="Stop Condition" ID="StopCondition" initValue="NoCondition" labelLocation="Left" labelWidth="120" controlWidth="250" parameterRef="omx_de.key.StopCondition" >
+          <lay:ListItem enumID="NoCondition" uiRep="No Condition" />
+          <lay:ListItem enumID="LastTradedLargerOrEqualsStopPrice" uiRep="Last traded price larger or equals than stop price" />
+          <lay:ListItem enumID="LastTradedLessOrEqualsStopPrice" uiRep="Last traded price less or equals stop price" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:TextField_t" label="Stop instrument" ID="StopInstrument" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="omx_de.key.StopInstrument" />
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Disclosed volume:" ID="DisclosedVolume" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="DisclosedVolume" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Transition type:" ID="TransitionType" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="TransitionType" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Order capacity:" ID="Capacity" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="OrderCapacity" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Strategy price policy:" ID="StrategyPricePolicy" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="StrategyPricePolicy" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed:" ID="PartialFillNotAllowed" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PartialFillNotAllowed" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>

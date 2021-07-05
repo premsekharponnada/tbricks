@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource name="Omega ATS venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="Omega ATS"
+           shortname="Omega"
+           identifier="2c5049b4-714a-11e6-a920-54640ca2cc1c"
+           description="Omega ATS">
+      <identifier>
+        <key name="symbol" tag="55"/>
+      </identifier>
+      <pools>
+        <pool name="board lot" default="yes" identifier="e0277424-c14c-11e6-9e50-eba38e3fa2d4"/>
+        <pool name="odd lot" identifier="e0b3fcf0-c14c-11e6-9560-c8e38db8a211"/>
+      </pools>
+    </venue>
+  </venues>
+
+  <capabilities>
+    <restriction message="order">
+      <field name="minimum acceptable volume" />
+      <field name="execution policy" value="buy minus" />
+      <field name="execution policy" value="sell plus" />
+      <field name="participation policy" value="dark lit sweep"/>
+      <field name="participation policy" value="indicative only"/>
+      <field name="validity type" value="infinite" />
+      <field name="validity type" value="until date" />
+      <field name="validity type" value="until datetime" />
+      <field name="validity type" value="until elapsed time" />
+      <field name="validity type" value="immediate on open" />
+      <field name="validity type" value="immediate on close" />
+      <field name="validity type" value="immediate on auction" />
+      <field name="transition type" value="market to limit" />
+      <field name="transition type" value="limit to market" />
+      <field name="price improvement not allowed"/>
+    </restriction>
+    <restriction message="order modify">
+      <field name="validity type"/>
+      <field name="price" value="empty"/>
+    </restriction>
+  </capabilities>
+
+  <documentation>
+    Venue identifier resource describing Omega ATS.
+  </documentation>
+</resource>

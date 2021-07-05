@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="resource" type="Resource" />
+
+  <xs:complexType name="Resource">
+    <xs:sequence>
+      <xs:element name="mapping" type="Mapping" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="recycling" type="RejectRule" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="rerouting" type="RejectRule" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="audit" type="Audit" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="errorMapping" type="ErrorMapping" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="optional"/>
+    <xs:attribute name="type" type="xs:string" use="required" fixed="application/x-catalys-app-config+xml"/>
+  </xs:complexType>
+
+  <xs:complexType name="Mapping">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="endpoint" type="Endpoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="extraData" type="ExtraData" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="venueTradeCondition" type="VenueTradeCondition" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parameter" type="Parameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="forwardParameter" type="Parameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="regulatoryParameter" type="Parameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="attribute" type="Attribute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="treeNode" type="TreeNode" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="table" type="Table" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="instrumentAttribute" type="InstrumentAttribute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="extraDataFromMemo" type="MemoExtraData" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parameterFromMemo" type="MemoParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="forwardParameterFromMemo" type="MemoParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="regulatoryParameterFromMemo" type="MemoParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="tradeParameter" type="TradeParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="symbologyKey" type="SymbologyKey" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="instrumentParameter" type="InstrumentParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="instrumentGroupParameter" type="InstrumentParameter" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="default" type="xs:boolean" use="optional" default="true"/>
+    <xs:attribute name="direction" type="Direction" use="optional" default="biDirectional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="Direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="inbound" />
+      <xs:enumeration value="outbound" />
+      <xs:enumeration value="biDirectional" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="SymbologyName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SecurityID" />
+      <xs:enumeration value="SecurityIDSource" />
+      <xs:enumeration value="Mic" />
+      <xs:enumeration value="Currency" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="SymbologySource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="3" />
+      <xs:enumeration value="4" />
+      <xs:enumeration value="5" />
+      <xs:enumeration value="8" />
+      <xs:enumeration value="9" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="M" />
+      <xs:enumeration value="TB" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="OutboundMapping">
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="value" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Endpoint">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="VenueTradeCondition">
+    <xs:attribute name="tag" type="xs:int" use="required"/>    
+    <xs:attribute name="key" type="xs:string" use="required"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+
+  <xs:attributeGroup name="RepeatingGroupInfo">
+    <xs:attribute name="parentTag" type="xs:int" use="optional"/>
+    <xs:attribute name="keyTag" type="xs:int" use="optional"/>
+    <xs:attribute name="keyTagValue" type="xs:string" use="optional"/>
+  </xs:attributeGroup>
+  
+  <xs:attributeGroup name="ConstantInfo">
+    <xs:attribute name="constant" type="xs:string" use="optional"/>
+    <xs:attribute name="override" type="xs:boolean" use="optional" default="false"/>
+  </xs:attributeGroup>
+
+  <xs:complexType name="ExtraData">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="key" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="AnyValueType" use="optional" default="String"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="ConstantInfo" />
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+
+  <xs:complexType name="Parameter">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+    <xs:attribute name="format" type="Format" use="optional" default="Identifier"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="ConstantInfo" />
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+  
+  <xs:complexType name="TradeParameter">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="rankingId" type="xs:string" use="optional" default="5e325302-32d2-11e1-be6e-e748d6d66bf3"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+  
+  <xs:complexType name="InstrumentParameter">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="contextId" type="xs:string" use="optional" default="f4414006-32d2-11e1-8d0a-141222d69e81"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+
+  <xs:complexType name="Attribute">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>    
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+    <xs:attribute name="format" type="Format" use="optional" default="Identifier"/>
+    <xs:attribute name="objectType" type="xs:string" use="optional"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+  
+  <xs:complexType name="InstrumentAttribute">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>    
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+    <xs:attribute name="type" type="InstrumentAttributeType" use="optional" default="Instrument"/>
+    <xs:attribute name="index" type="xs:int" use="optional" default="0"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+  
+  <xs:complexType name="SymbologyKey">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>    
+    <xs:attribute name="name" type="SymbologyName" use="required"/>
+    <xs:attribute name="source" type="SymbologySource" use="required"/>
+    <xs:attribute name="scope" type="Scope" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+  
+  <xs:simpleType name="Format">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Identifier" />
+      <xs:enumeration value="ShortName" />
+      <xs:enumeration value="ReceiverLEI" />
+      <xs:enumeration value="Parameter" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AnyValueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Boolean" />
+      <xs:enumeration value="Currency" />
+      <xs:enumeration value="Double" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="Identifier" />
+      <xs:enumeration value="String" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="InstrumentAttributeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Instrument" />
+      <xs:enumeration value="Leg" />
+      <xs:enumeration value="Underlying" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Scope">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Expiration" />
+      <xs:enumeration value="FarLeg" />
+      <xs:enumeration value="MultiLeg" />
+      <xs:enumeration value="NearLeg" />
+      <xs:enumeration value="OrderModify" />
+      <xs:enumeration value="QuoteCancel" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="TreeNode">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="parameter" type="Parameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="attribute" type="Attribute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="column" type="TableColumn" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parameterToMemo" type="MemoParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="attributeToMemo" type="MemoAttribute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parameterFromMemo" type="MemoParameter" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="attributeFromMemo" type="MemoAttribute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="columnFromMemo" type="MemoTableColumn" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="optional"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>    
+    <xs:attribute name="rejectOnUnknownValue" type="xs:boolean" use="optional" default="true" />
+    <xs:attribute name="rejectOnDuplicatedValue" type="xs:boolean" use="optional" default="true" />
+    <xs:attribute name="multiLevel" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="Table">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="column" type="Column" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="outboundMapping" type="OutboundMapping" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+    <xs:attribute name="row_separator" type="xs:string" use="required"/>
+    <xs:attribute name="column_separator" type="xs:string" use="optional"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+
+  <xs:complexType name="Column">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+    <xs:attribute name="format" type="Format" use="optional" default="Identifier"/>
+  </xs:complexType>
+
+  <xs:complexType name="TableColumn">
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="optional"/>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="tableId" type="xs:string" use="required"/>
+    <xs:attributeGroup ref="RepeatingGroupInfo" />
+  </xs:complexType>
+
+  <xs:complexType name="MemoParameter">
+    <xs:attribute name="memo" type="xs:string" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="MemoAttribute">
+    <xs:attribute name="memo" type="xs:string" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="MemoExtraData">
+    <xs:attribute name="memo" type="xs:string" use="required"/>
+    <xs:attribute name="key" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="AnyValueType" use="optional" default="String"/>
+  </xs:complexType>
+
+  <xs:complexType name="MemoTableColumn">
+    <xs:attribute name="memo" type="xs:string" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="optional"/>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="tableId" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="RejectRule">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="endpoint" type="Endpoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="error" type="RejectRuleErrorCondition" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="default" type="xs:boolean" use="optional" default="true"/>
+  </xs:complexType>
+
+  <xs:complexType name="RejectRuleErrorCondition">
+    <xs:sequence>
+      <xs:element name="request" type="RejectRuleRequestCondition" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="regex" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="RejectRuleRequestCondition">
+    <xs:attribute name="tag" type="xs:int" use="required"/>
+    <xs:attribute name="regex" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Audit">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="endpoint" type="Endpoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parameter" type="Parameter" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="default" type="xs:boolean" use="optional" default="true"/>
+    <xs:attribute name="direction" type="Direction" use="optional" default="biDirectional"/>
+    <xs:attribute name="skipIfAppCreated" type="xs:boolean" use="optional" default="false"/>
+    <xs:attribute name="skipIfAppNotCreated" type="xs:boolean" use="optional" default="false"/>
+    <xs:attribute name="registerOnParentApp" type="xs:boolean" use="optional" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="ErrorMapping">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="endpoint" type="Endpoint" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="error" type="ErrorMappingRule" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="default" type="xs:boolean" use="optional" default="true"/>
+  </xs:complexType>
+
+  <xs:complexType name="ErrorMappingRule">
+    <xs:attribute name="regex" type="xs:string" use="required"/>
+    <xs:attribute name="replacement" type="xs:string" use="required"/>
+  </xs:complexType>
+
+</xs:schema>

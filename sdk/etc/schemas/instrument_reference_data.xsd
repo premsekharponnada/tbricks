@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="uuid">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a -f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="venue">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]\-[0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F][0-9,a-f,A-F]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="boolean">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes" />
+            <xs:enumeration value="no" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="priceFormat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="decimal 0" />
+            <xs:enumeration value="decimal 1" />
+            <xs:enumeration value="decimal 2" />
+            <xs:enumeration value="decimal 3" />
+            <xs:enumeration value="decimal 4" />
+            <xs:enumeration value="decimal 5" />
+            <xs:enumeration value="decimal 6" />
+            <xs:enumeration value="decimal 7" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="priceDisplayFormat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Decimal" />
+            <xs:enumeration value="Wholes" />
+            <xs:enumeration value="Halves" />
+            <xs:enumeration value="Quarters" />
+            <xs:enumeration value="Eights" />
+            <xs:enumeration value="Sixteens" />
+            <xs:enumeration value="Thirty-seconds" />
+            <xs:enumeration value="Thirty-seconds (half)" />
+            <xs:enumeration value="Thirty-seconds (quarter)" />
+            <xs:enumeration value="Sixty-fourths" />
+            <xs:enumeration value="Sixty-fourths (half)" />
+            <xs:enumeration value="Hundred and twenty-eighths" />
+            <xs:enumeration value="Two hundred and fifty-sixths" />
+            <xs:enumeration value="Five hundred and twelfths" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="groupType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="custom" />
+            <xs:enumeration value="exchange" />
+            <xs:enumeration value="currency" />
+            <xs:enumeration value="sector" />
+            <xs:enumeration value="combination" />
+            <xs:enumeration value="spreadtable" />
+            <xs:enumeration value="derivative" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="anyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="string" />
+            <xs:enumeration value="double" />
+            <xs:enumeration value="smart double" />
+            <xs:enumeration value="integer" />
+            <xs:enumeration value="uinteger" />
+            <xs:enumeration value="boolean" />
+            <xs:enumeration value="uuid" />
+            <xs:enumeration value="datetime" />
+            <xs:enumeration value="currency" />
+            <xs:enumeration value="table" />
+            <xs:enumeration value="empty" />
+            <xs:enumeration value="date" />
+            <xs:enumeration value="duration" />
+            <xs:enumeration value="time" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="parameterDescription">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="parameter">
+                <xs:complexType mixed="true">
+                    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="cell">
+                            <xs:complexType mixed="true"> <!-- why mixed? -->
+                                <xs:attribute name="row" type="xs:string" use="required" />
+                                <xs:attribute name="value" type="xs:string" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="identifier" type="uuid" use="required" />
+                    <xs:attribute name="type" type="anyType" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="identifier" type="uuid"      use="required" />
+        <xs:attribute name="type"       type="anyType"   use="required" />
+        <xs:attribute name="value"      type="xs:string" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="parametersList">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="parameter" type="parameterDescription" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xml">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="custom" />
+                            <xs:enumeration value="fpml" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="src" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="groupsList" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="group">
+                <xs:complexType mixed="true"> <!-- why mixed? -->
+                    <xs:attribute name="id" type="xs:string" /> <!-- identifier? -->
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="instrumentIdentifiersList">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="identifier">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="1" maxOccurs="1" name="fields">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element minOccurs="1" maxOccurs="unbounded" name="field">
+                                        <xs:complexType mixed="true">
+                                            <xs:attribute name="name" type="xs:string" use="required" />
+                                            <xs:attribute name="value" type="xs:string" use="required" />
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="venue" type="venue" use="required" />
+                    <xs:attribute name="mic" type="xs:string" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="symbologyKeysList">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="symbology_key">
+                <xs:complexType>
+                    <xs:attribute name="security_id"     type="xs:string" use="required" />
+                    <xs:attribute name="security_id_src" type="xs:string" use="required" />
+                    <xs:attribute name="currency"        type="xs:string" use="optional" />
+                    <xs:attribute name="mic"             type="xs:string" use="optional" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="fieldsList">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="field">
+                <xs:complexType mixed="true">
+                    <xs:attribute name="name"  type="xs:string" use="required" />
+                    <xs:attribute name="value" type="xs:string" use="required" />
+                    <xs:attribute name="type"  type="anyType"   use="optional" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="componentsList" mixed="true"> <!-- why mixed? -->
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="component">
+                <xs:complexType mixed="true">
+                    <xs:attribute name="id"    type="xs:string" use="required" /> <!-- identifier? -->
+                    <xs:attribute name="ratio" type="xs:double" use="required" />
+                    <xs:attribute name="underlying_price_level" type="xs:double" use="optional" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="attributesList">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="attribute" type="parameterDescription" />
+        </xs:sequence>
+        <xs:attribute name="index" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="attributes">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="1" name="instrument">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="attribute" type="parameterDescription" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" maxOccurs="1" name="legs">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded" minOccurs="0"> 
+                            <xs:element name="leg" type="attributesList" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" maxOccurs="1" name="underlyings">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded" minOccurs="0"> 
+                            <xs:element name="underlying" type="attributesList" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:sequence>
+                <!-- old format; will be removed -->
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="attributes_block">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="attribute" type="parameterDescription" />
+                        </xs:sequence>
+                        <xs:attribute name="type" type="xs:integer"/>
+                        <xs:attribute name="index" type="xs:integer"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:all>
+
+                <xs:element name="groups" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="group">
+                                <xs:complexType>
+                                    <xs:all minOccurs="0">
+                                        <xs:element name="parameters" type="parametersList" />
+                                    </xs:all>
+                                    <xs:attribute name="id"          type="xs:string" use="required" /> <!-- identifier? -->
+                                    <xs:attribute name="name"        type="xs:string" use="required" />
+                                    <xs:attribute name="type"        type="groupType" use="optional" />
+                                    <xs:attribute name="long_name"   type="xs:string" use="optional" />
+                                    <xs:attribute name="category"    type="xs:string" use="optional" />
+                                    <xs:attribute name="description" type="xs:string" use="optional" />
+                                    <xs:attribute name="parent"      type="xs:string" use="optional" />
+                                    <xs:attribute name="deleted"     type="boolean"   use="optional" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="instruments" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="instrument">
+                                <xs:complexType>
+                                    <xs:all minOccurs="0">
+                                        <xs:element minOccurs="0" name="groups"         type="groupsList" />
+                                        <xs:element minOccurs="0" name="identifiers"    type="instrumentIdentifiersList" />
+                                        <xs:element minOccurs="0" name="symbology_keys" type="symbologyKeysList" />
+                                        <xs:element minOccurs="0" name="components"     type="componentsList" />
+                                        <xs:element minOccurs="0" name="attributes"     type="attributes" />
+                                        <xs:element minOccurs="0" name="parameters"     type="parametersList" />
+                                        <xs:element minOccurs="0" name="xml"            type="xml" />
+                                        <xs:element minOccurs="0" name="extra"          type="fieldsList" />
+                                    </xs:all>
+                                    <xs:attribute name="short_name"  type="xs:string"  use="required" />
+                                    <xs:attribute name="identifier"  type="uuid"       use="optional" />
+                                    <xs:attribute name="long_name"   type="xs:string"  use="optional" />
+                                    <xs:attribute name="mnemonic"    type="xs:string"  use="optional" />
+                                    <xs:attribute name="precedence"  type="xs:string"  use="optional" />
+                                    <xs:attribute name="cfi"         type="xs:string"  use="optional" />
+                                    <xs:attribute name="cfi_variant" type="xs:integer" use="optional" />
+                                    <xs:attribute name="cfi_standard" type="xs:string" use="optional" />
+                                    <xs:attribute name="created"     type="xs:string"  use="optional" />
+                                    <xs:attribute name="modified"    type="xs:string"  use="optional" />
+                                    <xs:attribute name="component"   type="xs:string"  use="optional" />
+                                    <xs:attribute name="deleted"     type="boolean"    use="optional" />
+                                    <xs:attribute name="valid_until" type="xs:string"  use="optional" />
+                                    <xs:attribute name="price_display_format" type="priceDisplayFormat" use="optional" />
+                                    <xs:attribute name="price_display_default_decimals" type="xs:integer" use="optional" />
+                                    <xs:attribute name="price_format" type="priceFormat" use="optional" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element minOccurs="0" name="documentation" />
+
+            </xs:all>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:attribute name="type" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

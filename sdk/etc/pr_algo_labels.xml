@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+    <label id="507d4dbe-bf0f-11e7-93d0-d7c6e9b0eefc" name="Quotes removed due to Strategy Engine disconnection"/>
+    <label id="509146f2-bf0f-11e7-a310-704fa9460849" name="Quotes removed due to internal limit breach"/>
+    <label id="509af5b2-bf0f-11e7-ab80-8af744ad3e61" name="Quotes removed due to entering safety state"/>
+    <label id="50a4a9e0-bf0f-11e7-85d0-f139815e30e3" name="Quotes removed during component startup cleanup"/>
+    <label id="50af1d26-bf0f-11e7-92c0-8c02447f19be" name="Quotes removed during component shutdown cleanup"/>
+    <label id="50b8acc4-bf0f-11e7-a080-d79d0dd23f2a" name="Quotes removed due to throttling limit breach"/>
+    <label id="50c24b44-bf0f-11e7-abe0-e0e61598c532" name="Quotes removed due to session disconnect"/>
+    <label id="50cc7cc2-bf0f-11e7-9ed0-d36308fbe94d" name="Quotes removed due to session reconnect"/>
+    <label id="50d67ac4-bf0f-11e7-9d10-18c5f95a7fb4" name="Unsolicited order cancelled"/>
+    <label id="50e03cd0-bf0f-11e7-8cf0-6275011b0697" name="Internal matching"/>
+    <label id="50e9f7ca-bf0f-11e7-93d0-5fc4560b6141" name="Hidden reaction on best price"/>
+    <label id="50f46bb0-bf0f-11e7-9680-83ba63386f1f" name="Peg reaction on order book"/>
+    <label id="50ff9080-bf0f-11e7-b200-93b4f521b213" name="Quotes removed due to gap cb"/>
+    <label id="51097a14-bf0f-11e7-b560-1c03d9fa1a6e" name="Orders removed during component shutdown cleanup"/>
+    <label id="5113b8e4-bf0f-11e7-9c40-7553641c156b" name="Quotes removed during pending quote set check"/>
+    <label id="511df674-bf0f-11e7-bdb0-3ce950bd4bf2" name="Synthetic cross request"/>
+    <label id="01c14964-c946-11e7-9680-6dbb7ab407cb" name="Orders removed due to session disconnect"/>
+    <label id="09fed33a-c946-11e7-aa50-52be0f12da43" name="Orders removed due to entering safety state"/>
+    <label id="0a3b5aee-c946-11e7-a030-5240de90f93b" name="Orders removed during component startup cleanup"/>
+    <label id="80f752b8-de7d-11e7-9760-5eeed5f8f408" name="Orders removed during force app destruction cleanup"/>
+    <label id="042e149e-2a27-4f08-a41b-2a44653bff6b" name="Quote disabled"/>
+</labels>

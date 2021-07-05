@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="markets" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="market" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="mic" type="xs:string" use="required"/>
+                                    <xs:attribute name="operating_mic" type="xs:string" use="required"/>
+                                    <xs:attribute name="market_level" type="xs:string" use="required"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="cc" type="xs:string"/>
+                                    <xs:attribute name="country" type="xs:string"/>
+                                    <xs:attribute name="city" type="xs:string"/>
+                                    <xs:attribute name="acronym" type="xs:string"/>
+                                    <xs:attribute name="url" type="xs:string"/>
+                                    <xs:attribute name="date" type="xs:string"/>
+                                    <xs:attribute name="status" type="xs:string"/>
+                                    <xs:attribute name="timezone" type="xs:string"/>
+                                    <xs:attribute name="end_of_day" type="xs:string"/>
+                               </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Budapest Derivatives venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Budapest Derivatives" shortname="Budapest Derivatives" identifier="6a2bceb2-8571-11e6-a6c0-ed9f4e2708c7" description="Budapest Derivatives">
+            <identifier>
+                <key name="sec_id"/>
+                <key name="board_id"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="disclosed volume"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="partial fill not allowed"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Budapest Derivaties venue.
+    </documentation>
+</resource>

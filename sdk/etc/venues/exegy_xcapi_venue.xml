@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="exegy xcapi venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Exegy XCAPI" shortname="Exegy XCAPI" identifier="deb175c4-2c6a-11e8-acb0-3e744887b514" description="Exegy XCAPI Real-Time Market Data Solutions">
+            <identifier>
+                <key name="triplet" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Exegy Documentation Center.
+    </documentation>
+</resource>

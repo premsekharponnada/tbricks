@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="TSX Alpha Exchange" type="application/x-venue+xml">
+    <venues>
+        <venue name="TSX Alpha Exchange" shortname="TSX Alpha Exchange" identifier="c25e1328-43be-11e6-92e0-623981b9ba40" description="TSX Alpha Exchange">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+               <!-- lit liquidity pools (board lot, odd lot, and special terms) -->
+               <pool name="board lot" default="yes" identifier="0f1ad37c-31c2-4950-95da-b99da058dd2c"/>
+               <pool name="odd lot" identifier="64cda2ce-973b-4f59-b47e-124f284a388f"/>
+               <pool name="special" identifier="fba9a9f1-bd22-4553-8fe5-012486b52b11"/>
+               <!-- TSX Alpha does not have a dark pool -->
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="execution policy" value="sell short exempt"/>
+            <field name="participation policy" value="dark lit sweep"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="last auction"/>
+            <field name="transition type"  value="market to limit"/>
+            <field name="transition type"  value="limit to market"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+    <documentation>
+        Venue identifier resource describing the TSX Alpha Exchange.
+    </documentation>
+</resource>

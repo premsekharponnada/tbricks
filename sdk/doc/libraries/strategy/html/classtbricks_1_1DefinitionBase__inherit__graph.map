@@ -1,0 +1,18 @@
+<map id="DefinitionBase" name="DefinitionBase">
+<area shape="rect" id="node1" title=" " alt="" coords="128,368,235,397"/>
+<area shape="rect" id="node5" href="$classtbricks_1_1AlertParameterDefinition.html" title=" " alt="" coords="304,5,467,35"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1CalculatedPropertyDefinition.html" title=" " alt="" coords="292,59,479,88"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1DistributedValueDefinition.html" title=" " alt="" coords="299,112,472,141"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1GridParameterDefinition.html" title=" " alt="" coords="305,165,465,195"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1InstrumentAttributeDefinition.html" title=" " alt="" coords="292,219,479,248"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1InstrumentCalculatedValueDefinition.html" title=" " alt="" coords="296,271,475,318"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1InstrumentParameterDefinition.html" title=" " alt="" coords="287,341,484,371"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1MarketDataParameterDefinition.html" title=" " alt="" coords="283,395,488,424"/>
+<area shape="rect" id="node21" href="$classtbricks_1_1ParameterDefinition.html" title=" " alt="" coords="317,448,453,477"/>
+<area shape="rect" id="node23" href="$classtbricks_1_1PortfolioParameterDefinition.html" title=" " alt="" coords="293,501,477,531"/>
+<area shape="rect" id="node25" href="$classtbricks_1_1RegulatoryParameterDefinition.html" title=" " alt="" coords="285,555,485,584"/>
+<area shape="rect" id="node27" href="$classtbricks_1_1TradeParameterDefinition.html" title=" " alt="" coords="300,608,471,637"/>
+<area shape="rect" id="node29" href="$classtbricks_1_1TreeNodeParameterDefinition.html" title=" " alt="" coords="288,661,483,691"/>
+<area shape="rect" id="node31" href="$classtbricks_1_1UserParameterDefinition.html" title=" " alt="" coords="303,715,468,744"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,368,79,397"/>
+</map>

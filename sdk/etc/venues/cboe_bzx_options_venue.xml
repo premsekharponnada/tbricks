@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CBOE BZX Options Exchange venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="CBOE BZX Options Exchange"
+               shortname="CBOE BZX Options"
+               identifier="fa2b4baa-7f5a-11ea-a190-0c4db3d7e5fb"
+               description="CBOE BZX Options Exchange">
+            <identifier>
+                <key name="symbol"/>
+                <key name="osi_root"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the CBOE BZX Options Exchange venue.
+    </documentation>
+</resource>

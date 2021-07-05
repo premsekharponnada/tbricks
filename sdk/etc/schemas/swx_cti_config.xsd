@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="session" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="user" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="default" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="outside" use="required">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="ExternalTraderID"/>
+                                                            <xs:enumeration value="ClientReference"/>
+                                                            <xs:enumeration value="OrderCapacity"/>
+                                                            <xs:enumeration value="TradeTypeCodeList"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="value" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="tbricks" type="xs:string" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>   
+                        </xs:sequence>
+                        <xs:attribute name="UserName" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element> 
+
+                <xs:element name="map" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="inside" type="xs:string" use="optional"/>
+                        <xs:attribute name="inside_field" use="optional">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="externaltraderid"/>
+                                    <xs:enumeration value="clientreference"/>
+                                    <xs:enumeration value="ordercapacity"/>
+                                    <xs:enumeration value="tradetypecodelist"/>
+                               </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="outside" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="ExternalTraderID"/>
+                                    <xs:enumeration value="ClientReference"/>
+                                    <xs:enumeration value="OrderCapacity"/>
+                                    <xs:enumeration value="TradeTypeCodeList"/>
+                               </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element> 
+
+                <xs:element name="documentation" minOccurs="0"/>
+
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

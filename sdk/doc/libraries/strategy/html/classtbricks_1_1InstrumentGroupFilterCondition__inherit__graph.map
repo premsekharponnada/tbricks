@@ -1,0 +1,12 @@
+<map id="InstrumentGroupFilterCondition" name="InstrumentGroupFilterCondition">
+<area shape="rect" id="node1" title=" " alt="" coords="283,221,485,251"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1InstrumentGroupByAttributesFilter.html" title=" " alt="" coords="551,5,740,51"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1InstrumentGroupByFlatParameterFilter.html" title=" " alt="" coords="537,74,753,121"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1InstrumentGroupByIdentifierFilter.html" title=" " alt="" coords="553,143,737,190"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1InstrumentGroupByParentIdentifierFilter.html" title=" " alt="" coords="535,213,756,259"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1InstrumentGroupBySubtreeFilter.html" title=" " alt="" coords="556,282,735,329"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1InstrumentGroupDeletedFilter.html" title=" " alt="" coords="549,352,741,381"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1InstrumentGroupHasParameterFilter.html" title=" " alt="" coords="544,405,747,451"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1FilterCondition.html" title=" " alt="" coords="128,221,235,251"/>
+<area shape="rect" id="node4" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,221,79,251"/>
+</map>

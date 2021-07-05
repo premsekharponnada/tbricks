@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Reuters FX venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Reuters FX" shortname="Reuters FX" identifier="a045715e-408a-11e7-bb70-61299452603a" description="Reuters FX">
+            <identifier>
+                <key name="Symbol" tag="55"/>
+                <key name="Currency" tag="15"/>
+            </identifier>
+        </venue>
+    </venues>
+    <capabilities>
+        <restriction message="order">
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify"/>
+    </capabilities>
+    <documentation>
+        Venue identifier resource for Reuters FX
+    </documentation>
+</resource>
+

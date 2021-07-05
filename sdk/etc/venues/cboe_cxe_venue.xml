@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="chi-x venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="CBOE CXE" shortname="CBOE CXE" identifier="6aa91998-06a9-4371-bebf-5fd6c1168707" description="CBOE CXE">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="target_book" tag="9303"/>
+            </identifier>
+        </venue>
+    </venues>
+
+   <capabilities>
+        <restriction message="order">
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until date"/>
+            <field name="transition type" value="market to limit" />
+            <field name="transition type" value="limit to market" />
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="valid until datetime"/>
+            <field name="disclosed volume"/>
+            <field name="total volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+   <documentation>
+        Venue identifier resource describing CBOE CXE venue.
+    </documentation>
+</resource>

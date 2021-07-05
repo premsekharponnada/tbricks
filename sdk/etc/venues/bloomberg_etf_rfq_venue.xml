@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Bloomberg ETF RFQ FIX" type="application/x-venue+xml">
+    <venues>
+        <venue name="Bloomberg ETF RFQ FIX" shortname="Bloomberg ETF" identifier="a2f68f78-f2db-11e8-b720-861f1e22e3da" description="Bloomberg ETF RFQ FIX interface">
+            <identifier>
+                <key name="SecurityID" tag="48">
+                    <additional tag="22" value="4"/>
+                </key>
+                <key name="SecurityExchange" tag="207"/><!-- instrument primary exchange code -->
+                <key name="IsNAV"/> <!-- not mapped onto FIX message -->
+                <key name="Currency"/> <!-- have to be extracted from FIX message, not from repeating group -->
+                <key name="Segment"/> <!-- have to be extracted from FIX manually because of being inside repeating group -->
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Bloomberg ETF RFQ FIX interface venue.
+    </documentation>
+</resource>

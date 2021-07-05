@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Internal market venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="Internal market" shortname="Internal market" identifier="0f9e71de-6942-4615-a8a7-76272ad9d3e3" description="Tbricks internal market place" algo_label_required="true">
+            <identifier>
+                <key name="symbol" intermediate="internal" tag="55"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="participation policy"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue resource for Tbricks internal market place.
+    </documentation>
+</resource>

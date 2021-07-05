@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="NASDAQ OMX Nordic Fixed Income venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="NASDAQ OMX Nordic Fixed Income" shortname="NASDAQ OMX Nordic Fixed Income" identifier="d5732940-6ef9-11e3-b0e3-df33f196b413" description="NASDAQ OMX Nordic Fixed Income">
+            <identifier>
+                <key name="symbol"/>
+            </identifier>
+            <pools>
+                <pool name="continuous limit order book" default="yes" identifier="84a88064-44be-11e9-ba00-35ed56af66df"/>
+                <pool name="indicative quotes" identifier="796a9636-418c-11e9-b6b0-09aa957f252f"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities two_sided_rfq_response_required="yes">
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="participation policy"/>
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the NASDAQ OMX Nordic Fixed Income venue.
+    </documentation>
+</resource>

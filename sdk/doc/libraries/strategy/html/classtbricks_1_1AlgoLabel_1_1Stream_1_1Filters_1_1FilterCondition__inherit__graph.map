@@ -1,0 +1,8 @@
+<map id="AlgoLabel::Stream::Filters::FilterCondition" name="AlgoLabel::Stream::Filters::FilterCondition">
+<area shape="rect" id="node1" title=" " alt="" coords="157,161,307,207"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1AlgoLabel_1_1Stream_1_1Filters_1_1ByIdentifierFilter.html" title=" " alt="" coords="5,256,123,285"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1AlgoLabel_1_1Stream_1_1Filters_1_1ByStrategyDefinitionFilter.html" title=" " alt="" coords="147,256,317,285"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1AlgoLabel_1_1Stream_1_1Filters_1_1DeletedFilter.html" title=" " alt="" coords="341,256,437,285"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1FilterCondition.html" title=" " alt="" coords="179,83,285,112"/>
+<area shape="rect" id="node4" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="196,5,268,35"/>
+</map>

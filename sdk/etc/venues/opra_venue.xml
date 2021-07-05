@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Options Price Reporting Authority" type="application/x-venue+xml">
+    <venues>
+        <venue name="Options Price Reporting Authority"
+               shortname="OPRA"
+               identifier="3bd0ff0a-78e4-11e5-8c87-ae529049f1f1"
+               description="Options Price Reporting Authority">
+            <identifier>
+                <key name="symbol"/>
+                <key name="put_or_call"/>
+                <key name="maturity_month_year"/>
+                <key name="maturity_day"/>
+                <!--
+                    market strike price represented as integer value with denominator,
+                    so we can not use a double field, that is why we have an own srike
+                    format (strike price:denominator code) and have no interface tag here.
+                -->
+                <key name="strike_price"/>
+                <key name="security_exchange"/>
+            </identifier>
+        </venue>
+    </venues>
+    
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Chicago Board Options Exchange venue.
+    </documentation>
+</resource>

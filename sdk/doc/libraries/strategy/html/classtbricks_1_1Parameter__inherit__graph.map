@@ -1,0 +1,40 @@
+<map id="Parameter" name="Parameter">
+<area shape="rect" id="node1" title=" " alt="" coords="128,955,211,984"/>
+<area shape="rect" id="node5" href="$classtbricks_1_1BinaryParameter.html" title=" " alt="" coords="301,5,419,35"/>
+<area shape="rect" id="node7" href="$classtbricks_1_1BooleanParameter.html" title=" " alt="" coords="296,59,424,88"/>
+<area shape="rect" id="node9" href="$classtbricks_1_1CalculatedPropertyFilterParameter.html" title=" " alt="" coords="279,111,441,158"/>
+<area shape="rect" id="node11" href="$classtbricks_1_1CalculatedPropertyParameter.html" title=" " alt="" coords="264,181,456,211"/>
+<area shape="rect" id="node13" href="$classtbricks_1_1CFIMaskParameter.html" title=" " alt="" coords="292,235,428,264"/>
+<area shape="rect" id="node15" href="$classtbricks_1_1CFIParameter.html" title=" " alt="" coords="308,288,412,317"/>
+<area shape="rect" id="node17" href="$classtbricks_1_1CurrencyParameter.html" title=" " alt="" coords="293,341,427,371"/>
+<area shape="rect" id="node19" href="$classtbricks_1_1DateParameter.html" title=" " alt="" coords="305,395,415,424"/>
+<area shape="rect" id="node21" href="$classtbricks_1_1DateTimeParameter.html" title=" " alt="" coords="291,448,429,477"/>
+<area shape="rect" id="node23" href="$classtbricks_1_1DoubleParameter.html" title=" " alt="" coords="299,501,421,531"/>
+<area shape="rect" id="node25" href="$classtbricks_1_1DurationParameter.html" title=" " alt="" coords="295,555,425,584"/>
+<area shape="rect" id="node27" href="$classtbricks_1_1GridSelectionParameter.html" title=" " alt="" coords="280,608,440,637"/>
+<area shape="rect" id="node29" href="$classtbricks_1_1IdentifierParameter.html" title=" " alt="" coords="295,661,425,691"/>
+<area shape="rect" id="node31" href="$classtbricks_1_1InstrumentGroupParameter.html" title=" " alt="" coords="271,715,449,744"/>
+<area shape="rect" id="node33" href="$classtbricks_1_1InstrumentIdentifierParameter.html" title=" " alt="" coords="263,768,457,797"/>
+<area shape="rect" id="node35" href="$classtbricks_1_1IntegerParameter.html" title=" " alt="" coords="299,821,421,851"/>
+<area shape="rect" id="node37" href="$classtbricks_1_1LegalEntityIdentifierParameter.html" title=" " alt="" coords="261,875,459,904"/>
+<area shape="rect" id="node39" href="$classtbricks_1_1LiquidityPoolParameter.html" title=" " alt="" coords="283,928,437,957"/>
+<area shape="rect" id="node41" href="$classtbricks_1_1MICParameter.html" title=" " alt="" coords="307,981,413,1011"/>
+<area shape="rect" id="node43" href="$classtbricks_1_1MMTFlagsParameter.html" title=" " alt="" coords="288,1035,432,1064"/>
+<area shape="rect" id="node45" href="$classtbricks_1_1PortfolioIdentifierParameter.html" title=" " alt="" coords="271,1088,449,1117"/>
+<area shape="rect" id="node47" href="$classtbricks_1_1PriceParameter.html" title=" " alt="" coords="304,1141,416,1171"/>
+<area shape="rect" id="node49" href="$classtbricks_1_1PublicTradeIdentifierParameter.html" title=" " alt="" coords="260,1195,460,1224"/>
+<area shape="rect" id="node51" href="$classtbricks_1_1RankingParameter.html" title=" " alt="" coords="295,1248,425,1277"/>
+<area shape="rect" id="node53" href="$classtbricks_1_1SideParameter.html" title=" " alt="" coords="307,1301,413,1331"/>
+<area shape="rect" id="node55" href="$classtbricks_1_1StrategyIdentifierParameter.html" title=" " alt="" coords="269,1355,451,1384"/>
+<area shape="rect" id="node57" href="$classtbricks_1_1StringParameter.html" title=" " alt="" coords="303,1408,417,1437"/>
+<area shape="rect" id="node59" href="$classtbricks_1_1SubsystemIdentifierParameter.html" title=" " alt="" coords="261,1461,459,1491"/>
+<area shape="rect" id="node61" href="$classtbricks_1_1TableParameter.html" title=" " alt="" coords="303,1515,417,1544"/>
+<area shape="rect" id="node63" href="$classtbricks_1_1TimeParameter.html" title=" " alt="" coords="305,1568,415,1597"/>
+<area shape="rect" id="node65" href="$classtbricks_1_1TradeIdentifierParameter.html" title=" " alt="" coords="277,1621,443,1651"/>
+<area shape="rect" id="node67" href="$classtbricks_1_1TreeNodeIdentifierParameter.html" title=" " alt="" coords="265,1675,455,1704"/>
+<area shape="rect" id="node69" href="$classtbricks_1_1TreeTypeIdentifierParameter.html" title=" " alt="" coords="267,1728,453,1757"/>
+<area shape="rect" id="node71" href="$classtbricks_1_1UserIdentifierParameter.html" title=" " alt="" coords="280,1781,440,1811"/>
+<area shape="rect" id="node73" href="$classtbricks_1_1VenueParameter.html" title=" " alt="" coords="301,1835,419,1864"/>
+<area shape="rect" id="node75" href="$classtbricks_1_1VolumeParameter.html" title=" " alt="" coords="297,1888,423,1917"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,955,79,984"/>
+</map>

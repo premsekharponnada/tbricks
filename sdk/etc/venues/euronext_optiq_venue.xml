@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Euronext Optiq Cash venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="Euronext Optiq Cash" shortname="Euronext Optiq Cash" identifier="3c6f10e6-faba-11e7-8c00-2f512031752f" description="Euronext Optiq Cash" native_trd_required="yes">
+      <identifier>
+        <key name="symbol"/>
+        <key name="segment"/>
+      </identifier>
+    </venue>
+  </venues>
+
+  <capabilities>
+    <restriction message="order">
+      <field name="execution policy"/>
+      <field name="participation policy"/>
+      <field name="transition type" value="limit to market"/>
+      <field name="validity type" value="last auction"/>
+      <field name="validity type" value="immediate on auction"/>
+      <field name="validity type" value="until datetime"/>
+      <field name="price improvement not allowed"/>
+    </restriction>
+    <restriction message="order modify">
+        <field name="disclosed volume"/>
+        <field name="price" value="empty"/>
+    </restriction>
+  </capabilities>
+
+  <documentation>
+       Venue identifier resource describing the Euronext Optiq venue.
+  </documentation>
+</resource>

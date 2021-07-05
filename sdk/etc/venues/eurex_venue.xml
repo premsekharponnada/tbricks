@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Eurex venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="eurex" shortname="Eurex" identifier="1dd13251-941f-4045-a60a-ad6c5825cde1" description="Eurex">
+            <identifier>
+                <key name="productid"/>
+                <key name="contracttype"/>
+                <key name="expirymonth"/>
+                <key name="strikeprice"/>
+                <key name="version"/>
+                <key name="strategytype"/>
+                <key name="underlyingprice"/>
+                <key name="leg1"/>
+                <key name="leg2"/>
+                <key name="leg3"/>
+                <key name="leg4"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="disclosed volume"/>
+            <field name="execution policy"/>
+            <field name="minimum acceptable volume"/>
+            <field name="partial fill not allowed"/>
+            <field name="participation policy"/>
+            <field name="transition type"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="retain on disconnect"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Eurex venue, both ETS and EBS.
+    </documentation>
+</resource>
+

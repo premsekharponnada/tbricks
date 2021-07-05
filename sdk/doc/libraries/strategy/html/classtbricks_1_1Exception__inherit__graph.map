@@ -1,0 +1,21 @@
+<map id="Exception" name="Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="128,552,208,581"/>
+<area shape="rect" id="node5" href="$structtbricks_1_1CallbackDoesNotSetException.html" title=" " alt="" coords="260,5,463,35"/>
+<area shape="rect" id="node7" href="$structtbricks_1_1InvalidAlertParameterDefinitionException.html" title=" " alt="" coords="260,58,463,105"/>
+<area shape="rect" id="node9" href="$structtbricks_1_1InvalidExtraDataDefinitionException.html" title=" " alt="" coords="275,127,448,174"/>
+<area shape="rect" id="node11" href="$structtbricks_1_1InvalidGridParameterDefinitionException.html" title=" " alt="" coords="263,197,460,243"/>
+<area shape="rect" id="node13" href="$structtbricks_1_1InvalidInstrumentAttributeDefinitionException.html" title=" " alt="" coords="276,266,447,313"/>
+<area shape="rect" id="node15" href="$structtbricks_1_1InvalidInstrumentCalculatedValueDefinitionException.html" title=" " alt="" coords="269,335,453,382"/>
+<area shape="rect" id="node17" href="$structtbricks_1_1InvalidInstrumentParameterDefinitionException.html" title=" " alt="" coords="271,405,452,451"/>
+<area shape="rect" id="node19" href="$structtbricks_1_1InvalidMarketDataParameterDefinitionException.html" title=" " alt="" coords="268,474,455,521"/>
+<area shape="rect" id="node21" href="$structtbricks_1_1InvalidParameterDefinitionException.html" title=" " alt="" coords="275,543,448,590"/>
+<area shape="rect" id="node23" href="$structtbricks_1_1InvalidPortfolioParameterDefinitionException.html" title=" " alt="" coords="277,613,445,659"/>
+<area shape="rect" id="node25" href="$structtbricks_1_1InvalidRegulatoryParameterDefinitionException.html" title=" " alt="" coords="271,682,452,729"/>
+<area shape="rect" id="node27" href="$structtbricks_1_1InvalidTradeParameterDefinitionException.html" title=" " alt="" coords="257,751,465,798"/>
+<area shape="rect" id="node29" href="$structtbricks_1_1InvalidTreeNodeParameterDefinitionException.html" title=" " alt="" coords="273,821,449,867"/>
+<area shape="rect" id="node31" href="$structtbricks_1_1InvalidUserParameterDefinitionException.html" title=" " alt="" coords="260,890,463,937"/>
+<area shape="rect" id="node33" href="$structtbricks_1_1NotMarketDataStreamException.html" title=" " alt="" coords="256,960,467,989"/>
+<area shape="rect" id="node35" href="$structtbricks_1_1StreamNotOpenException.html" title=" " alt="" coords="275,1013,448,1043"/>
+<area shape="rect" id="node37" href="$structtbricks_1_1TableInternalError.html" title=" " alt="" coords="299,1067,424,1096"/>
+<area shape="rect" id="node2" href="$classtbricks_1_1Printable.html" title=" " alt="" coords="7,552,79,581"/>
+</map>

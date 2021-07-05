@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="ASX Trade venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="ASX Trade" shortname="ASX Trade" identifier="aaf073c0-0689-11ea-bda0-102630cdc390" description="Australian Stock Exchange">
+            <identifier>
+                <key name="symbol" tag="55"/>
+            </identifier>
+            <pools>
+                <!-- synthetic liquidity pools (for static depth) -->
+                <pool name="dynamic" identifier="c079599a-9bef-11ea-9f30-2d2ff81f9dfc" default="yes"/>
+                <pool name="static" identifier="40a5367e-9bfb-11ea-9a10-8d1f5444e005"/>
+            </pools>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="transition type" value="limit to market"/>
+            <field name="validity type" value="immediate on close"/>
+            <field name="validity type" value="immediate on open"/>
+            <field name="validity type" value="immediate on auction"/>
+            <field name="validity type" value="until elapsed time"/>
+            <field name="validity type" value="until datetime"/>
+            <field name="execution policy" value="buy minus"/>
+            <field name="execution policy" value="sell plus"/>
+            <field name="participation policy" value="bypass undisclosed"/>
+            <field name="participation policy" value="indicative only"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="stop price"/>
+            <field name="price" value="empty"/>
+            <field name="execution policy"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing ASX Trade venue.
+    </documentation>
+</resource>

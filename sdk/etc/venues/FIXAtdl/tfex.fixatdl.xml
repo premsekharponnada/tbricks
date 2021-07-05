@@ -1,0 +1,88 @@
+<Strategies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.fixprotocol.org/FIXatdl-1-1/Flow" xmlns:reg="http://www.fixprotocol.org/FIXatdl-1-1/Regions" xmlns:tz="http://www.fixprotocol.org/FIXatdl-1-1/Timezones" xmlns:val="http://www.fixprotocol.org/FIXatdl-1-1/Validation" xmlns:lay="http://www.fixprotocol.org/FIXatdl-1-1/Layout" strategyIdentifierTag="10001" xmlns="http://www.fixprotocol.org/FIXatdl-1-1/Core"
+tbricks_venue_identifier="ce8c8d70-2564-11e9-89e0-6b4d3d649d7b">
+  <Strategy uiRep="TFEX" wireValue="TFEX" version="1.0" name="TFEX">
+    <Parameter xsi:type="Int_t" name="DisclosedVolume" tbricks_property_identifier="bc9e0d54-6779-4675-aa9c-6e769c30529e">
+      <Description>Disclosed volume</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="TransitionType" tbricks_property_identifier="c8f5adc6-a7cf-11e5-b809-3c870c3e9924">
+      <Description>Transition type</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="PostingAction" tbricks_property_identifier="c41e0652-9649-11e8-a68b-b3a6db3c870c">
+      <Description>Posting Action</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="PartialFillNotAllowed" tbricks_property_identifier="d0779bd6-c444-4b8d-8239-43caabb6ea1d">
+      <Description>Partial fill not allowed</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.infoText">
+      <Description>Info text</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.orderRef">
+      <Description>Order ref</Description>
+    </Parameter>
+    <Parameter xsi:type="Boolean_t" name="tfex.key.SpecialMarket">
+      <Description>Special market flag</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.user">
+      <Description>User</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.account">
+      <Description>Account</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.tradingMember">
+      <Description>Trading member</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.clearingMember">
+      <Description>Clearing member</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.actingUser">
+      <Description>Acting user</Description>
+    </Parameter>
+    <Parameter xsi:type="Int_t" name="OrderCapacity" tbricks_property_identifier="cc0d6d94-e1e2-11e5-9e24-9049f1f1bbe9">
+      <Description>Order capacity</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.validTill">
+      <Description>Valid till</Description>
+      <EnumPair enumID="GoodTillSession" wireValue="5" index="1"/>
+      <EnumPair enumID="GoodTillNextAuction" wireValue="3" index="2"/>
+      <EnumPair enumID="GoodTillNextAutomatch" wireValue="4" index="3"/>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.validTillData">
+      <Description>Valid till data</Description>
+    </Parameter>
+    <Parameter xsi:type="String_t" name="tfex.key.traderId">
+      <Description>TraderId</Description>
+    </Parameter>
+    <lay:StrategyLayout>
+      <lay:StrategyPanel title="Market specific settings:" orientation="VERTICAL">
+        <lay:Control xsi:type="lay:SingleSpinner_t" label="Disclosed volume" ID="DisclosedVolume" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="DisclosedVolume" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Transition type" ID="TransitionType" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="TransitionType" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Posting action" ID="PostingAction" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="PostingAction" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Order capacity" ID="Capacity" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="OrderCapacity" />
+        <lay:Control xsi:type="lay:DropDownList_t" label="Valid till" ID="validTill" labelLocation="Left" labelWidth="120" controlWidth="150" parameterRef="tfex.key.validTill" >
+          <lay:ListItem enumID="GoodTillSession" uiRep="Good till session" />
+          <lay:ListItem enumID="GoodTillNextAuction" uiRep="Good till next auction" />
+          <lay:ListItem enumID="GoodTillNextAutomatch" uiRep="Good till next automatch (ATO/ATC)" />
+        </lay:Control>
+        <lay:Control xsi:type="lay:TextField_t" label="Valid till data" ID="valid till data" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.validTillData" >
+            <flow:StateRule enabled="true">
+              <val:Edit field="validTill" operator="EQ" value="GoodTillSession" />
+            </flow:StateRule>
+            <flow:StateRule enabled="false">
+              <val:Edit field="validTill" operator="NE" value="GoodTillSession" />
+            </flow:StateRule>
+        </lay:Control>
+        <lay:Control xsi:type="lay:TextField_t" label="User" ID="user" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.user" />
+        <lay:Control xsi:type="lay:TextField_t" label="Account" ID="account" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.account" />
+        <lay:Control xsi:type="lay:TextField_t" label="Info text" ID="infoText" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.infoText" />
+        <lay:Control xsi:type="lay:TextField_t" label="Order ref" ID="orderRef" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.orderRef" />
+        <lay:Control xsi:type="lay:TextField_t" label="Trading member" ID="tradingMember" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.tradingMember" />
+        <lay:Control xsi:type="lay:TextField_t" label="Clearing member" ID="clearingMember" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.clearingMember" />
+        <lay:Control xsi:type="lay:TextField_t" label="Acting user" ID="actingUser" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.actingUser" />
+        <lay:Control xsi:type="lay:TextField_t" label="Trader ID" ID="traderId" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.traderId" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Partial fill not allowed" ID="PartialFillNotAllowed" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="PartialFillNotAllowed" />
+        <lay:Control xsi:type="lay:CheckBox_t" label="Special market" ID="SpecialMarket" labelLocation="Left" labelWidth="120" controlWidth="150"  parameterRef="tfex.key.SpecialMarket" />
+      </lay:StrategyPanel>
+    </lay:StrategyLayout>
+  </Strategy>
+</Strategies>
+

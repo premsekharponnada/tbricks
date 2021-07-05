@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="session" minOccurs="3" maxOccurs="5">
+                    <xs:complexType>
+                        <xs:attribute name="type" use="required">
+                    	    <xs:simpleType>
+                    		<xs:restriction base="xs:string">
+                    		    <xs:enumeration value="MD" />
+                    		    <xs:enumeration value="TR" />
+                    		    <xs:enumeration value="RPL" />
+                                <xs:enumeration value="TR_EQ" />
+                                <xs:enumeration value="TR_WA" />
+                    		</xs:restriction>
+                    	    </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="url" type="xs:string" use="required"/>
+                        <xs:attribute name="member" type="xs:string" use="required"/>
+                        <xs:attribute name="user" type="xs:string" use="required"/>
+                        <xs:attribute name="password" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element> 
+		<xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>		
+            </xs:sequence>
+       </xs:complexType>
+     </xs:element>
+ </xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="CATS LS France" type="application/x-venue+xml">
+    <venues>
+        <venue name="CATS LS France" shortname="CATS LS France" identifier="efbc55e8-915e-11e7-a5f0-c40c4a051b97" description="CATS LS France price feed interface">
+            <identifier>
+                <key name="SecurityID" tag="48"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+ 
+    <documentation>
+        Venue identifier resource describing the CATS LS France price feed interface venue.
+    </documentation>
+</resource>

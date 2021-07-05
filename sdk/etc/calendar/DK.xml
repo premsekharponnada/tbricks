@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="DK" type="application/x-calendar+xml">
+    <week monday="yes" tuesday="yes" wednesday="yes" thursday="yes" friday="yes" saturday="no" sunday="no"/>
+    <days>
+        <day date="01-01" valid="no"/> <!-- New Years Day -->
+        <day date="06-05" valid="no"/> <!-- Constitution Day -->
+        <day date="12-24" valid="no"/> <!-- Christmas Eve -->
+        <day date="12-25" valid="no"/> <!-- Christmas Day -->
+        <day date="12-26" valid="no"/> <!-- Boxing Day -->
+        <day date="12-31" valid="no"/> <!-- New Years Eve -->
+    </days>
+                        
+    <days year="2012">
+        <day date="04-05" valid="no"/> <!-- Skaertorsdag -->
+        <day date="04-06" valid="no"/> <!-- Good Friday -->
+        <day date="04-09" valid="no"/> <!-- Easter Monday -->
+        <day date="05-17" valid="no"/> <!-- Ascension Day --> 
+        <day date="05-28" valid="no"/> <!-- Pentecost -->
+    </days>
+
+    <days year="2013">
+        <day date="03-28" valid="no"/> <!-- Skaertorsdag -->
+        <day date="03-29" valid="no"/> <!-- Good Friday -->
+        <day date="04-01" valid="no"/> <!-- Easter Monday -->
+        <day date="04-26" valid="no"/> <!-- Prayer Day -->
+        <day date="05-09" valid="no"/> <!-- Ascension Day --> 
+        <day date="05-20" valid="no"/> <!-- Pentecost -->
+    </days>
+
+    <days year="2014">
+        <day date="04-17" valid="no"/> <!-- Skaertorsdag -->
+        <day date="04-18" valid="no"/> <!-- Good Friday -->
+        <day date="04-21" valid="no"/> <!-- Easter Monday -->
+        <day date="05-16" valid="no"/> <!-- Prayer Day -->
+        <day date="05-29" valid="no"/> <!-- Ascension Day -->
+        <day date="05-30" valid="no"/> <!-- Bank Holiday -->
+        <day date="06-09" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2015">
+        <day date="04-02" valid="no"/> <!-- Skaertorsdag -->
+        <day date="04-03" valid="no"/> <!-- Good Friday -->
+        <day date="04-06" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Prayer Day -->
+        <day date="05-14" valid="no"/> <!-- Ascension day -->
+        <day date="05-15" valid="no"/> <!-- Bank Holiday -->
+        <day date="05-25" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+                                                
+    <days year="2016">
+        <day date="03-24" valid="no"/> <!-- Skaertorsdag -->
+        <day date="03-25" valid="no"/> <!-- Good Friday -->
+        <day date="03-28" valid="no"/> <!-- Easter Monday -->
+        <day date="04-22" valid="no"/> <!-- Prayer Day -->
+        <day date="05-05" valid="no"/> <!-- Ascension day -->
+        <day date="05-16" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2017">
+        <day date="04-13" valid="no"/> <!-- Skaertorsdag -->
+        <day date="04-14" valid="no"/> <!-- Good Friday -->
+        <day date="04-17" valid="no"/> <!-- Easter Monday -->
+        <day date="05-12" valid="no"/> <!-- Prayer day -->
+        <day date="05-25" valid="no"/> <!-- Ascension day -->
+        <day date="06-05" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2018">
+        <day date="03-30" valid="no"/> <!-- Good Friday -->
+        <day date="03-29" valid="no"/> <!-- Skaertorsdag -->
+        <day date="04-02" valid="no"/> <!-- Easter Monday -->
+        <day date="04-27" valid="no"/> <!-- Prayer day -->
+        <day date="05-10" valid="no"/> <!-- Ascension day -->
+        <day date="05-21" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2019">
+        <day date="04-18" valid="no"/> <!-- Skaertorsdag -->
+        <day date="04-19" valid="no"/> <!-- Good Friday -->
+        <day date="04-22" valid="no"/> <!-- Easter Monday -->
+        <day date="05-17" valid="no"/> <!-- Prayer day -->
+        <day date="05-30" valid="no"/> <!-- Ascension day -->
+        <day date="05-10" valid="no"/> <!-- Pentecost Monday -->
+    </days>
+
+    <days year="2020">
+        <day date="04-09" valid="no"/> <!-- Maundy Thursday -->
+        <day date="04-10" valid="no"/> <!-- Good Friday -->
+        <day date="04-13" valid="no"/> <!-- Easter Monday -->
+        <day date="05-01" valid="no"/> <!-- Labor Day -->
+        <day date="05-08" valid="no"/> <!-- Prayer day -->
+        <day date="05-21" valid="no"/> <!-- Ascension day -->
+        <day date="05-22" valid="no"/> <!-- Bank Holiday -->
+        <day date="06-01" valid="no"/> <!-- Whit Monday -->
+    </days>
+
+    <documentation>
+        Calendar defining bank/settlement days for DK (Denmark).
+        Source https://www.timeanddate.com/holidays/denmark/
+    </documentation>
+</resource>

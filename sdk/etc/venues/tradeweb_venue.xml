@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Tradeweb FIX" type="application/x-venue+xml">
+    <venues>
+        <venue name="Tradeweb FIX" shortname="Tradeweb" identifier="f08afab8-af82-11e8-9d70-f97195f9f02f" description="Tradeweb DPL FIX interface">
+            <identifier>
+                <key name="SecurityID" tag="48">
+                    <additional tag="22" value="5"/>
+                </key>
+                <key name="IsNAV"/> <!-- not mapped onto FIX message -->
+                <key name="Segment" tag="23068"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the Tradeweb FIX DPL interface venue.
+    </documentation>
+</resource>

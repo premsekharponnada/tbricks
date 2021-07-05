@@ -1,0 +1,112 @@
+// Copyright (c) 2006, Google Inc.
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//     * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//     * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#pragma once
+#include <type_traits>
+#include <utility>  // For pair
+
+namespace google {
+
+// trait which can be added to user types to enable use of memcpy in sparsetable
+// Example:
+// namespace google{
+// template <>
+// struct is_relocatable<MyType> : std::true_type {};
+// }
+
+template <class T>
+struct is_relocatable
+    : std::integral_constant<bool,
+                             (std::is_trivially_copy_constructible<T>::value &&
+                              std::is_trivially_destructible<T>::value)> {};
+template <class T, class U>
+struct is_relocatable<std::pair<T, U>>
+    : std::integral_constant<bool, (is_relocatable<T>::value &&
+                                    is_relocatable<U>::value)> {};
+
+template <class T>
+struct is_relocatable<const T> : is_relocatable<T> {};
+
+// check function object for callability with given arguments;
+// trait will become standard in C++17;
+// implementation is taken from http://stackoverflow.com/a/37161919/6936672
+template<class F, class...Args>
+struct is_callable
+{
+    template<class U> static auto test(U* p) -> decltype((*p)(std::declval<Args>()...), void(), std::true_type());
+    template<class U> static auto test(...) -> decltype(std::false_type());
+
+    static constexpr bool value = decltype(test<F>(0))::value;
+};
+
+// traits logical operations
+template <class... T>
+struct trait_or;
+
+template <>
+struct trait_or<> : public std::false_type
+{};
+
+template <class L, class... R>
+struct trait_or<L, R...> : public std::integral_constant<bool, L::value || trait_or<R...>::value>
+{};
+
+// pass scalar and small types by value and other types by reference
+template <class T>
+struct decay_to_pass {
+  static constexpr bool is_rreference = std::is_rvalue_reference<T>::value;
+  using Tt = typename std::decay<T>::type;
+  static constexpr bool is_scalar = std::is_scalar<Tt>::value;
+  static constexpr bool is_pointer = std::is_pointer<Tt>::value;
+  static constexpr bool is_small = sizeof(Tt) <= 2 * sizeof(Tt*); // TODO: find rule of thumb supported by facts for this
+  static constexpr bool by_value = is_scalar || is_small;
+  using P = typename std::remove_pointer<Tt>::type;
+  using ConstT = typename std::conditional<is_pointer, const P*, Tt>::type;
+  using R = typename std::conditional<is_rreference, Tt&&, Tt&>::type;
+  using type = typename std::conditional<by_value, Tt, R>::type;
+  using const_type = typename std::conditional<by_value, ConstT, const Tt&>::type;
+};
+
+template <class T>
+using decay_to_pass_t = typename decay_to_pass<T>::type;
+
+template <class T>
+using decay_to_pass_const_t = typename decay_to_pass<T>::const_type;
+
+template <bool copyable>
+struct copy_characteristics {};
+
+template <>
+struct copy_characteristics<false> {
+  copy_characteristics() = default;
+  copy_characteristics(const copy_characteristics&) = delete;
+  copy_characteristics(copy_characteristics&&) = default;
+};
+
+}

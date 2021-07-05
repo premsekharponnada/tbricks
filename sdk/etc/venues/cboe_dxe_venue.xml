@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="bats venue" type="application/x-venue+xml">
+    <venues>
+        <venue name="CBOE DXE" shortname="CBOE DXE" identifier="0a0ff132-1bcb-11e9-ae20-a10c9e4ca59a" description="CBOE DXE">
+            <identifier>
+                <key name="symbol" tag="55"/>
+                <key name="target_book" tag="9303"/>
+            </identifier>
+        </venue>
+    </venues>
+    <capabilities>
+        <restriction message="order">
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="validity type" value="until date"/>
+            <field name="transition type" value="market to limit" />
+            <field name="transition type" value="limit to market" />
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="execution policy"/>
+            <field name="validity type"/>
+            <field name="valid until datetime"/>
+            <field name="total volume"/>
+            <field name="disclosed volume"/>
+            <field name="price" value="empty"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing CBOE DXE market data venue.
+    </documentation>
+</resource>

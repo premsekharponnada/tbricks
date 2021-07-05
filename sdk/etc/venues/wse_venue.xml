@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="WSE venue" type="application/x-venue+xml">
+  <venues>
+    <venue name="wse" shortname="WSE" identifier="16fe9968-8bc9-11e7-afd0-54389f85bba5" description="Warsaw Stock Exchange" native_trd_required="yes">
+      <identifier>
+        <key name="symbol"/>
+      </identifier>
+    </venue>
+  </venues>
+
+  <!-- capabilities should be corrected in future -->
+  <capabilities>
+    <restriction message="order">
+      <field name="execution policy"/>
+      <field name="transition type" value="limit to market"/>
+      <field name="validity type" value="immediate on open"/>
+      <field name="validity type" value="last auction"/>
+    </restriction>
+  </capabilities>
+
+  <documentation>
+    Venue identifier resource describing the Warsaw Stock Excahnge, both UTP-D (TR) and XDP (MD).
+  </documentation>
+</resource>

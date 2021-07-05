@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Oslo Børs Millennium" type="application/x-venue+xml">
+    <venues>
+        <venue name="Oslo Børs Millennium" shortname="Oslo Børs Millennium" identifier="0ec56e5a-e536-11e1-b464-65dd30913fc9" description="Oslo Millennium">
+            <identifier>
+                <key name="security_id" tag="48">
+                    <additional tag="22" value="8"/>
+                </key>
+                <key name="target_book" tag="9303"/>
+            </identifier>
+        </venue>
+    </venues>
+
+    <capabilities>
+        <restriction message="order">
+            <field name="execution policy"/>
+            <field name="transition type"/>
+            <field name="validity type" value="infinite"/>
+            <field name="validity type" value="last auction"/>
+            <field name="price improvement not allowed"/>
+        </restriction>
+        <restriction message="order modify">
+            <field name="validity type"/>
+            <field name="price" value="empty"/>
+            <field name="retain on disconnect"/>
+        </restriction>
+    </capabilities>
+
+    <documentation>
+        Venue identifier resource describing the OSLO Børs Millennium venue.
+    </documentation>
+</resource>

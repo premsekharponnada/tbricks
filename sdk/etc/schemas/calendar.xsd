@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="yesno">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(yes|no)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="time">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="-?[0-9]{1,2}:[0-5][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="session">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="time" name="open" use="optional"/>
+                    <xs:attribute type="time" name="close" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="day">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="session" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="date" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="(0?[0-9]|1[0-2])-([0-2]?[0-9]|3[0-1])"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute type="yesno" name="valid" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="week">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="session" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="yesno" name="monday"/>
+            <xs:attribute type="yesno" name="tuesday"/>
+            <xs:attribute type="yesno" name="wednesday"/>
+            <xs:attribute type="yesno" name="thursday"/>
+            <xs:attribute type="yesno" name="friday"/>
+            <xs:attribute type="yesno" name="saturday"/>
+            <xs:attribute type="yesno" name="sunday"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="days">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="day" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:short" name="year" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="documentation" type="xs:string"/>
+    <xs:element name="resource">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="week"/>
+                <xs:element ref="days" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element ref="documentation"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+            <xs:attribute type="xs:string" name="type"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
